@@ -1,3 +1,4 @@
 streamlit
 plotly
 pyngrok
+streamlit-option-menu
