@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
 html, body, [class*="css"] {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif ;
     font-size: 18px;
     font-weight: 500;
     color: #091747;
@@ -14,15 +14,35 @@ html, body, [class*="css"] {
     color: #2c4653;
 }
 
-#ramana-rao-ambore-rambo {
-    padding:0rem 0rem 0rem 0rem;
-    font-weight:bold;
-}
-.stImage {
+div [data-testid="stImageContainer"] {
     padding: .5rem;
     border-radius: 7px;
     margin: 0rem;
-    border:1px solid #2c4653;
+    border: 1px black !important;
+
 }
+#ramana-rao-ambore-rambo {
+    padding:0rem 0rem 0rem 0rem;
+    font-weight:800;
+}
+
+#application-development-director {
+    color: #e76801;
+    font-weight: bold;
+    padding-top: 0rem;
+
+}
+p {
+margin-bottom: 0px;
+}
+.stHorizontalBlock {
+gap:0rem;
+padding:0rem;
+}
+a {
+    color: #2c4653 !important;
+    text-decoration: none !important;
+}
+
         
 

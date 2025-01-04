@@ -4,6 +4,7 @@ from PIL import Image
 import base64
 from io import BytesIO
 
+
 def get_base64_of_bin_file(file):
     # with open(bin_file, 'rb') as f:
     #     data = f.read()
@@ -16,6 +17,7 @@ def get_base64_of_bin_file(file):
     img.save(buffered, format="PNG")
     img_str = base64.b64encode(buffered.getvalue()).decode()
     return img_str
+
 
 def set_png_as_page_bg(png_file):
     bin_str = get_base64_of_bin_file(png_file)
@@ -33,6 +35,7 @@ def set_png_as_page_bg(png_file):
 
     st.markdown(page_bg_img, unsafe_allow_html=True)
     return
+
 
 def show_image(png_file, width=250, height=250):
     img_str = get_base64_of_bin_file(png_file)
@@ -68,11 +71,23 @@ def show_image(png_file, width=250, height=250):
     )
 
 
-def load_profile_data():
+def get_profile_data():
     with open('data/profile_data.yaml', 'r') as file:
         return yaml.safe_load(file)
 
 
-def load_css():
+def get_custom_css():
     with open("src/frontend/custom_styles.css") as css:
-        return f'<style>{css.read()}</style>'
+        return css.read()
+
+
+def get_config_data():
+    with open('src/setup/config.yaml', 'r') as file:
+        return yaml.safe_load(file)
+
+
+def markdown(text, style_tag=True):
+    if style_tag:
+        text = f'<style>{text}</style>'
+
+    st.markdown(f'{text}', unsafe_allow_html=True)
