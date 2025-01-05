@@ -19,6 +19,7 @@ def container(*args, **kwargs):
 
     return function(*args, **kwargs)
 
+
 def disp_icon_text(icon_link, text):
     st.markdown(
         f"""
@@ -29,6 +30,7 @@ def disp_icon_text(icon_link, text):
         """,
         unsafe_allow_html=True
     )
+
 
 if 'logger' not in st.session_state:
     st.session_state.logger = log_setup()
@@ -56,21 +58,21 @@ if __name__ == '__main__':
         st.write(f'#### {prof['designation']}')
         st.write(prof['summary'])
 
-        loc_col, _, mail_col, _, phone_col = st.columns([0.7, .05, 1, .05, 1],vertical_alignment='center')
-        with loc_col:
-            disp_icon_text('loc_icon', 'Des Moines, Iowa')
-        with mail_col:
-            disp_icon_text('phone_icon', 'Ramana.Ambore@gmail.com')
-        with phone_col:
-            disp_icon_text('mail_icon', '(XXX) XXX-XXXX')
+    loc_col, _, mail_col, _, phone_col = st.columns([0.7, .05, 1, .05, 1], vertical_alignment='center')
+    with loc_col:
+        disp_icon_text('loc_icon', 'Des Moines, Iowa')
+    with mail_col:
+        disp_icon_text('phone_icon', 'Ramana.Ambore@gmail.com')
+    with phone_col:
+        disp_icon_text('mail_icon', '(XXX) XXX-XXXX')
 
-    linkedin_col, _, github_col = st.columns([ 1, .05, 2],vertical_alignment='center')
+    linkedin_col, _, github_col = st.columns([1.5, .05, 2], vertical_alignment='center')
     with linkedin_col:
         disp_icon_text('linkedin_icon', config['linkedin'])
     with github_col:
         disp_icon_text('github_icon', config['github'])
 
-    medium_col, _, streamlit_col = st.columns([ 1, .05, 2],vertical_alignment='center')
+    medium_col, _, streamlit_col = st.columns([1.5, .05, 2], vertical_alignment='center')
     with medium_col:
         disp_icon_text('medium_icon', config['medium'])
     with streamlit_col:
