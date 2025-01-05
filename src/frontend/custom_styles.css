@@ -21,7 +21,6 @@ html, body, [class*="css"] {
     padding 10px !important;
     border-radius: 7px !important;
     border: 1px solid #2c4653 !important;
-
 }
 
 #ramana-rao-ambore-rambo {
@@ -35,5 +34,20 @@ html, body, [class*="css"] {
     padding-top: 0rem;
 }
 .stHorizontalBlock {
-gap:0.2;
-padding:1rem;}
+    gap:0.2;
+    padding:1rem;
+}
+
+a {
+
+    color: #2c4653;
+    text-decoration: none; /* Underline on hover */
+
+}
+a:hover {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Text shadow */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+    color: #2c4653; /* Text color on hover */
+    text-decoration: none; /* Underline on hover */
+    transform: scale(1.05)
+}
