@@ -30,9 +30,9 @@ def disp_icon_text(parm_text, link_flag=True):
 
         st.markdown(
             f"""
-            <div style='display: flex; align-items: center; font-weight: bold; font-size: 20; padding:0rem;'>
+            <div class='icon_text_div'>
                 <img src='{icon}' style='width: 30px; margin-right: 10px;'>
-                <span> <a href="{link}">{text}</a></span>
+                <span> <a href="{link}" class='text_link'>{text}</a></span>
             </div>
             """,
             unsafe_allow_html=True
@@ -40,7 +40,7 @@ def disp_icon_text(parm_text, link_flag=True):
     else:
         st.markdown(
             f"""
-            <div style='display: flex; align-items: center; font-weight: bold; font-size: 20; padding:0rem;'>
+            <div class='icon_text_div'>
                 <img src='{icon}' style='width: 30px; margin-right: 10px;'>
                 <span> {text} </span>
             </div>
@@ -75,13 +75,13 @@ if __name__ == '__main__':
         st.write(f'#### {prof['designation']}')
         st.write(prof['summary'])
 
-    loc_col, _, mail_col, _, phone_col = st.columns([0.52, .05, 0.5, .05, 0.5], vertical_alignment='center')
+    loc_col, _, mail_col, _, phone_col = st.columns([0.515, .05, 0.5, .05, 0.5], vertical_alignment='center')
     with loc_col:
         disp_icon_text('loc')
     with mail_col:
         disp_icon_text('mail')
     with phone_col:
-        disp_icon_text('phone', False)
+        disp_icon_text('phone')
 
     linkedin_col, _, github_col = st.columns([1, .05, 2], vertical_alignment='center')
     with linkedin_col:
