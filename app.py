@@ -64,15 +64,15 @@ if __name__ == '__main__':
 
     with st.sidebar:
         get_option_menu()
-
+    st.header(f'{prof['name']}')
+        # st.header(about_me_name)
+    st.write(f'#### {prof['designation']}')
     col1, _, col2 = st.columns([3, .1, 10])
     with col1:
         container(st.image, get_image_file('ramana_photo.png', False), clamp=True,
                   use_container_width=True, key='bio_photo')
     with col2:
-        st.header(f'{prof['name']}')
-        # st.header(about_me_name)
-        st.write(f'#### {prof['designation']}')
+
         st.write(prof['summary'])
 
     loc_col, _, mail_col, _, phone_col = st.columns([0.515, .05, 0.5, .05, 0.5], vertical_alignment='center')
