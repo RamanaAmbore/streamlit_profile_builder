@@ -1,3 +1,6 @@
+import functools
+import logging
+
 import streamlit as st
 import yaml
 from PIL import Image
@@ -91,3 +94,22 @@ def markdown(text, style_tag=True):
         text = f'<style>{text}</style>'
 
     st.markdown(f'{text}', unsafe_allow_html=True)
+
+
+def debug_wrapper(function):
+    @functools.wraps(function)
+    def wrapper(*args, **kwargs):
+        logging.debug(f'{function.__name__} started')
+        result = function(*args, **kwargs)
+        # st.write(f"Finished executing {func.__name__}.")
+        logging.debug(f'{function.__name__} ended')
+        return result
+
+    return wrapper
+
+
+def get_image_file(file, icon=True):
+    if icon:
+        return f'assets/icons/{file}'
+    else:
+        return f'assets/images/{file}'

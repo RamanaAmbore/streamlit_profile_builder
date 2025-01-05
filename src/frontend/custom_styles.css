@@ -7,22 +7,25 @@ html, body, [class*="css"] {
     color: #091747;
 }
 .stSidebar  {
-    margin: 10px;
+    margin: 2px 0px 5px 3px;
     border-radius:  7px 0px 0px 7px;
+
 }
 .stMainBlockContainer  {
     color: #2c4653;
 }
 
-div [data-testid="stImageContainer"] {
-    padding: .5rem;
-    border-radius: 7px;
-    margin: 0rem;
-    border: 1px black !important;
+.st-key-bio_photo img{
+    margin:0rem;
+    padding:.5rem;
+    padding 10px !important;
+    border-radius: 7px !important;
+    border: 1px solid #2c4653 !important;
 
 }
+
 #ramana-rao-ambore-rambo {
-    padding:0rem 0rem 0rem 0rem;
+    padding:0rem;
     font-weight:800;
 }
 
@@ -30,19 +33,7 @@ div [data-testid="stImageContainer"] {
     color: #e76801;
     font-weight: bold;
     padding-top: 0rem;
-
-}
-p {
-margin-bottom: 0px;
 }
 .stHorizontalBlock {
-gap:0rem;
-padding:0rem;
-}
-a {
-    color: #2c4653 !important;
-    text-decoration: none !important;
-}
-
-        
-
+gap:0.2;
+padding:1rem;}
