@@ -38,30 +38,23 @@ html, body, [class*="css"] {
     padding:1rem;
 }
 
-.text_link {
-
+.icon_href_text_div a {
     font-weight: bold;
     color: #2c4653 !important;
-    text-decoration: none !important; /* Underline on hover */
-
-}
-.text_link:hover {
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Text shadow */
-    transition: transform 0.3s; /* Smooth transition for hover effect */
-    color: #2c4653; /* Text color on hover */
-    text-decoration: none; /* Underline on hover */
-    transform: scale(1.5)
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.icon_text_div {
-    display: flex;
-    align-items: center;
-    font-weight: bold;
+
+
+a:hover  {
     font-size: 22;
     padding:0rem;
+    transform: scale(1.2);
+    color:
 }
 
-.icon_widget {
-    style='width: 30px;
+.href_icon, .no_href_icon, href_text {
+    width: 30px;
     margin-right: 10px;
+    text-decoration: none !important;
 }
