@@ -21,14 +21,14 @@ def container(*args, **kwargs):
 
 
 def disp_icon_text(parm_text, link_flag=True):
-    icon = config[f'{parm_text}_icon']
-    text = config[f'{parm_text}_text']
+    icon = prof[f'{parm_text}_icon']
+    text = prof[f'{parm_text}_text']
 
     if 'http' not in icon:
         icon = get_image_bin_file(icon)
 
     if link_flag:
-        link = config[f'{parm_text}_link']
+        link = prof[f'{parm_text}_link']
         st.markdown(
             f"""
             <div class='icon_href_text_div'>
