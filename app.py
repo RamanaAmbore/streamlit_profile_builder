@@ -5,7 +5,7 @@ from PIL import Image
 
 from src.components.option_component import get_option_menu
 from src.logger import log_setup
-from src.utils import get_profile_data, get_custom_css, get_config_data, markdown, get_image_file, get_image_bin_file
+from src.utils import get_profile_data, get_custom_css, get_config_data, markdown, get_image_file, disp_icon_text
 
 
 def container(*args, **kwargs):
@@ -18,36 +18,6 @@ def container(*args, **kwargs):
             return function(*args, **kwargs)
 
     return function(*args, **kwargs)
-
-
-def disp_icon_text(parm_text, link_flag=True):
-    icon = prof[f'{parm_text}_icon']
-    text = prof[f'{parm_text}_text']
-
-    if 'http' not in icon:
-        icon = get_image_bin_file(icon)
-
-    if link_flag:
-        link = prof[f'{parm_text}_link']
-        st.markdown(
-            f"""
-            <div class='icon_href_text_div'>
-                <span> <a href='{link}' class='href_link'> <img src='{icon}' class='href_icon'></a> </span>
-                <span> <a href="{link}" class='href_link'><span class='href_text'>{text}</span></a></span>
-            </div>
-            """,
-            unsafe_allow_html=True
-        )
-    else:
-        st.markdown(
-            f"""
-            <div class='icon_text_div'>
-                <img src='{icon}' class='no_href_icon'>
-                <span class='no_href_text'> {text} </span>
-            </div>
-            """,
-            unsafe_allow_html=True
-        )
 
 
 if 'logger' not in st.session_state:
