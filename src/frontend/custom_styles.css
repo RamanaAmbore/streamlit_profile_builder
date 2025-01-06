@@ -38,23 +38,23 @@ html, body, [class*="css"] {
     padding:1rem;
 }
 
-.icon_href_text_div a {
+.href_icon, .no_href_icon {
+    text-decoration: none !important; /* Underline on hover */
+    width: 30px;
+    margin-right:10px;
+
+}
+
+a {
     font-weight: bold;
     color: #2c4653 !important;
-    transition: transform 0.3s ease, color 0.3s ease;
-}
-
-
-
-a:hover  {
-    font-size: 22;
-    padding:0rem;
-    transform: scale(1.2);
-    color:
-}
-
-.href_icon, .no_href_icon, href_text {
-    width: 30px;
-    margin-right: 10px;
     text-decoration: none !important;
+    transition: text-decoration 0.3s ease, color 0.3s ease;
+}
+
+a:hover {
+    text-shadow: 1px 1px 2px #f6f6f6;
+    text-decoration: underline !important;
+    color: #ff0000 !important;
+
 }

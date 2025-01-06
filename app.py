@@ -43,7 +43,7 @@ def disp_icon_text(parm_text, link_flag=True):
             f"""
             <div class='icon_text_div'>
                 <img src='{icon}' class='no_href_icon'>
-                <span class='href_text'> {text} </span>
+                <span class='no_href_text'> {text} </span>
             </div>
             """,
             unsafe_allow_html=True
