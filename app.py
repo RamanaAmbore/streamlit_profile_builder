@@ -75,7 +75,7 @@ if __name__ == '__main__':
     with col2:
         st.write(prof['summary'])
 
-    width_weights = [1.3, .05, 1.3, 0.05, 1.3, .05, 1.5]
+    width_weights = [1.2, .05, 1.2, 0.05, 1.2, .05, 1.2]
     loc_col, _, mail_col, _, phone_col, _, _ = st.columns(width_weights, vertical_alignment='center')
     linkedin_col, _, github_col, _, medium_col, _, streamlit_col = st.columns(width_weights,
                                                                               vertical_alignment='center')

@@ -10,7 +10,7 @@ from io import BytesIO
 from tornado.httputil import format_timestamp
 
 
-def get_image_bin_file(file,icon=True):
+def get_image_bin_file(file, icon=True):
     # with open(bin_file, 'rb') as f:
     #     data = f.read()
     # return base64.b64encode(data).decode()
@@ -42,40 +42,6 @@ def set_png_as_page_bg(png_file):
 
     st.markdown(page_bg_img, unsafe_allow_html=True)
     return
-
-
-def show_image(png_file, width=250, height=250):
-    img_str = get_image_bin_file(png_file)
-
-    # CSS for the image styling and centering
-    st.markdown(
-        f"""
-        <style>
-        .center-container {{
-
-        }}
-        .image-container {{
-            display: flex;
-            justify-content: center; /* Horizontal center */
-            align-items: top; /* Vertical center */
-            border: 1px solid orange; /* Border color and width */
-            border-radius: 10px; /* Rounded corners */
-            width: 100%; /* Set the width */
-            height: 100%; /* Set the height */
-            overflow: hidden;
-        }}
-        </style>
-        """, unsafe_allow_html=True
-    )
-
-    # Display the image with the specified styling
-    st.markdown(
-        f"""
-        <div class="image-container">
-                <img src="data:image/png;base64,{img_str}" alt="{png_file}" >
-</div> 
-        """, unsafe_allow_html=True
-    )
 
 
 def get_profile_data():
