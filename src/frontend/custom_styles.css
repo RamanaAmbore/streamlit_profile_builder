@@ -1,15 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
-
 .main .block-container {
     max-width:1200px;
-        color: #2c4653;
-        hieght:100vh;
-
+    color: #2c4653;
+    hieght:100vh;
     padding: 0rem;
-
-
 }
-
 
 .stSidebar  {
     margin: 2px 0px 5px 3px;
