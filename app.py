@@ -19,7 +19,7 @@ def initial_setup():
     st.set_page_config(page_title=f"{prof['name'].title()}, {prof['name_suffix']}'s Profile", page_icon=favicon,
                        layout="wide")
     markdown(css_style)
-    set_png_as_page_bg('background2.png')
+    set_png_as_page_bg('background.png')
 
 
 def contact_setup():
