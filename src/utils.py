@@ -30,10 +30,9 @@ def set_png_as_page_bg(png_file, icon=False):
     <style>
         .appview-container {{
         background-image: url("{bin_str}");
-        position: relative; 
-        background-repeat: no-repeat;
-        background-size: cover;
         background-attachment: scroll;
+        background-repeat: no-repeat;
+        background-position: top;
         }}
     </style>
     '''

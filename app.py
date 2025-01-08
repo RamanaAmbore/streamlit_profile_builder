@@ -51,13 +51,13 @@ if __name__ == '__main__':
     css_style = get_custom_css()
     config = get_config_data()
 
-    st.set_page_config(page_title=f"{prof['name'].title()}'s Profile", page_icon=favicon, layout="wide")
+    st.set_page_config(page_title=f"{prof['name'].title()}, {prof['name_suffix']}'s Profile", page_icon=favicon, layout="centered")
     markdown(css_style)
     set_png_as_page_bg('R2.png')
 
     with st.sidebar:
         get_option_menu()
-    container(st.header, prof['name'], key='profile_name')
+    container(st.header, f'{prof['name']}, {prof['name_suffix']}' , key='profile_name')
     # st.header(about_me_name)
     container(st.write, f'#### {prof['designation']}', key='profile_designation')
     col1, _, col2 = st.columns([2.5, .1, 10])

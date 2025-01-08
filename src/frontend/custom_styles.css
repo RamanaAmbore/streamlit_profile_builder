@@ -1,15 +1,18 @@
-.main .block-container {
-    max-width:1200px;
-    color: #2c4653;
-    hieght:100vh;
-    padding: 0rem;
+.appview-container .main .block-container     {
+    color: #091747;
 }
+.stMain > div {max-width:1700px;
+border-right:10px black; margin-left:0;}
 
 .stSidebar  {
     margin: 2px 0px 5px 3px;
     border-radius:  7px 0px 0px 7px;
-    max-width:150px;
+    width: 100px !important; # Set the width to your desired value
 
+
+}
+.stMainBlockContainer  {
+    color: #2c4653;
 }
 
 .st-key-bio_photo img{
@@ -29,10 +32,7 @@
     padding-top:0px;
 }
 .stHorizontalBlock {
-gap:.5rem;
-
-
-
+    gap:.5rem;
 }
 
 .href_icon, .no_href_icon {
