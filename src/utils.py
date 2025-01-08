@@ -7,10 +7,6 @@ from PIL import Image
 import base64
 from io import BytesIO
 
-from tornado.httputil import format_timestamp
-
-from app import prof
-
 
 def get_image_bin_file(file, icon=True):
     # with open(bin_file, 'rb') as f:
@@ -28,19 +24,19 @@ def get_image_bin_file(file, icon=True):
     return url
 
 
-def set_png_as_page_bg(png_file):
-    bin_str = get_image_bin_file(png_file)
-    page_bg_img = '''
+def set_png_as_page_bg(png_file, icon=False):
+    bin_str = get_image_bin_file(png_file, icon=False)
+    page_bg_img = f'''
     <style>
-        .appview-container {
-        background-image: url("data:image/png;base64,%s");
-        position: absolute; 
+        .appview-container {{
+        background-image: url("{bin_str}");
+        position: relative; 
         background-repeat: no-repeat;
         background-size: cover;
-        top: 0; 
-        left: 0; }
+        background-attachment: scroll;
+        }}
     </style>
-    ''' % bin_str
+    '''
 
     st.markdown(page_bg_img, unsafe_allow_html=True)
     return
@@ -87,31 +83,13 @@ def get_image_file(file, icon=True):
         return f'static/images/{file}'
 
 
-def disp_icon_text(parm_text, link_flag=True):
-    icon = prof[f'{parm_text}_icon']
-    text = prof[f'{parm_text}_text']
+def container(*args, **kwargs):
+    function = args[0]
+    args = args[1:]
+    if 'key' in kwargs:
+        key = kwargs.pop('key')
+        container = st.container(key=key)
+        with container:
+            return function(*args, **kwargs)
 
-    if 'http' not in icon:
-        icon = get_image_bin_file(icon)
-
-    if link_flag:
-        link = prof[f'{parm_text}_link']
-        st.markdown(
-            f"""
-            <div class='icon_href_text_div'>
-                <span> <a href='{link}' class='href_link'> <img src='{icon}' class='href_icon'></a> </span>
-                <span> <a href="{link}" class='href_link'><span class='href_text'>{text}</span></a></span>
-            </div>
-            """,
-            unsafe_allow_html=True
-        )
-    else:
-        st.markdown(
-            f"""
-            <div class='icon_text_div'>
-                <img src='{icon}' class='no_href_icon'>
-                <span class='no_href_text'> {text} </span>
-            </div>
-            """,
-            unsafe_allow_html=True
-        )
+    return function(*args, **kwargs)
