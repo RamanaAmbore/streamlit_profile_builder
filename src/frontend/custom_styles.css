@@ -1,3 +1,5 @@
+
+
 .stMain {
     margin-left: 0px !important;
 }
@@ -64,4 +66,8 @@ a:hover {
     text-decoration: underline !important;
     color: #ff0000 !important;
 
+}
+
+.st-emotion-cache-d55atj hr {
+    margin: 0rem 0px !important;
 }

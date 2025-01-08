@@ -1,2 +1,2 @@
-sections: ['Summary', 'Experience', 'Skills', 'Certifications', 'Projects', 'Hobbies']
-section_icons: ['house', 'person', 'gear', 'trophy', 'folder', 'joystick']
+sections: ['Summary', 'Experience', 'Skills', 'Certifications', 'Education', 'Projects', 'Hobbies']
+section_icons: ['house', 'person', 'gear', 'clipboard-check', 'trophy', 'folder', 'joystick']

@@ -116,3 +116,30 @@ def disp_icon_text(parm_text, link_flag=True):
             """,
             unsafe_allow_html=True
         )
+
+
+def contact_setup():
+    width_weights_contact = [1, .05, 1, 0.05, 1, .05, 1]
+    mail_col, _, phone_col, _, loc_col, _, streamlit_col = st.columns(width_weights_contact,
+                                                                      vertical_alignment='center')
+    with loc_col:
+        container(disp_icon_text, 'loc', key='contact_loc')
+    with mail_col:
+        container(disp_icon_text, 'mail', key='contact_mail')
+    with phone_col:
+        container(disp_icon_text, 'phone', key='contact_phone')
+    with streamlit_col:
+        container(disp_icon_text, 'streamlit', key='social_streamlit')
+    width_weights_social = [1, .05, 1, 0.05, 1, .05, 1]
+    linkedin_col, _, github_col, _, medium_col, _, _ = st.columns(width_weights_social,
+                                                                  vertical_alignment='center')
+    with linkedin_col:
+        container(disp_icon_text, 'linkedin', key='social_linkedin')
+    with github_col:
+        container(disp_icon_text, 'github', key='social_contact')
+    with medium_col:
+        container(disp_icon_text, 'medium', key='social_medium')
+
+
+def ruler():
+    st.markdown("---")
