@@ -27,8 +27,7 @@ def disp_icon_text(parm_text, link_flag=True):
         st.markdown(
             f"""
             <div class='icon_href_text_div'>
-                <span> <a href='{link}' class='href_link'> <img src='{icon}' class='href_icon'></a> </span>
-                <span> <a href="{link}" class='href_link'><span class='href_text'>{text}</span></a></span>
+                <span> <a href="{link}" class='href_link'><span class='href_text'><img src='{icon}' class='href_icon'>{text}</span></a></span>
             </div>
             """,
             unsafe_allow_html=True
