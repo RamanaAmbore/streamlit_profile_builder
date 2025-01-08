@@ -92,3 +92,33 @@ def container(*args, **kwargs):
             return function(*args, **kwargs)
 
     return function(*args, **kwargs)
+
+
+def disp_icon_text(parm_text, link_flag=True):
+    prof = get_profile_data()
+    icon = prof[f'{parm_text}_icon']
+    text = prof[f'{parm_text}_text']
+
+    if 'http' not in icon:
+        icon = get_image_bin_file(icon)
+
+    if link_flag:
+        link = prof[f'{parm_text}_link']
+        st.markdown(
+            f"""
+            <div class='icon_href_text_div'>
+                <span> <a href="{link}" class='href_link'><span class='href_text'><img src='{icon}' class='href_icon'>{text}</span></a></span>
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
+    else:
+        st.markdown(
+            f"""
+            <div class='icon_text_div'>
+                <img src='{icon}' class='no_href_icon'>
+                <span class='no_href_text'> {text} </span>
+            </div>
+            """,
+            unsafe_allow_html=True
+        )

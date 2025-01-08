@@ -1,56 +1,65 @@
-.appview-container .main .block-container     {
-    color: #091747;
+.stMain {
+    margin-left: 0px !important;
 }
-.stMain > div {max-width:1700px;
-border-right:10px black; margin-left:0;}
 
-.stSidebar  {
+.stSidebar {
     margin: 2px 0px 5px 3px;
-    border-radius:  7px 0px 0px 7px;
-    width: 100px !important; # Set the width to your desired value
-
+    border-radius: 7px 0px 0px 7px;
+    width: 200px;
 
 }
-.stMainBlockContainer  {
-    color: #2c4653;
+
+.stAppViewContainer {
+    max-width: 1800px;
 }
 
-.st-key-bio_photo img{
+.stMainBlockContainer {
+    padding-top: 1rem;
+}
+
+.st-key-bio_photo img {
     border-radius: 7px !important;
     border: 1px solid #2c4653 !important;
     padding: 5px;
 }
-
-.st-key-profile_name h2{
+.st-key-summary p{
+    font-size:18px;
+}
+.st-key-profile_name h2 {
     font-weight: 800 !important;
-    padding-bottom:0px;
+    padding-bottom: 0px;
 }
 
-.st-key-profile_designation h4{
+.st-key-profile_designation h4 {
     color: #e76801;
     font-weight: bold !important;
-    padding-top:0px;
+    padding-top: 0px;
 }
+
 .stHorizontalBlock {
-    gap:.5rem;
+    gap: .5rem;
+    margin:.5rem;
 }
+
+.element-container { flex-direction: column !important; }
 
 .href_icon, .no_href_icon {
-    text-decoration: none !important; /* Underline on hover */
+    text-decoration: none !important;
     width: 30px;
-    margin-right:10px;
-
+    margin-right: 10px;
+    margin-botto
 }
 
 a {
-    font-weight: bold;
     color: #2c4653 !important;
     text-decoration: none !important;
     transition: all 0.3s ease, color 0.1s ease;
 }
 
 a:hover {
+    text-weight: bold;
     text-decoration: underline !important;
+    text-decoration-color:blue !important;
     color: #ff0000 !important;
 
 }
