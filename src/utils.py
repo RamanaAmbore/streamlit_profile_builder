@@ -29,10 +29,10 @@ def set_png_as_page_bg(png_file, icon=False):
     page_bg_img = f'''
     <style>
         .appview-container {{
-        background-image: url("{bin_str}");
-        background-attachment: scroll;
-        background-repeat: no-repeat;
-        background-position: top;
+            background-image: url("{bin_str}");
+            background-repeat: repeat-y;
+            background-size: cover; 
+            background-position: top; 
         }}
     </style>
     '''
@@ -41,19 +41,14 @@ def set_png_as_page_bg(png_file, icon=False):
     return
 
 
-def get_profile_data():
-    with open('data/profile_data.yaml', 'r') as file:
-        return yaml.safe_load(file)
+with open('data/profile_data.yaml', 'r') as file:
+    prof = yaml.safe_load(file)
 
+with open("src/frontend/custom_styles.css") as css:
+    css_style = css.read()
 
-def get_custom_css():
-    with open("src/frontend/custom_styles.css") as css:
-        return css.read()
-
-
-def get_config_data():
-    with open('src/setup/config.yaml', 'r') as file:
-        return yaml.safe_load(file)
+with open('src/setup/config.yaml', 'r') as file:
+    config = yaml.safe_load(file)
 
 
 def markdown(text, style_tag=True):
@@ -95,7 +90,6 @@ def container(*args, **kwargs):
 
 
 def disp_icon_text(parm_text, link_flag=True):
-    prof = get_profile_data()
     icon = prof[f'{parm_text}_icon']
     text = prof[f'{parm_text}_text']
 
