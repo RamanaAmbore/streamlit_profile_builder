@@ -25,7 +25,7 @@ if __name__ == '__main__':
     st.set_page_config(page_title=f"{prof['name'].title()}, {prof['name_suffix']}'s Profile", page_icon=favicon,
                        layout="wide")
     markdown(css_style)
-    set_png_as_page_bg('R2.png')
+    set_png_as_page_bg('Rx.png')
 
     with st.sidebar:
         get_option_menu()

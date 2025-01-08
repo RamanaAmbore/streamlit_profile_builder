@@ -43,12 +43,15 @@
 
 .element-container { flex-direction: column !important; }
 
+
 .href_icon, .no_href_icon {
     text-decoration: none !important;
     width: 30px;
     margin-right: 10px;
     margin-bottom:5px;
 }
+
+.icon_href_text_div
 
 a {
     color: #2c4653 !important;

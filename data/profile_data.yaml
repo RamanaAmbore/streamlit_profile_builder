@@ -32,7 +32,7 @@ linkedin_link: 'https://www.linkedin.com/in/ramanaambore'
 linkedin_text: 'linkedin.com/in/ambore'
 
 loc_icon: 'loc.png'
-loc_link: 'https://www.google.com/maps/place/41.5772,lng:-93.7113'
+loc_link: 'https://www.google.com/maps/@41.5639989,-93.8009926,13z'
 loc_text: West Des Moines, Iowa
 
 streamlit_icon: 'rambo.png'
