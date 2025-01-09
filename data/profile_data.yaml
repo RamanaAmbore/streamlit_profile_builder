@@ -1,40 +1,369 @@
-summary: |
-    Financial Risk Manager (FRM) and Chartered Financial Analyst (CFA) Level 3 candidate with in-depth financial domain 
-    knowledge. As a FinTech expert, I bring hands-on experience in driving legacy system re-engineering and modernization, 
-    and optimizing high-volume trading and data transmission platforms. Successfully developed an algorithmic trading 
-    platform to capitalize on market inefficiencies. Proficient in leveraging cloud technologies, mainframe systems, 
-    data analytics, and agile methodologies to deliver innovative solutions. My first mainframe user ID and nickname, 
-    'Rambo,' reflect my unwavering tenacity in tackling complex challenges head-on.
-
 name: RAMANA RAO AMBORE
 designation: APPLICATION DEVELOPMENT DIRECTOR
-name_suffix : 'FRM'
+name_suffix: 'FRM'
+summary: |
+  Financial Risk Manager (FRM) and Chartered Financial Analyst (CFA) Level 3 candidate with in-depth financial domain 
+  knowledge. As a FinTech expert, I bring hands-on experience in driving legacy system re-engineering and modernization, 
+  and optimizing high-volume trading and data transmission platforms. Successfully developed an algorithmic trading 
+  platform to capitalize on market inefficiencies. Proficient in leveraging cloud technologies, mainframe systems, 
+  data analytics, and agile methodologies to deliver innovative solutions. My first mainframe user ID and nickname, 
+  'Rambo,' reflect my unwavering tenacity in tackling complex challenges head-on.
 
+education:
+  1.msc:
+    icon: jk.png
+    name: M.Sc. Computer Science (software)
+    link: https://www.jkinstitute.ac.in/
+    org: J.K.Institute of Applied Physics & Tech., Allahabad University
+    year: 1993
+  2.pgdbm:
+    icon: xlri.png
+    name: Business Management, 2005
+    link: https://www.xlri.ac.in/
+    org: Xaviers Labour Relations Institute (XLRI)
+    year: 2005
+  3.bsc:
+    icon: nagarjuna.png
+    name: B.Sc. Computer Science
+    link: https://www.nagarjunauniversity.ac.in/
+    org: Nagarjuna University
+    year: 1991
+certifications:
+  0.frm:
+    icon: frm.png
+    name: Financial Risk Manager (FRM)
+    link: https://www.cfainstitute.org/
+    org: GARP
+    year: 2022
+  1.cfa:
+    name: Cleared Certified Financial Analyst (CFA)
+    link: https://www.cfainstitute.org/
+    icon: cfa.png
+    org: CFA
+    year: 2020
+  2.dba:
+    name: IBM Certified DB2 DBA
+    icon: ibm_db2.png
+    org: IBM
+    year: 2003
+  3.six_sigma:
+    name: Six Sigma Green Belt certification
+    icon: six_sigma.png
+    org: QUI
+    year: 2005
+  4.pmp:
+    name: Project Management Professional (PMP)
+    icon: pmp.jpg
+    org: PMP
+    year: 2004
+  5.java:
+    name: Sun Certified Java Programmer
+    icon: java_small.png
+    org: Sun
+    year: 1999
+skills:
+  a.python:
+    name: Python
+    icon: python_new.png
+    level: 5
+  b.streamlit:
+    name: Streamlit
+    icon: streamlit.png
+    level: 3
+  c.dash/plotly:
+    name: Dash/Plotly
+    icon: dash_plotly.png
+    level: 4
+  d.java:
+    name: Java
+    icon: java_small.png
+    level: 4
+  e.spark:
+    name: Spark
+    icon: apache_spark.png
+    level: 4
+  f.springBoot:
+    name: SringBoot
+    icon: spring.png
+    level: 3
+  g.cobol:
+    name: COBOL
+    icon: ibm.png
+    level: 5
+  h.cics:
+    name: CICS
+    icon: ibm.png
+    level: 5
+  i.db2:
+    name: DB2
+    icon: ibm_db2.png
+    level: 5
+  j.jcl:
+    name: JCL
+    icon: ibm.png
+    level: 5
+  k.vsam:
+    name: VSAM
+    icon: ibm.png
+    level: 3
+  l.aws:
+    name: AWS
+    icon: aws.png
+    level: 3
+  m.terraform:
+    name: Terraform
+    icon: terraform.png
+    level: 3
+  n.jenkins:
+    name: Jenkins
+    icon: jenkins.png
+    level: 3
+  o.git:
+    name: GIT
+    icon: git.png
+    level: 4
+contact_social:
+  1.mail:
+    name: Ramana.Ambore@gmail.com
+    icon: mail.png
+    link: mailto:ramana.ambore@gmail.com
+  2.phone:
+    name: (515) 735level:1486
+    icon: phone.png
+    link: tel:+15157351486
+  3.loc:
+    name: West Des Moines, Iowa
+    icon: loc.png
+    link: https://www.google.com/maps/@41.5639989,-93.8009926,13z
+  4.ramana_portal:
+    name: ramanaambore.me
+    icon: rambo.png
+    link: https://ramanaambore.me
+  5.linkedin:
+    name: linkedin.com/in/ambore
+    icon: linkedin.png
+    link: https://www.linkedin.com/in/ramanaambore
+  6.github:
+    name: github.com/RamanaAmbore
+    icon: github.png
+    link: https://github.com/RamanaAmbore
+  7.medium:
+    name: medium.com/@rrambo
+    icon: medium.png
+    link: https://medium.com/@rrambo
+career:
+  1.ntt_data:
+    name: NTT DATA
+    designation: Application Development Director
+    start: Apr 2003
+    end: Till Date
+    duration: 21 years
+    projects:
+      5.mainframe_automation:
+        name: Mainframe Automation
+        summary:
+        client: Fidelity
+        role: Project Manager
+        start: Apr 2003
+        end: Till Date
+        duration: 21 years
+        skills: MVS, COBOL, CICS, JCL, DB2, VSAM, Assembler
+        desc:
+      4.mainframe_cics:
+        name: Mainframe Online CICS changes
+        summary: Mainframe Online CICS changes
+        client: Fidelity
+        role: Project Manager
+        start: Apr 2003
+        end: Till Date
+        duration: 21 years
+        skills: MVS, COBOL, CICS, JCL, DB2, VSAM, Assembler
+        desc:
+      3.legacy_reengineering:
+        name: Legacy Re-engineering
+        summary: Legacy Re-engineering
+        client: Fidelity
+        role: Project Manager
+        start: Apr 2003
+        end: Till Date
+        duration: 21 years
+        skills: MVS, COBOL, CICS, JCL, DB2, VSAM, Assembler
+        desc: Legacy Re-engineering
+      2.Legacy_analytics:
+        name: Legacy metadata analytics
+        summary: Legacy metadata analytics
+        client: Fidelity
+        role: Project Manager
+        start: Apr 2003
+        end: Till Date
+        duration: 21 years
+        skills: MVS, COBOL, CICS, JCL, DB2, VSAM, Assembler
+        desc: Legacy metadata analytics
+      1.cloud_platform:
+        name: Cloud based Transmission architecture, Design, Development
+        summary: Cloud based Transmission architecture, Design, Development
+        client: Fidelity
+        role: Project Manager
+        start: Apr 2003
+        end: Till Date
+        duration: 21 years
+        skills: MVS, COBOL, CICS, JCL, DB2, VSAM, Assembler
+        desc: Cloud based Transmission architecture, Design, Development
+      6.gmdid:
+        name: General Motors Dealer Information Database (GMDID) Re-engineering Project
+        summary: |
+          The General Motors Dealer Information Database (GMDID) is the repository for dealer related data including ship-to locations,
+          warranty repair stations, auction sites, etc., and provides for a “total” GM Dealer picture.  GMDID, working in conjunction with the Dealer
+          Network Planning System (DNPS) is the “hub of the wheel” interacting and supplying data to all GM downstream systems and non-GM Stakeholders
+          that require this data to run the business. There are over 30 GM applications, 1800 users and 134 extract requests provided to non-GM
+          Stakeholders each month.  The scope of the project is to create functional spec. and project proposal for the re-engineering project.
+        client: Pershing
+        role: Project Leader
+        start: May 2002
+        end: Apr 2003
+        duration: 1 year
+        skills: MVS, REXX, JCL, COBOL, IMS, DB2, CICS, Siebel, MS Word, MS Access, MS Excel, Windows NT
+        desc: |
+          Redesign the weekly batch cycle, implement the enhancements, provide offshore support.
+          •	Lead the teams in preparing program logic document and functional specification using 2440 COBOL/IMS/DB2 programs, 765 copybooks and
+          180 JCL’s and creating project proposal for GMDID/DNPS systems.
+          •	Created REXX tools to extract the information related to program logic, screen layout and dataset & database access for creating the
+          Functional Specification.
+          •	Did impact analysis on non-GMDID/DNPS applications that access GMDID/DNPS database. Also researched and documented the issues related to
+          data access to non-GMDID/DNPS databases.
+          •	Helped the Siebel team in understanding the data retrieval, update and user access rights in mainframe screens and creating the
+          corresponding Siebel screens.
+          •	Helped the Siebel team in understanding the mainframe batch process and creating the corresponding batch and reporting functionality in
+          the Siebel system.
+          •	Worked with the Siebel team to understand the database-related issues like database schema, data migration and database connectivity for
+          other applications, etc.
+          •	Actively involved in creating Functional Specification (FS) and project proposal for the re-engineering project.  Responsible for planning,
+          scheduling and monitoring the project activities according the project plan
+  2.inautix:
+    name: iNautix Technologies India Pvt
+    designation: Project Leader
+    start: May 2002
+    end: Apr 2003
+    duration: 1 year
+    projects:
+      datashopper:
+        name: Meta Data Services Group
+        summary: |
+          Meta Data Services group of  iNautix provides offshore support to the parent company – Pershing to capture,
+          store and present the Meta Data related to mainframe source code using Platinum Repository and DataShopper
+        client: Pershing
+        role: Project Leader
+        start: May 2002
+        end: Apr 2003
+        duration: 1 year
+        skills: MVS, REXX, JCL, COBOL, DB2, CA-7, Endevor, Platinum/Repository, Platinum/DataShopper, JDK 1.2, Swing,
+          JSP, Servlets, Java Script, DB2 Connect, Lotus Notes, MS Word, MS Access, MS Excel, MS Visio, Windows NT
+        desc: |
+          Redesign the weekly batch cycle, implement the enhancements, provide offshore support.
+          •	Created transition plans and coordinated with the delivery manager to recruit and train resources for the project.
+          Worked with the contractors to conduct knowledge transfer sessions for the offshore team members.
+          •	Did estimation, planning and scheduling for various tasks involved to capture, store and present the Meta Data using
+          Platinum/Repository. Identified the inefficiencies in the weekly batch process and redesigned weekly batch cycle.
+          Organized and consolidated the source code related to Meta Data on mainframe. Submitted the proposal for creating an
+          internet based ‘DBA Online Request Processing System’ for submitting, tracking and fulfilling database related requests.
+          Helped the team members in resolving various technical issues.
+          •	Redesigned the weekly batch cycle using REXX tools to submit the jobs recursively and ran it successfully through CA-7.
+          Identified and resolved various quality issues with the Meta Data. Implemented the enhancements requested by business users.
+          •	Created standard templates to document various activities in the project. Implemented the processes to identity and fix
+          the problems in Repository maintenance. Helped the team in creating tools using REXX and MS Access to automate and document
+          repetitive tasks.  Participated in CMM Level 3 process related activities.
+          •	Conducted training sessions for the team members on the core skills - REXX and Java, DB2 Database Administration - required
+          for the project. Created training material on Repository/Data Shopper and conducted training sessions for new associates.
+          Helped the associates to acquire the skills in DB2 Database administration through IBM certification.
+          Received Star award within three months of joining the company for the contribution to the project
+  3.modis:
+    name: Modis Consulting
+    designation: Senior Software Engineer
+    start: Nov 1997
+    end: Apr 2002
+    duration: 5 years
+    projects:
+      dbs_financials:
+        name: DBS Financials
+        summary: |
+          The project is to install, customize and implement DBS E-series packages for Dade County Public Schools.
+            The project also involved developing Internal Funds systems and integrating it with DBS E-Series packages
+        client: Dade County Public Schools, Office of Information Technology
+        role: Software Consultant
+        start: Apr 2002
+        end: Nov 1997
+        duration: 4.5 years
+        skills: MVS, COBOL, EasyTrieve, JCL, REXX, CICS, VSAM, FileAid, Xpediter, DCI, IE, MS Word, MS Outlook, Windows
+        desc: |
+          Worked as a consultant to assist the project manager in implementing DBS E-series financial system and developing
+          Internal Funds System.
+          •	Actively participated in creating the framework for implementing in-house enhancements and service requests.
+          •	Worked with team members in creating the documentation for screen and report layout changes.
+          •	Helped the team members in resolving the technical issues, creating the test cases and integrating the other
+          in-house systems with the new release.
+          •	Involved in troubleshooting various integration issues. Consulted with the vendor for applying the bug fixes
+          and resolving integration issues with budgetary and financial controller systems.
+          •	Rewrote the Internal Funds online system using Dun & Bradstreet Software’s DCI. Worked with the documentation
+          team in updating the user manual and conducted training sessions for the clients to use the new system.
+          •	Provided level 2 support for the new release.
 
-phone_icon: 'phone.png'
-phone_link: tel:+15157351486
-phone_text: (515) 735-1486
+  4.mastech:
+    name: Mastech Systems Inc.
+    Designation: Software Engineer
+    start: Nov 1996
+    end: Nov 1997
+    duration: 1 year
+    projects:
+      1.DBS E-series Year 2000 Conversion Projects:
+        name: DBS E-series Year 2000 Conversion Projects
+        summary: |
+          Ryder On-line Analytical Decision (ROAD) Support System helps in calculating the average number repair hours at 
+          the repair shops. The system generates productivity reports and helps in estimating the manpower requirements 
+          at various Ryder repair shops
+        client: Ryder Systems , USA
+        role: Project Manager
+        start: Nov 1996
+        end: Oct 1997
+        duration: 1 year
+        skills: MVS, COBOL, JCL, REXX, CICS, DB2, VSAM, DCI, IE, Script, Xpediter, SPUFI, FileAid, QMF
+        description: |
+          Worked as a consultant to perform analysis, design and implementation of ROAD. 
+          •	Consulted and reviewed the client requirements for the new system. Developed new programs and JCL’s and 
+            created installation and maintenance procedures for system maintenance. 
+          •	Worked with the maintenance team in installing the system and participated in the initial system maintenance.
+          •	Worked with the client in resolving the various data integrity issues in the database. 
+          •	Developed VIN subsystem to report any inconsistencies in the database and to correct it using online screens.
 
-mail_icon: 'mail.png'
-mail_link: mailto:ramana.ambore@gmail.com
-mail_text: Ramana.Ambore@gmail.com
-
-medium_icon: 'medium.png'
-medium_link: 'https://medium.com/@rrambo'
-medium_text: 'medium.com/@rrambo'
-
-github_icon: 'github.png'
-github_link: 'https://github.com/RamanaAmbore'
-github_text: 'github.com/RamanaAmbore'
-
-linkedin_icon: 'linkedin.png'
-linkedin_link: 'https://www.linkedin.com/in/ramanaambore'
-linkedin_text: 'linkedin.com/in/ambore'
-
-loc_icon: 'loc.png'
-loc_link: 'https://www.google.com/maps/@41.5639989,-93.8009926,13z'
-loc_text: West Des Moines, Iowa
-
-streamlit_icon: 'rambo.png'
-streamlit_link: 'https://ramanaambore.me'
-streamlit_text: 'ramanaambore.me'
+  5.dbss:
+    name: Dun & Bradstreet Satyma Software
+    Designation: Associate Engineer
+    start: Nov 1997
+    end: Nov 2005
+    duration: 2 years
+    projects:
+      dbs:
+        name: DBS E-series Year 2000 Conversion Projects
+        summary: |
+          Dun & Bradstreet E-series Government is a suit of mainframe financial packages used by Fortune 500 companies 
+          with DB2 as the database management system.  The project is to implement the new release of the package that 
+          is year 2000 compliant
+        client: Dun & Bradstreet Software Corp., USA
+        role: Software Engineer
+        start: Oct 1994
+        end: Oct 1996
+        duration: 2 years
+        skills: MVS, COBOL, JCL, REXX, CICS, VSAM, DCI, IE, Script, Xpediter, FileAid
+        desc: |
+          Worked as a team member to implement Year 200 changes and product enhancements for DB2 version of Purchasing 
+          and Common Components Modules.
+          Reviewed and tested Year 2000 changes for DB2 version of Purchasing and Common Components Modules.
+          •	Designed and implemented the scrolling functionality in Inquiry Screens.
+          •	Resolved the problem in using variable storage used in CICS screens. Performed the bug fixes and enhancements 
+            requested by the client.
+          •	Developed REXX tools for automating Year 2000 changes.  Participated in peer reviews as part of the quality 
+            assurance
+          Worked as a team member to build Design Document for Year 2000 changes and product enhancements for the new 
+          release of Purchasing System (PS) Module of DBS E-series products. 
+          •	Performed coding and testing for year 2000 changes and enhancements. 
+          •	Worked with quality assurance (QA) team for creating quality procedures for ISO 9000 certification. 
+           Won the ‘Project of the Year’ award for the overall performance

@@ -8,6 +8,14 @@ import base64
 from io import BytesIO
 
 
+class CustomDict(dict):
+    def __getitem__(self, key):
+        for k in self.keys():
+            if k.endswith(key):
+                return super().__getitem__(k)
+        raise KeyError(f"Key not found: {key}")
+
+
 def get_image_bin_file(file, icon=True):
     # with open(bin_file, 'rb') as f:
     #     data = f.read()
@@ -41,8 +49,14 @@ def set_png_as_page_bg(png_file, icon=False):
     return
 
 
-with open('data/profile_data.yaml', 'r') as file:
-    prof = yaml.safe_load(file)
+with open('data/profile_data.yaml', 'r',errors='ignore') as file:
+    profile = yaml.safe_load(file)
+    career = CustomDict(profile['career'])
+    education = CustomDict(profile['education'])
+    certifications = CustomDict(profile['certifications'])
+    skills = CustomDict(profile['skills'])
+    contact_social = CustomDict(profile['contact_social'])
+
 
 with open("src/frontend/custom_styles.css") as css:
     css_style = css.read()
@@ -71,6 +85,7 @@ def debug_wrapper(function):
 
 
 def get_image_file(file, icon=True):
+
     if icon:
         return f'static/icons/{file}'
     else:
@@ -88,16 +103,19 @@ def container(*args, **kwargs):
 
     return function(*args, **kwargs)
 
+def del_seq(parm_text):
+    if '.' in parm_text[1:2]: parm_text = parm_text.split('.',1)[1]
+    return parm_text
 
 def disp_icon_text(parm_text, link_flag=True):
-    icon = prof[f'{parm_text}_icon']
-    text = prof[f'{parm_text}_text']
+    icon = contact_social[parm_text]['icon']
+    text = contact_social[parm_text]['name']
 
     if 'http' not in icon:
         icon = get_image_bin_file(icon)
 
     if link_flag:
-        link = prof[f'{parm_text}_link']
+        link = contact_social[parm_text]['link']
         st.markdown(
             f"""
             <div class='icon_href_text_div'>
@@ -129,7 +147,7 @@ def contact_setup():
     with phone_col:
         container(disp_icon_text, 'phone', key='contact_phone')
     with streamlit_col:
-        container(disp_icon_text, 'streamlit', key='social_streamlit')
+        container(disp_icon_text, 'ramana_portal', key='ramana_portal')
     width_weights_social = [1, .05, 1, 0.05, 1, .05, 1]
     linkedin_col, _, github_col, _, medium_col, _, _ = st.columns(width_weights_social,
                                                                   vertical_alignment='center')
