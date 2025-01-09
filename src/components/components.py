@@ -59,7 +59,7 @@ def generate_barchart(categories, ratings, icon_paths, colors=config['colors']):
             showarrow=False,
             textangle=-90,  # Vertical text
             yanchor='bottom',
-            font=dict(color='#3f3f3f', size=14)
+            font=dict(color="#2f4550", size=14)
         )
 
         # Add images inside the bars just below the text
@@ -80,8 +80,8 @@ def generate_barchart(categories, ratings, icon_paths, colors=config['colors']):
     # Update layout for transparent background and vertical x-axis labels
     fig.update_layout(
         yaxis_title="Rating",
-        xaxis=dict( tickangle=0, showticklabels=False, ),# Remove x-axis text by setting ticktext to an empty list),
-        yaxis=dict( range=[0, 5] ),
+        xaxis=dict(tickangle=0, showticklabels=False, ),  # Remove x-axis text by setting ticktext to an empty list),
+        yaxis=dict(range=[0, 5]),
         plot_bgcolor='rgba(0, 0, 0, 0)',  # Transparent plot background
         paper_bgcolor='rgba(0, 0, 0, 0)',  # Transparent overall background
         showlegend=False
