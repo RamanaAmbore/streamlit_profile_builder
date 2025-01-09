@@ -80,6 +80,7 @@ def generate_barchart(categories, ratings, icon_paths, colors=config['colors']):
     # Update layout for transparent background and vertical x-axis labels
     fig.update_layout(
         yaxis_title="Skill Level",
+        xaxis_title="Technical Skills",
         xaxis=dict(tickangle=0, showticklabels=False, ),  # Remove x-axis text by setting ticktext to an empty list),
         yaxis=dict(range=[0, 5]),
         plot_bgcolor='rgba(0, 0, 0, 0)',  # Transparent plot background
