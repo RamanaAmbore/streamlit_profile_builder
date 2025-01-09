@@ -47,7 +47,7 @@ def generate_barchart(categories, ratings, icon_paths, colors=config['colors']):
             text='',
             textposition='inside',
             insidetextanchor='start',
-            marker=dict(color=select_colors[i], line=dict(color='#2f4550', width=1)),  # Light gray border with width 1
+            marker=dict(color=select_colors[i], line=dict(color='#cfcfcf', width=1)),  # Light gray border with width 1
             name=category
         ))
 
