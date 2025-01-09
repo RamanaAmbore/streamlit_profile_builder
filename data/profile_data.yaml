@@ -83,7 +83,7 @@ skills:
     icon: apache_spark.png
     level: 4
   f.springBoot:
-    name: SringBoot
+    name: SpringBoot
     icon: spring.png
     level: 3
   g.cobol:
