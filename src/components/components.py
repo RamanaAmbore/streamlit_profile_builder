@@ -85,6 +85,7 @@ def generate_barchart(categories, ratings, icon_paths, colors=config['colors']):
         yaxis=dict(range=[0, 5]),
         plot_bgcolor='rgba(0, 0, 0, 0)',  # Transparent plot background
         paper_bgcolor='rgba(0, 0, 0, 0)',  # Transparent overall background
+        margin=dict(t=20, b=20),
         showlegend=False
     )
 
