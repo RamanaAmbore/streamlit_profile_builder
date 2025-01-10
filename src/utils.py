@@ -107,15 +107,15 @@ def del_seq(parm_text):
     if '.' in parm_text[1:2]: parm_text = parm_text.split('.',1)[1]
     return parm_text
 
-def disp_icon_text(parm_text, link_flag=True):
-    icon = contact_social[parm_text]['icon']
-    text = contact_social[parm_text]['name']
+def disp_icon_text(parm_text, link_flag=True, dict =contact_social):
+    icon = dict[parm_text]['icon']
+    text = dict[parm_text]['name']
 
     if 'http' not in icon:
         icon = get_image_bin_file(icon)
 
     if link_flag:
-        link = contact_social[parm_text]['link']
+        link = dict[parm_text]['link']
         st.markdown(
             f"""
             <div class='icon_href_text_div'>

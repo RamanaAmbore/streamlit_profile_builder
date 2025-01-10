@@ -12,22 +12,25 @@ summary: |
 education:
   1.msc:
     icon: jk.png
-    name: M.Sc. Computer Science (software)
+    name: M.Sc. Computer Science
     link: https://www.jkinstitute.ac.in/
     org: J.K.Institute of Applied Physics & Tech., Allahabad University
     year: 1993
+    duration: 2
   2.pgdbm:
     icon: xlri.png
-    name: Business Management, 2005
+    name: Business Management
     link: https://www.xlri.ac.in/
     org: Xaviers Labour Relations Institute (XLRI)
     year: 2005
+    duration: 1.5
   3.bsc:
     icon: nagarjuna.png
     name: B.Sc. Computer Science
     link: https://www.nagarjunauniversity.ac.in/
     org: Nagarjuna University
     year: 1991
+    duration: 3
 certifications:
   0.frm:
     icon: frm.png
