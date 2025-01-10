@@ -117,8 +117,8 @@ def generate_education_section():
     write_subheading(':school: Education', key='school')
     width_education = [5, .05, 1]
 
-    education_col, _, education_pie_chart_col = st.columns(width_education,
-                                                           vertical_alignment='center')
+    education_col, _, education_pie_chart_col = container(st.columns,width_education,
+                                                           vertical_alignment='center',key='education_container')
     with education_col:
         write_container(education)
 
@@ -140,7 +140,8 @@ def generate_education_section():
         fig.update_layout(
             paper_bgcolor='rgba(0, 0, 0, 0)',  # Transparent overall background
             showlegend=False,
-            margin=dict(l=0, r=0, t=0, b=0)
+            margin=dict(t=0, b=0),
+            height=150
         )
 
         # Display the pie chart in Streamlit
