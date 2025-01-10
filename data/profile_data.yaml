@@ -70,7 +70,7 @@ certifications:
 skills:
   a.python:
     name: Python
-    icon: python_new.png
+    icon: python.png
     level: 5
   b.streamlit:
     name: Streamlit

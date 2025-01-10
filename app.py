@@ -76,11 +76,11 @@ if __name__ == '__main__':
         fig.update_layout(
             paper_bgcolor='rgba(0, 0, 0, 0)',  # Transparent overall background
             showlegend=False,
-            margin=dict(t=0, b=0)
+            margin=dict(l=0, r=0, t=0, b=0)
         )
 
         # Display the pie chart in Streamlit
-        st.plotly_chart(fig)
+        st.plotly_chart(fig, use_container_width=True)
 
     # for section in config['sections']:
     #     i = section.upper()
