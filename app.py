@@ -1,17 +1,13 @@
 import logging
-import random
 
-import streamlit as st
 from PIL import Image
 
-from src.components.components import generate_option_menu, generate_summary, generate_barchart
+from src.components.components import generate_option_menu, generate_summary_section, generate_skills_section, \
+    generate_contact_social_section, generate_education_section
 from src.logger import log_setup
-from src.utils import contact_social, css_style, profile, config, markdown, get_image_file, set_png_as_page_bg, \
-    contact_setup, container, \
-    ruler, skills, disp_icon_text, education
+from src.utils import css_style, profile, markdown, get_image_file, set_png_as_page_bg
 
 import streamlit as st
-import plotly.graph_objects as go
 
 
 def career_glance():
@@ -25,62 +21,25 @@ def initial_setup():
 
     favicon = Image.open(get_image_file("rambo_favicon.ico"))
 
-    st.set_page_config(page_title=f"{profile['name'].title()}, {profile['name_suffix']}'s Profile", page_icon=favicon,
-                       layout="wide")
+    st.set_page_config(
+        page_title=f"{profile['name'].title()}, {profile['name_suffix']}'s Profile",
+        page_icon=favicon,
+        layout="wide")
     markdown(css_style)
     set_png_as_page_bg('background.png')
 
 
 if __name__ == '__main__':
     initial_setup()
-
     generate_option_menu()
 
-    generate_summary()
-    ruler()
-    contact_setup()
-    ruler()
+    generate_summary_section()
 
-    container(st.subheader,':male-technologist: Skills',key='skills')
-    ruler()
-    categories = [val['name'] for val in skills.values()]
-    icons = [val['icon'] for val in skills.values()]
-    ratings = [val['level'] for val in skills.values()]
-    generate_barchart(categories, ratings, icons)
+    generate_contact_social_section()
 
-    ruler()
-    container(st.subheader,':school: Education',key='education')
-    ruler()
+    generate_skills_section()
 
-
-    width_education = [5, .05, 1]
-    education_col, _, education_pie_chart_col = st.columns(width_education,
-                                                                      vertical_alignment='center')
-    with education_col:
-            for val in education:
-                dct = education[val]
-                container(disp_icon_text, val, text=f"{dct['name']}, {dct['org']}, {dct['year']}", key=f'edu_{val}',dict = education)
-
-
-    with education_pie_chart_col:
-        vals = education.values()
-        labels = [i['short_name'] for i in vals]
-        values = [i['duration'] for i in vals]
-        select_colors = random.sample(config['colors'], len(labels))
-
-        # Create pie chart
-        fig = go.Figure(data=[go.Pie(labels=labels, values=values, marker=dict( colors=select_colors, line=dict(color="gray", width=1) ),
-                                     textinfo='label+percent', insidetextorientation='radial',pull=[0.03] * len(labels))])
-
-        # Update layout for custom appearance
-        fig.update_layout(
-            paper_bgcolor='rgba(0, 0, 0, 0)',  # Transparent overall background
-            showlegend=False,
-            margin=dict(l=0, r=0, t=0, b=0)
-        )
-
-        # Display the pie chart in Streamlit
-        st.plotly_chart(fig, use_container_width=True)
+    generate_education_section()
 
     # for section in config['sections']:
     #     i = section.upper()

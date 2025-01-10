@@ -49,14 +49,14 @@ def set_png_as_page_bg(png_file, icon=False):
     return
 
 
-with open('data/profile_data.yaml', 'r',errors='ignore') as file:
+with open('data/profile_data.yaml', 'r', errors='ignore') as file:
     profile = yaml.safe_load(file)
     career = CustomDict(profile['career'])
     education = CustomDict(profile['education'])
     certifications = CustomDict(profile['certifications'])
     skills = CustomDict(profile['skills'])
-    contact_social = CustomDict(profile['contact_social'])
-
+    contact = CustomDict(profile['contact'])
+    social = CustomDict(profile['social'])
 
 with open("src/frontend/custom_styles.css") as css:
     css_style = css.read()
@@ -85,11 +85,7 @@ def debug_wrapper(function):
 
 
 def get_image_file(file, icon=True):
-
-    if icon:
-        return f'static/icons/{file}'
-    else:
-        return f'static/images/{file}'
+    return f'static/icons/{file}' if icon else f'static/images/{file}'
 
 
 def container(*args, **kwargs):
@@ -103,25 +99,56 @@ def container(*args, **kwargs):
 
     return function(*args, **kwargs)
 
+
 def del_seq(parm_text):
-    if '.' in parm_text[1:2]: parm_text = parm_text.split('.',1)[1]
+    if '.' in parm_text[1:2]: parm_text = parm_text.split('.', 1)[1]
     return parm_text
 
-def disp_icon_text(parm_key, text=None, link_flag=True, dict =contact_social):
-    icon = dict[parm_key]['icon']
 
-    if text is None:
-        text = dict[parm_key]['name']
+def write_container(profile_section):
+    for key, vals in profile_section.items():
+        container(disp_icon_text, vals, key=del_seq(key))
+
+
+def write_colums(column_list, profile_section):
+    profile_keys = list(profile_section.keys())
+    size = len(profile_keys) - 1
+    profile_vals = list(profile_section.values())
+    for idx, col in enumerate(column_list):
+        if idx > size: return
+        key = profile_keys[idx]
+        vals = profile_vals[idx]
+        with col:
+            container(disp_icon_text, vals, key=del_seq(key))
+
+
+def ruler():
+    st.markdown("---")
+
+
+def write_subheading(text, key=None):
+    ruler()
+    container(st.subheader, text, key=key)
+    ruler()
+
+
+def disp_icon_text(parm_vals, link_flag=True):
+    icon = parm_vals['icon']
+
+    text = parm_vals['name'] if parm_vals.get('text') is None else parm_vals['text']
 
     if 'http' not in icon:
         icon = get_image_bin_file(icon)
 
     if link_flag:
-        link = dict[parm_key]['link']
+        link = parm_vals['link']
         st.markdown(
             f"""
             <div class='icon_href_text_div'>
-                <span> <a href="{link}" class='href_link'><span class='href_text'><img src='{icon}' class='href_icon'>{text}</span></a></span>
+                <span> 
+                    <a href="{link}" 
+                    class='href_link'><span class='href_text'><img src='{icon}' class='href_icon'>{text}</a>
+                </span>
             </div>
             """,
             unsafe_allow_html=True
@@ -130,36 +157,8 @@ def disp_icon_text(parm_key, text=None, link_flag=True, dict =contact_social):
         st.markdown(
             f"""
             <div class='icon_text_div'>
-                <img src='{icon}' class='no_href_icon'>
-                <span class='no_href_text'> {text} </span>
+                <img src='{icon}' class='no_href_icon'><span class='no_href_text'> {text} </span>
             </div>
             """,
             unsafe_allow_html=True
         )
-
-
-def contact_setup():
-    width_weights_contact = [1, .05, 1, 0.05, 1, .05, 1]
-    mail_col, _, phone_col, _, loc_col, _, streamlit_col = st.columns(width_weights_contact,
-                                                                      vertical_alignment='center')
-    with loc_col:
-        container(disp_icon_text, 'loc', key='contact_loc')
-    with mail_col:
-        container(disp_icon_text, 'mail', key='contact_mail')
-    with phone_col:
-        container(disp_icon_text, 'phone', key='contact_phone')
-    with streamlit_col:
-        container(disp_icon_text, 'ramana_portal', key='ramana_portal')
-    width_weights_social = [1, .05, 1, 0.05, 1, .05, 1]
-    linkedin_col, _, github_col, _, medium_col, _, _ = st.columns(width_weights_social,
-                                                                  vertical_alignment='center')
-    with linkedin_col:
-        container(disp_icon_text, 'linkedin', key='social_linkedin')
-    with github_col:
-        container(disp_icon_text, 'github', key='social_contact')
-    with medium_col:
-        container(disp_icon_text, 'medium', key='social_medium')
-
-
-def ruler():
-    st.markdown("---")

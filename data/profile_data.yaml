@@ -18,6 +18,7 @@ education:
     org: J.K.Institute of Applied Physics & Tech.
     year: 1993
     duration: 2
+    text: Masters in Computer Science, J.K.Institute of Applied Physics & Tech., 1993
   2.pgdbm:
     icon: xlri.png
     name: PGCBM
@@ -26,6 +27,7 @@ education:
     org: Xaviers Labour Relations Institute(XLRI)
     year: 2005
     duration: 1.5
+    text: PGCBM, Xaviers Labour Relations Institute(XLRI), 2005
   3.bsc:
     icon: nagarjuna.png
     name: Bachelors in Computer Science
@@ -34,6 +36,7 @@ education:
     org: Nagarjuna University
     year: 1991
     duration: 3
+    text: Bachelors in Computer Science, Nagarjuna University, 1991
 certifications:
   0.frm:
     icon: frm.png
@@ -128,7 +131,7 @@ skills:
     name: GIT
     icon: git.png
     level: 4
-contact_social:
+contact:
   1.mail:
     name: Ramana.Ambore@gmail.com
     icon: mail.png
@@ -145,15 +148,16 @@ contact_social:
     name: ramanaambore.me
     icon: rambo.png
     link: https://ramanaambore.me
-  5.linkedin:
+social:
+  1.linkedin:
     name: linkedin.com/in/ambore
     icon: linkedin.png
     link: https://www.linkedin.com/in/ramanaambore
-  6.github:
+  2.github:
     name: github.com/RamanaAmbore
     icon: github.png
     link: https://github.com/RamanaAmbore
-  7.medium:
+  3.medium:
     name: medium.com/@rrambo
     icon: medium.png
     link: https://medium.com/@rrambo

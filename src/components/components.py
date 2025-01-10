@@ -1,7 +1,9 @@
 import streamlit as st
+from plotly import graph_objects as go
 from streamlit_option_menu import option_menu
 
-from src.utils import container, get_image_file, contact_social, config, profile, get_image_bin_file
+from src.utils import container, get_image_file, config, profile, get_image_bin_file, skills, write_subheading, ruler, \
+    write_colums, contact, social, write_container, education
 import plotly.graph_objects as go
 import random
 
@@ -20,7 +22,7 @@ def generate_option_menu():
                                )
 
 
-def generate_summary():
+def generate_summary_section():
     container(st.header, f'{profile['name']}, {profile['name_suffix']}', key='profile_name')
     # st.header(about_me_name)
     container(st.write, f'#### {profile['designation']}', key='profile_designation')
@@ -32,9 +34,15 @@ def generate_summary():
         container(st.write, profile['summary'], key='summary')
 
 
-def generate_barchart(categories, ratings, icon_paths, colors=config['colors']):
+def generate_skills_section():
+    colors = config['colors']
+    categories = [val['name'] for val in skills.values()]
+    icon_paths = [val['icon'] for val in skills.values()]
+    ratings = [val['level'] for val in skills.values()]
     select_colors = random.sample(colors, len(ratings))
     img_base64 = [get_image_bin_file(icon) for icon in icon_paths]
+
+    write_subheading(':male-technologist: Skills', key='skills')
 
     # Create bar chart
     fig = go.Figure()
@@ -47,7 +55,7 @@ def generate_barchart(categories, ratings, icon_paths, colors=config['colors']):
             text='',
             textposition='inside',
             insidetextanchor='start',
-            marker=dict(color=select_colors[i], line=dict(color='#cfcfcf', width=1)),  # Light gray border with width 1
+            marker=dict(color=select_colors[i], line=dict(color='#dfdfdf', width=1)),  # Light gray border with width 1
             name=category
         ))
 
@@ -91,3 +99,49 @@ def generate_barchart(categories, ratings, icon_paths, colors=config['colors']):
 
     # Display the chart in Streamlit
     st.plotly_chart(fig)
+
+
+def generate_contact_social_section():
+    ruler()
+    width_cols = [1, .05, 1, 0.05, 1, .05, 1]
+    col1, _, col2, _, col3, _, col4 = st.columns(width_cols, vertical_alignment='center')
+    write_colums([col1, col2, col3, col4], contact)
+
+    width_cols = [1, .05, 1, 0.05, 1, .05, 1]
+    col1, _, col2, _, col3, _, col4 = st.columns(width_cols, vertical_alignment='center')
+    write_colums([col1, col2, col3, col4], social)
+
+
+def generate_education_section():
+    global values
+    write_subheading(':school: Education', key='school')
+    width_education = [5, .05, 1]
+
+    education_col, _, education_pie_chart_col = st.columns(width_education,
+                                                           vertical_alignment='center')
+    with education_col:
+        write_container(education)
+
+    with education_pie_chart_col:
+        vals = education.values()
+        labels = [i['short_name'] for i in vals]
+        values = [i['duration'] for i in vals]
+        select_colors = random.sample(config['colors'], len(labels))
+
+        # Create pie chart
+        fig = go.Figure(data=[
+            go.Pie(labels=labels,
+                   values=values,
+                   marker=dict(colors=select_colors, line=dict(color="gray", width=1)),
+                   textinfo='label+percent', insidetextorientation='radial',
+                   pull=[0.03] * len(labels))])
+
+        # Update layout for custom appearance
+        fig.update_layout(
+            paper_bgcolor='rgba(0, 0, 0, 0)',  # Transparent overall background
+            showlegend=False,
+            margin=dict(l=0, r=0, t=0, b=0)
+        )
+
+        # Display the pie chart in Streamlit
+        st.plotly_chart(fig, use_container_width=True)

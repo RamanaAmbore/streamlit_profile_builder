@@ -1,3 +1,3 @@
 sections: ['Summary', 'Experience', 'Skills', 'Certifications', 'Education', 'Projects', 'Hobbies']
 section_icons: ['house', 'person', 'gear', 'clipboard-check', 'trophy', 'folder', 'joystick']
-colors: ['#ffc09f','#ffee93','#fcf5c7','#a0ced9','#adf7b6','#809bce','#95b8d1','#b8e0d2','#d6eadf','#eac4d5','#e8dff5','#fce1e4','#fcf4dd','#ddedea','#daeaf6','#d4afb9','#d1cfe2','#9cadce','#7ec4cf','#52b2cf','#61f4de','#65cbe9','#68b6ef','#ff7477','#e69597','#ceb5b7','#b5d6d6','#9cf6f6','#f55c7a','#f57c73','#f68c70','#f6ac69','#f6bc66','#bde0fe','#a2d2ff']
+colors: ['#ffc09f','#ffee93','#fcf5c7','#a0ced9','#95b8d1','#b8e0d2','#d6eadf','#e8dff5','#fce1e4','#fcf4dd','#ddedea','#daeaf6','#d1cfe2','#9cadce','#7ec4cf','#e69597','#ceb5b7','#b5d6d6','#f68c70','#f6ac69','#f6bc66','#bde0fe']
