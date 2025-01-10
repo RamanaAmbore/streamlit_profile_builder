@@ -12,21 +12,24 @@ summary: |
 education:
   1.msc:
     icon: jk.png
-    name: M.Sc. Computer Science
+    name: Masters in Computer Science
+    short_name: Master's
     link: https://www.jkinstitute.ac.in/
-    org: J.K.Institute of Applied Physics & Tech., Allahabad University
+    org: J.K.Institute of Applied Physics & Tech.
     year: 1993
     duration: 2
   2.pgdbm:
     icon: xlri.png
-    name: Business Management
+    name: PGCBM
+    short_name: PGCBM
     link: https://www.xlri.ac.in/
-    org: Xaviers Labour Relations Institute (XLRI)
+    org: Xaviers Labour Relations Institute(XLRI)
     year: 2005
     duration: 1.5
   3.bsc:
     icon: nagarjuna.png
-    name: B.Sc. Computer Science
+    name: Bachelors in Computer Science
+    short_name: Bachelor's
     link: https://www.nagarjunauniversity.ac.in/
     org: Nagarjuna University
     year: 1991
@@ -131,7 +134,7 @@ contact_social:
     icon: mail.png
     link: mailto:ramana.ambore@gmail.com
   2.phone:
-    name: (515) 735level:1486
+    name: (515) 735-1486
     icon: phone.png
     link: tel:+15157351486
   3.loc:

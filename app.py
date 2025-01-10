@@ -53,18 +53,19 @@ if __name__ == '__main__':
     ruler()
 
 
-    width_education = [3, .05, 1]
+    width_education = [5, .05, 1]
     education_col, _, education_pie_chart_col = st.columns(width_education,
                                                                       vertical_alignment='center')
     with education_col:
-            container(disp_icon_text, 'msc', key='edu_msc',dict = education)
-            container(disp_icon_text, 'pgdbm', key='edu_pgdbm',dict = education)
-            container(disp_icon_text, 'bsc', key='edu_bsc',dict = education)
+            for val in education:
+                dct = education[val]
+                container(disp_icon_text, val, text=f"{dct['name']}, {dct['org']}, {dct['year']}", key=f'edu_{val}',dict = education)
+
 
     with education_pie_chart_col:
-        # Sample data
-        labels = [i['name'] for i in education.values()]
-        values = [i['duration'] for i in education.values()]
+        vals = education.values()
+        labels = [i['short_name'] for i in vals]
+        values = [i['duration'] for i in vals]
         select_colors = random.sample(config['colors'], len(labels))
 
         # Create pie chart
@@ -75,7 +76,7 @@ if __name__ == '__main__':
         fig.update_layout(
             paper_bgcolor='rgba(0, 0, 0, 0)',  # Transparent overall background
             showlegend=False,
-            margin=dict(t=20, b=20),
+            margin=dict(t=0, b=0)
         )
 
         # Display the pie chart in Streamlit
