@@ -36,23 +36,22 @@ colors:
   - '#bde0fe'
 
 dark_colors:
-  - '#ffc09f'
-  - '#ffee93'
-  - '#a0ced9'
-  - '#95b8d1'
-  - '#b8e0d2'
-  - '#e8dff5'
-  - '#fcf4dd'
-  - '#ddedea'
-  - '#daeaf6'
-  - '#d1cfe2'
-  - '#9cadce'
-  - '#7ec4cf'
-  - '#e69597'
-  - '#ceb5b7'
-  - '#b5d6d6'
-  - '#f6bc66'
-  - '#bde0fe'
+  - "#2ab7ca"
+  - "#fed766"
+  - "#005b96"
+  - "#651e3e"
+  - "#dec3c3"
+  - "#3da4ab"
+  - "#fe8a71"
+  - "#d0e1f9"
+  - "#c99789"
+  - "#96ceb4"
+  - "#854442"
+  - "#6f7c85"
+  - "#58668b"
+  - "#ffefd7"
+  - "#e4dcf1"
+  - "#e0ac69"
 
 
 freq_color: "#2f4550"

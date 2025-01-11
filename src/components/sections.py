@@ -253,7 +253,7 @@ def generate_milestonre_section():
         # Add dotted line connecting bubble to x-axis
         fig.add_trace(go.Scatter(
             x=[row['X'], row['X']],
-            y=[2, row['Y']*0.8],  # Connects bubble to x-axis
+            y=[1, row['Y']*0.8],  # Connects bubble to x-axis
             mode='lines',
             line=dict(color=freq_color, width=1, dash='dash'),  # Dotted line
             hoverinfo='skip',  # No hover for the line
@@ -279,7 +279,10 @@ def generate_milestonre_section():
             ticktext = []
     ),
         plot_bgcolor='rgba(0, 0, 0, 0)',  # Transparent background
-        paper_bgcolor='rgba(0, 0, 0, 0)'  # Transparent overall background
+        paper_bgcolor='rgba(0, 0, 0, 0)',  # Transparent overall background
+        showlegend=False,
+        margin=dict(t=10, b=10),
+        height=350
     )
 
     # Display the chart in Streamlit
