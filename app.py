@@ -4,10 +4,12 @@ import numpy as np
 import pandas as pd
 from PIL import Image
 
-from src.components.components import generate_option_menu, generate_summary_section, generate_skills_section, \
-    generate_contact_social_section, generate_education_section
+from src.components.components import set_png_as_page_bg, markdown
+from src.components.sections import generate_summary_section, generate_skills_section, \
+    generate_contact_social_section, generate_education_section, generate_sidebar_section, \
+    generate_certification_section
 from src.logger import log_setup
-from src.utils import css_style, profile, markdown, get_image_file, set_png_as_page_bg, milestones
+from src.utils import css_style, profile, get_image_path, milestones
 import plotly.graph_objects as go
 import streamlit as st
 import plotly.express as px
@@ -22,7 +24,7 @@ def initial_setup():
         st.session_state.logger = log_setup()
         logging.info('Logging setup')
 
-    favicon = Image.open(get_image_file("rambo_favicon.ico"))
+    favicon = Image.open(get_image_path("rambo_favicon.ico"))
 
     st.set_page_config(
         page_title=f"{profile['name'].title()}, {profile['name_suffix']}'s Profile",
@@ -34,7 +36,7 @@ def initial_setup():
 
 if __name__ == '__main__':
     initial_setup()
-    generate_option_menu()
+    generate_sidebar_section()
 
     generate_summary_section()
 
@@ -170,6 +172,8 @@ if __name__ == '__main__':
     generate_skills_section()
 
     generate_education_section()
+
+    generate_certification_section()
 
     # for section in config['sections']:
     #     i = section.upper()

@@ -99,6 +99,7 @@ certifications:
   2.dba:
     name: dba
     icon: ibm_db2.png
+    link: https://www.ibm.com/training/certification/ibm-certified-administrator-db2-12-for-zos-C0005400
     org: IBM
     year: 2003
     duration: 1
@@ -108,24 +109,27 @@ certifications:
   3.six_sigma:
     name: six sigma
     icon: six_sigma.png
-    org: QEI
+    link: https://qaiglobalinstitute.com/six-sigma-certification-courses/
+    org: QAI
     year: 2005
     duration: .5
     group: process
-    text: Six Sigma Green Belt certification, QEI, 2005
-    hover: Six Sigma Green Belt certification, QEI, 2005
+    text: Six Sigma Green Belt certification, QAI, 2005
+    hover: Six Sigma Green Belt certification, QAI, 2005
   4.pmp:
     name: pmp
-    icon: pmp.jpg
+    icon: pmp.png
+    link: https://www.pmi.org/certifications/project-management-pmp
     org: PMP
     year: 2004
     duration: .5
     group: management
     text: Project Management Professional (PMP), 2004
-    hover: Six Sigma Green Belt certification, QEI, 2005
+    hover: Six Sigma Green Belt certification, QAI, 2005
   5.java:
     name: java
     icon: java_small.png
+    link: https://www.oracle.com/in/education/training/java/
     org: Sun
     year: 1999
     duration: .5

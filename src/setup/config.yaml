@@ -1,19 +1,19 @@
-sidebar:
-  Summary: house
-  Experience: person
-  Skills: gear
-  Certifications: clipboard-check
-  Education: trophy
-  Projects: folder
-  Hobbies: joystick
-sections:
-  Summary:
-  Experience: male-technologist
-  Skills:
-  Certifications:
-  Education: school
-  Projects:
-  Hobbies:
+sidebar_icons:
+  summary: house
+  experience: person
+  skills: gear
+  certifications: clipboard-check
+  education: trophy
+  projects: folder
+  hobbies: joystick
+section_icons:
+  summary: house
+  experience: necktie
+  skills: male-technologist
+  certifications: trophy
+  education: school
+  projects: open_file_folder
+  hobbies: video_game
 colors:
   - '#ffc09f'
   - '#ffee93'
