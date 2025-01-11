@@ -7,11 +7,10 @@ from src.utils import container, get_image_file, config, profile, get_image_bin_
 import plotly.graph_objects as go
 
 
-
 def generate_option_menu():
     with st.sidebar:
-        selected = option_menu("", config['sections'],
-                               icons=config['section_icons'], menu_icon="cast", default_index=-1,
+        selected = option_menu("", list(config['sidebar'].keys()),
+                               icons=list(config['sidebar'].values()), menu_icon="cast", default_index=-1,
                                styles={
                                    "container": {"padding": "0!important", "background-color": "#2c4653"},
                                    "icon": {"color": "white", "font-size": "20px", "fond-weight": "bold"},
@@ -28,8 +27,8 @@ def generate_summary_section():
     container(st.write, f'#### {profile['designation']}', key='profile_designation')
     col1, _, col2 = st.columns([2, .1, 10])
     with col1:
-        container(st.image, get_image_file('ramana_photo.png', False), clamp=True,
-                  use_container_width=True, key='bio_photo')
+        container(st.image, get_image_file('profile_photo.png', False), clamp=True,
+                  use_container_width=True, key='profile_photo')
     with col2:
         container(st.write, profile['summary'], key='summary')
 
@@ -39,6 +38,7 @@ def generate_skills_section():
     icon_paths = [val['icon'] for val in skills.values()]
     ratings = [val['level'] for val in skills.values()]
     select_colors = get_sample(colors, len(ratings))
+
     img_base64 = [get_image_bin_file(icon) for icon in icon_paths]
 
     write_subheading(':male-technologist: Skills', key='skills')
@@ -54,7 +54,10 @@ def generate_skills_section():
             text='',
             textposition='inside',
             insidetextanchor='start',
-            marker=dict(color=select_colors[i], line=dict(color='#dfdfdf', width=1)),  # Light gray border with width 1
+            marker=dict(
+                color=select_colors[i],  # Base color
+                line=dict(color='lightgray', width=1)  # Shadow effect with darker border
+            ),
             name=category
         ))
 
@@ -122,7 +125,7 @@ def generate_education_section():
 
     with education_pie_chart_col:
         vals = education.values()
-        labels = [i['short_name'] for i in vals]
+        labels = [i['name'] for i in vals]
         values = [i['duration'] for i in vals]
         select_colors = get_sample(colors, len(labels))
 

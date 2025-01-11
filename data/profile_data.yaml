@@ -11,164 +11,203 @@ summary: |
 milestones:
   1991:
     name: Bachelors
-    tooltip: Completed Bachelor degree in Computer Science
-    impact: 10
     icon: cfa.png
+    hover: Completed Bachelor degree in Computer Science
+    impact: 10
     side: up
   1993:
     name: Masters
-    tooltip: Completed Master degree in Computer Science sponsored by Defence Research Development Organization
-    impact: 20
     icon: cfa.png
+    hover: Completed Master degree in Computer Science sponsored by Defence Research Development Organization
+    impact: 20
     side: down
   2005:
     name: PGCBM
-    tooltip: Completed PGCBM from Xaviers Labour Relations Institute (XLRI)
-    impact: 5
     icon: cfa.png
+    hover: Completed PGCBM from Xaviers Labour Relations Institute (XLRI)
+    impact: 5
     side: up
   2002:
     name: FRM
-    tooltip: Cleared two parts of Financial Risk Manager (FRM) after burning mid night oil so many days. Gave me
+    icon: cfa.png
+    hover: Cleared two parts of Financial Risk Manager (FRM) after burning mid night oil so many days. Gave me
       foundation on risk management for algo trading
     impact: 15
-    icon: cfa.png
     side: down
   2001:
     name: CFA
-    tooltip: Cleared two levels  of of Certified Financial Analyst which helped understanding trading and investment
-    impact: 25
     icon: cfa.png
+    hover: Cleared two levels  of of Certified Financial Analyst which helped understanding trading and investment
+    impact: 25
     side: up
   2003:
     name: Award
-    tooltip: Received delivery excellence award for innovation. one among the 40 people to receive the award across the
+    icon: cfa.png
+    hover: Received delivery excellence award for innovation. one among the 40 people to receive the award across the
       organization
     impact: 25
-    icon: cfa.png
     side: down
 education:
   1.msc:
+    name: Master's
     icon: jk.png
-    name: Masters in Computer Science
-    short_name: Master's
     link: https://www.jkinstitute.ac.in/
     org: J.K.Institute of Applied Physics & Tech.
     year: 1993
     duration: 2
     text: Masters in Computer Science, J.K.Institute of Applied Physics & Tech., 1993
+    hover: Masters in Computer Science, J.K.Institute of Applied Physics & Tech., 1993
   2.pgdbm:
-    icon: xlri.png
     name: PGCBM
-    short_name: PGCBM
+    icon: xlri.png
     link: https://www.xlri.ac.in/
     org: Xaviers Labour Relations Institute(XLRI)
     year: 2005
     duration: 1.5
     text: PGCBM, Xaviers Labour Relations Institute(XLRI), 2005
+    hover: PGCBM, Xaviers Labour Relations Institute(XLRI), 2005
   3.bsc:
+    name: Bachelor's
     icon: nagarjuna.png
-    name: Bachelors in Computer Science
-    short_name: Bachelor's
     link: https://www.nagarjunauniversity.ac.in/
     org: Nagarjuna University
     year: 1991
     duration: 3
     text: Bachelors in Computer Science, Nagarjuna University, 1991
+    hover: Bachelors in Computer Science, Nagarjuna University, 1991
 certifications:
   0.frm:
+    name: frm
     icon: frm.png
-    name: Financial Risk Manager (FRM)
     link: https://www.cfainstitute.org/
     org: GARP
     year: 2022
+    duration: 1.5
+    group: domain
+    text: GARP certified Financial Risk Manager (FRM), 2022
+    hover: GARP certified Financial Risk Manager (FRM), 2022
   1.cfa:
-    name: Cleared Certified Financial Analyst (CFA)
-    link: https://www.cfainstitute.org/
+    name: cfa
     icon: cfa.png
+    link: https://www.cfainstitute.org/
     org: CFA
     year: 2020
+    duration: 1.5
+    group: domain
+    text: Cleared Certified Financial Analyst (CFA) Level 1 and Level 2, 2020
+    hover: Cleared Certified Financial Analyst (CFA) Level 1 and Level 2, 2020
   2.dba:
-    name: IBM Certified DB2 DBA
+    name: dba
     icon: ibm_db2.png
     org: IBM
     year: 2003
+    duration: 1
+    group: technical
+    text: IBM Certified DB2 DBA, 2003
+    hover: IBM Certified DB2 DBA, 2003
   3.six_sigma:
-    name: Six Sigma Green Belt certification
+    name: six sigma
     icon: six_sigma.png
-    org: QUI
+    org: QEI
     year: 2005
+    duration: .5
+    group: process
+    text: Six Sigma Green Belt certification, QEI, 2005
+    hover: Six Sigma Green Belt certification, QEI, 2005
   4.pmp:
-    name: Project Management Professional (PMP)
+    name: pmp
     icon: pmp.jpg
     org: PMP
     year: 2004
+    duration: .5
+    group: management
+    text: Project Management Professional (PMP), 2004
+    hover: Six Sigma Green Belt certification, QEI, 2005
   5.java:
-    name: Sun Certified Java Programmer
+    name: java
     icon: java_small.png
     org: Sun
     year: 1999
+    duration: .5
+    group: technical
+    text: Sun Certified Java Programmer, 1999
+    hover: Sun Certified Java Programmer, 1999
 skills:
   a.python:
     name: Python
     icon: python.png
     level: 5
+    hover: Used extensively for legacy automation, visualization and analytics
   b.streamlit:
     name: Streamlit
     icon: streamlit.png
     level: 3
+    hover: Used for mainframe analytics
   c.dash/plotly:
     name: Dash/Plotly
     icon: dash_plotly.png
     level: 4
+    hover: Dash/Plotly
   d.java:
     name: Java
     icon: java_small.png
     level: 4
+    hover: java
   e.spark:
     name: Spark
     icon: apache_spark.png
     level: 4
+    hover: spark
   f.springBoot:
     name: SpringBoot
     icon: spring.png
     level: 3
+    hover: SpringBoot
   g.cobol:
     name: COBOL
     icon: ibm.png
     level: 5
+    hover: COBOL
   h.cics:
     name: CICS
     icon: ibm.png
     level: 5
+    hover: CICS
   i.db2:
     name: DB2
     icon: ibm_db2.png
     level: 5
+    hover: DB2
   j.jcl:
     name: JCL
     icon: ibm.png
     level: 5
+    hover: JCL
   k.vsam:
     name: VSAM
     icon: ibm.png
     level: 3
+    hover: VSAM
   l.aws:
     name: AWS
     icon: aws.png
     level: 3
+    hover: AWS
   m.terraform:
     name: Terraform
     icon: terraform.png
     level: 3
+    hover: Terraform
   n.jenkins:
     name: Jenkins
     icon: jenkins.png
     level: 3
+    hover: Jenkins
   o.git:
     name: GIT
     icon: git.png
     level: 4
+    hover: GIT
 contact:
   1.mail:
     name: Ramana.Ambore@gmail.com
