@@ -8,7 +8,45 @@ summary: |
   platform to capitalize on market inefficiencies. Proficient in leveraging cloud technologies, mainframe systems, 
   data analytics, and agile methodologies to deliver innovative solutions. My first mainframe user ID and nickname, 
   'Rambo,' reflect my unwavering tenacity in tackling complex challenges head-on.
-
+milestones:
+  1991:
+    name: Bachelors
+    tooltip: Completed Bachelor degree in Computer Science
+    impact: 10
+    icon: cfa.png
+    side: up
+  1993:
+    name: Masters
+    tooltip: Completed Master degree in Computer Science sponsored by Defence Research Development Organization
+    impact: 20
+    icon: cfa.png
+    side: down
+  2005:
+    name: PGCBM
+    tooltip: Completed PGCBM from Xaviers Labour Relations Institute (XLRI)
+    impact: 5
+    icon: cfa.png
+    side: up
+  2002:
+    name: FRM
+    tooltip: Cleared two parts of Financial Risk Manager (FRM) after burning mid night oil so many days. Gave me
+      foundation on risk management for algo trading
+    impact: 15
+    icon: cfa.png
+    side: down
+  2001:
+    name: CFA
+    tooltip: Cleared two levels  of of Certified Financial Analyst which helped understanding trading and investment
+    impact: 25
+    icon: cfa.png
+    side: up
+  2003:
+    name: Award
+    tooltip: Received delivery excellence award for innovation. one among the 40 people to receive the award across the
+      organization
+    impact: 25
+    icon: cfa.png
+    side: down
 education:
   1.msc:
     icon: jk.png

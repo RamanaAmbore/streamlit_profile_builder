@@ -1,5 +1,6 @@
 import functools
 import logging
+import random
 
 import streamlit as st
 import yaml
@@ -57,12 +58,15 @@ with open('data/profile_data.yaml', 'r', errors='ignore') as file:
     skills = CustomDict(profile['skills'])
     contact = CustomDict(profile['contact'])
     social = CustomDict(profile['social'])
+    milestones = CustomDict(profile['milestones'])
 
 with open("src/frontend/custom_styles.css") as css:
     css_style = css.read()
 
 with open('src/setup/config.yaml', 'r') as file:
     config = yaml.safe_load(file)
+    colors = config['colors']
+    freq_color = config['freq_color']
 
 
 def markdown(text, style_tag=True):
@@ -130,6 +134,10 @@ def write_subheading(text, key=None):
     ruler()
     container(st.subheader, text, key=key)
     ruler()
+
+
+def get_sample(lst, size):
+    return random.sample(lst, size) if len(lst) > size else random.choices(lst, size)
 
 
 def disp_icon_text(parm_vals, link_flag=True):

@@ -3,9 +3,9 @@ from plotly import graph_objects as go
 from streamlit_option_menu import option_menu
 
 from src.utils import container, get_image_file, config, profile, get_image_bin_file, skills, write_subheading, ruler, \
-    write_colums, contact, social, write_container, education
+    write_colums, contact, social, write_container, education, get_sample, colors, freq_color
 import plotly.graph_objects as go
-import random
+
 
 
 def generate_option_menu():
@@ -35,11 +35,10 @@ def generate_summary_section():
 
 
 def generate_skills_section():
-    colors = config['colors']
     categories = [val['name'] for val in skills.values()]
     icon_paths = [val['icon'] for val in skills.values()]
     ratings = [val['level'] for val in skills.values()]
-    select_colors = random.sample(colors, len(ratings))
+    select_colors = get_sample(colors, len(ratings))
     img_base64 = [get_image_bin_file(icon) for icon in icon_paths]
 
     write_subheading(':male-technologist: Skills', key='skills')
@@ -67,7 +66,7 @@ def generate_skills_section():
             showarrow=False,
             textangle=-90,  # Vertical text
             yanchor='bottom',
-            font=dict(color="#2f4550", size=14)
+            font=dict(color=freq_color, size=14)
         )
 
         # Add images inside the bars just below the text
@@ -87,9 +86,9 @@ def generate_skills_section():
 
     # Update layout for transparent background and vertical x-axis labels
     fig.update_layout(
-        xaxis_title=dict(text="Technical Skills", font=dict(color="#2f4550", size=14)),
-        yaxis_title=dict(text="Skill Level", font=dict(color="#2f4550", size=14)),
-        xaxis=dict(tickangle=0, showticklabels=False, ),  # Remove x-axis text by setting ticktext to an empty list),
+        xaxis_title=dict(text="Technical Skills", font=dict(color=freq_color, size=14)),
+        yaxis_title=dict(text="Skill Level", font=dict(color=freq_color, size=14)),
+        xaxis=dict(tickangle=0, showticklabels=False, ),
         yaxis=dict(range=[0, 5]),
         plot_bgcolor='rgba(0, 0, 0, 0)',  # Transparent plot background
         paper_bgcolor='rgba(0, 0, 0, 0)',  # Transparent overall background
@@ -113,12 +112,11 @@ def generate_contact_social_section():
 
 
 def generate_education_section():
-    global values
     write_subheading(':school: Education', key='school')
     width_education = [5, .05, 1]
 
-    education_col, _, education_pie_chart_col = container(st.columns,width_education,
-                                                           vertical_alignment='center',key='education_container')
+    education_col, _, education_pie_chart_col = container(st.columns, width_education,
+                                                          vertical_alignment='center', key='education_container')
     with education_col:
         write_container(education)
 
@@ -126,7 +124,7 @@ def generate_education_section():
         vals = education.values()
         labels = [i['short_name'] for i in vals]
         values = [i['duration'] for i in vals]
-        select_colors = random.sample(config['colors'], len(labels))
+        select_colors = get_sample(colors, len(labels))
 
         # Create pie chart
         fig = go.Figure(data=[
