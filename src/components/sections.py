@@ -1,10 +1,12 @@
+import numpy as np
+import pandas as pd
 import streamlit as st
 from plotly import graph_objects as go
 from streamlit_option_menu import option_menu
 
 from src.components.components import container, write_subheading, create_ruler, write_colums, write_container
 from src.utils import profile, get_image_path, get_sample, colors, get_image_bin_file, freq_color, contact, \
-    social, education, config, get_config, get_profile
+    social, education, config, get_config, get_profile, colors, dark_colors
 
 
 def generate_sidebar_section():
@@ -190,3 +192,96 @@ def generate_certification_section():
 
         # Display the pie chart in Streamlit
         st.plotly_chart(fig, use_container_width=True)
+
+
+def generate_milestonre_section():
+    # Generate example data
+    section_name = 'milestones'
+    key_list, val_list = get_profile(section_name)
+    write_subheading(section_name, key=section_name)
+
+    years = key_list
+    milestones = [i['name'] for i in val_list]  # Example milestones
+    impacts = [i['impact'] *3 for i in val_list]   # Random impact values (positive and negative)
+    hover = [i['hover'] for i in val_list]  # Categories for tooltip
+    Y = [i['y'] for i in val_list]
+    select_colors = get_sample(dark_colors, len(years))
+    # Create a dataframe
+    df = pd.DataFrame({
+        'Y': Y,
+        'X': years,
+        'Milestone': milestones,
+        'Impact': impacts ,
+        'Hover': hover,
+        'Color': select_colors
+    })
+
+    fig = go.Figure()
+
+    # Add shadow effect as a larger, semi-transparent circle behind each bubble
+    for _, row in df.iterrows():
+        # Add shadow (slightly larger and semi-transparent)
+        fig.add_trace(go.Scatter(
+            x=[row['X']],
+            y=[row['Y']],
+            marker=dict(
+                size=row['Impact'] * 1.2,  # Slightly larger for shadow
+                color='rgba(50, 50, 50, 0.2)',  # Semi-transparent gray
+            ),
+            mode='markers',
+            hoverinfo='skip',  # Hide shadow hover info
+            showlegend=False  # Do not include in legend
+        ))
+
+        # Add main bubble
+        fig.add_trace(go.Scatter(
+            x=[row['X']],
+            y=[row['Y']],
+            marker=dict(
+                size=row['Impact'],  # Bubble size based on 'Impact'
+                color =row['Color'] ,
+                line=dict(color='gray', width=1)  # Border for the bubble
+            ),
+            mode='markers+text',
+            text=row['Milestone'],  # Display milestone inside or near the bubble
+            textposition='top center',  # Position of the text
+            hovertext=row['Hover'],  # Hover text from DataFrame
+            hoverinfo='text',
+            name=row['Milestone']  # Name for the legend (optional)
+        ))
+
+        # Add dotted line connecting bubble to x-axis
+        fig.add_trace(go.Scatter(
+            x=[row['X'], row['X']],
+            y=[2, row['Y']*0.8],  # Connects bubble to x-axis
+            mode='lines',
+            line=dict(color=freq_color, width=1, dash='dash'),  # Dotted line
+            hoverinfo='skip',  # No hover for the line
+            showlegend=False  # Do not include in legend
+        ))
+
+    fig.update_layout(
+        xaxis=dict(
+            showline=True,
+            linecolor=freq_color,
+            linewidth=1,
+            showgrid=False,
+            zeroline=False,
+            tickvals=df['X'],  # Use only the years in the DataFrame for x-axis ticks
+            ticktext=df['X'],  # Ensure the labels match the ticks
+            type='category'  # Treat the x-axis as categorical (ordinal)
+        ),
+        yaxis=dict(
+            showline=False,  # Hide y-axis line
+            showgrid=False,  # Hide grid lines
+            zeroline=False,  # Hide the zero line
+            tickvals = [],
+            ticktext = []
+    ),
+        plot_bgcolor='rgba(0, 0, 0, 0)',  # Transparent background
+        paper_bgcolor='rgba(0, 0, 0, 0)'  # Transparent overall background
+    )
+
+    # Display the chart in Streamlit
+    st.plotly_chart(fig)
+

@@ -6,6 +6,7 @@ sidebar_icons:
   education: trophy
   projects: folder
   hobbies: joystick
+  milestones: calendar
 section_icons:
   summary: house
   experience: necktie
@@ -14,6 +15,7 @@ section_icons:
   education: school
   projects: open_file_folder
   hobbies: video_game
+  milestones: calendar
 colors:
   - '#ffc09f'
   - '#ffee93'
@@ -32,4 +34,25 @@ colors:
   - '#b5d6d6'
   - '#f6bc66'
   - '#bde0fe'
+
+dark_colors:
+  - '#ffc09f'
+  - '#ffee93'
+  - '#a0ced9'
+  - '#95b8d1'
+  - '#b8e0d2'
+  - '#e8dff5'
+  - '#fcf4dd'
+  - '#ddedea'
+  - '#daeaf6'
+  - '#d1cfe2'
+  - '#9cadce'
+  - '#7ec4cf'
+  - '#e69597'
+  - '#ceb5b7'
+  - '#b5d6d6'
+  - '#f6bc66'
+  - '#bde0fe'
+
+
 freq_color: "#2f4550"
