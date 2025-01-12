@@ -32,7 +32,7 @@ with open("src/frontend/custom_styles.css") as css:
 
 with open('src/setup/config.yaml', 'r') as file:
     config = yaml.safe_load(file)
-    colors = config['colors']
+    colors = config['dark_colors']
     dark_colors =  config['dark_colors']
     sidebar_icons = config['sidebar_icons']
     section_icons = config['section_icons']

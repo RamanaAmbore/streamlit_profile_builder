@@ -11,6 +11,7 @@ from src.utils import profile, get_image_path, get_sample, colors, get_image_bin
 
 def generate_sidebar_section():
     key_list, val_list = get_config('sidebar_icons')
+    key_list = [ x.title() for x in key_list]
     with st.sidebar:
         selected = option_menu("", key_list,
                                icons=val_list, menu_icon="cast", default_index=-1,
@@ -196,9 +197,10 @@ def generate_certification_section():
 
 def generate_milestonre_section():
     # Generate example data
+    create_ruler()
     section_name = 'milestones'
     key_list, val_list = get_profile(section_name)
-    write_subheading(section_name, key=section_name)
+    # write_subheading(section_name, key=section_name)
 
     years = key_list
     milestones = [i['name'] for i in val_list]  # Example milestones
