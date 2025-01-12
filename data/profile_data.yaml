@@ -13,40 +13,46 @@ milestones:
     name: Bachelors
     icon: cfa.png
     hover: Completed Bachelor degree in Computer Science
-    impact: 10
-    y: 10
+    impact: 23
+    y: 23
   1993:
     name: Masters
     icon: cfa.png
     hover: Completed Master degree in Computer Science sponsored by Defence Research Development Organization
-    impact: 20
+    impact: 25
     y: 25
+  1995:
+    name: First Job
+    icon: cfa.png
+    hover: My first job at Dun & Bradstreet Satyam Software, the previous avatar of Cognizant
+    impact: 23
+    y: 23
   2005:
     name: PGCBM
     icon: cfa.png
     hover: Completed PGCBM from Xaviers Labour Relations Institute (XLRI)
-    impact: 5
-    y: 10
+    impact: 25
+    y: 25
   2002:
     name: FRM
     icon: cfa.png
     hover: Cleared two parts of Financial Risk Manager (FRM) after burning mid night oil so many days. Gave me
       foundation on risk management for algo trading
-    impact: 15
-    y: 25
+    impact: 23
+    y: 23
   2001:
     name: CFA
     icon: cfa.png
     hover: Cleared two levels  of of Certified Financial Analyst which helped understanding trading and investment
     impact: 25
-    y: 10
+    y: 25
   2003:
     name: Award
     icon: cfa.png
     hover: Received delivery excellence award for innovation. one among the 40 people to receive the award across the
       organization
-    impact: 25
-    y: 25
+    impact: 23
+    y: 23
 education:
   1.msc:
     name: Master's

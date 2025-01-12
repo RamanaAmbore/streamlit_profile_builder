@@ -206,6 +206,9 @@ def generate_milestonre_section():
     milestones = [i['name'] for i in val_list]  # Example milestones
     impacts = [i['impact'] *3 for i in val_list]   # Random impact values (positive and negative)
     hover = [i['hover'] for i in val_list]  # Categories for tooltip
+    icons = [get_image_bin_file(i['icon']) for i in val_list]  # Example icon list
+
+
     Y = [i['y'] for i in val_list]
     select_colors = get_sample(dark_colors, len(years))
     # Create a dataframe
@@ -215,7 +218,8 @@ def generate_milestonre_section():
         'Milestone': milestones,
         'Impact': impacts ,
         'Hover': hover,
-        'Color': select_colors
+        'Color': select_colors,
+        'Icon' : icons
     })
 
     fig = go.Figure()
@@ -255,12 +259,28 @@ def generate_milestonre_section():
         # Add dotted line connecting bubble to x-axis
         fig.add_trace(go.Scatter(
             x=[row['X'], row['X']],
-            y=[1, row['Y']*0.8],  # Connects bubble to x-axis
+            y=[0, row['Y']*0.8],  # Connects bubble to x-axis
             mode='lines',
-            line=dict(color=freq_color, width=1, dash='dash'),  # Dotted line
+            line=dict(color=freq_color, width=1, dash='dot'),  # Dotted line
             hoverinfo='skip',  # No hover for the line
             showlegend=False  # Do not include in legend
         ))
+
+        # Add icon inside the bubble
+        fig.add_layout_image(
+            dict(
+                source=row['Icon'],  # Base64 encoded icon
+                x=row['X'],
+                y=row['Y'],
+                xref="x",
+                yref="y",
+                sizex=row['Impact'] * 0.1,  # Adjust size relative to bubble size
+                sizey=row['Impact'] * 0.1,  # Adjust size relative to bubble size
+                xanchor="center",
+                yanchor="middle",  # Center the icon inside the bubble
+                layer="above"  # Ensure icon is visible above other elements
+            )
+        )
 
     fig.update_layout(
         xaxis=dict(
