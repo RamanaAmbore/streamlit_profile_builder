@@ -12,47 +12,91 @@ milestones:
   1991:
     name: Bachelors
     icon: nagarjuna.png
+    text: Completed Bachelor degree in Computer Science
     hover: Completed Bachelor degree in Computer Science
     impact: 10
-    y: 23
+    y: 19
   1993:
     name: Masters
     icon: jk.png
+    text: Completed Master degree in Computer Science
     hover: Completed Master degree in Computer Science sponsored by Defence Research Development Organization
     impact: 10
-    y: 25
-  1995:
+    y: 18
+  1994:
     name: First Job
     icon: cts.png
+    text: Joined Dun & Bradstreet Satyam Software, India
     hover: My first job at Dun & Bradstreet Satyam Software, the previous avatar of Cognizant
     impact: 10
-    y: 23
+    y: 20
   2005:
     name: PGCBM
     icon: xlri.png
+    text: Post Graduate Certificate in Business Management, XLRI
     hover: Completed PGCBM from Xaviers Labour Relations Institute (XLRI)
     impact: 10
-    y: 25
-  2002:
+    y: 22
+  2020:
     name: FRM
     icon: frm.png
+    text: GARP Certified Financial Risk Manager (FRM)
     hover: Cleared two parts of Financial Risk Manager (FRM) after burning mid night oil so many days. Gave me
       foundation on risk management for algo trading
     impact: 10
-    y: 23
-  2001:
+    y: 18
+  2021:
     name: CFA
     icon: cfa.png
+    text: Cleared Chartered Financial Analyst Level 2 Exam
     hover: Cleared two levels  of of Certified Financial Analyst which helped understanding trading and investment
     impact: 10
-    y: 25
-  2003:
-    name: Award
+    y: 21
+  2023:
+    name: Innovation
     icon: ntt.png
+    text: Received Global Delivery Excellence Award in NTT
     hover: Received delivery excellence award for innovation. one among the 40 people to receive the award across the
       organization
     impact: 10
-    y: 23
+    y: 20
+
+  2003:
+    name: NTT DATA
+    icon: ntt.png
+    duration: 21
+    link: https://www.nttdata.com/global/en/
+    text: Joined NTT Data as a project Manager, India
+    hover: NTT DATA Global Delivery Services Ltd., Director, Apr 2003 - Till Date
+    impact: 10
+    y: 18
+  2002:
+    name: iNautix
+    icon: inautix.png
+    duration: 1
+    link: https://www.bny.com/pershing/us/en.html
+    text: Joined iNautix as a Project Leader, India
+    hover: iNautix Technologies India Pvt, Project Leader, May 2002 - Apr 2003
+    impact: 10
+    y: 16
+  1997:
+    name: Moids
+    icon: modis.png
+    link: https://www.akkodis.com/
+    duration: 5
+    text: Joined Modis Consulting as a Software Consultant, USA
+    hover: BModis Consulting, Software Consultant, Nov 1997 Apr 2002
+    impact: 10
+    y: 20
+  1996:
+    name: Mastech
+    icon: igate.png
+    duration: 1
+    link: https://www.capgemini.com/
+    text: Joined Mastech as a software consultant, USA
+    hover: Matech Systems, Software Consultant, Nov 1996 - Nov 1997
+    impact: 10
+    y: 18
 education:
   1.msc:
     name: Master's
@@ -101,8 +145,8 @@ employment:
     icon: modis.png
     link: https://www.akkodis.com/
     duration: 5
-    text: Modis Consulting, Nagarjuna University, Software Consultant, Nov 1997 Apr 2002
-    hover: BModis Consulting, Nagarjuna University, Software Consultant, Nov 1997 Apr 2002
+    text: Modis Consulting, Software Consultant, Nov 1997 Apr 2002
+    hover: BModis Consulting, Software Consultant, Nov 1997 Apr 2002
   4.mastech:
     name: Mastech
     icon: igate.png

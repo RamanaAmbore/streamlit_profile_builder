@@ -244,18 +244,18 @@ def generate_milestone_section():
     fig = go.Figure()
 
     for i, row in df.iterrows():
-        # Add shadow effect
-        fig.add_trace(go.Scatter(
-            x=[row['x']],
-            y=[row['y']],
-            marker=dict(
-                size=row['impact'] * 6.5,  # Increased bubble size
-                color='rgba(50, 50, 50, 0.1)'  # Light shadow
-            ),
-            mode='markers',
-            hoverinfo='skip',
-            showlegend=False
-        ))
+        # # Add shadow effect
+        # fig.add_trace(go.Scatter(
+        #     x=[row['x']],
+        #     y=[row['y']],
+        #     marker=dict(
+        #         size=row['impact'] * 6.5,  # Increased bubble size
+        #         color='rgba(50, 50, 50, 0.1)'  # Light shadow
+        #     ),
+        #     mode='markers',
+        #     hoverinfo='skip',
+        #     showlegend=False
+        # ))
 
         # Add main bubble
         fig.add_trace(go.Scatter(
@@ -272,21 +272,36 @@ def generate_milestone_section():
             name=row['name']
         ))
 
+        # Add main bubble
+        fig.add_trace(go.Scatter(
+            x=[row['x']],
+            y=[row['y']],
+            marker=dict(
+                size=row['impact'] * 4,  # Main bubble size
+                color='#fafAfA',
+                line=dict(color=freq_color, width=1)
+            ),
+            mode='markers',
+            hovertext=row['hover'],
+            hoverinfo='text',
+            name=row['name']
+        ))
+
         # Add dotted line connecting bubble to x-axis
         fig.add_trace(go.Scatter(
             x=[row['x'], row['x']],
             y=[0, row['y'] - 2],
             mode='lines',
-            line=dict(color=freq_color, width=1, dash='dot'),
+            line=dict(color='#EFEFEF', width=1, dash='dot'),
             hoverinfo='skip',
             showlegend=False
         ))
 
         # Add vertical milestone name starting from the zero line
         fig.add_annotation(
-            x=row['x']-.15,
+            x=row['x'],
             y=.2,
-            text=row['name'],
+            text=row['text'],
             showarrow=False,
             font=dict(size=12, color=freq_color, family='Arial'),
             textangle=-90,
@@ -295,17 +310,17 @@ def generate_milestone_section():
             yanchor="bottom"
         )
 
-        # Add label above the bubble
-        fig.add_annotation(
-            x=row['x'],
-            y=row['y'] + 2,
-            text=row['name'],
-            showarrow=False,
-            font=dict(size=12, color=freq_color, family='Arial, bold'),
-            align="center",
-            xanchor="center",
-            yanchor="bottom"
-        )
+        # # Add label above the bubble
+        # fig.add_annotation(
+        #     x=row['x'],
+        #     y=row['y'] + 2,
+        #     text=row['name'],
+        #     showarrow=False,
+        #     font=dict(size=12, color=freq_color, family='Arial, bold'),
+        #     align="center",
+        #     xanchor="center",
+        #     yanchor="bottom"
+        # )
 
         # Add custom image/icon
         fig.add_layout_image(
@@ -339,7 +354,7 @@ def generate_milestone_section():
             bgcolor=row['color'],  # Use DataFrame color column
             bordercolor='gray',  # Border color for the button
             borderwidth=1,  # Width of the border
-            borderpad=4,  # Padding for rounded corners
+            borderpad=2,  # Padding for rounded corners
             opacity=1
         )
 
