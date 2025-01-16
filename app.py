@@ -5,7 +5,7 @@ from PIL import Image
 from src.components.components import set_png_as_page_bg, markdown
 from src.components.sections import generate_summary_section, generate_skills_section, \
     generate_contact_social_section, generate_education_section, generate_sidebar_section, \
-    generate_certification_section, generate_milestonre_section
+    generate_certification_section, generate_milestone_section
 from src.logger import log_setup
 from src.utils import css_style, profile, get_image_path
 import streamlit as st
@@ -38,7 +38,7 @@ if __name__ == '__main__':
 
     generate_contact_social_section()
 
-    generate_milestonre_section()
+    generate_milestone_section()
 
     # Display the plot with Streamlit
 

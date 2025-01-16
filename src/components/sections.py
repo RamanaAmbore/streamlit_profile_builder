@@ -1,8 +1,11 @@
 import numpy as np
 import pandas as pd
 import streamlit as st
+from PIL import Image
 from plotly import graph_objects as go
 from streamlit_option_menu import option_menu
+import plotly.express as px
+import base64
 
 from src.components.components import container, write_subheading, create_ruler, write_colums, write_container
 from src.utils import profile, get_image_path, get_sample, colors, get_image_bin_file, freq_color, contact, \
@@ -195,118 +198,115 @@ def generate_certification_section():
         st.plotly_chart(fig, use_container_width=True)
 
 
-def generate_milestonre_section():
-    # Generate example data
-    create_ruler()
-    section_name = 'milestones'
-    key_list, val_list = get_profile(section_name)
-    # write_subheading(section_name, key=section_name)
-
-    years = key_list
-    milestones = [i['name'] for i in val_list]  # Example milestones
-    impacts = [i['impact'] *3 for i in val_list]   # Random impact values (positive and negative)
-    hover = [i['hover'] for i in val_list]  # Categories for tooltip
-    icons = [get_image_bin_file(i['icon']) for i in val_list]  # Example icon list
-
-
-    Y = [i['y'] for i in val_list]
-    select_colors = get_sample(dark_colors, len(years))
-    # Create a dataframe
-    df = pd.DataFrame({
-        'Y': Y,
-        'X': years,
-        'Milestone': milestones,
-        'Impact': impacts ,
-        'Hover': hover,
-        'Color': select_colors,
-        'Icon' : icons
-    })
+def generate_milestone_section():
+    section = profile['milestones']
+    df = pd.DataFrame.from_dict(section, orient='index')
+    df.index.name = 'x'
+    df = df.reset_index()
+    df['color'] = get_sample(colors, len(df))
 
     fig = go.Figure()
 
-    # Add shadow effect as a larger, semi-transparent circle behind each bubble
-    for _, row in df.iterrows():
-        # Add shadow (slightly larger and semi-transparent)
+    for i, row in df.iterrows():
+        # Add shadow effect
         fig.add_trace(go.Scatter(
-            x=[row['X']],
-            y=[row['Y']],
+            x=[row['x']],
+            y=[row['y']],
             marker=dict(
-                size=row['Impact'] * 1.2,  # Slightly larger for shadow
-                color='rgba(50, 50, 50, 0.2)',  # Semi-transparent gray
+                size=row['impact'] * 5.2,  # Increased bubble size
+                color=row['color']  # Light shadow
             ),
             mode='markers',
-            hoverinfo='skip',  # Hide shadow hover info
-            showlegend=False  # Do not include in legend
+            hoverinfo='skip',
+            showlegend=False
         ))
 
         # Add main bubble
         fig.add_trace(go.Scatter(
-            x=[row['X']],
-            y=[row['Y']],
+            x=[row['x']],
+            y=[row['y']],
             marker=dict(
-                size=row['Impact'],  # Bubble size based on 'Impact'
-                color =row['Color'] ,
-                line=dict(color='gray', width=1)  # Border for the bubble
+                size=row['impact'] * 4,  # Main bubble size
+                color='#fafafa',
+                line=dict(color=freq_color, width=1)
             ),
-            mode='markers+text',
-            text=row['Milestone'],  # Display milestone inside or near the bubble
-            textposition='top center',  # Position of the text
-            hovertext=row['Hover'],  # Hover text from DataFrame
+            mode='markers',
+            hovertext=row['hover'],
             hoverinfo='text',
-            name=row['Milestone']  # Name for the legend (optional)
+            name=row['name']
         ))
 
         # Add dotted line connecting bubble to x-axis
         fig.add_trace(go.Scatter(
-            x=[row['X'], row['X']],
-            y=[0, row['Y']*0.8],  # Connects bubble to x-axis
+            x=[row['x'], row['x']],
+            y=[0, row['y']-2],
             mode='lines',
-            line=dict(color=freq_color, width=1, dash='dot'),  # Dotted line
-            hoverinfo='skip',  # No hover for the line
-            showlegend=False  # Do not include in legend
+            line=dict(color=freq_color, width=1, dash='dot'),
+            hoverinfo='skip',
+            showlegend=False
         ))
 
-        # Add icon inside the bubble
+        # Add vertical milestone name starting from the zero line, with horizontal offset
+        text_offset = 0.15  # Adjust this value to fine-tune the text placement
+        fig.add_annotation(
+            x=row['x'] - text_offset,  # Slightly offset the text to avoid overlap
+            y=0,  # Start from the zero line
+            text=row['name'],  # Milestone name
+            showarrow=False,
+            font=dict(
+                size=12,
+                color= freq_color,
+                family='Arial'
+            ),
+            textangle=-90,  # Rotate text vertically
+            align="center",
+            xanchor="center",
+            yanchor="bottom"  # Anchor the text to the zero line
+        )
+
+        # Add custom image/icon
         fig.add_layout_image(
             dict(
-                source=row['Icon'],  # Base64 encoded icon
-                x=row['X'],
-                y=row['Y'],
+                source=Image.open(get_image_path(row['icon'])),
                 xref="x",
                 yref="y",
-                sizex=row['Impact'] * 0.1,  # Adjust size relative to bubble size
-                sizey=row['Impact'] * 0.1,  # Adjust size relative to bubble size
                 xanchor="center",
-                yanchor="middle",  # Center the icon inside the bubble
-                layer="above"  # Ensure icon is visible above other elements
+                yanchor="middle",
+                x=row['x'],
+                y=row['y'],
+                sizex=2,  # Increased image size
+                sizey=2,  # Increased image size
+                sizing="contain",
+                opacity=0.8,
+                layer="above"
             )
         )
 
+    # Update layout for x-axis and overall appearance
     fig.update_layout(
         xaxis=dict(
-            showline=True,
-            linecolor=freq_color,
-            linewidth=1,
-            showgrid=False,
-            zeroline=False,
-            tickvals=df['X'],  # Use only the years in the DataFrame for x-axis ticks
-            ticktext=df['X'],  # Ensure the labels match the ticks
-            type='category'  # Treat the x-axis as categorical (ordinal)
+            tickvals=df['x'],
+            ticktext=df['x'],
+            ticklabelposition="inside",
+            showline=False,  # Remove x-axis line
+            tickfont=dict(size=12, color='black', family='Arial, bold'),
+            zeroline=True
         ),
         yaxis=dict(
-            showline=False,  # Hide y-axis line
-            showgrid=False,  # Hide grid lines
-            zeroline=False,  # Hide the zero line
-            tickvals = [],
-            ticktext = []
-    ),
-        plot_bgcolor='rgba(0, 0, 0, 0)',  # Transparent background
-        paper_bgcolor='rgba(0, 0, 0, 0)',  # Transparent overall background
+            showline=False,  # Remove y-axis line
+            showgrid=False,
+            zeroline=True,  # Make the horizontal zero line visible
+            zerolinecolor='gray',  # Color for the zero line
+            zerolinewidth=1,  # Width of the zero line
+            tickvals=[],  # Remove y-axis ticks
+            ticktext=[]  # Remove y-axis tick text
+        ),
+        plot_bgcolor='rgba(0, 0, 0, 0)',  # White background for the plot area
+        paper_bgcolor='rgba(0, 0, 0, 0)',  # White background for the entire chart
         showlegend=False,
-        margin=dict(t=10, b=10),
-        height=350
+        margin=dict(l=50, r=50, t=50, b=50),
+        height=500,
     )
 
     # Display the chart in Streamlit
     st.plotly_chart(fig)
-
