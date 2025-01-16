@@ -262,7 +262,7 @@ def generate_milestone_section():
             x=[row['x']],
             y=[row['y']],
             marker=dict(
-                size=row['impact'] * 5,  # Main bubble size
+                size=row['impact'] * 4,  # Main bubble size
                 color=row['color'],
                 line=dict(color=freq_color, width=1)
             ),
@@ -277,7 +277,7 @@ def generate_milestone_section():
             x=[row['x']],
             y=[row['y']],
             marker=dict(
-                size=row['impact'] * 4,  # Main bubble size
+                size=row['impact'] * 3,  # Main bubble size
                 color='#fafAfA',
                 line=dict(color=freq_color, width=1)
             ),
@@ -332,8 +332,8 @@ def generate_milestone_section():
                 yanchor="middle",
                 x=row['x'],
                 y=row['y'],
-                sizex=1.5,
-                sizey=1.5,
+                sizex=1.2,
+                sizey=1.2,
                 sizing="contain",
                 opacity=0.8,
                 layer="above"
@@ -355,7 +355,8 @@ def generate_milestone_section():
             bordercolor='gray',  # Border color for the button
             borderwidth=1,  # Width of the border
             borderpad=2,  # Padding for rounded corners
-            opacity=1
+            opacity=1,
+            textangle=-90
         )
 
     # Update layout for overall appearance
