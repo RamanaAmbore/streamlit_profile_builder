@@ -6,6 +6,7 @@ sidebar_icons:
   certifications: clipboard-check
   projects: folder
   hobbies: joystick
+  employment: person-workspace
 section_icons:
   summary: house
   experience: necktie
@@ -14,6 +15,7 @@ section_icons:
   education: school
   projects: open_file_folder
   hobbies: video_game
+  employment: office
 colors:
   - '#ffc09f'
   - '#ffee93'
@@ -42,7 +44,6 @@ dark_colors:
   - "#d0e1f9"
   - "#c99789"
   - "#96ceb4"
-  - "#6f7c85"
   - "#ffefd7"
   - "#e4dcf1"
   - "#e0ac69"

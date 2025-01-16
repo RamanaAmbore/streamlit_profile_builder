@@ -197,6 +197,42 @@ def generate_certification_section():
         # Display the pie chart in Streamlit
         st.plotly_chart(fig, use_container_width=True)
 
+def generate_employment_section():
+    section_name = 'employment'
+    key_list, val_list = get_profile(section_name)
+    write_subheading(section_name, key=section_name)
+
+    width_education = [5, .05, 1]
+
+    col, _, pie_chart_col = container(st.columns, width_education,
+                                                          vertical_alignment='center', key='employment_container')
+    with col:
+        write_container('employment')
+
+    with pie_chart_col:
+        labels = [val['name'] for val in val_list]
+        values = [val['duration'] for val in val_list]
+        select_colors = get_sample(colors, len(labels))
+
+        # Create pie chart
+        fig = go.Figure(data=[
+            go.Pie(labels=labels,
+                   values=values,
+                   marker=dict(colors=select_colors, line=dict(color="gray", width=1)),
+                   textinfo='label+percent', insidetextorientation='radial',
+                   pull=[0.03] * len(labels))])
+
+        # Update layout for custom appearance
+        fig.update_layout(
+            paper_bgcolor='rgba(0, 0, 0, 0)',  # Transparent overall background
+            showlegend=False,
+            margin=dict(t=0, b=0),
+            height=150
+        )
+
+        # Display the pie chart in Streamlit
+        st.plotly_chart(fig, use_container_width=True)
+
 
 def generate_milestone_section():
     section = profile['milestones']
@@ -213,8 +249,8 @@ def generate_milestone_section():
             x=[row['x']],
             y=[row['y']],
             marker=dict(
-                size=row['impact'] * 5.2,  # Increased bubble size
-                color=row['color']  # Light shadow
+                size=row['impact'] * 6.5,  # Increased bubble size
+                color='rgba(50, 50, 50, 0.1)'  # Light shadow
             ),
             mode='markers',
             hoverinfo='skip',
@@ -226,8 +262,8 @@ def generate_milestone_section():
             x=[row['x']],
             y=[row['y']],
             marker=dict(
-                size=row['impact'] * 4,  # Main bubble size
-                color='#fafafa',
+                size=row['impact'] * 5,  # Main bubble size
+                color=row['color'],
                 line=dict(color=freq_color, width=1)
             ),
             mode='markers',
@@ -239,29 +275,36 @@ def generate_milestone_section():
         # Add dotted line connecting bubble to x-axis
         fig.add_trace(go.Scatter(
             x=[row['x'], row['x']],
-            y=[0, row['y']-2],
+            y=[0, row['y'] - 2],
             mode='lines',
             line=dict(color=freq_color, width=1, dash='dot'),
             hoverinfo='skip',
             showlegend=False
         ))
 
-        # Add vertical milestone name starting from the zero line, with horizontal offset
-        text_offset = 0.15  # Adjust this value to fine-tune the text placement
+        # Add vertical milestone name starting from the zero line
         fig.add_annotation(
-            x=row['x'] - text_offset,  # Slightly offset the text to avoid overlap
-            y=0,  # Start from the zero line
-            text=row['name'],  # Milestone name
+            x=row['x']-.15,
+            y=.2,
+            text=row['name'],
             showarrow=False,
-            font=dict(
-                size=12,
-                color= freq_color,
-                family='Arial'
-            ),
-            textangle=-90,  # Rotate text vertically
+            font=dict(size=12, color=freq_color, family='Arial'),
+            textangle=-90,
             align="center",
             xanchor="center",
-            yanchor="bottom"  # Anchor the text to the zero line
+            yanchor="bottom"
+        )
+
+        # Add label above the bubble
+        fig.add_annotation(
+            x=row['x'],
+            y=row['y'] + 2,
+            text=row['name'],
+            showarrow=False,
+            font=dict(size=12, color=freq_color, family='Arial, bold'),
+            align="center",
+            xanchor="center",
+            yanchor="bottom"
         )
 
         # Add custom image/icon
@@ -274,37 +317,52 @@ def generate_milestone_section():
                 yanchor="middle",
                 x=row['x'],
                 y=row['y'],
-                sizex=2,  # Increased image size
-                sizey=2,  # Increased image size
+                sizex=1.5,
+                sizey=1.5,
                 sizing="contain",
                 opacity=0.8,
                 layer="above"
             )
         )
 
-    # Update layout for x-axis and overall appearance
+    # Add button-like labels for x-axis
+    for i, row in df.iterrows():
+        fig.add_annotation(
+            x=row['x'],
+            y=-1.5,  # Position just below the zero line
+            text=str(row['x']),
+            showarrow=False,
+            font=dict(size=12, color='black', family='Arial'),
+            align="center",
+            xanchor="center",
+            yanchor="middle",
+            bgcolor=row['color'],  # Use DataFrame color column
+            bordercolor='gray',  # Border color for the button
+            borderwidth=1,  # Width of the border
+            borderpad=4,  # Padding for rounded corners
+            opacity=1
+        )
+
+    # Update layout for overall appearance
     fig.update_layout(
         xaxis=dict(
-            tickvals=df['x'],
-            ticktext=df['x'],
-            ticklabelposition="inside",
-            showline=False,  # Remove x-axis line
-            tickfont=dict(size=12, color='black', family='Arial, bold'),
-            zeroline=True
+            showline=False,
+            tickvals=[],  # Remove default x-axis ticks
+            ticktext=[]  # Remove default x-axis text
         ),
         yaxis=dict(
-            showline=False,  # Remove y-axis line
+            showline=False,
             showgrid=False,
-            zeroline=True,  # Make the horizontal zero line visible
-            zerolinecolor='gray',  # Color for the zero line
-            zerolinewidth=1,  # Width of the zero line
-            tickvals=[],  # Remove y-axis ticks
-            ticktext=[]  # Remove y-axis tick text
+            zeroline=True,
+            zerolinecolor='gray',
+            zerolinewidth=1,
+            tickvals=[],
+            ticktext=[]
         ),
-        plot_bgcolor='rgba(0, 0, 0, 0)',  # White background for the plot area
-        paper_bgcolor='rgba(0, 0, 0, 0)',  # White background for the entire chart
+        plot_bgcolor='rgba(255, 255, 255, 1)',  # White background
+        paper_bgcolor='rgba(255, 255, 255, 1)',  # White background
         showlegend=False,
-        margin=dict(l=50, r=50, t=50, b=50),
+        margin=dict(l=0, r=0, t=20, b=20),
         height=500,
     )
 
