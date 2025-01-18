@@ -14,7 +14,7 @@ from src.utils import profile, get_image_path, get_sample, colors, get_image_bin
 
 def generate_sidebar_section():
     key_list, val_list = get_config('sidebar_icons')
-    key_list = [ x.title() for x in key_list]
+    key_list = [x.title() for x in key_list]
     with st.sidebar:
         selected = option_menu("", key_list,
                                icons=val_list, menu_icon="cast", default_index=-1,
@@ -50,9 +50,11 @@ def generate_contact_social_section():
     col1, _, col2, _, col3, _, col4 = st.columns(width_cols, vertical_alignment='center')
     write_colums([col1, col2, col3, col4], 'social')
 
+
 def generate_summary_section():
     section_name = 'summary'
     write_subheading(section_name, key=section_name)
+    generate_milestone_section()
     val_list = profile[section_name]
     for line in val_list:
         st.write(f"- {line}")
@@ -130,21 +132,21 @@ def generate_skills_section():
     # Display the chart in Streamlit
     st.plotly_chart(fig)
 
+
 def generate_hobbie_section():
-        section_name = 'hobbies'
-        write_subheading(section_name, key=section_name)
-        st.write(profile[section_name])
+    section_name = 'hobbies'
+    write_subheading(section_name, key=section_name)
+    st.write(profile[section_name])
 
-        width_education = [6, .05, 2,2]
+    width_education = [6, .05, 2, 2]
 
-        col1, _, col2,_ = container(st.columns, width_education,
-                                                              vertical_alignment='center', key='hobbie_container')
-        with col1:
-            st.image(get_image_path('drone.png', icon=False))
+    col1, _, col2, _ = container(st.columns, width_education,
+                                 vertical_alignment='center', key='hobbie_container')
+    with col1:
+        st.image(get_image_path('drone.png', icon=False))
 
-
-        with col2:
-            st.image(get_image_path('raspberry.png', icon=False))
+    with col2:
+        st.image(get_image_path('raspberry.png', icon=False))
 
 
 def generate_education_section():
@@ -184,6 +186,7 @@ def generate_education_section():
         # Display the pie chart in Streamlit
         st.plotly_chart(fig, use_container_width=True)
 
+
 def generate_certification_section():
     section_name = 'certifications'
     key_list, val_list = get_profile(section_name)
@@ -192,7 +195,7 @@ def generate_certification_section():
     width_education = [5, .05, 1]
 
     col, _, pie_chart_col = container(st.columns, width_education,
-                                                          vertical_alignment='center', key='certification_container')
+                                      vertical_alignment='center', key='certification_container')
     with col:
         write_container('certifications')
 
@@ -220,6 +223,7 @@ def generate_certification_section():
         # Display the pie chart in Streamlit
         st.plotly_chart(fig, use_container_width=True)
 
+
 def generate_employment_section():
     section_name = 'employment'
     key_list, val_list = get_profile(section_name)
@@ -228,7 +232,7 @@ def generate_employment_section():
     width_education = [5, .05, 1]
 
     col, _, pie_chart_col = container(st.columns, width_education,
-                                                          vertical_alignment='center', key='employment_container')
+                                      vertical_alignment='center', key='employment_container')
     with col:
         write_container('employment')
 
@@ -266,123 +270,30 @@ def generate_milestone_section():
 
     fig = go.Figure()
 
-    for i, row in df.iterrows():
-        # # Add shadow effect
-        # fig.add_trace(go.Scatter(
-        #     x=[row['x']],
-        #     y=[row['y']],
-        #     marker=dict(
-        #         size=row['impact'] * 6.5,  # Increased bubble size
-        #         color='rgba(50, 50, 50, 0.1)'  # Light shadow
-        #     ),
-        #     mode='markers',
-        #     hoverinfo='skip',
-        #     showlegend=False
-        # ))
+    # Iterate over each milestone in the DataFrame
+    for i in range(len(df)):
+        row = df.iloc[i]
 
-        # # Add main bubble
-        fig.add_trace(go.Scatter(
-            x=[row['x']],
-            y=[row['y']-7],
-            marker=dict(
-                size=row['impact'] ,  # Main bubble size
-                color=row['color'],
-                line=dict(color=freq_color, width=1)
-            ),
-            mode='markers',
-            hovertext=row['hover'],
-            hoverinfo='text',
-            name=row['name']
-        ))
-        #
-        # # Add main bubble
-        # fig.add_trace(go.Scatter(
-        #     x=[row['x']],
-        #     y=[row['y']],
-        #     marker=dict(
-        #         size=row['impact'] * 3,  # Main bubble size
-        #         color='#fafAfA',
-        #         line=dict(color=freq_color, width=1)
-        #     ),
-        #     mode='markers',
-        #     hovertext=row['hover'],
-        #     hoverinfo='text',
-        #     name=row['name']
-        # ))
-
-        # # Add dotted line connecting bubble to x-axis
-        # fig.add_trace(go.Scatter(
-        #     x=[row['x'], row['x']],
-        #     y=[0, row['y'] - 2],
-        #     mode='lines',
-        #     line=dict(color='#EFEFEF', width=1, dash='dot'),
-        #     hoverinfo='skip',
-        #     showlegend=False
-        # ))
-
-        # Add vertical milestone name starting from the zero line
+        # Add combined annotation above the zero line with vertical orientation and hover effect
         fig.add_annotation(
-            x=row['x'],
-            y=.2,
-            text=row['text'],
+            x=i*.5,
+            y=0.5,  # Position above the zero line, adjust this for vertical padding
+            text=f"<span style='line-height:10px;background-color:{row['color']};'>{row['name']}</span><br><span style='line-height:10px;'>{str(row['x'])}</span>",  # Combine name and year
             showarrow=False,
             font=dict(size=12, color=freq_color, family='Arial'),
-            textangle=-90,
             align="center",
             xanchor="center",
-            yanchor="bottom"
-        )
-
-        # # Add label above the bubble
-        # fig.add_annotation(
-        #     x=row['x'],
-        #     y=row['y'] + 2,
-        #     text=row['name'],
-        #     showarrow=False,
-        #     font=dict(size=12, color=freq_color, family='Arial, bold'),
-        #     align="center",
-        #     xanchor="center",
-        #     yanchor="bottom"
-        # )
-
-        # # Add custom image/icon
-        # fig.add_layout_image(
-        #     dict(
-        #         source=Image.open(get_image_path(row['icon'])),
-        #         xref="x",
-        #         yref="y",
-        #         xanchor="center",
-        #         yanchor="middle",
-        #         x=row['x'],
-        #         y=row['y'],
-        #         sizex=1.2,
-        #         sizey=1.2,
-        #         sizing="contain",
-        #         opacity=0.8,
-        #         layer="above"
-        #     )
-        # )
-
-    # Add button-like labels for x-axis
-    for i, row in df.iterrows():
-        fig.add_annotation(
-            x=row['x'],
-            y=-1.5,  # Position just below the zero line
-            text=str(row['x']),
-            showarrow=False,
-            font=dict(size=12, color='black', family='Arial'),
-            align="center",
-            xanchor="center",
-            yanchor="middle",
-            bgcolor=row['color'],  # Use DataFrame color column
-            bordercolor='gray',  # Border color for the button
+            yanchor="bottom",
+            textangle=-90,  # Vertical text orientation
+            bgcolor=row['color'],  # Background color for the milestone name
+            bordercolor='gray',  # Border color for the annotation
             borderwidth=1,  # Width of the border
-            borderpad=2,  # Padding for rounded corners
+            borderpad=5,  # Padding for rounded corners
             opacity=1,
-            textangle=-90
+            hovertext=row['hover'],  # Hover text for annotation
         )
 
-    # Update layout for overall appearance
+    # Update layout for overall appearance with increased right margin
     fig.update_layout(
         xaxis=dict(
             showline=False,
@@ -393,7 +304,7 @@ def generate_milestone_section():
             showline=False,
             showgrid=False,
             zeroline=True,
-            zerolinecolor='gray',
+            zerolinecolor='#efefef',
             zerolinewidth=1,
             tickvals=[],
             ticktext=[]
@@ -401,8 +312,8 @@ def generate_milestone_section():
         plot_bgcolor='rgba(255, 255, 255, 0)',  # White background
         paper_bgcolor='rgba(255, 255, 255, 0)',  # White background
         showlegend=False,
-        margin=dict(l=0, r=0, t=20, b=20),
-        height=500,
+        margin=dict(l=0, r=0, t=20, b=0),  # Increased right margin
+        height=150,
     )
 
     # Display the chart in Streamlit
