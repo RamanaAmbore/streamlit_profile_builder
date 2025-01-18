@@ -273,14 +273,15 @@ def generate_milestone_section():
     # Iterate over each milestone in the DataFrame
     for i in range(len(df)):
         row = df.iloc[i]
-
+        color = row['color']
         # Add combined annotation above the zero line with vertical orientation and hover effect
         fig.add_annotation(
             x=i*.5,
             y=0.5,  # Position above the zero line, adjust this for vertical padding
-            text=f"<span style='line-height:10px;background-color:{row['color']};'>{row['name']}</span><br><span style='line-height:10px;'>{str(row['x'])}</span>",  # Combine name and year
+
+            text=f"<span style='line-height:11px;background-color:{color};font-weight:bold;'> {str(row['x'])}  </span><span style='line-height:11px;'>{row['name']}</span>",  # Combine name and year
             showarrow=False,
-            font=dict(size=12, color=freq_color, family='Arial'),
+            font=dict(size=13, color="black", family='Serif'),
             align="center",
             xanchor="center",
             yanchor="bottom",
@@ -288,7 +289,31 @@ def generate_milestone_section():
             bgcolor=row['color'],  # Background color for the milestone name
             bordercolor='gray',  # Border color for the annotation
             borderwidth=1,  # Width of the border
-            borderpad=5,  # Padding for rounded corners
+            borderpad=3,  # Padding for rounded corners
+            opacity=1,
+            hovertext=row['hover'],  # Hover text for annotation
+        )
+
+    for i in range(len(df)):
+        row = df.iloc[i]
+        color = row['color']
+        # Add combined annotation above the zero line with vertical orientation and hover effect
+        fig.add_annotation(
+            x=i * .5,
+            y=1.55,  # Position above the zero line, adjust this for vertical padding
+
+            text=f"</span><span style='line-height:11px;'>{row['name']}</span>",
+            # Combine name and year
+            showarrow=False,
+            font=dict(size=13, color="black", family='Serif'),
+            align="center",
+            xanchor="center",
+            yanchor="bottom",
+            textangle=-90,  # Vertical text orientation
+            bgcolor='white',  # Background color for the milestone name
+            bordercolor='gray',  # Border color for the annotation
+            borderwidth=1,  # Width of the border
+            borderpad=3,  # Padding for rounded corners
             opacity=1,
             hovertext=row['hover'],  # Hover text for annotation
         )
@@ -313,7 +338,7 @@ def generate_milestone_section():
         paper_bgcolor='rgba(255, 255, 255, 0)',  # White background
         showlegend=False,
         margin=dict(l=0, r=0, t=20, b=0),  # Increased right margin
-        height=150,
+        height=200,
     )
 
     # Display the chart in Streamlit
