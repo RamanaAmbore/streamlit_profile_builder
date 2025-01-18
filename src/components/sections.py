@@ -289,18 +289,15 @@ def generate_milestone_section():
             bgcolor=row['color'],  # Background color for the milestone name
             bordercolor='gray',  # Border color for the annotation
             borderwidth=1,  # Width of the border
-            borderpad=3,  # Padding for rounded corners
+            borderpad=5,  # Padding for rounded corners
             opacity=1,
             hovertext=row['hover'],  # Hover text for annotation
         )
 
-    for i in range(len(df)):
-        row = df.iloc[i]
-        color = row['color']
         # Add combined annotation above the zero line with vertical orientation and hover effect
         fig.add_annotation(
             x=i * .5,
-            y=1.55,  # Position above the zero line, adjust this for vertical padding
+            y=1.57,  # Position above the zero line, adjust this for vertical padding
 
             text=f"</span><span style='line-height:11px;'>{row['name']}</span>",
             # Combine name and year
@@ -311,9 +308,9 @@ def generate_milestone_section():
             yanchor="bottom",
             textangle=-90,  # Vertical text orientation
             bgcolor='white',  # Background color for the milestone name
-            bordercolor='gray',  # Border color for the annotation
+            bordercolor='lightgray',  # Border color for the annotation
             borderwidth=1,  # Width of the border
-            borderpad=3,  # Padding for rounded corners
+            borderpad=5,  # Padding for rounded corners
             opacity=1,
             hovertext=row['hover'],  # Hover text for annotation
         )
