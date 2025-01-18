@@ -144,7 +144,7 @@ def generate_hobbie_section():
 
 
         with col2:
-            st.image(get_image_path('rosberri.png', icon=False))
+            st.image(get_image_path('rosberri.png'))
 
 
 def generate_education_section():
