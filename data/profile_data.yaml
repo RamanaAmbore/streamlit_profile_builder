@@ -1,13 +1,33 @@
 name: RAMANA RAO AMBORE
 designation: APPLICATION DEVELOPMENT DIRECTOR
 name_suffix: 'FRM'
-summary: |
+profile: |
   Financial Risk Manager (FRM) and Chartered Financial Analyst (CFA) Level 3 candidate with in-depth financial domain 
   knowledge. As a FinTech expert, I bring hands-on experience in driving legacy system re-engineering and modernization, 
   and optimizing high-volume trading and data transmission platforms. Successfully developed an algorithmic trading 
   platform to capitalize on market inefficiencies. Proficient in leveraging cloud technologies, mainframe systems, 
   data analytics, and agile methodologies to deliver innovative solutions. My first mainframe user ID and nickname, 
   'Rambo,' reflect my unwavering tenacity in tackling complex challenges head-on.
+
+summary:
+  - Over nineteen years of development, consulting, and project management experience using IBM mainframe and other technologies.
+  - Extensive hands-on experience in designing applications in the securities clearing and settlement industry.
+  - Dual role of account manager and technical lead for a leading clearing house.
+  - Extensive hands-on experience using mainframe technologies and developing CICS (online) applications.
+  - Around six years of onsite experience in the USA in consulting and management roles; successfully coordinated and transitioned projects to offshore.
+  - Well-versed in preparing proposals, project plans, and schedules for development, conversion, and maintenance projects.
+  - Worked in onsite project manager/coordinator and offshore account manager roles for large projects both in the UK and the USA.
+  - Worked for a leading retailer client in the UK and managed challenging situations onsite.
+  - Lead member of projects like Option Symbology, Trailing Stops, Conditional Orders, and Transmission Automation in the trading/clearing industry.
+  - Contributed extensively to mentoring new resources and implementing Six Sigma projects for process improvement activities.
+  - Extensive experience in designing and implementing online CICS and batch applications on IBM mainframe.
+  - Part of the Project Management Office (PMO) with a good understanding of risk management and project audits.
+  - Good knowledge of brokerage & clearing, banking & finance, and retail domains.
+  - Postgraduate Certificate in Business Administration from Xavier Labour Relations Institute (XLRI).
+  - Project Management Professional (PMP) certification from PMI.
+  - Very good understanding of Six Sigma tools and SEI CMM Level 5 processes.
+hobbies:
+  Drone pogramming Rasberri Pie
 milestones:
   1991:
     name: Bachelors

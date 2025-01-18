@@ -27,6 +27,7 @@ with open('data/profile_data.yaml', 'r', errors='ignore') as file:
     social = CustomDict(profile['social'])
     milestones = CustomDict(profile['milestones'])
 
+
 with open("src/frontend/custom_styles.css") as css:
     css_style = css.read()
 

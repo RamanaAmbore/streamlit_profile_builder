@@ -28,7 +28,7 @@ def generate_sidebar_section():
                                )
 
 
-def generate_summary_section():
+def generate_profile_section():
     container(st.header, f'{profile['name']}, {profile['name_suffix']}', key='profile_name')
     # st.header(about_me_name)
     container(st.write, f'#### {profile['designation']}', key='profile_designation')
@@ -37,7 +37,7 @@ def generate_summary_section():
         container(st.image, get_image_path('profile_photo.png', False), clamp=True,
                   use_container_width=True, key='profile_photo')
     with col2:
-        container(st.write, profile['summary'], key='summary')
+        container(st.write, profile['profile'], key='profile')
 
 
 def generate_contact_social_section():
@@ -49,6 +49,13 @@ def generate_contact_social_section():
     width_cols = [1, .05, 1, 0.05, 1, .05, 1]
     col1, _, col2, _, col3, _, col4 = st.columns(width_cols, vertical_alignment='center')
     write_colums([col1, col2, col3, col4], 'social')
+
+def generate_summary_section():
+    section_name = 'summary'
+    write_subheading(section_name, key=section_name)
+    val_list = profile[section_name]
+    for line in val_list:
+        st.write(f"- {line}")
 
 
 def generate_skills_section():
@@ -122,6 +129,22 @@ def generate_skills_section():
 
     # Display the chart in Streamlit
     st.plotly_chart(fig)
+
+def generate_hobbie_section():
+        section_name = 'hobbies'
+        write_subheading(section_name, key=section_name)
+        st.write(profile[section_name])
+
+        width_education = [6, .05, 2,2]
+
+        col1, _, col2,_ = container(st.columns, width_education,
+                                                              vertical_alignment='center', key='hobbie_container')
+        with col1:
+            st.image(get_image_path('drone.png', icon=False))
+
+
+        with col2:
+            st.image(get_image_path('rosberri.png', icon=False))
 
 
 def generate_education_section():
@@ -257,12 +280,12 @@ def generate_milestone_section():
         #     showlegend=False
         # ))
 
-        # Add main bubble
+        # # Add main bubble
         fig.add_trace(go.Scatter(
             x=[row['x']],
-            y=[row['y']],
+            y=[row['y']-7],
             marker=dict(
-                size=row['impact'] * 4,  # Main bubble size
+                size=row['impact'] ,  # Main bubble size
                 color=row['color'],
                 line=dict(color=freq_color, width=1)
             ),
@@ -271,31 +294,31 @@ def generate_milestone_section():
             hoverinfo='text',
             name=row['name']
         ))
+        #
+        # # Add main bubble
+        # fig.add_trace(go.Scatter(
+        #     x=[row['x']],
+        #     y=[row['y']],
+        #     marker=dict(
+        #         size=row['impact'] * 3,  # Main bubble size
+        #         color='#fafAfA',
+        #         line=dict(color=freq_color, width=1)
+        #     ),
+        #     mode='markers',
+        #     hovertext=row['hover'],
+        #     hoverinfo='text',
+        #     name=row['name']
+        # ))
 
-        # Add main bubble
-        fig.add_trace(go.Scatter(
-            x=[row['x']],
-            y=[row['y']],
-            marker=dict(
-                size=row['impact'] * 3,  # Main bubble size
-                color='#fafAfA',
-                line=dict(color=freq_color, width=1)
-            ),
-            mode='markers',
-            hovertext=row['hover'],
-            hoverinfo='text',
-            name=row['name']
-        ))
-
-        # Add dotted line connecting bubble to x-axis
-        fig.add_trace(go.Scatter(
-            x=[row['x'], row['x']],
-            y=[0, row['y'] - 2],
-            mode='lines',
-            line=dict(color='#EFEFEF', width=1, dash='dot'),
-            hoverinfo='skip',
-            showlegend=False
-        ))
+        # # Add dotted line connecting bubble to x-axis
+        # fig.add_trace(go.Scatter(
+        #     x=[row['x'], row['x']],
+        #     y=[0, row['y'] - 2],
+        #     mode='lines',
+        #     line=dict(color='#EFEFEF', width=1, dash='dot'),
+        #     hoverinfo='skip',
+        #     showlegend=False
+        # ))
 
         # Add vertical milestone name starting from the zero line
         fig.add_annotation(
@@ -322,23 +345,23 @@ def generate_milestone_section():
         #     yanchor="bottom"
         # )
 
-        # Add custom image/icon
-        fig.add_layout_image(
-            dict(
-                source=Image.open(get_image_path(row['icon'])),
-                xref="x",
-                yref="y",
-                xanchor="center",
-                yanchor="middle",
-                x=row['x'],
-                y=row['y'],
-                sizex=1.2,
-                sizey=1.2,
-                sizing="contain",
-                opacity=0.8,
-                layer="above"
-            )
-        )
+        # # Add custom image/icon
+        # fig.add_layout_image(
+        #     dict(
+        #         source=Image.open(get_image_path(row['icon'])),
+        #         xref="x",
+        #         yref="y",
+        #         xanchor="center",
+        #         yanchor="middle",
+        #         x=row['x'],
+        #         y=row['y'],
+        #         sizex=1.2,
+        #         sizey=1.2,
+        #         sizing="contain",
+        #         opacity=0.8,
+        #         layer="above"
+        #     )
+        # )
 
     # Add button-like labels for x-axis
     for i, row in df.iterrows():
@@ -375,8 +398,8 @@ def generate_milestone_section():
             tickvals=[],
             ticktext=[]
         ),
-        plot_bgcolor='rgba(255, 255, 255, 1)',  # White background
-        paper_bgcolor='rgba(255, 255, 255, 1)',  # White background
+        plot_bgcolor='rgba(255, 255, 255, 0)',  # White background
+        paper_bgcolor='rgba(255, 255, 255, 0)',  # White background
         showlegend=False,
         margin=dict(l=0, r=0, t=20, b=20),
         height=500,
