@@ -1,12 +1,9 @@
-import numpy as np
+
 import pandas as pd
 import streamlit as st
-from PIL import Image
 from plotly import graph_objects as go
-from scripts.regsetup import description
 from streamlit_option_menu import option_menu
-import plotly.express as px
-import base64
+
 
 from src.components.components import container, write_subheading, create_ruler, write_colums, write_container, \
     disp_icon_text
