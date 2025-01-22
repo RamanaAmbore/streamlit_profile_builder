@@ -27,14 +27,13 @@ with open('data/profile_data.yaml', 'r', errors='ignore') as file:
     social = CustomDict(profile['social'])
     milestones = CustomDict(profile['milestones'])
 
-
 with open("src/frontend/custom_styles.css") as css:
     css_style = css.read()
 
 with open('src/setup/config.yaml', 'r') as file:
     config = yaml.safe_load(file)
     colors = config['dark_colors']
-    dark_colors =  config['dark_colors']
+    dark_colors = config['dark_colors']
     sidebar_icons = config['sidebar_icons']
     section_icons = config['section_icons']
     freq_color = config['freq_color']
@@ -76,11 +75,11 @@ def get_sample(lst, size):
     return random.sample(lst, size) if len(lst) > size else random.choices(lst, size)
 
 
-def get_config (name):
+def get_config(name):
     section = config[name]
     return list(section.keys()), list(section.values())
 
 
-def get_profile (name):
+def get_profile(name):
     section = profile[name]
     return list(section.keys()), list(section.values())
