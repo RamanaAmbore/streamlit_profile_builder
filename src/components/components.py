@@ -47,7 +47,7 @@ def write_subheading(text, key=None):
     create_ruler()
 
 
-def disp_icon_text(parm_vals, link_flag=True):
+def disp_icon_text(parm_vals, link_flag=True, bold=True):
     icon = parm_vals['icon']
 
     text = parm_vals['name'] if parm_vals.get('text') is None else parm_vals['text']
@@ -55,26 +55,30 @@ def disp_icon_text(parm_vals, link_flag=True):
     if 'http' not in icon:
         icon = get_image_bin_file(icon)
 
-    if link_flag:
+    if bold:
         link = parm_vals['link']
         st.markdown(
             f"""
             <div class='icon_href_text_div'>
                 <span> 
                     <a href="{link}" 
-                    class='href_link'><span class='href_text'><img src='{icon}' class='href_icon'>{text}</a>
+                    class='href_link'><span class='href_text'><img src='{icon}' class='href_icon'>{text} </a>
                 </span>
             </div>
             """,
             unsafe_allow_html=True
         )
     else:
+        link = parm_vals['link']
         st.markdown(
             f"""
-            <div class='icon_text_div'>
-                <img src='{icon}' class='no_href_icon'><span class='no_href_text'> {text} </span>
-            </div>
-            """,
+             <div class='icon_href_text_div'>
+                 <span> 
+                     <a href="{link}" 
+                     class='href_link'><span class='href_text'><img src='{icon}' class='href_icon'>{text} </a>
+                 </span>
+             </div>
+             """,
             unsafe_allow_html=True
         )
 

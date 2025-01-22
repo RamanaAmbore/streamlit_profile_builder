@@ -1,22 +1,25 @@
 sidebar_icons:
   summary: list-check
-  experience: person
   skills: gear
   employment: person-workspace
+  projects: folder
+  portfolio: rocket
   education: trophy
   certifications: clipboard-check
-  projects: folder
+
   hobbies: joystick
 
+
 section_icons:
-  summary: memo
-  experience: necktie
+  experience summary: memo
   skills: male-technologist
   employment: office
+  projects: open_file_folder
+  portfolio: rocket
   education: school
   certifications: trophy
-  projects: open_file_folder
   hobbies: video_game
+
 
 colors:
   - '#ffc09f'

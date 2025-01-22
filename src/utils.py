@@ -19,7 +19,7 @@ class CustomDict(dict):
 
 with open('data/profile_data.yaml', 'r', errors='ignore') as file:
     profile = yaml.safe_load(file)
-    career = CustomDict(profile['career'])
+    projects = CustomDict(profile['projects'])
     education = CustomDict(profile['education'])
     certifications = CustomDict(profile['certifications'])
     skills = CustomDict(profile['skills'])

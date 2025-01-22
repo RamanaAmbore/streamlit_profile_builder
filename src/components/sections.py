@@ -3,13 +3,15 @@ import pandas as pd
 import streamlit as st
 from PIL import Image
 from plotly import graph_objects as go
+from scripts.regsetup import description
 from streamlit_option_menu import option_menu
 import plotly.express as px
 import base64
 
-from src.components.components import container, write_subheading, create_ruler, write_colums, write_container
+from src.components.components import container, write_subheading, create_ruler, write_colums, write_container, \
+    disp_icon_text
 from src.utils import profile, get_image_path, get_sample, colors, get_image_bin_file, freq_color, contact, \
-    social, education, config, get_config, get_profile, colors, dark_colors
+    social, education, config, get_config, get_profile, colors, dark_colors, del_seq
 
 
 def generate_sidebar_section():
@@ -52,12 +54,14 @@ def generate_contact_social_section():
 
 
 def generate_summary_section():
-    section_name = 'summary'
+    section_name = 'experience summary'
     write_subheading(section_name, key=section_name)
     generate_milestone_section()
     val_list = profile[section_name]
-    for line in val_list:
-        st.write(f"- {line}")
+    point_container = st.container(key='summary_points')
+    with point_container:
+        for line in val_list:
+            st.write(f"- {line}")
 
 
 def generate_skills_section():
@@ -234,7 +238,7 @@ def generate_employment_section():
     col, _, pie_chart_col = container(st.columns, width_education,
                                       vertical_alignment='center', key='employment_container')
     with col:
-        write_container('employment')
+        write_container(section_name)
 
     with pie_chart_col:
         labels = [val['name'] for val in val_list]
@@ -260,6 +264,40 @@ def generate_employment_section():
         # Display the pie chart in Streamlit
         st.plotly_chart(fig, use_container_width=True)
 
+def generate_portfolio_section():
+    section_name = 'portfolio'
+    # key_list, val_list = get_profile(section_name)
+    write_subheading(section_name, key=section_name)
+    profile_section = profile[section_name]
+    for key, vals in profile_section.items():
+        container = st.container(key=del_seq(key))
+        with container:
+            disp_icon_text(vals)
+            st.markdown(f"* Technology:  {vals['technology']}")
+            st.markdown(f"* github: {vals['github']}")
+            st.markdown(f"* Summary: {vals['summary']}")
+            with st.expander(f"Description"):
+                st.write(vals['description'])
+
+def generate_project_section():
+    section_name = 'projects'
+    # key_list, val_list = get_profile(section_name)
+    write_subheading(section_name, key=section_name)
+    profile_section = profile[section_name]
+    for key, vals in profile_section.items():
+        container = st.container(key=f"{section_name}_{del_seq(key)}")
+        with container:
+            st.markdown(f"**{vals['name']}**")
+            for key1, vals1 in vals['clients'].items():
+                st.write(key1)
+                for key2, vals2 in vals1.items():
+                    st.write(f"Project: {key2}, Role: {vals2['role']}, {vals2['start']}-{vals2['end']}")
+                    st.write(f"Skills: {vals2['skills']}")
+                    st.write(f"Summary: {vals2['summary']}")
+                    with st.expander(f"Description"):
+                        st.write(vals2['desc'])
+
+
 
 def generate_milestone_section():
     section = profile['milestones']
@@ -281,7 +319,7 @@ def generate_milestone_section():
 
             text=f"<span style='line-height:11px;background-color:{color};font-weight:bold;'> {str(row['x'])}  </span><span style='line-height:11px;'>{row['name']}</span>",  # Combine name and year
             showarrow=False,
-            font=dict(size=13, color="black", family='Serif'),
+            font=dict(size=13, color="black"),
             align="center",
             xanchor="center",
             yanchor="bottom",
@@ -297,12 +335,12 @@ def generate_milestone_section():
         # Add combined annotation above the zero line with vertical orientation and hover effect
         fig.add_annotation(
             x=i * .5,
-            y=1.57,  # Position above the zero line, adjust this for vertical padding
+            y=1.55,  # Position above the zero line, adjust this for vertical padding
 
             text=f"</span><span style='line-height:11px;'>{row['name']}</span>",
             # Combine name and year
             showarrow=False,
-            font=dict(size=13, color="black", family='Serif'),
+            font=dict(size=13, color="black"),
             align="center",
             xanchor="center",
             yanchor="bottom",
@@ -334,9 +372,11 @@ def generate_milestone_section():
         plot_bgcolor='rgba(255, 255, 255, 0)',  # White background
         paper_bgcolor='rgba(255, 255, 255, 0)',  # White background
         showlegend=False,
-        margin=dict(l=0, r=0, t=20, b=0),  # Increased right margin
+        margin=dict(l=0, r=0, t=0, b=0),  # Increased right margin
         height=200,
     )
 
     # Display the chart in Streamlit
-    st.plotly_chart(fig)
+    milestone_container = st.container(key='milestones')
+    with milestone_container:
+        st.plotly_chart(fig)

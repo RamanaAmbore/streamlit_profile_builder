@@ -9,7 +9,7 @@ profile: |
   data analytics, and agile methodologies to deliver innovative solutions. My first mainframe user ID and nickname, 
   'Rambo,' reflect my unwavering tenacity in tackling complex challenges head-on.
 
-summary:
+experience summary:
   - Over nineteen years of development, consulting, and project management experience using IBM mainframe and other technologies.
   - Extensive hands-on experience in designing applications in the securities clearing and settlement industry.
   - Dual role of account manager and technical lead for a leading clearing house.
@@ -67,7 +67,7 @@ milestones:
     text: Joined iNautix as a Project Leader, India
     hover: iNautix Technologies India Pvt, Project Leader, May 2002 - Apr 2003
   2003:
-    name: NTT DATA
+    name: NTT & Fidelity
     icon: ntt.png
     duration: 21
     link: https://www.nttdata.com/global/en/
@@ -127,7 +127,7 @@ education:
     hover: Bachelors in Computer Science, Nagarjuna University, 1991
 employment:
   1.ntt:
-    name: NTT DATA
+    name: NTT & Fidelity
     icon: ntt.png
     duration: 21
     link: https://www.nttdata.com/global/en/
@@ -163,7 +163,7 @@ employment:
     hover: Dun & Bradstreet Satyam Software, Software Associate, Oct 1994 - Oct 1996
 certifications:
   0.frm:
-    name: frm
+    name: FRM
     icon: frm.png
     link: https://www.cfainstitute.org/
     org: GARP
@@ -173,7 +173,7 @@ certifications:
     text: GARP certified Financial Risk Manager (FRM), 2022
     hover: GARP certified Financial Risk Manager (FRM), 2022
   1.cfa:
-    name: cfa
+    name: CFA
     icon: cfa.png
     link: https://www.cfainstitute.org/
     org: CFA
@@ -183,7 +183,7 @@ certifications:
     text: Cleared Certified Financial Analyst (CFA) Level 1 and Level 2, 2020
     hover: Cleared Certified Financial Analyst (CFA) Level 1 and Level 2, 2020
   2.dba:
-    name: dba
+    name: DB2 DBA
     icon: ibm_db2.png
     link: https://www.ibm.com/training/certification/ibm-certified-administrator-db2-12-for-zos-C0005400
     org: IBM
@@ -193,7 +193,7 @@ certifications:
     text: IBM Certified DB2 DBA, 2003
     hover: IBM Certified DB2 DBA, 2003
   3.six_sigma:
-    name: six sigma
+    name: 6 Sigma
     icon: six_sigma.png
     link: https://qaiglobalinstitute.com/six-sigma-certification-courses/
     org: QAI
@@ -203,7 +203,7 @@ certifications:
     text: Six Sigma Green Belt certification, QAI, 2005
     hover: Six Sigma Green Belt certification, QAI, 2005
   4.pmp:
-    name: pmp
+    name: PMP
     icon: pmp.png
     link: https://www.pmi.org/certifications/project-management-pmp
     org: PMP
@@ -213,7 +213,7 @@ certifications:
     text: Project Management Professional (PMP), 2004
     hover: Six Sigma Green Belt certification, QAI, 2005
   5.java:
-    name: java
+    name: Java
     icon: java_small.png
     link: https://www.oracle.com/in/education/training/java/
     org: Sun
@@ -328,20 +328,32 @@ social:
     name: medium.com/@rrambo
     icon: medium.png
     link: https://medium.com/@rrambo
-career:
+
+portfolio:
+  1.profiles:
+    name: Profile builder
+    icon: rambo.png
+    link: https://medium.com/@rrambo
+    github: https://medium.com/@rrambo
+    technology: Python,  Pandas, Streamlit
+    summary: description placeholder
+    description: detailed description place holder
+  2.algo:
+    name: Algo Trading Platform for Derivatives
+    icon: trader.png
+    link: https://medium.com/@rrambo
+    github: https://medium.com/@rrambo
+    technology: Python,  Pandas, Streamlit
+    summary: description placeholder
+    description: detailed description place holder
+projects:
   1.ntt_data:
     name: NTT DATA
-    designation: Application Development Director
-    start: Apr 2003
-    end: Till Date
-    duration: 21 years
-    client:
-      name: Fidelity
-      projects:
+    clients:
+      1.Fidelity:
         5.mainframe_automation:
           name: Mainframe Automation
           summary:
-          client: Fidelity
           role: Project Manager
           start: Apr 2003
           end: Till Date
@@ -351,7 +363,6 @@ career:
         4.mainframe_cics:
           name: Mainframe Online CICS changes
           summary: Mainframe Online CICS changes
-          client: Fidelity
           role: Project Manager
           start: Apr 2003
           end: Till Date
@@ -361,7 +372,6 @@ career:
         3.legacy_reengineering:
           name: Legacy Re-engineering
           summary: Legacy Re-engineering
-          client: Fidelity
           role: Project Manager
           start: Apr 2003
           end: Till Date
@@ -371,26 +381,25 @@ career:
         2.Legacy_analytics:
           name: Legacy metadata analytics
           summary: Legacy metadata analytics
-          client: Fidelity
           role: Project Manager
           start: Apr 2003
           end: Till Date
           duration: 21 years
           skills: MVS, COBOL, CICS, JCL, DB2, VSAM, Assembler
+          summary: place holder
           desc: Legacy metadata analytics
         1.cloud_platform:
           name: Cloud based Transmission architecture, Design, Development
           summary: Cloud based Transmission architecture, Design, Development
-          client: Fidelity
           role: Project Manager
           start: Apr 2003
           end: Till Date
           duration: 21 years
           skills: MVS, COBOL, CICS, JCL, DB2, VSAM, Assembler
+          summary: place holder
           desc: Cloud based Transmission architecture, Design, Development
-      name: Fidelity
-      projects:
-        1.gmdid:
+      2.General Motors:
+        1.General Motors Dealer Information Database (GMDID) Re-engineering Project:
           name: General Motors Dealer Information Database (GMDID) Re-engineering Project
           summary: |
             The General Motors Dealer Information Database (GMDID) is the repository for dealer related data including ship-to locations,
@@ -398,7 +407,6 @@ career:
             Network Planning System (DNPS) is the “hub of the wheel” interacting and supplying data to all GM downstream systems and non-GM Stakeholders
             that require this data to run the business. There are over 30 GM applications, 1800 users and 134 extract requests provided to non-GM
             Stakeholders each month.  The scope of the project is to create functional spec. and project proposal for the re-engineering project.
-          client: Pershing
           role: Project Leader
           start: May 2002
           end: Apr 2003
@@ -420,21 +428,14 @@ career:
             other applications, etc.
             •	Actively involved in creating Functional Specification (FS) and project proposal for the re-engineering project.  Responsible for planning,
             scheduling and monitoring the project activities according the project plan
-  2.inautix:
+  2.iNautix Technologies India Pvt:
     name: iNautix Technologies India Pvt
-    designation: Project Leader
-    start: May 2002
-    end: Apr 2003
-    duration: 1 year
-    client:
-      name: Pershing
-      projects:
-        datashopper:
-          name: Meta Data Services Group
+    clients:
+      1.Pershing:
+        1.Meta Data Services Group:
           summary: |
             Meta Data Services group of  iNautix provides offshore support to the parent company – Pershing to capture,
             store and present the Meta Data related to mainframe source code using Platinum Repository and DataShopper
-          client: Pershing
           role: Project Leader
           start: May 2002
           end: Apr 2003
@@ -459,21 +460,14 @@ career:
             for the project. Created training material on Repository/Data Shopper and conducted training sessions for new associates.
             Helped the associates to acquire the skills in DB2 Database administration through IBM certification.
             Received Star award within three months of joining the company for the contribution to the project
-  3.modis:
+  3.Modis Consulting:
     name: Modis Consulting
-    designation: Senior Software Engineer
-    start: Nov 1997
-    end: Apr 2002
-    duration: 5 years
-    client:
-      name: Dade Country Schools
-      projects:
-        dbs_financials:
-          name: DBS Financials
+    clients:
+      Dade Country Schools:
+        1.dbs_financials:
           summary: |
             The project is to install, customize and implement DBS E-series packages for Dade County Public Schools.
               The project also involved developing Internal Funds systems and integrating it with DBS E-Series packages
-          client: Dade County Public Schools, Office of Information Technology
           role: Software Consultant
           start: Apr 2002
           end: Nov 1997
@@ -494,26 +488,20 @@ career:
 
   4.mastech:
     name: Mastech Systems Inc.
-    Designation: Software Engineer
-    start: Nov 1996
-    end: Nov 1997
-    duration: 1 year
-    client:
-      name: Ryder Inc
-      projects:
+    clients:
+      1.Ryder Inc:
         1.DBS E-series Year 2000 Conversion Projects:
           name: DBS E-series Year 2000 Conversion Projects
           summary: |
             Ryder On-line Analytical Decision (ROAD) Support System helps in calculating the average number repair hours at 
             the repair shops. The system generates productivity reports and helps in estimating the manpower requirements 
             at various Ryder repair shops
-          client: Ryder Systems , USA
           role: Project Manager
           start: Nov 1996
           end: Oct 1997
           duration: 1 year
           skills: MVS, COBOL, JCL, REXX, CICS, DB2, VSAM, DCI, IE, Script, Xpediter, SPUFI, FileAid, QMF
-          description: |
+          desc: |
             Worked as a consultant to perform analysis, design and implementation of ROAD. 
             •	Consulted and reviewed the client requirements for the new system. Developed new programs and JCL’s and 
               created installation and maintenance procedures for system maintenance. 
@@ -523,20 +511,14 @@ career:
 
   5.dbss:
     name: Dun & Bradstreet Satyma Software
-    Designation: Associate Engineer
-    start: Nov 1997
-    end: Nov 2005
-    duration: 2 years
-    client:
-      name: Dun & Bradstreet
-      projects:
+    clients:
+      1.Dun & Bradstreet:
         dbs:
           name: DBS E-series Year 2000 Conversion Projects
           summary: |
             Dun & Bradstreet E-series Government is a suit of mainframe financial packages used by Fortune 500 companies 
             with DB2 as the database management system.  The project is to implement the new release of the package that 
             is year 2000 compliant
-          client: Dun & Bradstreet Software Corp., USA
           role: Software Engineer
           start: Oct 1994
           end: Oct 1996
