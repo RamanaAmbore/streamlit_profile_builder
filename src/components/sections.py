@@ -282,7 +282,7 @@ def generate_portfolio_section():
         with container:
             disp_icon_text_new(vals['icon'], key, vals['link'],'h5')
             for key1, val1 in vals.items():
-                if key1 not in ['icon', 'link']:
+                if key1 not in ['icon', 'link', 'Description']:
                     st.write(f"**{key1}**: {val1}")
             with st.expander(f"Description"):
                 st.write(vals['Description'])
