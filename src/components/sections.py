@@ -5,7 +5,7 @@ from streamlit_option_menu import option_menu
 
 
 from src.components.components import container, write_subheading, create_ruler, write_colums, write_container, \
-    disp_icon_text
+    disp_icon_text, disp_icon_text_new
 from src.utils import profile, get_image_path, get_sample, colors, get_image_bin_file, freq_color, contact, \
     social, education, config, get_config, get_profile, colors, dark_colors, del_seq
 
@@ -165,6 +165,7 @@ def generate_education_section():
         vals = education.values()
         labels = [val['name'] for val in val_list]
         values = [val['duration'] for val in val_list]
+        hover = [(val['hover'] if 'hover' in val else val['description']).replace(',','<br>') for val in val_list]
         select_colors = get_sample(colors, len(labels))
 
         # Create pie chart
@@ -172,7 +173,10 @@ def generate_education_section():
             go.Pie(labels=labels,
                    values=values,
                    marker=dict(colors=select_colors, line=dict(color="gray", width=1)),
-                   textinfo='label+percent', insidetextorientation='radial',
+                   textinfo='label', insidetextorientation='radial',
+                   textposition='inside',
+                   hovertemplate='%{customdata}<extra></extra>',
+                   customdata=hover,
                    pull=[0.03] * len(labels))])
 
         # Update layout for custom appearance
@@ -202,6 +206,7 @@ def generate_certification_section():
     with pie_chart_col:
         labels = [val['name'] for val in val_list]
         values = [val['duration'] for val in val_list]
+        hover = [(val['hover'] if 'hover' in val else val['description']).replace(',','<br>') for val in val_list]
         select_colors = get_sample(colors, len(labels))
 
         # Create pie chart
@@ -209,7 +214,10 @@ def generate_certification_section():
             go.Pie(labels=labels,
                    values=values,
                    marker=dict(colors=select_colors, line=dict(color="gray", width=1)),
-                   textinfo='label+percent', insidetextorientation='radial',
+                   textinfo='label', insidetextorientation='radial',
+                   textposition='inside',
+                   hovertemplate='%{customdata}<extra></extra>',
+                   customdata=hover,
                    pull=[0.03] * len(labels))])
 
         # Update layout for custom appearance
@@ -239,6 +247,7 @@ def generate_employment_section():
     with pie_chart_col:
         labels = [val['name'] for val in val_list]
         values = [val['duration'] for val in val_list]
+        hover = [(val['hover'] if 'hover' in val else val['description']).replace(',','<br>') for val in val_list]
         select_colors = get_sample(colors, len(labels))
 
         # Create pie chart
@@ -246,7 +255,10 @@ def generate_employment_section():
             go.Pie(labels=labels,
                    values=values,
                    marker=dict(colors=select_colors, line=dict(color="gray", width=1)),
-                   textinfo='label+percent', insidetextorientation='radial',
+                   textinfo='label', insidetextorientation='radial',
+                   textposition='inside',
+                   hovertemplate='%{customdata}<extra></extra>',
+                   customdata=hover,
                    pull=[0.03] * len(labels))])
 
         # Update layout for custom appearance
@@ -268,12 +280,12 @@ def generate_portfolio_section():
     for key, vals in profile_section.items():
         container = st.container(key=del_seq(key))
         with container:
-            disp_icon_text(vals)
-            st.markdown(f"* Technology:  {vals['technology']}")
-            st.markdown(f"* github: {vals['github']}")
-            st.markdown(f"* Summary: {vals['summary']}")
+            disp_icon_text_new(vals['icon'], key, vals['link'],'h5')
+            for key1, val1 in vals.items():
+                if key1 not in ['icon', 'link']:
+                    st.write(f"**{key1}**: {val1}")
             with st.expander(f"Description"):
-                st.write(vals['description'])
+                st.write(vals['Description'])
 
 def generate_project_section():
     section_name = 'projects'
@@ -291,7 +303,7 @@ def generate_project_section():
                     st.write(f"Skills: {vals2['skills']}")
                     st.write(f"Summary: {vals2['summary']}")
                     with st.expander(f"Description"):
-                        st.write(vals2['desc'])
+                        st.write(vals2['description'])
 
 
 
@@ -325,7 +337,7 @@ def generate_milestone_section():
             borderwidth=1,  # Width of the border
             borderpad=5,  # Padding for rounded corners
             opacity=1,
-            hovertext=row['hover'],  # Hover text for annotation
+            hovertext=row['description'],  # Hover text for annotation
         )
 
         # Add combined annotation above the zero line with vertical orientation and hover effect
@@ -346,7 +358,7 @@ def generate_milestone_section():
             borderwidth=1,  # Width of the border
             borderpad=5,  # Padding for rounded corners
             opacity=1,
-            hovertext=row['hover'],  # Hover text for annotation
+            hovertext=row['description'],  # Hover text for annotation
         )
 
     # Update layout for overall appearance with increased right margin

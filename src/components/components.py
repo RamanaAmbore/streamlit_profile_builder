@@ -50,7 +50,7 @@ def write_subheading(text, key=None):
 def disp_icon_text(parm_vals, link_flag=True, bold=True):
     icon = parm_vals['icon']
 
-    text = parm_vals['name'] if parm_vals.get('text') is None else parm_vals['text']
+    text = parm_vals['name'] if parm_vals.get('description') is None else parm_vals['description']
 
     if 'http' not in icon:
         icon = get_image_bin_file(icon)
@@ -82,6 +82,20 @@ def disp_icon_text(parm_vals, link_flag=True, bold=True):
             unsafe_allow_html=True
         )
 
+def disp_icon_text_new(icon=None, text="", link="#",tag=""):
+        icon = get_image_bin_file(icon)
+        st.markdown(
+            f"""
+            <div class='icon_href_text_div'>
+                <span> 
+                    <a href="{link} " 
+                    class='href_link'><span class='href_text'><{tag}><img src='{icon}' class='href_icon'>{text}</{tag}></a>
+                </span>
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
+
 
 def create_ruler():
     st.markdown('---', unsafe_allow_html=True)
@@ -90,7 +104,7 @@ def create_ruler():
 def write_container(name):
     profile_section = profile[name]
     for key, vals in profile_section.items():
-        container(disp_icon_text, vals, key=del_seq(key))
+        container(disp_icon_text, vals, key=f"{name}_{del_seq(key)}")
 
 
 def write_colums(column_list, name):
