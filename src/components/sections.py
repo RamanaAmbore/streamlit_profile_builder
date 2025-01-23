@@ -3,11 +3,11 @@ import streamlit as st
 from plotly import graph_objects as go
 from streamlit_option_menu import option_menu
 
-
-from src.components.components import container, write_subheading, create_ruler, write_colums, write_container, \
-    disp_icon_text, disp_icon_text_new
+from src.components.components import container, write_section_heading, create_ruler, write_colums, write_container, \
+    disp_icon_text
 from src.utils import profile, get_image_path, get_sample, colors, get_image_bin_file, freq_color, contact, \
-    social, education, config, get_config, get_profile, colors, dark_colors, del_seq
+    social, education, config, get_config, get_profile, colors, dark_colors, del_seq, get_labels, capitalize, \
+    get_darker_colors, get_darker_color
 
 
 def generate_sidebar_section():
@@ -27,7 +27,7 @@ def generate_sidebar_section():
 
 
 def generate_profile_section():
-    container(st.header, f'{profile['name']}, {profile['name_suffix']}', key='profile_name')
+    container(st.header, f'{profile['name']}, {profile['name suffix']}', key='profile_name')
     # st.header(about_me_name)
     container(st.write, f'#### {profile['designation']}', key='profile_designation')
     col1, _, col2 = st.columns([2, .1, 10])
@@ -40,22 +40,26 @@ def generate_profile_section():
 
 def generate_contact_social_section():
     create_ruler()
-    width_cols = [1, .05, 1, 0.05, 1, .05, 1]
-    col1, _, col2, _, col3, _, col4 = st.columns(width_cols, vertical_alignment='center')
-    write_colums([col1, col2, col3, col4], 'contact')
+    section_name = 'contact'
+    with st.container(key=section_name):
+        width_cols = [1, .05, 1, 0.05, 1, .05, 1]
+        col1, _, col2, _, col3, _, col4 = st.columns(width_cols, vertical_alignment='center')
+        write_colums([col1, col2, col3, col4], section_name)
 
-    width_cols = [1, .05, 1, 0.05, 1, .05, 1]
-    col1, _, col2, _, col3, _, col4 = st.columns(width_cols, vertical_alignment='center')
-    write_colums([col1, col2, col3, col4], 'social')
+    section_name = 'social'
+    with st.container(key=section_name):
+        width_cols = [1, .05, 1, 0.05, 1, .05, 1]
+        col1, _, col2, _, col3, _, col4 = st.columns(width_cols, vertical_alignment='center')
+        write_colums([col1, col2, col3, col4], section_name)
 
 
-def generate_summary_section():
+def generate_experience_summary_section():
     section_name = 'experience summary'
-    write_subheading(section_name, key=section_name)
+    write_section_heading(section_name, key=section_name)
     generate_milestone_section()
+
     val_list = profile[section_name]
-    point_container = st.container(key='summary_points')
-    with point_container:
+    with st.container(key='summary_points'):
         for line in val_list:
             st.write(f"- {line}")
 
@@ -64,12 +68,14 @@ def generate_skills_section():
     section_name = 'skills'
     key_list, val_list = get_profile(section_name)
 
-    write_subheading(section_name, key=section_name)
+    write_section_heading(section_name, key=section_name)
 
-    categories = [val['name'] for val in val_list]
+    categories = get_labels(section_name)
     icon_paths = [val['icon'] for val in val_list]
     ratings = [val['level'] for val in val_list]
+    hover = [val['long label'] for val in val_list]
     select_colors = get_sample(colors, len(ratings))
+    border_colors = get_darker_colors(select_colors)
 
     img_base64 = [get_image_bin_file(icon) for icon in icon_paths]
 
@@ -77,20 +83,23 @@ def generate_skills_section():
     fig = go.Figure()
 
     # Add bars with categories inside (vertical text) and shadow around the bar
-    for i, category in enumerate(categories):
-        fig.add_trace(go.Bar(
-            x=[category],
-            y=[ratings[i]],
-            text='',
-            textposition='inside',
-            insidetextanchor='start',
-            marker=dict(
-                color=select_colors[i],  # Base color
-                line=dict(color='lightgray', width=1)  # Shadow effect with darker border
-            ),
-            name=category
-        ))
 
+    fig.add_trace(go.Bar(
+        x=categories,
+        y=ratings,
+        text='',
+        textposition='inside',
+        insidetextanchor='start',
+        marker=dict(
+            color=select_colors,  # Base color
+            line=dict(color=border_colors, width=1)  # Shadow effect with darker border
+        ),
+        hovertemplate='%{customdata}<extra></extra>',
+        customdata=hover
+
+    ))
+
+    for i, category in enumerate(categories):
         # Add vertical text inside the bars
         fig.add_annotation(
             x=category,
@@ -135,8 +144,9 @@ def generate_skills_section():
 
 def generate_hobbie_section():
     section_name = 'hobbies'
-    write_subheading(section_name, key=section_name)
-    st.write(profile[section_name])
+    section = profile[section_name]
+    write_section_heading(section_name, key=section_name)
+    st.write(section['summary'])
 
     width_education = [6, .05, 2, 2]
 
@@ -147,12 +157,14 @@ def generate_hobbie_section():
 
     with col2:
         st.image(get_image_path('raspberry.png', icon=False))
+    with st.expander("Additional Information..."):
+        st.write(section['additional information'])
 
 
 def generate_education_section():
     section_name = 'education'
     key_list, val_list = get_profile(section_name)
-    write_subheading(section_name, key=section_name)
+    write_section_heading(section_name, key=section_name, first_line=False)
 
     width_education = [5, .05, 1]
 
@@ -162,17 +174,17 @@ def generate_education_section():
         write_container('education')
 
     with education_pie_chart_col:
-        vals = education.values()
-        labels = [val['name'] for val in val_list]
+        labels = get_labels(section_name, 'short label')
         values = [val['duration'] for val in val_list]
-        hover = [(val['hover'] if 'hover' in val else val['description']).replace(',','<br>') for val in val_list]
+        hover = [(val['hover'] if 'hover' in val else val['long label']).replace(',', '<br>') for val in val_list]
         select_colors = get_sample(colors, len(labels))
+        border_colors = get_darker_colors(select_colors)
 
         # Create pie chart
         fig = go.Figure(data=[
             go.Pie(labels=labels,
                    values=values,
-                   marker=dict(colors=select_colors, line=dict(color="gray", width=1)),
+                   marker=dict(colors=select_colors, line=dict(color=border_colors, width=1)),
                    textinfo='label', insidetextorientation='radial',
                    textposition='inside',
                    hovertemplate='%{customdata}<extra></extra>',
@@ -194,7 +206,7 @@ def generate_education_section():
 def generate_certification_section():
     section_name = 'certifications'
     key_list, val_list = get_profile(section_name)
-    write_subheading(section_name, key=section_name)
+    write_section_heading(section_name, key=section_name)
 
     width_education = [5, .05, 1]
 
@@ -204,16 +216,17 @@ def generate_certification_section():
         write_container('certifications')
 
     with pie_chart_col:
-        labels = [val['name'] for val in val_list]
+        labels = get_labels(section_name, 'short label')
         values = [val['duration'] for val in val_list]
-        hover = [(val['hover'] if 'hover' in val else val['description']).replace(',','<br>') for val in val_list]
+        hover = [(val['hover'] if 'hover' in val else val['long label']).replace(',', '<br>') for val in val_list]
         select_colors = get_sample(colors, len(labels))
+        border_colors = get_darker_colors(select_colors)
 
         # Create pie chart
         fig = go.Figure(data=[
             go.Pie(labels=labels,
                    values=values,
-                   marker=dict(colors=select_colors, line=dict(color="gray", width=1)),
+                   marker=dict(colors=select_colors, line=dict(color=border_colors, width=1)),
                    textinfo='label', insidetextorientation='radial',
                    textposition='inside',
                    hovertemplate='%{customdata}<extra></extra>',
@@ -234,27 +247,28 @@ def generate_certification_section():
 
 def generate_employment_section():
     section_name = 'employment'
-    key_list, val_list = get_profile(section_name)
-    write_subheading(section_name, key=section_name)
+    key_list, val_list = get_profile('projects')
+    write_section_heading(section_name, key=section_name)
 
     width_education = [5, .05, 1]
 
     col, _, pie_chart_col = container(st.columns, width_education,
-                                      vertical_alignment='center', key='employment_container')
+                                      vertical_alignment='center', key=f'{section_name}_data')
     with col:
-        write_container(section_name)
+        write_container('projects')
 
     with pie_chart_col:
-        labels = [val['name'] for val in val_list]
+        labels = get_labels('projects')
         values = [val['duration'] for val in val_list]
-        hover = [(val['hover'] if 'hover' in val else val['description']).replace(',','<br>') for val in val_list]
+        hover = [(val['hover'] if 'hover' in val else val['long label']).replace(',', '<br>') for val in val_list]
         select_colors = get_sample(colors, len(labels))
+        border_colors = get_darker_colors(select_colors)
 
         # Create pie chart
         fig = go.Figure(data=[
             go.Pie(labels=labels,
                    values=values,
-                   marker=dict(colors=select_colors, line=dict(color="gray", width=1)),
+                   marker=dict(colors=select_colors, line=dict(color=border_colors, width=1)),
                    textinfo='label', insidetextorientation='radial',
                    textposition='inside',
                    hovertemplate='%{customdata}<extra></extra>',
@@ -272,47 +286,58 @@ def generate_employment_section():
         # Display the pie chart in Streamlit
         st.plotly_chart(fig, use_container_width=True)
 
+
 def generate_portfolio_section():
     section_name = 'portfolio'
     # key_list, val_list = get_profile(section_name)
-    write_subheading(section_name, key=section_name)
-    profile_section = profile[section_name]
-    for key, vals in profile_section.items():
+    write_section_heading(section_name, key=section_name, first_line=False)
+    section = profile[section_name]
+    for key, vals in section.items():
         container = st.container(key=del_seq(key))
         with container:
-            disp_icon_text_new(vals['icon'], key, vals['link'],'h5')
-            for key1, val1 in vals.items():
-                if key1 not in ['icon', 'link', 'Description']:
-                    st.write(f"**{key1}**: {val1}")
-            with st.expander(f"Description"):
-                st.write(vals['Description'])
+            col1,_,col2 = st.columns([7,0.01, 10])
+            with col1:
+                disp_icon_text(vals['icon'], key, vals['link'], 'h5')
+            with col2:
+                disp_icon_text('git_small.png', '', vals['github'])
+            col1, _, col2 = st.columns([10, 0.01, 5])
+            with col1:
+                st.write(vals['summary'])
+                st.write(f"Technology: {vals['technology']}")
+            with col2:
+                st.image(get_image_path(vals['image'],icon=False))
+            with st.expander(f"Additional Information..."):
+                st.write(vals['additional information'])
+
 
 def generate_project_section():
     section_name = 'projects'
     # key_list, val_list = get_profile(section_name)
-    write_subheading(section_name, key=section_name)
-    profile_section = profile[section_name]
-    for key, vals in profile_section.items():
+    write_section_heading(section_name, key=section_name)
+    section = profile[section_name]
+    for key, vals in section.items():
         container = st.container(key=f"{section_name}_{del_seq(key)}")
         with container:
-            st.markdown(f"**{vals['name']}**")
+            label = capitalize(vals['label'] if 'label' in vals else key)
+            disp_icon_text(vals['icon'], label, vals['link'],'H5')
+            # st.markdown(f"**{label}**")
             for key1, vals1 in vals['clients'].items():
-                st.write(key1)
                 for key2, vals2 in vals1.items():
-                    st.write(f"Project: {key2}, Role: {vals2['role']}, {vals2['start']}-{vals2['end']}")
-                    st.write(f"Skills: {vals2['skills']}")
-                    st.write(f"Summary: {vals2['summary']}")
-                    with st.expander(f"Description"):
-                        st.write(vals2['description'])
-
+                    st.write(f"**{key2}, {key1}, {vals2['role']}, {vals2['start']} - {vals2['end']}**")
+                    st.write(f"{vals2['summary']}")
+                    st.write(f"Technology: {vals2['technology']}")
+                    with st.expander(f"Additional Information..."):
+                        st.write(vals2['additional information'])
 
 
 def generate_milestone_section():
-    section = profile['milestones']
+    section_name = 'milestones'
+    section = profile[section_name]
     df = pd.DataFrame.from_dict(section, orient='index')
     df.index.name = 'x'
     df = df.reset_index()
     df['color'] = get_sample(colors, len(df))
+
 
     fig = go.Figure()
 
@@ -320,12 +345,13 @@ def generate_milestone_section():
     for i in range(len(df)):
         row = df.iloc[i]
         color = row['color']
+        border_color = get_darker_color(color,.25)
         # Add combined annotation above the zero line with vertical orientation and hover effect
         fig.add_annotation(
-            x=i*.5,
+            x=i * .5,
             y=0.5,  # Position above the zero line, adjust this for vertical padding
-
-            text=f"<span style='line-height:11px;background-color:{color};font-weight:bold;'> {str(row['x'])}  </span><span style='line-height:11px;'>{row['name']}</span>",  # Combine name and year
+            text=f"<span style='line-height:11px;background-color:{color};font-weight:bold;'> {str(row['x'])}  </span><span style='line-height:11px;'>{row['milestone']}</span>",
+            # Combine name and year
             showarrow=False,
             font=dict(size=13, color="black"),
             align="center",
@@ -333,19 +359,19 @@ def generate_milestone_section():
             yanchor="bottom",
             textangle=-90,  # Vertical text orientation
             bgcolor=row['color'],  # Background color for the milestone name
-            bordercolor='gray',  # Border color for the annotation
+            bordercolor=border_color,  # Border color for the annotation
             borderwidth=1,  # Width of the border
             borderpad=5,  # Padding for rounded corners
             opacity=1,
-            hovertext=row['description'],  # Hover text for annotation
+            hovertext=row['long label'],  # Hover text for annotation
         )
-
+        border_color = get_darker_color(color, .75)
         # Add combined annotation above the zero line with vertical orientation and hover effect
         fig.add_annotation(
             x=i * .5,
             y=1.55,  # Position above the zero line, adjust this for vertical padding
 
-            text=f"</span><span style='line-height:11px;'>{row['name']}</span>",
+            text=f"</span><span style='line-height:11px;'>{row['milestone']}</span>",
             # Combine name and year
             showarrow=False,
             font=dict(size=13, color="black"),
@@ -354,11 +380,11 @@ def generate_milestone_section():
             yanchor="bottom",
             textangle=-90,  # Vertical text orientation
             bgcolor='white',  # Background color for the milestone name
-            bordercolor='lightgray',  # Border color for the annotation
+            bordercolor=border_color,  # Border color for the annotation
             borderwidth=1,  # Width of the border
             borderpad=5,  # Padding for rounded corners
             opacity=1,
-            hovertext=row['description'],  # Hover text for annotation
+            hovertext=row['long label'],  # Hover text for annotation
         )
 
     # Update layout for overall appearance with increased right margin
@@ -385,6 +411,6 @@ def generate_milestone_section():
     )
 
     # Display the chart in Streamlit
-    milestone_container = st.container(key='milestones')
+    milestone_container = st.container(key=section_name)
     with milestone_container:
         st.plotly_chart(fig)

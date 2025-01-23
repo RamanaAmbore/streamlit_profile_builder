@@ -40,61 +40,38 @@ def container(*args, **kwargs):
     return function(*args, **kwargs)
 
 
-def write_subheading(text, key=None):
-    create_ruler()
+def write_section_heading(text, key=None, first_line=True, last_line=True):
+    if first_line:
+        create_ruler()
     icon = config["section_icons"]
     container(st.subheader, f':{icon[text]}: {text.title()}', key=key)
-    create_ruler()
+    if last_line:
+        create_ruler()
 
 
-def disp_icon_text(parm_vals, link_flag=True, bold=True):
-    icon = parm_vals['icon']
+def write_subheading(heading, text, key=None):
+    st.write(f"**{heading.title()}:** {text}")
 
-    text = parm_vals['name'] if parm_vals.get('description') is None else parm_vals['description']
 
-    if 'http' not in icon:
-        icon = get_image_bin_file(icon)
-
-    if bold:
-        link = parm_vals['link']
-        st.markdown(
-            f"""
-            <div class='icon_href_text_div'>
-                <span> 
-                    <a href="{link}" 
-                    class='href_link'><span class='href_text'><img src='{icon}' class='href_icon'>{text} </a>
-                </span>
-            </div>
-            """,
-            unsafe_allow_html=True
-        )
+def disp_icon_text(icon=None, text="", link="#", tag=""):
+    icon = get_image_bin_file(icon)
+    if tag == "":
+        tag = f"<img src='{icon}' class='href_icon'>{text}"
     else:
-        link = parm_vals['link']
-        st.markdown(
-            f"""
-             <div class='icon_href_text_div'>
-                 <span> 
-                     <a href="{link}" 
-                     class='href_link'><span class='href_text'><img src='{icon}' class='href_icon'>{text} </a>
-                 </span>
-             </div>
-             """,
-            unsafe_allow_html=True
-        )
+        tag = f"<{tag}><img src='{icon}' class='href_icon'>{text}</{tag}>"
 
-def disp_icon_text_new(icon=None, text="", link="#",tag=""):
-        icon = get_image_bin_file(icon)
-        st.markdown(
-            f"""
+    st.markdown(
+        f"""
             <div class='icon_href_text_div'>
                 <span> 
                     <a href="{link} " 
-                    class='href_link'><span class='href_text'><{tag}><img src='{icon}' class='href_icon'>{text}</{tag}></a>
+                    class='href_link'><span class='href_text'>{tag}</a>
                 </span>
             </div>
             """,
-            unsafe_allow_html=True
-        )
+        unsafe_allow_html=True
+    )
+
 
 
 def create_ruler():
@@ -104,7 +81,7 @@ def create_ruler():
 def write_container(name):
     profile_section = profile[name]
     for key, vals in profile_section.items():
-        container(disp_icon_text, vals, key=f"{name}_{del_seq(key)}")
+        disp_icon_text(vals['icon'], vals['long label'], vals['link'])
 
 
 def write_colums(column_list, name):
@@ -112,9 +89,11 @@ def write_colums(column_list, name):
     profile_keys = list(profile_section.keys())
     size = len(profile_keys) - 1
     profile_vals = list(profile_section.values())
+
     for idx, col in enumerate(column_list):
         if idx > size: return
-        key = profile_keys[idx]
+        vals = profile_vals[idx]
+        label = vals['label'] if 'label' in vals else profile_keys[idx]
         vals = profile_vals[idx]
         with col:
-            container(disp_icon_text, vals, key=del_seq(key))
+            disp_icon_text(vals['icon'], label, vals['link'])
