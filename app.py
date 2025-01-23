@@ -23,8 +23,7 @@ def initial_setup():
     st.set_page_config(
         page_title=f"{profile['name'].title()}, {profile['name suffix']}'s Profile",
         page_icon=favicon,
-        layout="wide",
-        initial_sidebar_state="collapsed")
+        layout="wide")
     markdown(css_style)
     set_png_as_page_bg('background.png')
 
