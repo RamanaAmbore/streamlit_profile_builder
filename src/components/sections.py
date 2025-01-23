@@ -394,6 +394,7 @@ def generate_milestone_section():
             ticktext=[]  # Remove default x-axis text
         ),
         yaxis=dict(
+            range=[0, 5],
             showline=False,
             showgrid=False,
             zeroline=True,
