@@ -73,7 +73,6 @@ def disp_icon_text(icon=None, text="", link="#", tag=""):
     )
 
 
-
 def create_ruler():
     st.markdown('---', unsafe_allow_html=True)
 

@@ -295,7 +295,7 @@ def generate_portfolio_section():
     for key, vals in section.items():
         container = st.container(key=del_seq(key))
         with container:
-            col1,_,col2 = st.columns([7,0.01, 10])
+            col1, _, col2 = st.columns([7, 0.01, 10])
             with col1:
                 disp_icon_text(vals['icon'], key, vals['link'], 'h5')
             with col2:
@@ -305,7 +305,7 @@ def generate_portfolio_section():
                 st.write(vals['summary'])
                 st.write(f"Technology: {vals['technology']}")
             with col2:
-                st.image(get_image_path(vals['image'],icon=False))
+                st.image(get_image_path(vals['image'], icon=False))
             with st.expander(f"Additional Information..."):
                 st.write(vals['additional information'])
 
@@ -319,7 +319,7 @@ def generate_project_section():
         container = st.container(key=f"{section_name}_{del_seq(key)}")
         with container:
             label = capitalize(vals['label'] if 'label' in vals else key)
-            disp_icon_text(vals['icon'], label, vals['link'],'H5')
+            disp_icon_text(vals['icon'], label, vals['link'], 'H5')
             # st.markdown(f"**{label}**")
             for key1, vals1 in vals['clients'].items():
                 for key2, vals2 in vals1.items():
@@ -338,14 +338,13 @@ def generate_milestone_section():
     df = df.reset_index()
     df['color'] = get_sample(colors, len(df))
 
-
     fig = go.Figure()
 
     # Iterate over each milestone in the DataFrame
     for i in range(len(df)):
         row = df.iloc[i]
         color = row['color']
-        border_color = get_darker_color(color,.25)
+        border_color = get_darker_color(color, .25)
         # Add combined annotation above the zero line with vertical orientation and hover effect
         fig.add_annotation(
             x=i * .5,
