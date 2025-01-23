@@ -5,9 +5,8 @@ from streamlit_option_menu import option_menu
 
 from src.components.components import container, write_section_heading, create_ruler, write_colums, write_container, \
     disp_icon_text
-from src.utils import profile, get_image_path, get_sample, colors, get_image_bin_file, freq_color, contact, \
-    social, education, config, get_config, get_profile, colors, dark_colors, del_seq, get_labels, capitalize, \
-    get_darker_colors, get_darker_color
+from src.utils import profile, get_image_path, get_sample, get_image_bin_file, freq_color, get_config, get_profile, \
+    colors, get_labels, capitalize,     get_darker_colors, get_darker_color, pdf_resume
 
 
 def generate_sidebar_section():
@@ -28,11 +27,17 @@ def generate_sidebar_section():
 
 def generate_profile_section():
     container(st.header, f'{profile['name']}, {profile['name suffix']}', key='profile_name')
-    # st.header(about_me_name)
-    container(st.write, f'#### {profile['designation']}', key='profile_designation')
+    col1, _, col2 = st.columns([10, .05, 1])
+    with col1:
+        container(st.write, f'#### {profile['designation']}', key='profile_designation')
+    with col2:
+        st.download_button(label=":arrow_down: pdf", type='secondary',
+                           data=pdf_resume,
+                           file_name="ramana_ambore_resume.pdf",
+                           mime='application/octet-stream')
     col1, _, col2 = st.columns([2, .1, 10])
     with col1:
-        container(st.image, get_image_path('profile_photo.png', False), clamp=True,
+        container(st.image, get_image_path('profile_photo.png'), clamp=True,
                   use_container_width=True, key='profile_photo')
     with col2:
         container(st.write, profile['profile'], key='profile')
@@ -153,10 +158,10 @@ def generate_hobbie_section():
     col1, _, col2, _ = container(st.columns, width_education,
                                  vertical_alignment='center', key='hobbie_container')
     with col1:
-        st.image(get_image_path('drone.png', icon=False))
+        st.image(get_image_path('drone.png'))
 
     with col2:
-        st.image(get_image_path('raspberry.png', icon=False))
+        st.image(get_image_path('raspberry.png'))
     with st.expander("Additional Information..."):
         st.write(section['additional information'])
 
@@ -293,7 +298,7 @@ def generate_portfolio_section():
     write_section_heading(section_name, key=section_name)
     section = profile[section_name]
     for key, vals in section.items():
-        container = st.container(key=del_seq(key))
+        container = st.container(key=key)
         with container:
             col1, _, col2 = st.columns([10, 0.01, 10])
             with col1:
@@ -305,7 +310,7 @@ def generate_portfolio_section():
                 st.write(vals['summary'])
                 st.write(f"Technology: {vals['technology']}")
             with col2:
-                st.image(get_image_path(vals['image'], icon=False))
+                st.image(get_image_path(vals['image']))
             with st.expander(f"Additional Information..."):
                 st.write(vals['additional information'])
 
@@ -316,7 +321,7 @@ def generate_project_section():
     write_section_heading(section_name, key=section_name)
     section = profile[section_name]
     for key, vals in section.items():
-        container = st.container(key=f"{section_name}_{del_seq(key)}")
+        container = st.container(key=f"{section_name}_{key}")
         with container:
             label = capitalize(vals['label'] if 'label' in vals else key)
             disp_icon_text(vals['icon'], label, vals['link'], 'H5')

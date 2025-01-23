@@ -1,7 +1,7 @@
 import streamlit as st
 
 import src.components
-from src.utils import get_image_bin_file, del_seq, config, profile
+from src.utils import get_image_bin_file, config, profile
 
 
 def set_png_as_page_bg(png_file, icon=False):

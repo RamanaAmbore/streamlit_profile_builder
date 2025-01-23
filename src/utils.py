@@ -1,11 +1,12 @@
+import base64
 import functools
 import logging
 import random
+from io import BytesIO
 
+import streamlit
 import yaml
 from PIL import Image
-import base64
-from io import BytesIO
 
 
 class CustomDict(dict):
@@ -38,18 +39,16 @@ with open('src/setup/config.yaml', 'r') as file:
     section_icons = config['section_icons']
     freq_color = config['freq_color']
 
-
-def get_image_path(file, icon=True):
-    return f'static/icons/{file}' if icon else f'static/images/{file}'
-
-
-def del_seq(parm_text):
-    if '.' in parm_text[1:2]: parm_text = parm_text.split('.', 1)[1]
-    return parm_text
+with open("static/resume.pdf", "rb") as pdf_file:
+    pdf_resume = pdf_file.read()
 
 
+def get_image_path(file):
+    return f'static/{file}'
+
+@streamlit.cache_resource
 def get_image_bin_file(file, icon=True):
-    img = Image.open(get_image_path(file, icon))
+    img = Image.open(get_image_path(file))
     format = file[-3:].upper()
 
     # Encode the image as base64
@@ -86,7 +85,7 @@ def get_profile(name):
 
 
 def capitalize(text):
-    return text if text.isupper() else text.title()
+    return text if any([x.isupper() for x in text]) else text.title()
 
 
 def get_labels(name, label='label'):
