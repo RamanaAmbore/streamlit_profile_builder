@@ -129,7 +129,7 @@ def generate_skills_section():
     # Update layout for transparent background and vertical x-axis labels
     fig.update_layout(
         xaxis_title=dict(text="Technical Skills", font=dict(color=freq_color, size=14)),
-        yaxis_title=dict(text="Skill Level", font=dict(color=freq_color, size=14)),
+        yaxis_title=dict(text="Proficiency", font=dict(color=freq_color, size=14)),
         xaxis=dict(tickangle=0, showticklabels=False, ),
         yaxis=dict(range=[0, 5]),
         plot_bgcolor='rgba(0, 0, 0, 0)',  # Transparent plot background
@@ -164,7 +164,7 @@ def generate_hobbie_section():
 def generate_education_section():
     section_name = 'education'
     key_list, val_list = get_profile(section_name)
-    write_section_heading(section_name, key=section_name, first_line=False)
+    write_section_heading(section_name, key=section_name)
 
     width_education = [5, .05, 1]
 
@@ -290,7 +290,7 @@ def generate_employment_section():
 def generate_portfolio_section():
     section_name = 'portfolio'
     # key_list, val_list = get_profile(section_name)
-    write_section_heading(section_name, key=section_name, first_line=False)
+    write_section_heading(section_name, key=section_name)
     section = profile[section_name]
     for key, vals in section.items():
         container = st.container(key=del_seq(key))
