@@ -1,56 +1,79 @@
+# Import necessary modules and components
 import pandas as pd
 import streamlit as st
 from plotly import graph_objects as go
 from streamlit_option_menu import option_menu
 
+# Import custom components and functions from src directory
 from src.components.components import container, write_section_heading, create_ruler, write_colums, write_container, \
     disp_icon_text
 from src.utils import profile, get_image_path, get_sample, get_image_bin_file, freq_color, get_config, get_profile, \
-    colors, get_labels, capitalize,     get_darker_colors, get_darker_color, pdf_resume
+    colors, get_labels, capitalize, get_darker_colors, get_darker_color, pdf_resume
 
 
+# Function to generate the sidebar section
 def generate_sidebar_section():
+    """Generate the sidebar section with menu items and custom styles."""
+    # Fetch configuration for sidebar icons
     key_list, val_list = get_config('sidebar_icons')
     key_list = [x.title() for x in key_list]
+
     with st.sidebar:
-        selected = option_menu("", key_list,
-                               icons=val_list, menu_icon="cast", default_index=-1,
-                               styles={
-                                   "container": {"padding": "0!important", "background-color": "#2c4653"},
-                                   "icon": {"color": "white", "font-size": "20px", "fond-weight": "bold"},
-                                   "nav-link": {"font-size": "16px", "text-align": "left", "color": "white",
-                                                "margin": "0px",
-                                                "--hover-color": "#616365"},
-                                   "nav-link-selected": {"background-color": "#e6873a", "font-size": "15px"}}
-                               )
+        # Display the sidebar menu using Streamlit option menu
+        selected = option_menu(
+            "", key_list,
+            icons=val_list, menu_icon="cast", default_index=-1,
+            styles={
+                "container": {"padding": "0!important", "background-color": "#2c4653"},
+                "icon": {"color": "white", "font-size": "20px", "fond-weight": "bold"},
+                "nav-link": {
+                    "font-size": "16px", "text-align": "left", "color": "white",
+                    "margin": "0px",
+                    "--hover-color": "#616365"
+                },
+                "nav-link-selected": {"background-color": "#e6873a", "font-size": "15px"}
+            }
+        )
 
 
+# Function to generate the profile section
 def generate_profile_section():
-    container(st.header, f'{profile['name']}, {profile['name suffix']}', key='profile_name')
+    """Generate the profile section with name, designation, photo, and profile details."""
+    # Display profile name and designation
+    container(st.header, f"{profile['name']}, {profile['name suffix']}", key='profile_name')
     col1, _, col2 = st.columns([10, .05, 1])
     with col1:
-        container(st.write, f'#### {profile['designation']}', key='profile_designation')
+        container(st.write, f"#### {profile['designation']}", key='profile_designation')
     with col2:
+        # Add a button to download the resume as a PDF
         st.download_button(label=":arrow_down: pdf", type='secondary',
                            data=pdf_resume,
                            file_name="ramana_ambore_resume.pdf",
                            mime='application/octet-stream')
+
     col1, _, col2 = st.columns([2, .1, 10])
     with col1:
+        # Display profile photo
         container(st.image, get_image_path('profile_photo.png'), clamp=True,
                   use_container_width=True, key='profile_photo')
     with col2:
+        # Display profile details
         container(st.write, profile['profile'], key='profile')
 
 
+# Function to generate the contact and social media section
 def generate_contact_social_section():
-    create_ruler()
+    """Generate the contact and social media sections with formatted layout."""
+    create_ruler()  # Add a horizontal ruler
+
+    # Contact section
     section_name = 'contact'
     with st.container(key=section_name):
         width_cols = [1, .05, 1, 0.05, 1, .05, 1]
         col1, _, col2, _, col3, _, col4 = st.columns(width_cols, vertical_alignment='center')
         write_colums([col1, col2, col3, col4], section_name)
 
+    # Social media section
     section_name = 'social'
     with st.container(key=section_name):
         width_cols = [1, .05, 1, 0.05, 1, .05, 1]
@@ -58,23 +81,29 @@ def generate_contact_social_section():
         write_colums([col1, col2, col3, col4], section_name)
 
 
+# Function to generate the experience summary section
 def generate_experience_summary_section():
+    """Generate the experience summary section with milestones and summary points."""
     section_name = 'experience summary'
-    write_section_heading(section_name, key=section_name)
-    generate_milestone_section()
+    write_section_heading(section_name, key=section_name)  # Add section heading
+    generate_milestone_section()  # Generate milestone section
 
     val_list = profile[section_name]
     with st.container(key='summary_points'):
+        # Display each experience summary point as a list item
         for line in val_list:
             st.write(f"- {line}")
 
 
+# Function to generate the skills section
 def generate_skills_section():
+    """Generate the skills section with a bar chart representing proficiency levels."""
     section_name = 'skills'
     key_list, val_list = get_profile(section_name)
 
-    write_section_heading(section_name, key=section_name)
+    write_section_heading(section_name, key=section_name)  # Add section heading
 
+    # Prepare data for skills bar chart
     categories = get_labels(section_name)
     icon_paths = [val['icon'] for val in val_list]
     ratings = [val['level'] for val in val_list]
@@ -84,10 +113,8 @@ def generate_skills_section():
 
     img_base64 = [get_image_bin_file(icon) for icon in icon_paths]
 
-    # Create bar chart
+    # Create bar chart using Plotly
     fig = go.Figure()
-
-    # Add bars with categories inside (vertical text) and shadow around the bar
 
     fig.add_trace(go.Bar(
         x=categories,
@@ -101,7 +128,6 @@ def generate_skills_section():
         ),
         hovertemplate='%{customdata}<extra></extra>',
         customdata=hover
-
     ))
 
     for i, category in enumerate(categories):
@@ -117,7 +143,6 @@ def generate_skills_section():
         )
 
         # Add images inside the bars just below the text
-
         fig.add_layout_image(
             dict(
                 source=img_base64[i],
@@ -250,17 +275,19 @@ def generate_certification_section():
         st.plotly_chart(fig, use_container_width=True)
 
 
+# Function to generate the employment section
 def generate_employment_section():
     section_name = 'employment'
     key_list, val_list = get_profile('projects')
-    write_section_heading(section_name, key=section_name)
+    write_section_heading(section_name, key=section_name)  # Add section heading
 
-    width_education = [5, .05, 1]
+    width_education = [5, .05, 1]  # Column widths for layout
 
+    # Create columns for layout
     col, _, pie_chart_col = container(st.columns, width_education,
                                       vertical_alignment='center', key=f'{section_name}_data')
     with col:
-        write_container('projects')
+        write_container('projects')  # Write project details
 
     with pie_chart_col:
         labels = get_labels('projects')
@@ -292,49 +319,53 @@ def generate_employment_section():
         st.plotly_chart(fig, use_container_width=True)
 
 
+# Function to generate the portfolio section
 def generate_portfolio_section():
     section_name = 'portfolio'
     # key_list, val_list = get_profile(section_name)
-    write_section_heading(section_name, key=section_name)
+    write_section_heading(section_name, key=section_name)  # Add section heading
     section = profile[section_name]
     for key, vals in section.items():
         container = st.container(key=key)
         with container:
             col1, _, col2 = st.columns([10, 0.01, 10])
             with col1:
-                disp_icon_text(vals['icon'], key, vals['link'], 'h5')
+                disp_icon_text(vals['icon'], key, vals['link'], 'h5')  # Display project icon and link
             with col2:
-                disp_icon_text('git_small.png', '', vals['github'])
+                disp_icon_text('git_small.png', '', vals['github'])  # Display GitHub icon and link
             col1, _, col2 = st.columns([10, 0.01, 5])
             with col1:
-                st.write(vals['summary'])
-                st.write(f"Technology: {vals['technology']}")
+                st.write(vals['summary'])  # Write project summary
+                st.write(f"Technology: {vals['technology']}")  # Write project technology used
             with col2:
-                st.image(get_image_path(vals['image']))
+                st.image(get_image_path(vals['image']))  # Display project image
             with st.expander(f"Additional Information..."):
-                st.write(vals['additional information'])
+                st.write(vals['additional information'])  # Write additional project information
 
 
+# Function to generate the project section
 def generate_project_section():
     section_name = 'projects'
     # key_list, val_list = get_profile(section_name)
-    write_section_heading(section_name, key=section_name)
+    write_section_heading(section_name, key=section_name)  # Add section heading
     section = profile[section_name]
     for key, vals in section.items():
         container = st.container(key=f"{section_name}_{key}")
         with container:
             label = capitalize(vals['label'] if 'label' in vals else key)
-            disp_icon_text(vals['icon'], label, vals['link'], 'H5')
+            disp_icon_text(vals['icon'], label, vals['link'], 'H5')  # Display project icon and link
             # st.markdown(f"**{label}**")
             for key1, vals1 in vals['clients'].items():
                 for key2, vals2 in vals1.items():
-                    st.write(f"**{key2}, {key1}, {vals2['role']}, {vals2['start']} - {vals2['end']}**")
-                    st.write(f"{vals2['summary']}")
-                    st.write(f"Technology: {vals2['technology']}")
+                    st.write(
+                        f"**{key2}, {key1}, {vals2['role']}, {vals2['start']} - {vals2['end']}**")  # Write client details
+                    st.write(f"{vals2['summary']}")  # Write project summary
+                    st.write(f"Technology: {vals2['technology']}")  # Write project technology used
                     with st.expander(f"Additional Information..."):
-                        st.write(vals2['additional information'])
+                        st.write(vals2['additional information'])  # Write additional project information
 
 
+# Function to generate the milestone section
 def generate_milestone_section():
     section_name = 'milestones'
     section = profile[section_name]
@@ -418,4 +449,4 @@ def generate_milestone_section():
     # Display the chart in Streamlit
     milestone_container = st.container(key=section_name)
     with milestone_container:
-        st.plotly_chart(fig)
+        st.plotly_chart(fig)  # Display milestone chart
