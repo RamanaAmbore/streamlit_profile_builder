@@ -295,7 +295,7 @@ def generate_portfolio_section():
     for key, vals in section.items():
         container = st.container(key=del_seq(key))
         with container:
-            col1, _, col2 = st.columns([7, 0.01, 10])
+            col1, _, col2 = st.columns([10, 0.01, 10])
             with col1:
                 disp_icon_text(vals['icon'], key, vals['link'], 'h5')
             with col2:
