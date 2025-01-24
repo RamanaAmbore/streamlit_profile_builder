@@ -1,7 +1,10 @@
 # Import necessary modules and components
 import logging
+
+import streamlit
 import streamlit as st
 from PIL import Image
+from streamlit.components.v1 import html
 
 # Import custom components and functions from src directory
 from src.components import set_png_as_page_bg, markdown
@@ -39,7 +42,29 @@ def initial_setup():
 # Main function to execute the initial setup and generate different sections of the profile page
 if __name__ == '__main__':
     initial_setup()
-    generate_sidebar_section()
+
+    # Add JavaScript for smooth scrolling with debugging
+    # Add JavaScript for scrolling
+    st.markdown(
+        """
+        <script>
+        function scrollTo(sectionId) {
+            console.log("Scrolling to:", sectionId); // Debug log
+            const element = document.getElementById(sectionId);
+            if (element) {
+                console.log("Found element:", element);
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            } else {
+                console.error("Element not found for section ID:", sectionId);
+            }
+        }
+        </script>
+        """,
+        unsafe_allow_html=True,
+    )
+
+    selected = generate_sidebar_section()
+
     generate_profile_section()
     generate_contact_social_section()
     generate_experience_summary_section()
@@ -50,3 +75,5 @@ if __name__ == '__main__':
     generate_education_section()
     generate_certification_section()
     generate_hobbie_section()
+
+    st.markdown(f"<script>scrollTo('{selected}');</script>", unsafe_allow_html=True)

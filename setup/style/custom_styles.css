@@ -17,7 +17,7 @@
 
 .stMainBlockContainer {
     padding-top: 1rem;
-    padding-left: 1.5rem;
+    padding-left: 3rem;
 }
 
 .st-key-profile_photo img {
@@ -80,4 +80,7 @@ a:hover {
 ul {margin-bottom: 5px;}
 .st-key-pdf_download p {
     font-size:14px !important;
+}
+.st-emotion-cache-8atqhb {
+    background: #e76801 !important;
 }

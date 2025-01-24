@@ -42,10 +42,11 @@ def container(*args, **kwargs):
 
 # Function to display a section heading with an optional icon and styling
 def write_section_heading(text, key=None, first_line=True, last_line=True):
+    st.markdown(f'<div id="{key.lower()}_section"></div>', unsafe_allow_html=True)
     if first_line:
         create_ruler()  # Create a horizontal ruler before the section
     icon = config["section_icons"]  # Get icon from config based on section name
-    container(st.subheader, f':{icon[text]}: {text.title()}', key=key)  # Display section heading
+    st.subheader(f':{icon[text]}: {text.title()}', anchor=text.title())  # Display section heading
     if last_line:
         create_ruler()  # Create a horizontal ruler after the section
 

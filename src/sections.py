@@ -3,11 +3,14 @@ import pandas as pd
 import streamlit as st
 from plotly import graph_objects as go
 from streamlit_option_menu import option_menu
+import streamlit as st
+from streamlit_scroll_navigation import scroll_navbar
 
 # Import custom components and functions from src directory
 from src.components import container, write_section_heading, create_ruler, write_colums, write_container, \
     disp_icon_text
-from src.utils import profile, get_image_path, get_sample, get_image_bin_file, freq_color, get_config, get_profile, \
+from src.utils import profile, get_image_path, get_selected_colors, get_image_bin_file, freq_color, get_config, \
+    get_profile, \
     colors, get_labels, capitalize, get_darker_colors, get_darker_color, pdf_resume
 
 
@@ -19,26 +22,18 @@ def generate_sidebar_section():
 
     with st.sidebar:
         # Display the sidebar menu using Streamlit option menu
-        selected = option_menu(
-            "", key_list,
-            icons=val_list, menu_icon="cast", default_index=-1,
-            styles={
-                "container": {"padding": "0!important", "background-color": "#2c4653"},
-                "icon": {"color": "white", "font-size": "20px", "fond-weight": "bold"},
-                "nav-link": {
-                    "font-size": "16px", "text-align": "left", "color": "white",
-                    "margin": "0px",
-                    "--hover-color": "#616365"
-                },
-                "nav-link-selected": {"background-color": "#e6873a", "font-size": "15px"}
-            }
+        scroll_navbar(
+            key_list,
+            anchor_labels=None,
+            anchor_icons=val_list,
         )
 
 
 # Function to generate the profile section
 def generate_profile_section():
     # Display profile name and designation
-    container(st.header, f"{profile['name']}, {profile['name suffix']}", key='profile_name')
+    st.markdown(f"<div id='summary_section'></div>", unsafe_allow_html=True)
+    container(st.header, f"{profile['name']}, {profile['name suffix']}", anchor="Summary", key='profile_name')
 
     container(st.write, f"#### {profile['designation']}", key='profile_designation')
 
@@ -101,7 +96,7 @@ def generate_skills_section():
     icon_paths = [val['icon'] for val in val_list]
     ratings = [val['level'] for val in val_list]
     hover = [val['long label'] for val in val_list]
-    select_colors = get_sample(colors, len(ratings))
+    select_colors = get_selected_colors(colors, len(ratings))
     border_colors = get_darker_colors(select_colors)
 
     img_base64 = [get_image_bin_file(icon) for icon in icon_paths]
@@ -200,7 +195,7 @@ def generate_education_section():
         labels = get_labels(section_name, 'short label')
         values = [val['duration'] for val in val_list]
         hover = [(val['hover'] if 'hover' in val else val['long label']).replace(',', '<br>') for val in val_list]
-        select_colors = get_sample(colors, len(labels))
+        select_colors = get_selected_colors(colors, len(labels))
         border_colors = get_darker_colors(select_colors)
 
         # Create pie chart
@@ -242,7 +237,7 @@ def generate_certification_section():
         labels = get_labels(section_name, 'short label')
         values = [val['duration'] for val in val_list]
         hover = [(val['hover'] if 'hover' in val else val['long label']).replace(',', '<br>') for val in val_list]
-        select_colors = get_sample(colors, len(labels))
+        select_colors = get_selected_colors(colors, len(labels))
         border_colors = get_darker_colors(select_colors)
 
         # Create pie chart
@@ -286,7 +281,7 @@ def generate_employment_section():
         labels = get_labels('projects')
         values = [val['duration'] for val in val_list]
         hover = [(val['hover'] if 'hover' in val else val['long label']).replace(',', '<br>') for val in val_list]
-        select_colors = get_sample(colors, len(labels))
+        select_colors = get_selected_colors(colors, len(labels))
         border_colors = get_darker_colors(select_colors)
 
         # Create pie chart
@@ -365,7 +360,7 @@ def generate_milestone_section():
     df = pd.DataFrame.from_dict(section, orient='index')
     df.index.name = 'x'
     df = df.reset_index()
-    df['color'] = get_sample(colors, len(df))
+    df['color'] = get_selected_colors(colors, len(df))
 
     fig = go.Figure()
 
