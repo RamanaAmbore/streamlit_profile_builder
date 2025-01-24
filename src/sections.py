@@ -39,15 +39,8 @@ def generate_sidebar_section():
 def generate_profile_section():
     # Display profile name and designation
     container(st.header, f"{profile['name']}, {profile['name suffix']}", key='profile_name')
-    col1, _, col2 = container(st.columns,[10, .01, 1],key='pdf_container')
-    with col1:
-        container(st.write, f"#### {profile['designation']}", key='profile_designation')
-    with col2:
-        # Add a button to download the resume as a PDF
-        container(st.download_button,label=":arrow_down: pdf", type='tertiary',
-                           data=pdf_resume,
-                           file_name=f"{profile['name'].lower()}.pdf",
-                           mime='application/octet-stream', key="pdf_download")
+
+    container(st.write, f"#### {profile['designation']}", key='profile_designation')
 
     col1, _, col2 = st.columns([2, .1, 10])
     with col1:
@@ -57,6 +50,11 @@ def generate_profile_section():
     with col2:
         # Display profile details
         container(st.write, profile['profile'], key='profile')
+        # Add a button to download the resume as a PDF
+        container(st.download_button, label=":arrow_down: pdf", type='tertiary',
+                  data=pdf_resume,
+                  file_name=f"{profile['name'].lower()}.pdf",
+                  mime='application/octet-stream', key="pdf_download")
 
 
 # Function to generate the contact and social media section
