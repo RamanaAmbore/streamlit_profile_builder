@@ -26,7 +26,23 @@ def generate_sidebar_section():
             key_list,
             anchor_labels=None,
             anchor_icons=val_list,
-            override_styles={"background-color":"white"}
+            override_styles={
+                "navbarButtonBase": {
+                    "backgroundColor": "#2f4550",  # Set a custom button background color
+                    "color": "#ffffff"  # Set custom text color
+
+                }, "navbarButtonHover": {
+                    "backgroundColor": "#3da4ab",  # Set a custom hover color for the buttons
+                },
+                "navbarButtonActive": {
+                    "backgroundColor": "#e76801",  # Change the navigation bar background color
+                },
+                "navigationBarBase": {
+                    "backgroundColor": "#2f4550",  # Change the navigation bar background color
+                }
+
+            }
+
         )
 
 
