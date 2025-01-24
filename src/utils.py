@@ -23,16 +23,7 @@ class CustomDict(dict):
 # Load profile data from a YAML file
 with open('setup/yaml/profile_data.yaml', 'r', errors='ignore') as file:
     profile = yaml.safe_load(file)  # Load YAML file into a Python dictionary
-    # Create CustomDict objects for different sections of the profile
-    projects = CustomDict(profile['projects'])
-    education = CustomDict(profile['education'])
-    certifications = CustomDict(profile['certifications'])
-    skills = CustomDict(profile['skills'])
-    contact = CustomDict(profile['contact'])
-    social = CustomDict(profile['social'])
-    milestones = CustomDict(profile['milestones'])
-    hobbies = CustomDict(profile['hobbies'])
-    portfolio = CustomDict(profile['portfolio'])
+
 
 # Load custom CSS styles for styling the frontend
 with open("setup/style/custom_styles.css") as css:
