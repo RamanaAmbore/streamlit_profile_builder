@@ -1,47 +1,42 @@
-# Streamlit Resume
+readme_content = """
+# Streamlit Profile Website
 
-## Overview
-This project is a Streamlit web application that provides a visual representation of your skills, work experience, projects, and additional information about you. It showcases your proficiency in various skills, your professional background, and more.
+A dynamic, professional profile website built with **Streamlit**. This app is designed to showcase your profile, skills, experience, and portfolio in a visually appealing and interactive format. It leverages Streamlit's features and custom JavaScript for smooth scrolling navigation.
 
-<img src="GIF/resume_ss.gif?raw=true"/>
+## Features
 
-## Table of Contents
-- [How to Run the Application](#how-to-run-the-application)
-- [Skills](#skills)
-- [Work Experience](#work-experience)
-- [Projects](#projects)
-- [Chatbot](#chatbot)
-- [About Me](#about-me)
-- [Education](#education)
-- [Certifications](#certifications)
+### 🚀 Main Highlights
+- **Smooth Scrolling**: Navigate seamlessly to different sections of the profile using JavaScript.
+- **Dynamic Sidebar**: A sidebar menu for quick navigation between sections.
+- **Comprehensive Sections**:
+  - **Profile**: Display your name, tagline, and basic info.
+  - **Social Links**: Provide easy access to your social media profiles.
+  - **Experience Summary**: Summarize your career achievements.
+  - **Skills**: Showcase your technical and soft skills.
+  - **Projects and Portfolio**: Highlight your key projects and accomplishments.
+  - **Education**: Add details of your academic qualifications.
+  - **Certifications**: Showcase professional certifications.
+  - **Hobbies**: Add a personal touch with your interests.
 
-## How to Run the Application
-1. Clone the repository.
-2. Install the required dependencies using `pip install -r requirements.txt`.
-3. Run the application with `streamlit run your_app.py`.
-4. Access the application in your web browser at `http://localhost:8501`.
+### 🎨 Styling and Customization
+- Custom **background images** and **favicon**.
+- Dynamic **CSS styling** applied to enhance the app's look and feel.
 
-## Chatbot
-Explore the built-in chatbot that can answer predefined questions, providing quick access to information about me and the projects I've done.
+### 🛠️ Tech Stack
+- **Streamlit**: For building the UI.
+- **Python**: For logic and backend handling.
+- **JavaScript**: For enabling smooth scrolling.
+- **Pillow**: For image processing.
+- **HTML & CSS**: For custom styling.
 
-## About Me
-Learn more about the my work with links, publications, and portfolio. This section provides insights into the my professional background and achievements.
+## Installation
 
-## Education
-Discover the author's educational background and institutions attended, shedding light on their academic journey.
+### Prerequisites
+- Python 3.8 or above.
+- `pip` for dependency installation.
 
-## Skills
-The application displays your skills with proficiency levels in the form of pie charts. You can see your expertise in various areas and the corresponding skill descriptions.
-
-## Work Experience
-You'll find details about your work experience, including roles and responsibilities in different time periods. This section highlights your professional journey.
-
-## Projects
-The application showcases various projects you've been involved in. Each project includes a brief description, relevant images, and the skills you utilized during its execution.
-
-## Certifications
-Find information about the certifications the author has completed and the skills they acquired through these certifications.
-
-Feel free to explore the application to learn more about the author's skills, work experience, projects, and additional details. Enjoy your visit!
-
-
+### Steps
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/streamlit-profile-website.git
+   cd streamlit-profile-website

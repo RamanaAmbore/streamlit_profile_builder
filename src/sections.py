@@ -26,6 +26,7 @@ def generate_sidebar_section():
             key_list,
             anchor_labels=None,
             anchor_icons=val_list,
+            override_styles={"background-color":"white"}
         )
 
 
