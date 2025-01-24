@@ -167,7 +167,8 @@ def generate_skills_section():
         plot_bgcolor='rgba(0, 0, 0, 0)',  # Transparent plot background
         paper_bgcolor='rgba(0, 0, 0, 0)',  # Transparent overall background
         margin=dict(t=20, b=20),
-        showlegend=False
+        showlegend=False,
+        height=250
     )
 
     # Display the chart in Streamlit
