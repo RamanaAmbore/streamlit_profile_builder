@@ -386,47 +386,81 @@ def generate_project_section():
 # Function to generate the milestone section
 def generate_milestone_section():
     section_name = 'milestones'
-    section = profile[section_name]  # Retrieve milestones section data
-    df = pd.DataFrame.from_dict(section, orient='index')  # Convert milestone data to DataFrame
-    df.index.name = 'x'  # Name index column
-    df = df.reset_index()  # Reset index to prepare for visualization
-    df['color'] = get_selected_colors(colors, len(df))  # Assign colors for milestones
+    section = profile[section_name]
+    df = pd.DataFrame.from_dict(section, orient='index')
+    df.index.name = 'x'
+    df = df.reset_index()
+    df['color'] = get_selected_colors(colors, len(df))
 
     fig = go.Figure()
 
-    # Iterate over each milestone and create annotations
+    # Iterate over each milestone in the DataFrame
     for i in range(len(df)):
         row = df.iloc[i]
         color = row['color']
         border_color = get_darker_color(color, .25)
-
-        # Add annotation for milestone
+        # Add combined annotation above the zero line with vertical orientation and hover effect
         fig.add_annotation(
             x=i * .5,
-            y=0.5,
-            text=f"<span style='line-height:11px;background-color:{color};font-weight:bold;'> {str(row['x'])}  </span>" f"<span style='line-height:11px;'>{row['milestone']}</span>",
+            y=0.5,  # Position above the zero line, adjust this for vertical padding
+            text=f"<span style='line-height:11px;background-color:{color};font-weight:bold;'> {str(row['x'])}  </span>"  f"<span style='line-height:11px;'>{row['milestone']}</span>",
+            # Combine name and year
             showarrow=False,
             font=dict(size=13, color="black"),
             align="center",
             xanchor="center",
             yanchor="bottom",
-            textangle=-90,
-            bgcolor=row['color'],
-            bordercolor=border_color,
-            borderwidth=1,
-            borderpad=5,
+            textangle=-90,  # Vertical text orientation
+            bgcolor=row['color'],  # Background color for the milestone name
+            bordercolor=border_color,  # Border color for the annotation
+            borderwidth=1,  # Width of the border
+            borderpad=5,  # Padding for rounded corners
             opacity=1,
-            hovertext=row['long label'],
+            hovertext=row['long label'],  # Hover text for annotation
+        )
+        border_color = get_darker_color(color, .75)
+        # Add combined annotation above the zero line with vertical orientation and hover effect
+        fig.add_annotation(
+            x=i * .5,
+            y=1.5,  # Position above the zero line, adjust this for vertical padding
+
+            text=f"</span><span style='line-height:11px;'>{row['milestone']}</span>",
+            # Combine name and year
+            showarrow=False,
+            font=dict(size=13, color="black"),
+            align="center",
+            xanchor="center",
+            yanchor="bottom",
+            textangle=-90,  # Vertical text orientation
+            bgcolor='white',  # Background color for the milestone name
+            bordercolor=border_color,  # Border color for the annotation
+            borderwidth=1,  # Width of the border
+            borderpad=5,  # Padding for rounded corners
+            opacity=1,
+            hovertext=row['long label'],  # Hover text for annotation
         )
 
-    # Update layout for overall appearance
+    # Update layout for overall appearance with increased right margin
     fig.update_layout(
-        xaxis=dict(showline=False, tickvals=[], ticktext=[]),  # Hide x-axis details
-        yaxis=dict(range=[0, 5], showline=False, showgrid=False, zeroline=True, zerolinecolor='#efefef', zerolinewidth=1, tickvals=[], ticktext=[]),  # Format y-axis
-        plot_bgcolor='rgba(255, 255, 255, 0)',  # Set plot background
-        paper_bgcolor='rgba(255, 255, 255, 0)',  # Set paper background
+        xaxis=dict(
+            showline=False,
+            tickvals=[],  # Remove default x-axis ticks
+            ticktext=[]  # Remove default x-axis text
+        ),
+        yaxis=dict(
+            range=[0, 5],
+            showline=False,
+            showgrid=False,
+            zeroline=True,
+            zerolinecolor='#efefef',
+            zerolinewidth=1,
+            tickvals=[],
+            ticktext=[]
+        ),
+        plot_bgcolor='rgba(255, 255, 255, 0)',  # White background
+        paper_bgcolor='rgba(255, 255, 255, 0)',  # White background
         showlegend=False,
-        margin=dict(l=0, r=0, t=0, b=0),
+        margin=dict(l=0, r=0, t=0, b=0),  # Increased right margin
         height=200,
     )
 
