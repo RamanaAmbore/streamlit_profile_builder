@@ -151,7 +151,7 @@ def generate_skills_section():
 
     # Update layout for transparent background and vertical x-axis labels
     fig.update_layout(
-        xaxis_title=dict(text="Technical Skills", font=dict(color=freq_color, size=14)),
+        xaxis_title=dict(text="Skills", font=dict(color=freq_color, size=14)),
         yaxis_title=dict(text="Proficiency", font=dict(color=freq_color, size=14)),
         xaxis=dict(tickangle=0, showticklabels=False, ),
         yaxis=dict(range=[0, 5]),
