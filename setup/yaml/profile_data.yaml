@@ -2,7 +2,11 @@ name: RAMANA RAO AMBORE
 designation: APPLICATION DEVELOPMENT DIRECTOR
 name suffix: 'FRM'
 profile: |
-  FinTech expert with FRM certification and CFA Level 3 candidacy. Proven track record in modernizing legacy systems, optimizing high-volume trading platforms, and developing algorithmic trading solutions that leverage quantitative analysis to capitalize on market inefficiencies. Extensive hands-on experience with cloud/distributed technologies, legacy systems, database systems, and data analytics. Known as 'Rambo' for my determination and results-driven approach, I excel at solving complex challenges and delivering impactful solutions.
+  FinTech expert with FRM certification and CFA Level 3 candidacy. Proven track record in modernizing legacy systems, 
+  optimizing high-volume trading platforms, and developing algorithmic trading solutions that leverage quantitative analysis 
+  to capitalize on market inefficiencies. Extensive hands-on experience with cloud/distributed technologies, legacy systems, 
+  database systems, and data analytics. Known as 'Rambo' for my determination and results-driven approach, I excel at 
+  solving complex challenges and delivering impactful solutions.
 experience summary:
   - Proven expertise in reengineering high-volume legacy applications using cloud-based distributed technologies for superior scalability and performance
   - Extensive hands-on experience in designing applications in the securities clearing and settlement industry.
@@ -36,38 +40,30 @@ hobbies:
     pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, 
     porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
 milestones:
-  1991:
-    milestone: Bachelor's
-    icon: nagarjuna.png
-    long label: Completed Bachelor degree in Computer Science
   1993:
     milestone: Master's
     icon: jk.png
     long label: Completed Master degree in Computer Science sponsored by Defence Research Development Organization
-  1994:
-    milestone: First Job
-    icon: cts.png
-    long label: My first job at Dun & Bradstreet Satyam Software, the previous avatar of Cognizant
   1996:
-    milestone: Mastech
+    milestone: Ryder
     icon: igate.png
     duration: 1
     link: https://www.capgemini.com/
     long label: Matech Systems, Software Consultant, Nov 1996 - Nov 1997
   1997:
-    milestone: Moids
+    milestone: Dade County
     icon: modis.png
     link: https://www.akkodis.com/
     duration: 5
     long label: Modis Consulting, Software Consultant, Nov 1997 Apr 2002
   2002:
-    milestone: iNautix
+    milestone: Pershing
     icon: inautix.png
     duration: 1
     link: https://www.bny.com/pershing/us/en.html
     long label: iNautix Technologies India Pvt, Project Leader, May 2002 - Apr 2003
   2003:
-    milestone: NTT & Fidelity
+    milestone: TJMaxx
     icon: ntt.png
     duration: 21
     link: https://www.nttdata.com/global/en/
@@ -76,6 +72,12 @@ milestones:
     milestone: PGCBM
     icon: xlri.png
     long label: Completed PGCBM from XLRI, Xavier School of Management
+  2008:
+    milestone: Fidelity
+    icon: ntt.png
+    duration: 21
+    link: https://www.nttdata.com/global/en/
+    long label: NTT DATA Global Delivery Services Ltd., Director, Apr 2003 - Till Date
   2020:
     milestone: FRM
     icon: frm.png
@@ -159,60 +161,60 @@ skills:
     long label: Used extensively for legacy automation, visualization and analytics
   streamlit:
     icon: streamlit.png
-    level: 3
-    long label: Used for mainframe analytics
+    level: 4
+    long label: created analytics platform for analyzing organizational artifacts and dependencies
   dash/plotly:
     icon: dash_plotly.png
     level: 4
-    long label: Dash/Plotly
+    long label: craated algo trading platform for derivatives
   java:
     icon: java_small.png
     level: 4
-    long label: java
+    long label: Used to modernize a high volume legacy application in cloud
   spark:
     icon: apache_spark.png
     level: 4
-    long label: spark
+    long label: used to modernize high volume time sensitive lagcy applicaiton
   springBoot:
     icon: spring.png
     level: 3
-    long label: SpringBoot
+    long label: used to create spark batch application
   COBOL:
     icon: ibm.png
     level: 5
-    long label: COBOL
+    long label: Used to develop batch, db2 and CICS appliactions
   CICS:
     icon: ibm.png
     level: 5
-    long label: CICS
-  DB2:
+    long label: Developed new online screens and modify existing screens
+  DB2/SQL:
     icon: ibm_db2.png
     level: 5
-    long label: DB2
+    long label: Used extesnively on mainframe for batch and online applciations, Certified DB2 DBA.
   JCL:
     icon: ibm.png
     level: 5
-    long label: JCL
+    long label: devloped high-volume batch applications. Certified Java developer
   VSAM:
     icon: ibm.png
     level: 3
-    long label: VSAM
+    long label: used for batch and online applications
   AWS:
     icon: aws.png
     level: 3
-    long label: AWS
+    long label: legacy modernization is done using AWS
   terraform:
     icon: terraform.png
     level: 3
-    long label: Terraform
+    long label: Used cloud automation
   jenkins:
     icon: jenkins.png
     level: 3
-    long label: Jenkins
+    long label: usec to created CI/CD pipelines
   git:
     icon: git.png
     level: 4
-    long label: GIT
+    long label: Used for professional and personal projects
 contact:
   mail:
     label: Ramana.Ambore@gmail.com
