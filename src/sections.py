@@ -378,8 +378,7 @@ def generate_milestone_section():
         fig.add_annotation(
             x=i * .5,
             y=0.5,  # Position above the zero line, adjust this for vertical padding
-            text=f"<span style='line-height:11px;background-color:{color};font-weight:bold;'> {str(row['x'])}</span>"
-                 f"<span style='line-height:11px;'>{row['milestone']}</span>",
+            text=f"<span style='line-height:11px;background-color:{color};font-weight:bold;'> {str(row['x'])}  </span>"  f"<span style='line-height:11px;'>{row['milestone']}</span>",
             # Combine name and year
             showarrow=False,
             font=dict(size=13, color="black"),
@@ -398,7 +397,7 @@ def generate_milestone_section():
         # Add combined annotation above the zero line with vertical orientation and hover effect
         fig.add_annotation(
             x=i * .5,
-            y=1.55,  # Position above the zero line, adjust this for vertical padding
+            y=1.5,  # Position above the zero line, adjust this for vertical padding
 
             text=f"</span><span style='line-height:11px;'>{row['milestone']}</span>",
             # Combine name and year
