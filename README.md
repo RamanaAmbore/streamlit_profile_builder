@@ -1,4 +1,4 @@
-# Streamlit Profile Website
+# Streamlit Profile Builder
 
 A dynamic, professional profile website built with **Streamlit**. This app is designed to showcase your profile, skills, experience, and portfolio in a visually appealing and interactive format. It leverages Streamlit's features and custom JavaScript for smooth scrolling navigation.
 
