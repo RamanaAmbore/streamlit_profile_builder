@@ -9,18 +9,10 @@ import yaml
 from PIL import Image
 
 
+# Custom dictionary class to handle keys with suffix matching
 class CustomDict(dict):
-    """
-    A custom dictionary class that allows partial key matching based on suffix.
-    """
-
     def __getitem__(self, key):
-        """
-        Get an item from the dictionary where the key ends with the specified suffix.
-
-        :param key: The suffix of the key to match.
-        :return: The value associated with the matched key, or None if no match is found.
-        """
+        # Check if any key in the dictionary ends with the specified key
         for k in self.keys():
             if k.endswith(key):
                 return super().__getitem__(k)
@@ -29,9 +21,9 @@ class CustomDict(dict):
 
 
 # Load profile data from a YAML file
-
 with open('setup/yaml/profile_data.yaml', 'r', errors='ignore') as file:
-    profile = yaml.safe_load(file)
+    profile = yaml.safe_load(file)  # Load YAML file into a Python dictionary
+    # Create CustomDict objects for different sections of the profile
     projects = CustomDict(profile['projects'])
     education = CustomDict(profile['education'])
     certifications = CustomDict(profile['certifications'])
@@ -42,46 +34,39 @@ with open('setup/yaml/profile_data.yaml', 'r', errors='ignore') as file:
     hobbies = CustomDict(profile['hobbies'])
     portfolio = CustomDict(profile['portfolio'])
 
-# Load custom CSS styles for the frontend
+# Load custom CSS styles for styling the frontend
 with open("setup/style/custom_styles.css") as css:
-    css_style = css.read()
+    css_style = css.read()  # Read the CSS file into a string
 
-# Load configuration data from another YAML file
+# Load additional configuration data from a YAML file
 with open('setup/yaml/config.yaml', 'r') as file:
-    config = yaml.safe_load(file)
+    config = yaml.safe_load(file)  # Load YAML config file
     colors = config['dark_colors']
     dark_colors = config['dark_colors']
     sidebar_icons = config['sidebar_icons']
     section_icons = config['section_icons']
     freq_color = config['freq_color']
 
-# Read a PDF file into memory
+# Read and store a PDF file (resume) in memory for download or display
 with open("setup/resume/resume.pdf", "rb") as pdf_file:
     pdf_resume = pdf_file.read()
 
 
+# Function to get the path of an image file
 def get_image_path(file, certificate=False):
-    """
-    Get the file path of an image in the static directory.
-
-    :param file: The filename of the image.
-    :return: The full path to the image.
-    """
+    # Return the appropriate path based on whether the image is a certificate
     return f'setup/images/certificates/{file}' if certificate else f'setup/images/{file}'
 
 
 @streamlit.cache_resource
 def get_image_bin_file(file):
     """
-    Converts an image file to a base64-encoded URL.
-
-    :param file: The filename of the image.
-    :return: A base64-encoded data URL for the image.
+    Encodes an image file as a Base64 string for embedding in HTML.
     """
-    img = Image.open(get_image_path(file))
-    format = file[-3:].upper()
+    img = Image.open(get_image_path(file))  # Open the image file
+    format = file[-3:].upper()  # Extract the file format (e.g., PNG, JPG)
 
-    # Encode the image as base64
+    # Encode the image into a Base64 string
     buffered = BytesIO()
     img.save(buffered, format=format)
     img_str = base64.b64encode(buffered.getvalue()).decode()
@@ -89,19 +74,13 @@ def get_image_bin_file(file):
     return url
 
 
+# Debug wrapper to log the start and end of functions
 def debug_wrapper(function):
-    """
-    A decorator for debugging the start and end of function calls.
-
-    :param function: The function to wrap with debugging logs.
-    :return: The wrapped function.
-    """
-
     @functools.wraps(function)
     def wrapper(*args, **kwargs):
-        logging.debug(f'{function.__name__} started')
+        logging.debug(f'{function.__name__} started')  # Log function start
         result = function(*args, **kwargs)
-        logging.debug(f'{function.__name__} ended')
+        logging.debug(f'{function.__name__} ended')  # Log function end
         return result
 
     return wrapper
@@ -110,11 +89,8 @@ def debug_wrapper(function):
 @streamlit.cache_resource
 def get_selected_colors(lst, size):
     """
-    Get a random sample or duplicate items if the list is too small.
-
-    :param lst: The list to sample from.
-    :param size: The number of items to sample.
-    :return: A list of sampled items.
+    Select a random subset of colors from a list.
+    If the list is smaller than the requested size, repeat elements.
     """
     return random.sample(lst, size) if len(lst) > size else random.choices(lst, size)
 
@@ -122,10 +98,7 @@ def get_selected_colors(lst, size):
 @streamlit.cache_resource
 def get_config(name):
     """
-    Retrieve configuration data by section name.
-
-    :param name: The name of the configuration section.
-    :return: A tuple of keys and values from the section.
+    Retrieve a section from the config dictionary and return its keys and values.
     """
     section = config[name]
     return list(section.keys()), list(section.values())
@@ -134,10 +107,7 @@ def get_config(name):
 @streamlit.cache_resource
 def get_profile(name):
     """
-    Retrieve profile data by section name.
-
-    :param name: The name of the profile section.
-    :return: A tuple of keys and values from the section.
+    Retrieve a section from the profile dictionary and return its keys and values.
     """
     section = profile[name]
     return list(section.keys()), list(section.values())
@@ -146,10 +116,7 @@ def get_profile(name):
 @streamlit.cache_resource
 def capitalize(text):
     """
-    Capitalize the text unless it already contains uppercase characters.
-
-    :param text: The text to capitalize.
-    :return: The capitalized text.
+    Capitalize text if it doesn't already contain uppercase characters.
     """
     return text if any([x.isupper() for x in text]) else text.title()
 
@@ -157,11 +124,7 @@ def capitalize(text):
 @streamlit.cache_resource
 def get_labels(name, label='label'):
     """
-    Retrieve labels from profile data, capitalizing where necessary.
-
-    :param name: The name of the profile section.
-    :param label: The key to use for labels in the section.
-    :return: A list of labels.
+    Get a list of capitalized labels for a given profile section.
     """
     section = profile[name]
     return [capitalize(vals[label] if label in vals else key) for key, vals in section.items()]
@@ -170,36 +133,28 @@ def get_labels(name, label='label'):
 @streamlit.cache_resource
 def get_darker_color(hex_color, factor=0.5):
     """
-    Darken a hex RGB color by a specified factor.
-
-    :param hex_color: The original color in hex format (e.g., "#RRGGBB").
-    :param factor: A float between 0 and 1. The lower the factor, the darker the color.
-    :return: A darkened color in hex format.
+    Darken a given hex color by a specified factor.
+    Factor should be between 0 (black) and 1 (original color).
     """
     if not (0 <= factor <= 1):
         raise ValueError("Factor must be between 0 and 1")
 
+    # Convert hex color to RGB
     hex_color = hex_color.lstrip('#')
     r, g, b = int(hex_color[:2], 16), int(hex_color[2:4], 16), int(hex_color[4:], 16)
 
+    # Apply the factor to each channel
     r = int(r * factor)
     g = int(g * factor)
     b = int(b * factor)
 
-    r = max(0, min(255, r))
-    g = max(0, min(255, g))
-    b = max(0, min(255, b))
-
+    # Clamp values between 0 and 255 and return the new hex color
     return f"#{r:02x}{g:02x}{b:02x}"
 
 
 @streamlit.cache_resource
 def get_darker_colors(hex_color_list, factor=0.75):
     """
-    Apply darkening to a list of hex colors.
-
-    :param hex_color_list: A list of hex color codes.
-    :param factor: A float between 0 and 1 for the darkening factor.
-    :return: A list of darkened colors.
+    Darken a list of hex colors by a specified factor.
     """
     return [get_darker_color(color, factor) for color in hex_color_list]

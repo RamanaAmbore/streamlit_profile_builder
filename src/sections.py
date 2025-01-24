@@ -176,44 +176,51 @@ def generate_skills_section():
 
 
 def generate_hobbie_section():
-    section_name = 'hobbies'
-    section = profile[section_name]
-    write_section_heading(section_name, key=section_name)
-    st.write(section['summary'])
+    # Generate the "Hobbies" section of the profile
+    section_name = 'hobbies'  # Section identifier
+    section = profile[section_name]  # Load hobbies data from the profile
+    write_section_heading(section_name, key=section_name)  # Add a section heading
+    st.write(section['summary'])  # Display summary of hobbies
 
+    # Define column layout for images
     width_education = [6, .05, 2, 2]
 
+    # Create columns for displaying images of hobbies
     col1, _, col2, _ = container(st.columns, width_education,
                                  vertical_alignment='center', key='hobbie_container')
     with col1:
-        st.image(get_image_path('drone.png'))
+        st.image(get_image_path('drone.png'))  # Display the first hobby image
 
     with col2:
-        st.image(get_image_path('raspberry.png'))
+        st.image(get_image_path('raspberry.png'))  # Display the second hobby image
+
     with st.expander("Additional Information..."):
-        st.write(section['additional information'])
+        st.write(section['additional information'])  # Display additional hobby details
 
 
 def generate_education_section():
-    section_name = 'education'
-    key_list, val_list = get_profile(section_name)
-    write_section_heading(section_name, key=section_name)
+    # Generate the "Education" section of the profile
+    section_name = 'education'  # Section identifier
+    key_list, val_list = get_profile(section_name)  # Retrieve profile data for education
+    write_section_heading(section_name, key=section_name)  # Add a section heading
 
+    # Define column layout
     width_education = [5, .05, 1]
 
+    # Create columns for education details and pie chart
     education_col, _, education_pie_chart_col = container(st.columns, width_education,
                                                           vertical_alignment='center', key='education_container')
     with education_col:
-        write_container('education')
+        write_container('education')  # Display education details
 
     with education_pie_chart_col:
-        labels = get_labels(section_name, 'short label')
-        values = [val['duration'] for val in val_list]
+        labels = get_labels(section_name, 'short label')  # Get labels for education pie chart
+        values = [val['duration'] for val in val_list]  # Extract duration values
         hover = [(val['hover'] if 'hover' in val else val['long label']).replace(',', '<br>') for val in val_list]
-        select_colors = get_selected_colors(colors, len(labels))
-        border_colors = get_darker_colors(select_colors)
+        select_colors = get_selected_colors(colors, len(labels))  # Select colors for the chart
+        border_colors = get_darker_colors(select_colors)  # Darken colors for border
 
-        # Create pie chart
+        # Create a pie chart to visualize education data
         fig = go.Figure(data=[
             go.Pie(labels=labels,
                    values=values,
@@ -224,9 +231,9 @@ def generate_education_section():
                    customdata=hover,
                    pull=[0.03] * len(labels))])
 
-        # Update layout for custom appearance
+        # Update chart layout for customization
         fig.update_layout(
-            paper_bgcolor='rgba(0, 0, 0, 0)',  # Transparent overall background
+            paper_bgcolor='rgba(0, 0, 0, 0)',  # Transparent background
             showlegend=False,
             margin=dict(t=0, b=0),
             height=150
@@ -237,25 +244,28 @@ def generate_education_section():
 
 
 def generate_certification_section():
-    section_name = 'certifications'
-    key_list, val_list = get_profile(section_name)
-    write_section_heading(section_name, key=section_name)
+    # Generate the "Certifications" section of the profile
+    section_name = 'certifications'  # Section identifier
+    key_list, val_list = get_profile(section_name)  # Retrieve certification data
+    write_section_heading(section_name, key=section_name)  # Add section heading
 
+    # Define column layout
     width_education = [5, .05, 1]
 
+    # Create columns for certifications details and pie chart
     col, _, pie_chart_col = container(st.columns, width_education,
                                       vertical_alignment='center', key='certification_container')
     with col:
-        write_container('certifications')
+        write_container('certifications')  # Display certification details
 
     with pie_chart_col:
-        labels = get_labels(section_name, 'short label')
-        values = [val['duration'] for val in val_list]
+        labels = get_labels(section_name, 'short label')  # Get labels for the pie chart
+        values = [val['duration'] for val in val_list]  # Extract duration values
         hover = [(val['hover'] if 'hover' in val else val['long label']).replace(',', '<br>') for val in val_list]
-        select_colors = get_selected_colors(colors, len(labels))
-        border_colors = get_darker_colors(select_colors)
+        select_colors = get_selected_colors(colors, len(labels))  # Select colors for the chart
+        border_colors = get_darker_colors(select_colors)  # Darken colors for border
 
-        # Create pie chart
+        # Create a pie chart for certifications
         fig = go.Figure(data=[
             go.Pie(labels=labels,
                    values=values,
@@ -266,9 +276,9 @@ def generate_certification_section():
                    customdata=hover,
                    pull=[0.03] * len(labels))])
 
-        # Update layout for custom appearance
+        # Update chart layout for customization
         fig.update_layout(
-            paper_bgcolor='rgba(0, 0, 0, 0)',  # Transparent overall background
+            paper_bgcolor='rgba(0, 0, 0, 0)',  # Transparent background
             showlegend=False,
             margin=dict(t=0, b=0),
             height=150
@@ -277,29 +287,28 @@ def generate_certification_section():
         # Display the pie chart in Streamlit
         st.plotly_chart(fig, use_container_width=True)
 
-
 # Function to generate the employment section
 def generate_employment_section():
     section_name = 'employment'
-    key_list, val_list = get_profile('projects')
-    write_section_heading(section_name, key=section_name)  # Add section heading
+    key_list, val_list = get_profile('projects')  # Retrieve profile data for the projects section
+    write_section_heading(section_name, key=section_name)  # Add section heading for employment
 
-    width_education = [5, .05, 1]  # Column widths for layout
+    width_education = [5, .05, 1]  # Define column widths for layout
 
-    # Create columns for layout
+    # Create columns for employment section layout
     col, _, pie_chart_col = container(st.columns, width_education,
                                       vertical_alignment='center', key=f'{section_name}_data')
     with col:
-        write_container('projects')  # Write project details
+        write_container('projects')  # Write project details in the left column
 
     with pie_chart_col:
-        labels = get_labels('projects')
-        values = [val['duration'] for val in val_list]
-        hover = [(val['hover'] if 'hover' in val else val['long label']).replace(',', '<br>') for val in val_list]
-        select_colors = get_selected_colors(colors, len(labels))
-        border_colors = get_darker_colors(select_colors)
+        labels = get_labels('projects')  # Retrieve labels for pie chart
+        values = [val['duration'] for val in val_list]  # Get project durations for pie chart values
+        hover = [(val['hover'] if 'hover' in val else val['long label']).replace(',', '<br>') for val in val_list]  # Prepare hover text for the pie chart
+        select_colors = get_selected_colors(colors, len(labels))  # Get selected colors for pie chart
+        border_colors = get_darker_colors(select_colors)  # Get darker colors for pie chart borders
 
-        # Create pie chart
+        # Create pie chart using Plotly
         fig = go.Figure(data=[
             go.Pie(labels=labels,
                    values=values,
@@ -308,14 +317,14 @@ def generate_employment_section():
                    textposition='inside',
                    hovertemplate='%{customdata}<extra></extra>',
                    customdata=hover,
-                   pull=[0.03] * len(labels))])
+                   pull=[0.03] * len(labels))])  # Add slight pull-out effect for all slices
 
-        # Update layout for custom appearance
+        # Update pie chart layout for custom appearance
         fig.update_layout(
-            paper_bgcolor='rgba(0, 0, 0, 0)',  # Transparent overall background
-            showlegend=False,
-            margin=dict(t=0, b=0),
-            height=150
+            paper_bgcolor='rgba(0, 0, 0, 0)',  # Transparent background
+            showlegend=False,  # Hide legend
+            margin=dict(t=0, b=0),  # Adjust margins
+            height=150  # Set height for pie chart
         )
 
         # Display the pie chart in Streamlit
@@ -325,127 +334,99 @@ def generate_employment_section():
 # Function to generate the portfolio section
 def generate_portfolio_section():
     section_name = 'portfolio'
-    # key_list, val_list = get_profile(section_name)
-    write_section_heading(section_name, key=section_name)  # Add section heading
-    section = profile[section_name]
+    write_section_heading(section_name, key=section_name)  # Add section heading for portfolio
+    section = profile[section_name]  # Retrieve portfolio section data
+
+    # Iterate over each portfolio item
     for key, vals in section.items():
-        container = st.container(key=key)
+        container = st.container(key=key)  # Create a container for each portfolio item
         with container:
-            col1, _, col2 = st.columns([10, 0.01, 10])
+            col1, _, col2 = st.columns([10, 0.01, 10])  # Define column layout for portfolio item
             with col1:
                 disp_icon_text(vals['icon'], key, vals['link'], 'h5')  # Display project icon and link
             with col2:
                 disp_icon_text('git_small.png', '', vals['github'])  # Display GitHub icon and link
-            col1, _, col2 = st.columns([10, 0.01, 5])
+
+            col1, _, col2 = st.columns([10, 0.01, 5])  # Define column layout for project details
             with col1:
-                st.write(vals['summary'])  # Write project summary
-                st.write(f"Technology: {vals['technology']}")  # Write project technology used
+                st.write(vals['summary'])  # Display project summary
+                st.write(f"Technology: {vals['technology']}")  # Display technologies used
             with col2:
                 st.image(get_image_path(vals['image']))  # Display project image
+
             with st.expander(f"Additional Information..."):
-                st.write(vals['additional information'])  # Write additional project information
+                st.write(vals['additional information'])  # Display additional information about the project
 
 
 # Function to generate the project section
 def generate_project_section():
     section_name = 'projects'
-    # key_list, val_list = get_profile(section_name)
-    write_section_heading(section_name, key=section_name)  # Add section heading
-    section = profile[section_name]
+    write_section_heading(section_name, key=section_name)  # Add section heading for projects
+    section = profile[section_name]  # Retrieve projects section data
+
+    # Iterate over each project
     for key, vals in section.items():
-        container = st.container(key=f"{section_name}_{key}")
+        container = st.container(key=f"{section_name}_{key}")  # Create a container for each project
         with container:
-            label = capitalize(vals['label'] if 'label' in vals else key)
+            label = capitalize(vals['label'] if 'label' in vals else key)  # Capitalize the project label
             disp_icon_text(vals['icon'], label, vals['link'], 'H5')  # Display project icon and link
-            # st.markdown(f"**{label}**")
+
+            # Iterate over clients for the project
             for key1, vals1 in vals['clients'].items():
                 for key2, vals2 in vals1.items():
+                    # Display client details
                     st.write(
-                        f"**{key2}, {key1}, {vals2['role']}, {vals2['start']} - {vals2['end']}**")  # Write client details
-                    st.write(f"{vals2['summary']}")  # Write project summary
-                    st.write(f"Technology: {vals2['technology']}")  # Write project technology used
+                        f"**{key2}, {key1}, {vals2['role']}, {vals2['start']} - {vals2['end']}**")
+                    st.write(f"{vals2['summary']}")  # Display project summary
+                    st.write(f"Technology: {vals2['technology']}")  # Display technologies used
                     with st.expander(f"Additional Information..."):
-                        st.write(vals2['additional information'])  # Write additional project information
+                        st.write(vals2['additional information'])  # Display additional project information
 
 
 # Function to generate the milestone section
 def generate_milestone_section():
     section_name = 'milestones'
-    section = profile[section_name]
-    df = pd.DataFrame.from_dict(section, orient='index')
-    df.index.name = 'x'
-    df = df.reset_index()
-    df['color'] = get_selected_colors(colors, len(df))
+    section = profile[section_name]  # Retrieve milestones section data
+    df = pd.DataFrame.from_dict(section, orient='index')  # Convert milestone data to DataFrame
+    df.index.name = 'x'  # Name index column
+    df = df.reset_index()  # Reset index to prepare for visualization
+    df['color'] = get_selected_colors(colors, len(df))  # Assign colors for milestones
 
     fig = go.Figure()
 
-    # Iterate over each milestone in the DataFrame
+    # Iterate over each milestone and create annotations
     for i in range(len(df)):
         row = df.iloc[i]
         color = row['color']
         border_color = get_darker_color(color, .25)
-        # Add combined annotation above the zero line with vertical orientation and hover effect
+
+        # Add annotation for milestone
         fig.add_annotation(
             x=i * .5,
-            y=0.5,  # Position above the zero line, adjust this for vertical padding
-            text=f"<span style='line-height:11px;background-color:{color};font-weight:bold;'> {str(row['x'])}  </span>"  f"<span style='line-height:11px;'>{row['milestone']}</span>",
-            # Combine name and year
+            y=0.5,
+            text=f"<span style='line-height:11px;background-color:{color};font-weight:bold;'> {str(row['x'])}  </span>" f"<span style='line-height:11px;'>{row['milestone']}</span>",
             showarrow=False,
             font=dict(size=13, color="black"),
             align="center",
             xanchor="center",
             yanchor="bottom",
-            textangle=-90,  # Vertical text orientation
-            bgcolor=row['color'],  # Background color for the milestone name
-            bordercolor=border_color,  # Border color for the annotation
-            borderwidth=1,  # Width of the border
-            borderpad=5,  # Padding for rounded corners
+            textangle=-90,
+            bgcolor=row['color'],
+            bordercolor=border_color,
+            borderwidth=1,
+            borderpad=5,
             opacity=1,
-            hovertext=row['long label'],  # Hover text for annotation
-        )
-        border_color = get_darker_color(color, .75)
-        # Add combined annotation above the zero line with vertical orientation and hover effect
-        fig.add_annotation(
-            x=i * .5,
-            y=1.5,  # Position above the zero line, adjust this for vertical padding
-
-            text=f"</span><span style='line-height:11px;'>{row['milestone']}</span>",
-            # Combine name and year
-            showarrow=False,
-            font=dict(size=13, color="black"),
-            align="center",
-            xanchor="center",
-            yanchor="bottom",
-            textangle=-90,  # Vertical text orientation
-            bgcolor='white',  # Background color for the milestone name
-            bordercolor=border_color,  # Border color for the annotation
-            borderwidth=1,  # Width of the border
-            borderpad=5,  # Padding for rounded corners
-            opacity=1,
-            hovertext=row['long label'],  # Hover text for annotation
+            hovertext=row['long label'],
         )
 
-    # Update layout for overall appearance with increased right margin
+    # Update layout for overall appearance
     fig.update_layout(
-        xaxis=dict(
-            showline=False,
-            tickvals=[],  # Remove default x-axis ticks
-            ticktext=[]  # Remove default x-axis text
-        ),
-        yaxis=dict(
-            range=[0, 5],
-            showline=False,
-            showgrid=False,
-            zeroline=True,
-            zerolinecolor='#efefef',
-            zerolinewidth=1,
-            tickvals=[],
-            ticktext=[]
-        ),
-        plot_bgcolor='rgba(255, 255, 255, 0)',  # White background
-        paper_bgcolor='rgba(255, 255, 255, 0)',  # White background
+        xaxis=dict(showline=False, tickvals=[], ticktext=[]),  # Hide x-axis details
+        yaxis=dict(range=[0, 5], showline=False, showgrid=False, zeroline=True, zerolinecolor='#efefef', zerolinewidth=1, tickvals=[], ticktext=[]),  # Format y-axis
+        plot_bgcolor='rgba(255, 255, 255, 0)',  # Set plot background
+        paper_bgcolor='rgba(255, 255, 255, 0)',  # Set paper background
         showlegend=False,
-        margin=dict(l=0, r=0, t=0, b=0),  # Increased right margin
+        margin=dict(l=0, r=0, t=0, b=0),
         height=200,
     )
 
