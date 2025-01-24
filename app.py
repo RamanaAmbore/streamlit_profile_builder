@@ -4,8 +4,8 @@ import streamlit as st
 from PIL import Image
 
 # Import custom components and functions from src directory
-from src.components.components import set_png_as_page_bg, markdown
-from src.components.sections import generate_profile_section, generate_skills_section, \
+from src.components import set_png_as_page_bg, markdown
+from src.sections import generate_profile_section, generate_skills_section, \
     generate_contact_social_section, generate_education_section, generate_sidebar_section, \
     generate_certification_section, generate_employment_section, \
     generate_experience_summary_section, \

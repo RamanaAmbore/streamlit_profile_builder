@@ -5,7 +5,7 @@ from plotly import graph_objects as go
 from streamlit_option_menu import option_menu
 
 # Import custom components and functions from src directory
-from src.components.components import container, write_section_heading, create_ruler, write_colums, write_container, \
+from src.components import container, write_section_heading, create_ruler, write_colums, write_container, \
     disp_icon_text
 from src.utils import profile, get_image_path, get_sample, get_image_bin_file, freq_color, get_config, get_profile, \
     colors, get_labels, capitalize, get_darker_colors, get_darker_color, pdf_resume
@@ -13,7 +13,6 @@ from src.utils import profile, get_image_path, get_sample, get_image_bin_file, f
 
 # Function to generate the sidebar section
 def generate_sidebar_section():
-    """Generate the sidebar section with menu items and custom styles."""
     # Fetch configuration for sidebar icons
     key_list, val_list = get_config('sidebar_icons')
     key_list = [x.title() for x in key_list]
@@ -38,19 +37,21 @@ def generate_sidebar_section():
 
 # Function to generate the profile section
 def generate_profile_section():
-    """Generate the profile section with name, designation, photo, and profile details."""
     # Display profile name and designation
-    container(st.header, f"{profile['name']}, {profile['name suffix']}", key='profile_name')
-    col1, _, col2 = st.columns([10, .05, 1])
+
+    col1, _, col2 = container(st.columns,[10, .01, 1],key='pdf_container')
     with col1:
-        container(st.write, f"#### {profile['designation']}", key='profile_designation')
+        container(st.header, f"{profile['name']}, {profile['name suffix']}", key='profile_name')
+
     with col2:
         # Add a button to download the resume as a PDF
-        st.download_button(label=":arrow_down: pdf", type='secondary',
+        container(st.download_button,label=":arrow_down: pdf", type='tertiary',
                            data=pdf_resume,
-                           file_name="ramana_ambore_resume.pdf",
-                           mime='application/octet-stream')
-
+                           file_name=f"{profile['name'].lower()}.pdf",
+                           mime='application/octet-stream', key="pdf_download")
+    col1, _, col2 = container(st.columns, [10, .01, 1])
+    with col1:
+        container(st.write, f"#### {profile['designation']}", key='profile_designation')
     col1, _, col2 = st.columns([2, .1, 10])
     with col1:
         # Display profile photo
@@ -63,7 +64,6 @@ def generate_profile_section():
 
 # Function to generate the contact and social media section
 def generate_contact_social_section():
-    """Generate the contact and social media sections with formatted layout."""
     create_ruler()  # Add a horizontal ruler
 
     # Contact section
@@ -83,7 +83,6 @@ def generate_contact_social_section():
 
 # Function to generate the experience summary section
 def generate_experience_summary_section():
-    """Generate the experience summary section with milestones and summary points."""
     section_name = 'experience summary'
     write_section_heading(section_name, key=section_name)  # Add section heading
     generate_milestone_section()  # Generate milestone section
@@ -97,7 +96,6 @@ def generate_experience_summary_section():
 
 # Function to generate the skills section
 def generate_skills_section():
-    """Generate the skills section with a bar chart representing proficiency levels."""
     section_name = 'skills'
     key_list, val_list = get_profile(section_name)
 
@@ -385,7 +383,8 @@ def generate_milestone_section():
         fig.add_annotation(
             x=i * .5,
             y=0.5,  # Position above the zero line, adjust this for vertical padding
-            text=f"<span style='line-height:11px;background-color:{color};font-weight:bold;'> {str(row['x'])}  </span><span style='line-height:11px;'>{row['milestone']}</span>",
+            text=f"<span style='line-height:11px;background-color:{color};font-weight:bold;'> {str(row['x'])}</span>"
+                 f"<span style='line-height:11px;'>{row['milestone']}</span>",
             # Combine name and year
             showarrow=False,
             font=dict(size=13, color="black"),

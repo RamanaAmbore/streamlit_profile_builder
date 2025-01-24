@@ -16,13 +16,15 @@ def log_setup():
     format = logging.Formatter("%(asctime)s:%(levelname)s:%(message)s", datefmt="%H:%M:%S")
 
     # Create a RotatingFileHandler for error logs with size limit and backup count
-    error_file_handler = RotatingFileHandler(".log/streamlit_error_log.log", maxBytes=maxBytes, backupCount=backupCount)
+    error_file_handler = RotatingFileHandler(".log/streamlit_error_log.log",
+                                             maxBytes=maxBytes, backupCount=backupCount)
     error_file_handler.setLevel(logging.INFO)  # Log messages of INFO level and higher
     error_file_handler.setFormatter(format)  # Apply the log format to the handler
     log.addHandler(error_file_handler)  # Add the handler to the logger
 
     # Create a RotatingFileHandler for debug logs
-    debug_file_handler = RotatingFileHandler(".log/streamlit_debug_log.log", maxBytes=maxBytes, backupCount=backupCount)
+    debug_file_handler = RotatingFileHandler(".log/streamlit_debug_log.log",
+                                             maxBytes=maxBytes, backupCount=backupCount)
     debug_file_handler.setLevel(logging.DEBUG)  # Log messages of DEBUG level and higher
     debug_file_handler.setFormatter(format)  # Apply the log format to the handler
     log.addHandler(debug_file_handler)  # Add the handler to the logger

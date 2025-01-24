@@ -29,7 +29,7 @@ class CustomDict(dict):
 
 
 # Load profile data from a YAML file
-with open('data/profile_data.yaml', 'r', errors='ignore') as file:
+with open('setup/yaml/profile_data.yaml', 'r', errors='ignore') as file:
     profile = yaml.safe_load(file)
     projects = CustomDict(profile['projects'])
     education = CustomDict(profile['education'])
@@ -38,13 +38,15 @@ with open('data/profile_data.yaml', 'r', errors='ignore') as file:
     contact = CustomDict(profile['contact'])
     social = CustomDict(profile['social'])
     milestones = CustomDict(profile['milestones'])
+    hobbies = CustomDict(profile['hobbies'])
+    portfolio = CustomDict(profile['portfolio'])
 
 # Load custom CSS styles for the frontend
-with open("src/frontend/custom_styles.css") as css:
+with open("setup/style/custom_styles.css") as css:
     css_style = css.read()
 
 # Load configuration data from another YAML file
-with open('src/setup/config.yaml', 'r') as file:
+with open('setup/yaml/config.yaml', 'r') as file:
     config = yaml.safe_load(file)
     colors = config['dark_colors']
     dark_colors = config['dark_colors']
@@ -53,18 +55,19 @@ with open('src/setup/config.yaml', 'r') as file:
     freq_color = config['freq_color']
 
 # Read a PDF file into memory
-with open("static/resume.pdf", "rb") as pdf_file:
+with open("setup/resume/resume.pdf", "rb") as pdf_file:
     pdf_resume = pdf_file.read()
 
 
-def get_image_path(file):
+def get_image_path(file,certificate=False):
     """
     Get the file path of an image in the static directory.
 
     :param file: The filename of the image.
     :return: The full path to the image.
     """
-    return f'static/{file}'
+    return f'setup/images/certificates/{file}' if certificate else f'setup/images/{file}'
+
 
 
 @streamlit.cache_resource
