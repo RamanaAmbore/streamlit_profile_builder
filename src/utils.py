@@ -8,6 +8,7 @@ import streamlit
 import yaml
 from PIL import Image
 
+
 class CustomDict(dict):
     """
     A custom dictionary class that allows partial key matching based on suffix.
@@ -59,7 +60,7 @@ with open("setup/resume/resume.pdf", "rb") as pdf_file:
     pdf_resume = pdf_file.read()
 
 
-def get_image_path(file,certificate=False):
+def get_image_path(file, certificate=False):
     """
     Get the file path of an image in the static directory.
 
@@ -67,7 +68,6 @@ def get_image_path(file,certificate=False):
     :return: The full path to the image.
     """
     return f'setup/images/certificates/{file}' if certificate else f'setup/images/{file}'
-
 
 
 @streamlit.cache_resource
@@ -96,6 +96,7 @@ def debug_wrapper(function):
     :param function: The function to wrap with debugging logs.
     :return: The wrapped function.
     """
+
     @functools.wraps(function)
     def wrapper(*args, **kwargs):
         logging.debug(f'{function.__name__} started')
@@ -104,6 +105,7 @@ def debug_wrapper(function):
         return result
 
     return wrapper
+
 
 @streamlit.cache_resource
 def get_selected_colors(lst, size):
@@ -116,6 +118,7 @@ def get_selected_colors(lst, size):
     """
     return random.sample(lst, size) if len(lst) > size else random.choices(lst, size)
 
+
 @streamlit.cache_resource
 def get_config(name):
     """
@@ -126,6 +129,7 @@ def get_config(name):
     """
     section = config[name]
     return list(section.keys()), list(section.values())
+
 
 @streamlit.cache_resource
 def get_profile(name):
@@ -138,6 +142,7 @@ def get_profile(name):
     section = profile[name]
     return list(section.keys()), list(section.values())
 
+
 @streamlit.cache_resource
 def capitalize(text):
     """
@@ -147,6 +152,7 @@ def capitalize(text):
     :return: The capitalized text.
     """
     return text if any([x.isupper() for x in text]) else text.title()
+
 
 @streamlit.cache_resource
 def get_labels(name, label='label'):
@@ -159,6 +165,7 @@ def get_labels(name, label='label'):
     """
     section = profile[name]
     return [capitalize(vals[label] if label in vals else key) for key, vals in section.items()]
+
 
 @streamlit.cache_resource
 def get_darker_color(hex_color, factor=0.5):
@@ -184,6 +191,7 @@ def get_darker_color(hex_color, factor=0.5):
     b = max(0, min(255, b))
 
     return f"#{r:02x}{g:02x}{b:02x}"
+
 
 @streamlit.cache_resource
 def get_darker_colors(hex_color_list, factor=0.75):

@@ -2,8 +2,6 @@
 import pandas as pd
 import streamlit as st
 from plotly import graph_objects as go
-from streamlit_option_menu import option_menu
-import streamlit as st
 from streamlit_scroll_navigation import scroll_navbar
 
 # Import custom components and functions from src directory

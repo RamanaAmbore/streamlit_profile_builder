@@ -77,7 +77,9 @@ a:hover {
     padding:0px;
 }
 
-ul {margin-bottom: 5px;}
+ul {
+    margin-bottom: 5px;
+}
 .st-key-pdf_download p {
     font-size:14px !important;
 }
