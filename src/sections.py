@@ -16,7 +16,7 @@ from src.utils import profile, get_image_path, get_selected_colors, get_image_bi
 def generate_sidebar_section():
     # Fetch configuration for sidebar icons
     key_list, val_list = get_config('sidebar_icons')
-    key_list = [x.title() for x in key_list]
+    key_list = [key.title() for key in key_list]
 
     with st.sidebar:
         # Display the sidebar menu using Streamlit option menu
@@ -33,7 +33,7 @@ def generate_sidebar_section():
                     "backgroundColor": "#3da4ab",  # Set a custom hover color for the buttons
                 },
                 "navbarButtonActive": {
-                    "backgroundColor": "#e76801",  # Change the navigation bar background color
+                    "backgroundColor": "#fd7659",  # Change the navigation bar background color
                 },
                 "navigationBarBase": {
                     "backgroundColor": "#2f4550",  # Change the navigation bar background color
@@ -47,7 +47,6 @@ def generate_sidebar_section():
 # Function to generate the profile section
 def generate_profile_section():
     # Display profile name and designation
-    st.markdown(f"<div id='summary_section'></div>", unsafe_allow_html=True)
     container(st.header, f"{profile['name']}, {profile['name suffix']}", anchor="Summary", key='profile_name')
 
     container(st.write, f"#### {profile['designation']}", key='profile_designation')
@@ -89,7 +88,7 @@ def generate_contact_social_section():
 # Function to generate the experience summary section
 def generate_experience_summary_section():
     section_name = 'experience summary'
-    write_section_heading(section_name, key=section_name)  # Add section heading
+    write_section_heading(section_name)  # Add section heading
     generate_milestone_section()  # Generate milestone section
 
     val_list = profile[section_name]
@@ -104,7 +103,7 @@ def generate_skills_section():
     section_name = 'skills'
     key_list, val_list = get_profile(section_name)
 
-    write_section_heading(section_name, key=section_name)  # Add section heading
+    write_section_heading(section_name)  # Add section heading
 
     # Prepare data for skills bar chart
     categories = get_labels(section_name)
@@ -179,7 +178,7 @@ def generate_hobbie_section():
     # Generate the "Hobbies" section of the profile
     section_name = 'hobbies'  # Section identifier
     section = profile[section_name]  # Load hobbies data from the profile
-    write_section_heading(section_name, key=section_name)  # Add a section heading
+    write_section_heading(section_name)  # Add a section heading
     st.write(section['summary'])  # Display summary of hobbies
 
     # Define column layout for images
@@ -202,7 +201,7 @@ def generate_education_section():
     # Generate the "Education" section of the profile
     section_name = 'education'  # Section identifier
     key_list, val_list = get_profile(section_name)  # Retrieve profile data for education
-    write_section_heading(section_name, key=section_name)  # Add a section heading
+    write_section_heading(section_name)  # Add a section heading
 
     # Define column layout
     width_education = [5, .05, 1]
@@ -247,7 +246,7 @@ def generate_certification_section():
     # Generate the "Certifications" section of the profile
     section_name = 'certifications'  # Section identifier
     key_list, val_list = get_profile(section_name)  # Retrieve certification data
-    write_section_heading(section_name, key=section_name)  # Add section heading
+    write_section_heading(section_name)  # Add section heading
 
     # Define column layout
     width_education = [5, .05, 1]
@@ -291,7 +290,7 @@ def generate_certification_section():
 def generate_employment_section():
     section_name = 'employment'
     key_list, val_list = get_profile('projects')  # Retrieve profile data for the projects section
-    write_section_heading(section_name, key=section_name)  # Add section heading for employment
+    write_section_heading(section_name)  # Add section heading for employment
 
     width_education = [5, .05, 1]  # Define column widths for layout
 
@@ -334,7 +333,7 @@ def generate_employment_section():
 # Function to generate the portfolio section
 def generate_portfolio_section():
     section_name = 'portfolio'
-    write_section_heading(section_name, key=section_name)  # Add section heading for portfolio
+    write_section_heading(section_name)  # Add section heading for portfolio
     section = profile[section_name]  # Retrieve portfolio section data
 
     # Iterate over each portfolio item
@@ -361,7 +360,7 @@ def generate_portfolio_section():
 # Function to generate the project section
 def generate_project_section():
     section_name = 'projects'
-    write_section_heading(section_name, key=section_name)  # Add section heading for projects
+    write_section_heading(section_name)  # Add section heading for projects
     section = profile[section_name]  # Retrieve projects section data
 
     # Iterate over each project
