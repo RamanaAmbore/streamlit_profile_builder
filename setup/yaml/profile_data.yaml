@@ -10,21 +10,17 @@ profile: |
   coveted Innovation Award, a results-driven professional with a proven ability to deliver innovative 
   solutions and drive success within the financial markets.
 experience summary:
-  - Modernized a high-volume, business-critical legacy application on AWS using Java and Spark. The resulting core framework reduced development and deployment turnaround times by 50 percent.
-  - Developed 'Rambo,' an analytics platform that empowered software development teams to reengineer and optimize software artifacts. By providing critical insights into dependencies,
+  - Modernized a high-volume, business-critical legacy application on AWS using Java and Spark. 
+    The resulting core framework reduced development and deployment turnaround times by 50 percent.
+  - Developed 'Rambo,' an analytics platform that empowered software development teams to reengineer and 
+    optimize software artifacts. By providing critical insights into dependencies,
     'Rambo' facilitated the identification and decommissioning of around 3000 batch jobs, significantly improving efficiency.
-  - Received the Delivery Excellence Award for designing and developing a Python-based product suite to reengineer legacy COBOL-VSAM applications into COBOL-DB2 applications.
-  - Well-versed in preparing proposals, project plans, and schedules for development, conversion, and maintenance projects.
-  - Worked in onsite project manager/coordinator and offshore account manager roles for large projects both in the UK and the USA.
-  - Worked for a leading retailer client in the UK and managed challenging situations onsite.
-  - Lead member of projects like Option Symbology, Trailing Stops, Conditional Orders, and Transmission Automation in the trading/clearing industry.
-  - Contributed extensively to mentoring new resources and implementing Six Sigma projects for process improvement activities.
-  - Extensive experience in designing and implementing online CICS and batch applications on IBM mainframe.
-  - Part of the Project Management Office (PMO) with a good understanding of risk management and project audits.
-  - Good knowledge of brokerage & clearing, banking & finance, and retail domains.
-  - Postgraduate Certificate in Business Administration from Xavier Labour Relations Institute (XLRI).
-  - Project Management Professional (PMP) certification from PMI.
-  - Very good understanding of Six Sigma tools and SEI CMM Level 5 processes.
+  - Received the Delivery Excellence Award for designing and developing a Python-based product suite to reengineer 
+    legacy COBOL-VSAM applications into COBOL-DB2 applications.
+  - As Principal Software Engineer, I'm leading the development of the parsing engine for Cobra, a COBOL research and analysis tool. 
+    This engine will track data flow, identify the origin and transformation of critical fields, and ultimately enable accurate data lineage analysis.
+  - Developing an algorithmic trading platform that leverages the power of option Greeks and underlying stock prices to identify 
+    and exploit fleeting market inefficiencies, enabling automated, data-driven trading decisions.
 hobbies:
   summary: |
     Drone programming with Raspberry Pi and ArduPilot.     Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
