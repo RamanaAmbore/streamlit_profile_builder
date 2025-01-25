@@ -198,6 +198,10 @@ skills:
     level: 4
     long label: Used for professional and personal projects
 contact:
+  pdf:
+    label: Resume donwload
+    icon: pdf.png
+    link: mailto:ramana.ambore@gmail.com
   mail:
     label: Ramana.Ambore@gmail.com
     icon: mail.png
@@ -210,11 +214,12 @@ contact:
     label: West Des Moines, Iowa
     icon: loc.png
     link: https://www.google.com/maps/@41.5639989,-93.8009926,13z
+
+social:
   ramana_portal:
     label: ramanaambore.me
     icon: rambo.png
     link: https://ramanaambore.me
-social:
   linkedin:
     label: linkedin.com/in/ambore
     icon: linkedin.png
@@ -223,6 +228,7 @@ social:
     label: github.com/RamanaAmbore
     icon: github.png
     link: https://github.com/RamanaAmbore
+
   medium:
     label: medium.com/@rrambo
     icon: medium.png
@@ -534,25 +540,25 @@ projects:
                 Won the ‘Project of the Year’ award for the overall performance
 hobbies:
   summary: |
-    This hobby project integrates a Raspberry Pi onto a drone to enhance its capabilities beyond basic flight. Challenges include minimizing weight and power consumption, ensuring reliable communication, and developing real-time processing algorithms while addressing the harsh environment. This project provides a rewarding learning experience in drone technology and embedded systems.
-    additional information: |
-    - Brief Description: This hobby project integrates a Raspberry Pi onto a drone to enhance its capabilities, such as real-time image processing and autonomous flight. Key challenges include minimizing weight, optimizing power consumption, and developing robust algorithms for the drone's dynamic environment.
-    - Main Highlights:
-      - Enhanced Flight Control: Real-time sensor data processing for improved stability, navigation, and obstacle avoidance.
-      - Advanced Data Collection: High-resolution image and video capture, image recognition (object detection), and environmental data analysis.
-      - Autonomous Flight: Implementation of advanced flight modes like "follow me," precision landings, and autonomous missions.
-    - Technical Challenges:
-      - Weight and Size Constraints: Minimizing the weight and size of the Raspberry Pi and its components to avoid impacting the drone's flight performance.
-      - Power Consumption: Ensuring efficient power management to prevent excessive battery drain.
-      - Data Transmission: Establishing a reliable and low-latency communication link for data transmission between the Pi and a ground station.
-      - Environmental Factors: Addressing the challenges of operating the Raspberry Pi in harsh environments (vibration, temperature fluctuations, etc.).
-      - Real-time Processing: Developing efficient algorithms for real-time processing of sensor data and image/video streams.
-      - Safety: Implementing robust safety mechanisms to ensure safe and reliable drone operation.
-      - This project pushes the boundaries of drone technology, enabling more sophisticated and autonomous operations.
-    - Tech Stack 
-       - Raspberry Pi: As the on-board computer.
-       - Python: As the primary programming language.
-       - OpenCV: For image and video processing, including object detection and computer vision tasks.
-       - Sensor Libraries: Libraries for interfacing with on-board sensors (IMU, GPS, barometer, etc.).
-       - Communication Protocols: Libraries for communication (e.g., Wi-Fi, Bluetooth, radio) between the Pi and a ground station or other systems.
-       - ArduPilot (or similar): For low-level flight control and coordination with the Raspberry Pi.
+    The hobby project integrates a Raspberry Pi onto a drone to enhance its capabilities beyond basic flight. Challenges include minimizing weight and power consumption, ensuring reliable communication, and developing real-time processing algorithms while addressing the harsh environment. This project provides a rewarding learning experience in drone technology and embedded systems.
+  additional information:
+        - Brief Description: This hobby project integrates a Raspberry Pi onto a drone to enhance its capabilities, such as real-time image processing and autonomous flight. Key challenges include minimizing weight, optimizing power consumption, and developing robust algorithms for the drone's dynamic environment.
+        - Main Highlights:
+          - Enhanced Flight Control: Real-time sensor data processing for improved stability, navigation, and obstacle avoidance.
+          - Advanced Data Collection: High-resolution image and video capture, image recognition (object detection), and environmental data analysis.
+          - Autonomous Flight: Implementation of advanced flight modes like "follow me," precision landings, and autonomous missions.
+        - Technical Challenges:
+          - Weight and Size Constraints: Minimizing the weight and size of the Raspberry Pi and its components to avoid impacting the drone's flight performance.
+          - Power Consumption: Ensuring efficient power management to prevent excessive battery drain.
+          - Data Transmission: Establishing a reliable and low-latency communication link for data transmission between the Pi and a ground station.
+          - Environmental Factors: Addressing the challenges of operating the Raspberry Pi in harsh environments (vibration, temperature fluctuations, etc.).
+          - Real-time Processing: Developing efficient algorithms for real-time processing of sensor data and image/video streams.
+          - Safety: Implementing robust safety mechanisms to ensure safe and reliable drone operation.
+          - This project pushes the boundaries of drone technology, enabling more sophisticated and autonomous operations.
+        - Tech Stack:
+           - Raspberry Pi: As the on-board computer.
+           - Python: As the primary programming language.
+           - OpenCV: For image and video processing, including object detection and computer vision tasks.
+           - Sensor Libraries: Libraries for interfacing with on-board sensors (IMU, GPS, barometer, etc.).
+           - Communication Protocols: Libraries for communication (e.g., Wi-Fi, Bluetooth, radio) between the Pi and a ground station or other systems.
+           - ArduPilot (or similar): For low-level flight control and coordination with the Raspberry Pi.

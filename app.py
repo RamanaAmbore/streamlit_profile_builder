@@ -7,11 +7,13 @@ from PIL import Image  # PIL module for image handling
 from src.components import set_png_as_page_bg, markdown  # Functions for setting background and styling
 from src.logger import log_setup  # Custom logging setup
 from src.sections import generate_profile_section, generate_skills_section, \
-    generate_contact_social_section, generate_education_section, generate_sidebar_section, \
+    generate_education_section, generate_sidebar_section, \
     generate_certification_section, generate_employment_section, \
     generate_experience_summary_section, \
-    generate_hobbie_section, generate_portfolio_section, generate_project_section  # Functions to generate sections of the profile page
-from src.utils import css_style, profile, get_image_path  # Utility functions for styling, accessing profile data, and image paths
+    generate_hobbie_section, generate_portfolio_section, \
+    generate_project_section  # Functions to generate sections of the profile page
+from src.utils import css_style, profile, \
+    get_image_path  # Utility functions for styling, accessing profile data, and image paths
 
 
 # Define the initial setup function to configure the Streamlit app
@@ -47,9 +49,6 @@ if __name__ == '__main__':
 
     # Generate the profile section
     generate_profile_section()
-
-    # Generate the contact and social links section
-    generate_contact_social_section()
 
     # Generate the experience summary section
     generate_experience_summary_section()

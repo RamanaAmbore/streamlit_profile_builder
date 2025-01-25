@@ -8,8 +8,7 @@ from streamlit_scroll_navigation import scroll_navbar
 from src.components import container, write_section_heading, create_ruler, write_colums, write_container, \
     disp_icon_text
 from src.utils import profile, get_image_path, get_selected_colors, get_image_bin_file, freq_color, get_config, \
-    get_profile, \
-    colors, get_labels, capitalize, get_darker_colors, get_darker_color, pdf_resume
+    get_profile,     colors, get_labels, capitalize, get_darker_colors, get_darker_color, pdf_resume
 
 
 # Function to generate the sidebar section
@@ -59,30 +58,28 @@ def generate_profile_section():
     with col2:
         # Display profile details
         container(st.write, profile['profile'], key='profile')
-        # Add a button to download the resume as a PDF
-        container(st.download_button, label=":arrow_down: pdf", type='tertiary',
-                  data=pdf_resume,
-                  file_name=f"{profile['name'].lower()}.pdf",
-                  mime='application/octet-stream', key="pdf_download")
+        # Contact section
+
+    generate_contact_social_section()
 
 
-# Function to generate the contact and social media section
 def generate_contact_social_section():
-    create_ruler()  # Add a horizontal ruler
-
-    # Contact section
-    section_name = 'contact'
+    section_name = 'contact_social'
     with st.container(key=section_name):
+
+
+        section_name = 'contact'
+        width_cols = [1, .05, 1, 0.05, 1, .05, 1]
+        col1, _, col2, _, col3, _, col4 = st.columns(width_cols, vertical_alignment='center')
+        # Add a button to download the resume as a PDF
+        write_colums([col1, col2, col3, col4], section_name)
+
+        # Social media section
+        section_name = 'social'
         width_cols = [1, .05, 1, 0.05, 1, .05, 1]
         col1, _, col2, _, col3, _, col4 = st.columns(width_cols, vertical_alignment='center')
         write_colums([col1, col2, col3, col4], section_name)
 
-    # Social media section
-    section_name = 'social'
-    with st.container(key=section_name):
-        width_cols = [1, .05, 1, 0.05, 1, .05, 1]
-        col1, _, col2, _, col3, _, col4 = st.columns(width_cols, vertical_alignment='center')
-        write_colums([col1, col2, col3, col4], section_name)
 
 
 # Function to generate the experience summary section
@@ -186,7 +183,7 @@ def generate_hobbie_section():
     width_education = [3, .05, 1, 3]
 
     # Create columns for displaying images of hobbies
-    col1, _, col2,_ = container(st.columns, width_education,
+    col1, _, col2, _ = container(st.columns, width_education,
                                  vertical_alignment='center', key='hobbie_container')
     with col1:
         st.image(get_image_path('drone.png'))  # Display the first hobby image
@@ -287,6 +284,7 @@ def generate_certification_section():
         # Display the pie chart in Streamlit
         st.plotly_chart(fig, use_container_width=True)
 
+
 # Function to generate the employment section
 def generate_employment_section():
     section_name = 'employment'
@@ -304,7 +302,8 @@ def generate_employment_section():
     with pie_chart_col:
         labels = get_labels('projects')  # Retrieve labels for pie chart
         values = [val['duration'] for val in val_list]  # Get project durations for pie chart values
-        hover = [(val['hover'] if 'hover' in val else val['long label']).replace(',', '<br>') for val in val_list]  # Prepare hover text for the pie chart
+        hover = [(val['hover'] if 'hover' in val else val['long label']).replace(',', '<br>') for val in
+                 val_list]  # Prepare hover text for the pie chart
         select_colors = get_selected_colors(colors, len(labels))  # Get selected colors for pie chart
         border_colors = get_darker_colors(select_colors)  # Get darker colors for pie chart borders
 
@@ -341,7 +340,7 @@ def generate_portfolio_section():
     for key, vals in section.items():
         m_col1, _, m_col2 = st.columns([10, 0.01, 5])  # Define column layout for project details
         with m_col1:
-            col1,  col2 = st.columns([4,  2])  # Define column layout for portfolio item
+            col1, col2 = st.columns([4, 2])  # Define column layout for portfolio item
             with col1:
                 disp_icon_text(vals['icon'], key, vals['link'], 'h5')  # Display project icon and link
             with col2:
