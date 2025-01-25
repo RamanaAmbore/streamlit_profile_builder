@@ -183,7 +183,7 @@ def generate_hobbie_section():
     st.write(section['summary'])  # Display summary of hobbies
 
     # Define column layout for images
-    width_education = [3, .05, 2, 3]
+    width_education = [3, .05, 1, 3]
 
     # Create columns for displaying images of hobbies
     col1, _, col2,_ = container(st.columns, width_education,

@@ -82,9 +82,8 @@ ul {
     font-size:14px !important;
 }
 
-hr {
-        border-color: darkblue;
-    }
+
+.stExpander details {border-style: none !important;}
 
 
 

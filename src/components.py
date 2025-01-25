@@ -44,7 +44,7 @@ def container(*args, **kwargs):
 def write_section_heading(text):
 
     icon = config["section_icons"]  # Get icon from config based on section name
-    st.subheader(f':{icon[text]}: {text.title()}', anchor=text.title(),divider=True)  # Display section heading
+    st.subheader(f':{icon[text]}: {text.title()}', anchor=text.title(),divider='rainbow')  # Display section heading
 
 
 
