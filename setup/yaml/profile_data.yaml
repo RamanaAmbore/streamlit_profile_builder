@@ -249,40 +249,51 @@ portfolio:
     github: https://github.com/RamanaAmbore/stremlite_profile
     image: portfolio1.png
     summary: |
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
-      Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, 
-      pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, 
-      vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis 
-      pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, 
-      porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
+      A dynamic, professional profile website built with Streamlit. This app is designed to showcase your profile, skills, experience, 
+      and portfolio in a visually appealing and interactive format. It leverages Streamlit's features and custom JavaScript for smooth scrolling navigation.
     technology: Python,  Pandas, Streamlit
     additional information: |
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
-      Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, 
-      pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, 
-      vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis 
-      pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, 
-      porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
+      Main Highlights
+        - Smooth Scrolling: Navigate seamlessly to different sections of the profile using JavaScript.
+        - Dynamic Sidebar: A sidebar menu for quick navigation between sections.
+        - Comprehensive Sections:
+        - Profile: Display your name, tagline, and basic info.
+        - Social Links: Provide easy access to your social media profiles.
+        - Experience Summary: Summarize your career achievements.
+        - Skills: Showcase your technical and soft skills.
+        - Projects and Portfolio: Highlight your key projects and accomplishments.
+        - Education: Add details of your academic qualifications.
+        - Certifications: Showcase professional certifications.
+        - Hobbies: Add a personal touch with your interests.
+      Tech Stack
+        - Streamlit: For building the UI.
+        - Python: For logic and backend handling.
+        - JavaScript: For enabling smooth scrolling.
+        - Pillow: For image processing.
+        - HTML & CSS: For custom styling.
   RRambo Trader - Algo Trading for Derivatives:
     icon: trader.png
     link: https://medium.com/@rrambo
     github: https://medium.com/@rrambo
     image: portfolio2.png
     summary: |
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
-      Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, 
-      pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, 
-      vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis 
-      pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, 
-      porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
+      This project aims to develop a sophisticated algorithmic trading platform designed to identify and capitalize on short-term market inefficiencies 
+      in option prices. Leveraging the power of Python, Dash, and Plotly, the platform will utilize option Greeks, underlying stock prices, and advanced 
+      statistical models to generate robust trading signals and execute trades automatically.
     technology: Python,  Pandas, Dash, Plotly
     additional information: |
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
-      Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, 
-      pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, 
-      vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis 
-      pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, 
-      porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
+      Main Highlights
+        - Develop and implement a robust backtesting framework to rigorously evaluate trading strategies on historical market data.
+        - Incorporate risk management rules, such as position sizing, stop-loss orders, and portfolio diversification, to minimize potential losses.
+        - Integrate with a brokerage API to enable automated order execution and trade management.
+        - Conduct ongoing research and development to refine trading strategies, incorporate new market data sources, and adapt to evolving market conditions.
+        - Develop a comprehensive documentation and user manual to guide users in utilizing the platform effectively.
+      Tech Stack:
+        - Programming Languages: Python
+        - Data Science Libraries: Pandas, NumPy, Scikit-learn, Statsmodels
+        - Data Visualization: Plotly, Dash
+        - Cloud Computing (Optional): AWS, Google Cloud, Azure (for scalability and resource management)
+        - Brokerage API Integration: Interactive Brokers API, Alpaca API, or other relevant APIs
 projects:
   NTT DATA:
     short label: NTT

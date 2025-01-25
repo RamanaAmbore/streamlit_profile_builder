@@ -350,7 +350,6 @@ def generate_portfolio_section():
             col1, _, col2 = st.columns([10, 0.01, 5])  # Define column layout for project details
             with col1:
                 st.write(vals['summary'])  # Display project summary
-                st.write(f"Technology: {vals['technology']}")  # Display technologies used
             with col2:
                 st.image(get_image_path(vals['image']))  # Display project image
 
