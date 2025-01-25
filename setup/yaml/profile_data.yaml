@@ -534,9 +534,9 @@ projects:
                 Won the ‘Project of the Year’ award for the overall performance
 hobbies:
   summary: |
-    This project explores the integration of a Raspberry Pi directly onto a drone platform. By leveraging the Pi's computational power, the project aims to enhance drone capabilities beyond basic flight control. Key objectives include real-time sensor data processing for improved stability, navigation, and obstacle avoidance; high-resolution image and video capture with on-board image recognition for applications like object detection and environmental monitoring; and the implementation of advanced flight modes such as "follow me," precision landings, and autonomous missions.
-  additional information: |
-    - Brief Description: This project involves integrating a Raspberry Pi directly onto a drone to enhance its capabilities beyond basic flight control.
+    This hobby project integrates a Raspberry Pi onto a drone to enhance its capabilities beyond basic flight. Challenges include minimizing weight and power consumption, ensuring reliable communication, and developing real-time processing algorithms while addressing the harsh environment. This project provides a rewarding learning experience in drone technology and embedded systems.
+    additional information: |
+    - Brief Description: This hobby project integrates a Raspberry Pi onto a drone to enhance its capabilities, such as real-time image processing and autonomous flight. Key challenges include minimizing weight, optimizing power consumption, and developing robust algorithms for the drone's dynamic environment.
     - Main Highlights:
       - Enhanced Flight Control: Real-time sensor data processing for improved stability, navigation, and obstacle avoidance.
       - Advanced Data Collection: High-resolution image and video capture, image recognition (object detection), and environmental data analysis.
