@@ -85,7 +85,7 @@ def debug_wrapper(function):
     return wrapper
 
 
-@streamlit.cache_resource
+
 def get_selected_colors(lst, size):
     """
     Select a random subset of colors from a list.
