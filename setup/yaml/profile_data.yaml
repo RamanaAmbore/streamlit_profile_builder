@@ -68,7 +68,7 @@ milestones:
   2021:
     milestone: CFA
     icon: cfa.png
-    long label: Cleared two levels  of of Certified Financial Analyst which helped understanding trading and investment
+    long label: Cleared two levels  of of Certified Financial Analyst which helped understanding trading and investment, ID# 8243442
   2023:
     milestone: Innovation
     icon: ntt.png
@@ -100,14 +100,14 @@ certifications:
     year: 2022
     duration: 1.5
     group: domain
-    long label: GARP certified Financial Risk Manager (FRM), 2022
+    long label: GARP certified Financial Risk Manager (FRM), 2022, GARP ID# 502640
   CFA:
     icon: cfa.png
     link: https://www.cfainstitute.org/
     year: 2020
     duration: 1.5
     group: domain
-    long label: Cleared Certified Financial Analyst (CFA) Level 1 and Level 2 exams, 2020
+    long label: Cleared Certified Financial Analyst (CFA) Level 1 and Level 2 exams, 2020,  ID# 8243442
   DB2 DBA:
     icon: ibm_db2.png
     link: https://www.ibm.com/training/certification/ibm-certified-administrator-db2-12-for-zos-C0005400
