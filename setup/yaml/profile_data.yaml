@@ -338,107 +338,141 @@ projects:
           duration: 21 years
           technology: MVS, COBOL, CICS, JCL, DB2, VSAM, Assembler
           summary: |
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
-            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, 
-            pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec,
+            Led the modernization of a high-volume, business-critical legacy application on AWS, leveraging Java, Spark, and a developed core framework. This significantly improved development and deployment speed, achieving a 50% reduction in turnaround times. Key responsibilities included designing high-volume transmission files, implementing data parsing and validation, and ensuring data consistency with mainframe systems.
           additional information: |
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
-            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, 
-            pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, 
-            vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis 
-            pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, 
-            porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
-        2. Legacy metadata analytics:
+            **Modernized a high-volume, business-critical legacy application on AWS using Java and Spark. This involved:
+            
+            Creating a core framework that reduced development and deployment turnaround times by 50 percent.
+            Developing high-volume transmission files generated from the new system using complex SQL queries.
+            Parsing SQL output to match the format of the transmission files.
+            Implementing the entire solution as a core framework.
+            Ensuring data in the transmission files matches with mainframe transmission files.
+            Developing mechanisms within the core framework to recreate transmissions for specific clients within SLAs when failures occur.
+            Utilizing technologies such as Spring Boot, Spark, EMR, and AWS.
+            Analyzing existing mainframe processes utilizing tools like REXX.**
+        2. Rambo - Rapid Analysis of Mainframe Batch Objects:
           role: Project Manager
           start: Apr 2003
           end: Till Date
           technology: MVS, COBOL, CICS, JCL, DB2, VSAM, Assembler
           summary: |
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
-            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, 
-            pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec,
+            I led the development of 'Rambo,' an analytics platform that empowered software development teams to reengineer and optimize software artifacts by providing critical insights into dependencies. My responsibilities included identifying metadata sources on software artifacts, organizing and storing the data in a database, creating networkx graph structures with nodes and edges, parsing the data for various use cases with complex SQLs, and presenting data flow diagrams in a visual manner using Python, PyVis, SQL, REXX, and Streamlit.
           additional information: |
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
-            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, 
-            pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, 
-            vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis 
-            pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, 
-            porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
-        3. legacy_reengineering:
+            **Responsibilities:**
+            
+            * **Platform Development:** Developed 'Rambo,' an analytics platform empowering software development teams to reengineer and optimize software artifacts by providing critical insights into dependencies.
+            * **Metadata Management:** Identified metadata sources on software artifacts, organized, and saved the data in the database.
+            * **Graph Structure:** Created networkx graph structures with nodes and edges, parsing the data for various use cases with complex SQLs.
+            * **Data Visualization:** Presented data flow diagrams visually using Python, PyVis, SQL, REXX, and Streamlit.
+        3. Cobra - COBOL Research & Analysis:
           role: Project Manager
           start: Apr 2003
           end: Till Date
           technology: MVS, COBOL, CICS, JCL, DB2, VSAM, Assembler
           summary: |
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
-            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, 
-            pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec,
+            This project centers around the development of "Cobra," a comprehensive ecosystem specifically designed to address the challenges of modernizing and enhancing legacy COBOL applications. Recognizing the critical role these systems play in many organizations, Cobra aims to equip businesses with the tools and technologies necessary to effectively understand, analyze, and ultimately modernize their existing COBOL codebases. This multifaceted ecosystem will encompass a suite of integrated tools and functionalities, empowering organizations to gain deeper insights into their COBOL applications and explore various modernization pathways.
           additional information: |
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
-            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, 
-            pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, 
-            vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis 
-            pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, 
-            porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
-        4. Mainframe Online CICS changes:
+            **Project: Cobra - COBOL Research & Analysis**
+            
+            **Description:** This project involves the development of a comprehensive ecosystem, "Cobra," designed to modernize and enhance legacy COBOL applications. Cobra will provide a suite of tools and technologies to help organizations understand, analyze, and modernize their existing COBOL codebases.
+            
+            **Key Components:**
+            
+            * **High-Performance Parsing Engine:** 
+                * Develops a robust parser to accurately analyze COBOL code, including lexical and syntax analysis, handling various dialects, and constructing an Abstract Syntax Tree (AST).
+                * Extracts key information such as data flow, control flow, and data dependencies.
+            * **Data Lineage Analysis:** 
+                * Tracks the origin and transformation of critical data elements throughout the application.
+                * Provides visual representations of data flows using interactive diagrams and visualizations.
+            * **Code Analysis and Optimization Tools:** 
+                * Identifies potential areas for code improvement, such as performance bottlenecks, code redundancy, and potential security vulnerabilities.
+                * Suggests refactoring opportunities to improve code maintainability and readability.
+            * **Modernization Pathways:** 
+                * Explores and evaluates potential modernization strategies, such as:
+                    * Code refactoring and optimization
+                    * Partial or full code translation to modern languages
+                    * Integration with modern technologies and architectures
+            * **User Interface and Documentation:** 
+                * Develops a user-friendly interface for interacting with the Cobra ecosystem, including data visualization tools and interactive dashboards. 
+                * Provides comprehensive documentation and tutorials to guide users in effectively utilizing Cobra.
+            
+            **Challenges:**
+            
+            * **Handling the Complexity of COBOL:** Dealing with the intricacies of the COBOL language, including various dialects, complex data structures, and decades of accumulated code.
+            * **Ensuring Data Accuracy and Consistency:** Maintaining the accuracy and consistency of data extracted from the COBOL codebase.
+            * **Developing Scalable and Performant Solutions:** Creating tools that can efficiently handle large-scale COBOL applications and provide timely results.
+            * **Addressing the Evolving Landscape of COBOL:** Adapting to new COBOL standards, emerging technologies, and evolving business requirements.
+            * **Building a User-Friendly Experience:** Designing an intuitive and user-friendly interface for interacting with the Cobra ecosystem.
+            
+            **Key Skills:**
+            
+            * **Strong proficiency in Python programming**
+            * **Deep understanding of COBOL language syntax and semantics**
+            * **Experience with parsing techniques (lexical analysis, syntax analysis, AST construction)**
+            * **Familiarity with parsing tools and libraries (e.g., PLY, ANTLR)**
+            * **Data analysis and visualization skills (e.g., using libraries like Pandas, NumPy, Matplotlib, Plotly)**
+            * **Software engineering best practices (design patterns, testing, code reviews)**
+            
+            This project represents a significant undertaking in modernizing legacy COBOL systems. By addressing the challenges and leveraging the power of modern technologies, Cobra - COBOL Research & Analysis can empower organizations to unlock the value of their existing COBOL investments while preparing them for the future.
+        4. Legacy Automation:
           role: Project Manager
           start: Apr 2003
           end: Till Date
           technology: MVS, COBOL, CICS, JCL, DB2, VSAM, Assembler
           summary: |
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
-            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, 
-            pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec,
+            The project focused on modernizing legacy transmission job automation processes within our organization. The primary objective was to replace static job schedules with dynamic job submissions triggered by events or data changes within the CICS environment.
           additional information: |
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
-            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, 
-            pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, 
-            vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis 
-            pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, 
-            porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
-        5. Mainframe Automation:
-          role: Project Manager
-          start: Apr 2003
-          end: Till Date
-          technology: MVS, COBOL, CICS, JCL, DB2, VSAM, Assembler
-          summary: |
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
-            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, 
-            pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec,
-          additional information: |
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
-            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, 
-            pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, 
-            vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis 
-            pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, 
-            porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
+       
+            **Project: Legacy Transmission Job Automation**
+            
+            **Description:** This project focused on modernizing legacy transmission job automation processes within our organization. The primary objective was to replace static job schedules with dynamic job submissions triggered by events or data changes within the CICS environment. 
+            
+            **Key Achievements:**
+            
+            * **Developed and implemented a framework for dynamic job submission:** 
+                * Leveraged CICS internal readers to monitor specific transactions, messages, or data changes within the CICS environment.
+                * Developed custom CICS programs (written in COBOL) to process these events and trigger appropriate job submissions.
+                * Integrated with the Job Control Language (JCL) to dynamically generate and submit jobs to the mainframe batch environment.
+            * **Enhanced Job Scheduling Flexibility:** 
+                * Replaced static job schedules with dynamic triggers, enabling more responsive and event-driven job execution.
+                * Improved resource utilization by executing jobs only when necessary, reducing unnecessary processing overhead.
+            * **Improved Operational Efficiency:** 
+                * Streamlined job scheduling processes, reducing manual intervention and the risk of human error.
+                * Improved overall system responsiveness and reduced job execution delays. 
+            * **Technology Stack:**
+                * **COBOL:** Primary language for developing CICS programs and processing business logic.
+                * **CICS:** Provided the runtime environment for CICS programs and facilitated event-driven processing.
+                * **JCL:** Used for defining and submitting batch jobs to the mainframe.
+                * **DB2:** Utilized for data storage and retrieval.
+                * **REXX:** (Optional) Potentially used for scripting and automation tasks within the CICS environment.
+            
+            **Benefits:**
+            
+            * **Increased agility and responsiveness:** Enabled the organization to react more quickly to changing business needs and events.
+            * **Improved operational efficiency:** Reduced manual intervention, minimized errors, and improved resource utilization.
+            * **Enhanced system stability:** Reduced the risk of missed jobs or scheduling conflicts.
+            * **Modernized legacy systems:** Brought legacy job scheduling processes in line with modern IT practices.
       General Motors:
         General Motors Dealer Information Database (GMDID) Re-engineering Project:
-          summary: The General Motors Dealer Information Database (GMDID) is the repository for dealer related data including ship-to locations,
-            warranty repair stations, auction sites, etc., and provides for a “total” GM Dealer picture.  GMDID, working in conjunction with the Dealer
-            Network Planning System (DNPS) is the “hub of the wheel” interacting and supplying data to all GM downstream systems and non-GM Stakeholders
-            that require this data to run the business. There are over 30 GM applications, 1800 users and 134 extract requests provided to non-GM
-            Stakeholders each month.  The scope of the project is to create functional spec. and project proposal for the re-engineering project.
+          summary: |
+            As a lead, I prepared program logic documents and functional specifications, and created project proposals for GMDID/DNPS systems. I developed REXX tools to extract information for creating Functional Specifications. I conducted impact analysis and documented data access issues. I assisted in data retrieval, batch processes, and database issues for Siebel integration. I also created Functional Specifications and project proposals, and managed project planning, scheduling, and monitoring.
+
+
           role: Project Leader
           start: May 2002
           end: Apr 2003
           technology: MVS, REXX, JCL, COBOL, IMS, DB2, CICS, Siebel, MS Word, MS Access, MS Excel, Windows NT
           additional information: |
-            Redesign the weekly batch cycle, implement the enhancements, provide offshore support. 
-            •	Lead the teams in preparing program logic document and functional specification using 2440 COBOL/IMS/DB2 programs, 765 copybooks and 
-            180 JCL’s and creating project proposal for GMDID/DNPS systems. 
-            •	Created REXX tools to extract the information related to program logic, screen layout and dataset & database access for creating the 
-            Functional Specification. 
-            •	Did impact analysis on non-GMDID/DNPS applications that access GMDID/DNPS database. Also researched and documented the issues related to 
-            data access to non-GMDID/DNPS databases. 
-            •	Helped the Siebel team in understanding the data retrieval, update and user access rights in mainframe screens and creating the 
-            corresponding Siebel screens. 
-            •	Helped the Siebel team in understanding the mainframe batch process and creating the corresponding batch and reporting functionality in 
-            the Siebel system. 
-            •	Worked with the Siebel team to understand the database-related issues like database schema, data migration and database connectivity for 
-            other applications, etc. 
-            •	Actively involved in creating Functional Specification (FS) and project proposal for the re-engineering project.  Responsible for planning, 
-            scheduling and monitoring the project activities according the project plan
+            **Redesign and Enhancement of Weekly Batch Cycle with Offshore Support:**
+
+            * **Leadership and Documentation:** Led the teams in preparing program logic documents and functional specifications using 2440 COBOL/IMS/DB2 programs, 765 copybooks, and 180 JCLs, and creating project proposals for GMDID/DNPS systems.
+            * **REXX Tools Creation:** Developed REXX tools to extract information related to program logic, screen layout, and dataset & database access for creating the Functional Specification.
+            * **Impact Analysis:** Conducted impact analysis on non-GMDID/DNPS applications that access the GMDID/DNPS database. Researched and documented issues related to data access to non-GMDID/DNPS databases.
+            * **Siebel Team Support:** Assisted the Siebel team in understanding data retrieval, updates, and user access rights in mainframe screens, and in creating the corresponding Siebel screens.
+            * **Batch Process Understanding:** Supported the Siebel team in understanding the mainframe batch process and creating the corresponding batch and reporting functionality in the Siebel system.
+            * **Database-related Issues:** Collaborated with the Siebel team to address database-related issues such as database schema, data migration, and database connectivity for other applications.
+            * **Functional Specification and Project Proposal:** Actively involved in creating Functional Specifications (FS) and project proposals for the re-engineering project. Responsible for planning, scheduling, and monitoring project activities according to the project plan.
+
   iNautix Technologies India Pvt:
     short label: iNautix
     icon: inautix.png
