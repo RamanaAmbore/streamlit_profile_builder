@@ -42,10 +42,10 @@ def container(*args, **kwargs):
 
 # Function to display a section heading with an optional icon and styling
 def write_section_heading(text):
-    create_ruler()
+
     icon = config["section_icons"]  # Get icon from config based on section name
-    st.subheader(f':{icon[text]}: {text.title()}', anchor=text.title())  # Display section heading
-    create_ruler()
+    st.subheader(f':{icon[text]}: {text.title()}', anchor=text.title(),divider=True)  # Display section heading
+
 
 
 # Function to display a subheading with text
