@@ -341,7 +341,7 @@ def generate_portfolio_section():
     for key, vals in section.items():
         container = st.container(key=key)  # Create a container for each portfolio item
         with container:
-            col1, _, col2 = st.columns([10, 0.01, 10])  # Define column layout for portfolio item
+            col1,  col2 = st.columns([7,  10])  # Define column layout for portfolio item
             with col1:
                 disp_icon_text(vals['icon'], key, vals['link'], 'h5')  # Display project icon and link
             with col2:
