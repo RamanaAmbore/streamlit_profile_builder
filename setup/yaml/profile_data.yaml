@@ -141,62 +141,77 @@ skills:
     icon: python.png
     level: 5
     long label: Used extensively for legacy automation, visualization and analytics
+    duration: 8
   streamlit:
     icon: streamlit.png
     level: 4
     long label: created analytics platform for analyzing organizational artifacts and dependencies
+    duration: 3
   dash/plotly:
     icon: dash_plotly.png
     level: 4
     long label: craated algo trading platform for derivatives
+    duration: 2
   java:
     icon: java_small.png
     level: 4
     long label: Used to modernize a high volume legacy application in cloud
+    duration: 6
   spark:
     icon: apache_spark.png
     level: 4
     long label: used to modernize high volume time sensitive lagcy applicaiton
+    duration: 3
   springBoot:
     icon: spring.png
     level: 3
     long label: used to create spark batch application
+    duration: 5
   COBOL:
     icon: ibm.png
     level: 5
-    long label: Used to develop batch, db2 and CICS appliactions
+    long label: Used to develop batch, db2 and CICS applications
+    duration: 25
   CICS:
     icon: ibm.png
     level: 5
     long label: Developed new online screens and modify existing screens
+    duration: 20
   DB2/SQL:
     icon: ibm_db2.png
     level: 5
     long label: Used extesnively on mainframe for batch and online applciations, Certified DB2 DBA.
+    duration: 25
   JCL:
     icon: ibm.png
     level: 5
     long label: devloped high-volume batch applications. Certified Java developer
+    duration: 25
   VSAM:
     icon: ibm.png
     level: 3
     long label: used for batch and online applications
+    duration: 15
   AWS:
     icon: aws.png
     level: 3
     long label: legacy modernization is done using AWS
+    duration: 5
   terraform:
     icon: terraform.png
     level: 3
     long label: Used cloud automation
+    duration: 5
   jenkins:
     icon: jenkins.png
     level: 3
+    duration: 5
     long label: usec to created CI/CD pipelines
   git:
     icon: git.png
     level: 4
     long label: Used for professional and personal projects
+    duration: 8
 contact:
   resume:
     label: Download Resume
