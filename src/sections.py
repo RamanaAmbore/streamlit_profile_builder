@@ -339,22 +339,20 @@ def generate_portfolio_section():
 
     # Iterate over each portfolio item
     for key, vals in section.items():
-        container = st.container(key=key)  # Create a container for each portfolio item
-        with container:
-            col1,  col2 = st.columns([7,  10])  # Define column layout for portfolio item
+        m_col1, _, m_col2 = st.columns([10, 0.01, 5])  # Define column layout for project details
+        with m_col1:
+            col1,  col2 = st.columns([4,  2])  # Define column layout for portfolio item
             with col1:
                 disp_icon_text(vals['icon'], key, vals['link'], 'h5')  # Display project icon and link
             with col2:
                 disp_icon_text('git_small.png', '', vals['github'])  # Display GitHub icon and link
 
-            col1, _, col2 = st.columns([10, 0.01, 5])  # Define column layout for project details
-            with col1:
-                st.write(vals['summary'])  # Display project summary
-            with col2:
-                st.image(get_image_path(vals['image']))  # Display project image
+            st.write(vals['summary'])  # Display project summary
+        with m_col2:
+            st.image(get_image_path(vals['image']))  # Display project image
 
-            with st.expander(f"Additional Information..."):
-                st.write(vals['additional information'])  # Display additional information about the project
+        with st.expander(f"Additional Information..."):
+            st.write(vals['additional information'])  # Display additional information about the project
 
 
 # Function to generate the project section
