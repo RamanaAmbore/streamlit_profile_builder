@@ -79,11 +79,16 @@ ul {
     margin-bottom: 5px;
 }
 
+.stExpander details {
+    border-style: none !important;
+    background:#f8f8f8 !important;
+}
 
-
-.stExpander details {border-style: none !important; background:#f8f8f8 !important;}
-
-.st-key-contact_social {border-width: white !important; background:#fafafa !important;gap:.5rem !important; padding:0px; border-radius:10px !important;}
+.st-key-contact_social {
+    background-color: #fafafa !important;
+    gap:.5rem !important;
+    border-radius:10px !important;
+}
 
 
 

@@ -50,7 +50,7 @@ def generate_profile_section():
 
     container(st.write, f"#### {profile['designation']}", key='profile_designation')
 
-    col1, _, col2 = st.columns([2, .1, 10])
+    col1, _, col2 = st.columns([2, .1, 10],vertical_alignment="center")
     with col1:
         # Display profile photo
         container(st.image, get_image_path('profile_photo.png'), clamp=True,
@@ -66,7 +66,6 @@ def generate_profile_section():
 def generate_contact_social_section():
     section_name = 'contact_social'
     with st.container(key=section_name):
-
 
         section_name = 'contact'
         width_cols = [1, .05, 1, 0.05, 1, .05, 1]
