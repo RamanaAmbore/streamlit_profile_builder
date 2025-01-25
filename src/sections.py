@@ -348,6 +348,7 @@ def generate_portfolio_section():
                 disp_icon_text('git_small.png', '', vals['github'])  # Display GitHub icon and link
 
             st.write(vals['summary'])  # Display project summary
+            st.write(f"Technology: {vals['technology']}")  # Display technologies used
         with m_col2:
             st.image(get_image_path(vals['image']))  # Display project image
 
