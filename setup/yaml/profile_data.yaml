@@ -23,19 +23,21 @@ experience summary:
     and exploit fleeting market inefficiencies, enabling automated, data-driven trading decisions.
 hobbies:
   summary: |
-    Drone programming with Raspberry Pi and ArduPilot.     Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
-    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, 
-    pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, 
-    vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis 
-    pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, 
-    porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
+    This project explores the integration of a Raspberry Pi directly onto a drone platform. By leveraging the Pi's computational power, the project aims to enhance drone capabilities beyond basic flight control. Key objectives include real-time sensor data processing for improved stability, navigation, and obstacle avoidance; high-resolution image and video capture with on-board image recognition for applications like object detection and environmental monitoring; and the implementation of advanced flight modes such as "follow me," precision landings, and autonomous missions.
   additional information: |
-    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
-    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, 
-    pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, 
-    vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis 
-    pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, 
-    porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
+    - Brief Description: This project involves integrating a Raspberry Pi directly onto a drone to enhance its capabilities beyond basic flight control.
+    - Main Highlights:
+      - Enhanced Flight Control: Real-time sensor data processing for improved stability, navigation, and obstacle avoidance.
+      - Advanced Data Collection: High-resolution image and video capture, image recognition (object detection), and environmental data analysis.
+      - Autonomous Flight: Implementation of advanced flight modes like "follow me," precision landings, and autonomous missions.
+    - Technical Challenges:
+      - Weight and Size Constraints: Minimizing the weight and size of the Raspberry Pi and its components to avoid impacting the drone's flight performance.
+      - Power Consumption: Ensuring efficient power management to prevent excessive battery drain.
+      - Data Transmission: Establishing a reliable and low-latency communication link for data transmission between the Pi and a ground station.
+      - Environmental Factors: Addressing the challenges of operating the Raspberry Pi in harsh environments (vibration, temperature fluctuations, etc.).
+      - Real-time Processing: Developing efficient algorithms for real-time processing of sensor data and image/video streams.
+      - Safety: Implementing robust safety mechanisms to ensure safe and reliable drone operation.
+      - This project pushes the boundaries of drone technology, enabling more sophisticated and autonomous operations.
 milestones:
   1993:
     milestone: Master's

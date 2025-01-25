@@ -183,10 +183,10 @@ def generate_hobbie_section():
     st.write(section['summary'])  # Display summary of hobbies
 
     # Define column layout for images
-    width_education = [6, .05, 2, 2]
+    width_education = [3, .05, 6]
 
     # Create columns for displaying images of hobbies
-    col1, _, col2, _ = container(st.columns, width_education,
+    col1, _, col2 = container(st.columns, width_education,
                                  vertical_alignment='center', key='hobbie_container')
     with col1:
         st.image(get_image_path('drone.png'))  # Display the first hobby image
