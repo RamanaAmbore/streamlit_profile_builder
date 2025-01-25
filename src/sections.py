@@ -5,9 +5,9 @@ from plotly import graph_objects as go
 from streamlit_scroll_navigation import scroll_navbar
 
 # Import custom components and functions from src directory
-from src.components import container, write_section_heading, create_ruler, write_colums, write_container, \
+from src.components import container, write_section_heading, write_columns, write_container, \
     disp_icon_text
-from src.utils import profile, get_image_path, get_selected_colors, get_image_bin_file, freq_color, get_config, \
+from src.utils import profile, get_path, get_selected_colors, get_image_bin_file, freq_color, get_config, \
     get_profile,     colors, get_labels, capitalize, get_darker_colors, get_darker_color, pdf_resume
 
 
@@ -53,7 +53,7 @@ def generate_profile_section():
     col1, _, col2 = st.columns([2, .1, 10],vertical_alignment="center")
     with col1:
         # Display profile photo
-        container(st.image, get_image_path('profile_photo.png'), clamp=True,
+        container(st.image, get_path('profile_photo.png'), clamp=True,
                   use_container_width=True, key='profile_photo')
     with col2:
         # Display profile details
@@ -71,13 +71,13 @@ def generate_contact_social_section():
         width_cols = [1, .05, 1, 0.05, 1, .05, 1]
         col1, _, col2, _, col3, _, col4 = st.columns(width_cols, vertical_alignment='center')
         # Add a button to download the resume as a PDF
-        write_colums([col1, col2, col3, col4], section_name)
+        write_columns([col1, col2, col3, col4], section_name)
 
         # Social media section
         section_name = 'social'
         width_cols = [1, .05, 1, 0.05, 1, .05, 1]
         col1, _, col2, _, col3, _, col4 = st.columns(width_cols, vertical_alignment='center')
-        write_colums([col1, col2, col3, col4], section_name)
+        write_columns([col1, col2, col3, col4], section_name)
 
 
 
@@ -185,10 +185,10 @@ def generate_hobbie_section():
     col1, _, col2, _ = container(st.columns, width_education,
                                  vertical_alignment='center', key='hobbie_container')
     with col1:
-        st.image(get_image_path('drone.png'))  # Display the first hobby image
+        st.image(get_path('drone.png'))  # Display the first hobby image
 
     with col2:
-        st.image(get_image_path('raspberry.png'))  # Display the second hobby image
+        st.image(get_path('raspberry.png'))  # Display the second hobby image
 
     with st.expander("Additional Information..."):
         st.write(section['additional information'])  # Display additional hobby details
@@ -348,7 +348,7 @@ def generate_portfolio_section():
             st.write(vals['summary'])  # Display project summary
             st.write(f"Technology: {vals['technology']}")  # Display technologies used
         with m_col2:
-            st.image(get_image_path(vals['image']))  # Display project image
+            st.image(get_path(vals['image']))  # Display project image
 
         with st.expander(f"Additional Information..."):
             st.write(vals['additional information'])  # Display additional information about the project

@@ -9,7 +9,22 @@ import yaml
 from PIL import Image
 
 
-# Custom dictionary class to handle keys with suffix matching
+# Function to get the path of an image file
+def get_path(file):
+    # Return the appropriate path based on whether the image is a certificate
+    type = file.split('.')[1]
+    dirs = {'jpg': 'images/',
+            'ico': 'images/',
+            'png': 'images/',
+            'jpeg': 'images/',
+            'css': 'style/',
+            'pdf': 'resume/',
+            'certificate': 'images/certificates/',
+            'yaml': 'yaml/'}
+    return f"setup/{dirs[type]}/{file}"
+    # Custom dictionary class to handle keys with suffix matching
+
+
 class CustomDict(dict):
     def __getitem__(self, key):
         # Check if any key in the dictionary ends with the specified key
@@ -21,13 +36,16 @@ class CustomDict(dict):
 
 
 # Load profile data from a YAML file
-with open('setup/yaml/profile_data.yaml', 'r', errors='ignore') as file:
+with open(get_path('profile_data.yaml'), 'r', errors='ignore') as file:
     profile = yaml.safe_load(file)  # Load YAML file into a Python dictionary
 
-
 # Load custom CSS styles for styling the frontend
-with open("setup/style/custom_styles.css") as css:
+with open(get_path("style.css"), "r") as css:
     css_style = css.read()  # Read the CSS file into a string
+
+# Read and store a PDF file (resume) in memory for download or display
+with open(get_path("resume.pdf"), "rb") as pdf_file:
+    pdf_resume = pdf_file.read()
 
 # Load additional configuration data from a YAML file
 with open('setup/yaml/config.yaml', 'r') as file:
@@ -38,23 +56,13 @@ with open('setup/yaml/config.yaml', 'r') as file:
     section_icons = config['section_icons']
     freq_color = config['freq_color']
 
-# Read and store a PDF file (resume) in memory for download or display
-with open("setup/resume/resume.pdf", "rb") as pdf_file:
-    pdf_resume = pdf_file.read()
-
-
-# Function to get the path of an image file
-def get_image_path(file, certificate=False):
-    # Return the appropriate path based on whether the image is a certificate
-    return f'setup/images/certificates/{file}' if certificate else f'setup/images/{file}'
-
 
 @streamlit.cache_resource
 def get_image_bin_file(file):
     """
     Encodes an image file as a Base64 string for embedding in HTML.
     """
-    img = Image.open(get_image_path(file))  # Open the image file
+    img = Image.open(get_path(file))  # Open the image file
     format = file[-3:].upper()  # Extract the file format (e.g., PNG, JPG)
 
     # Encode the image into a Base64 string
