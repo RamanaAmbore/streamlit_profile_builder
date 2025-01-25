@@ -517,7 +517,7 @@ projects:
           role: Software Consultant
           start: Apr 2002
           end: Nov 1997
-          technology: MVS, COBOL, EasyTrieve, JCL, REXX, CICS, VSAM, FileAid, Xpediter, DCI, IE, MS Word, MS Outlook, Windows
+          technology: MVS, COBOL, EasyTrieve, JCL, REXX, CICS, VSAM, FileAid, Xpediter, DCI
           summary: |
             The project is to install, customize and implement DBS E-series packages for Dade County Public Schools. 
               The project also involved developing Internal Funds systems and integrating it with DBS E-Series packages
