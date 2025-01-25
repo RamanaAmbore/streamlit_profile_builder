@@ -87,7 +87,7 @@ def write_container(name):
 
 
 # Function to display profile information in columns
-def write_colums(column_list, name):
+def write_columns(column_list, name):
     profile_section = profile[name]  # Get profile section for the given name
     profile_keys = list(profile_section.keys())  # List of profile keys
     size = len(profile_keys) - 1  # Total number of profile items

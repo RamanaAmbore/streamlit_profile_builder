@@ -13,7 +13,7 @@ from src.sections import generate_profile_section, generate_skills_section, \
     generate_hobbie_section, generate_portfolio_section, \
     generate_project_section  # Functions to generate sections of the profile page
 from src.utils import css_style, profile, \
-    get_image_path  # Utility functions for styling, accessing profile data, and image paths
+    get_path  # Utility functions for styling, accessing profile data, and image paths
 
 
 # Define the initial setup function to configure the Streamlit app
@@ -24,7 +24,7 @@ def initial_setup():
         logging.info('Logging setup')  # Log an informational message
 
     # Load the favicon image from the specified file path
-    favicon = Image.open(get_image_path("rambo_favicon.ico"))
+    favicon = Image.open(get_path("rambo_favicon.ico"))
 
     # Set the page configuration for the Streamlit app
     st.set_page_config(

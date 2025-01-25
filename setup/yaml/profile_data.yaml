@@ -198,10 +198,10 @@ skills:
     level: 4
     long label: Used for professional and personal projects
 contact:
-  pdf:
-    label: Resume donwload
+  resume:
+    label: View Resume
     icon: pdf.png
-    link: mailto:ramana.ambore@gmail.com
+    link: resume.pdf
   mail:
     label: Ramana.Ambore@gmail.com
     icon: mail.png
