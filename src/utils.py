@@ -12,6 +12,7 @@ from PIL import Image
 # Function to get the path of an image file
 def get_path(file):
     # Return the appropriate path based on whether the image is a certificate
+    if 'http' in file: return file
     type = file.split('.')[1]
     dirs = {'jpg': 'images/',
             'ico': 'images/',
@@ -62,6 +63,8 @@ def get_image_bin_file(file):
     """
     Encodes an image file as a Base64 string for embedding in HTML.
     """
+
+    if 'http' in file: return file
     img = Image.open(get_path(file))  # Open the image file
     format = file[-3:].upper()  # Extract the file format (e.g., PNG, JPG)
 

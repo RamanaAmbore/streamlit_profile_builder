@@ -96,7 +96,7 @@ education:
 certifications:
   FRM:
     icon: frm.png
-    link: https://www.cfainstitute.org/
+    link: https://www.garp.org/frm
     year: 2022
     duration: 1.5
     group: domain
