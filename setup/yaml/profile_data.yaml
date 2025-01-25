@@ -21,23 +21,6 @@ experience summary:
     This engine will track data flow, identify the origin and transformation of critical fields, and ultimately enable accurate data lineage analysis.
   - Developing an algorithmic trading platform that leverages the power of option Greeks and underlying stock prices to identify 
     and exploit fleeting market inefficiencies, enabling automated, data-driven trading decisions.
-hobbies:
-  summary: |
-    This project explores the integration of a Raspberry Pi directly onto a drone platform. By leveraging the Pi's computational power, the project aims to enhance drone capabilities beyond basic flight control. Key objectives include real-time sensor data processing for improved stability, navigation, and obstacle avoidance; high-resolution image and video capture with on-board image recognition for applications like object detection and environmental monitoring; and the implementation of advanced flight modes such as "follow me," precision landings, and autonomous missions.
-  additional information: |
-    - Brief Description: This project involves integrating a Raspberry Pi directly onto a drone to enhance its capabilities beyond basic flight control.
-    - Main Highlights:
-      - Enhanced Flight Control: Real-time sensor data processing for improved stability, navigation, and obstacle avoidance.
-      - Advanced Data Collection: High-resolution image and video capture, image recognition (object detection), and environmental data analysis.
-      - Autonomous Flight: Implementation of advanced flight modes like "follow me," precision landings, and autonomous missions.
-    - Technical Challenges:
-      - Weight and Size Constraints: Minimizing the weight and size of the Raspberry Pi and its components to avoid impacting the drone's flight performance.
-      - Power Consumption: Ensuring efficient power management to prevent excessive battery drain.
-      - Data Transmission: Establishing a reliable and low-latency communication link for data transmission between the Pi and a ground station.
-      - Environmental Factors: Addressing the challenges of operating the Raspberry Pi in harsh environments (vibration, temperature fluctuations, etc.).
-      - Real-time Processing: Developing efficient algorithms for real-time processing of sensor data and image/video streams.
-      - Safety: Implementing robust safety mechanisms to ensure safe and reliable drone operation.
-      - This project pushes the boundaries of drone technology, enabling more sophisticated and autonomous operations.
 milestones:
   1993:
     milestone: Master's
@@ -255,7 +238,7 @@ portfolio:
       and portfolio in a visually appealing and interactive format. It leverages Streamlit's features and custom JavaScript for smooth scrolling navigation.
     technology: Python,  Pandas, Streamlit
     additional information: |
-      Main Highlights
+      - Main Highlights
         - Smooth Scrolling: Navigate seamlessly to different sections of the profile using JavaScript.
         - Dynamic Sidebar: A sidebar menu for quick navigation between sections.
         - Comprehensive Sections:
@@ -267,7 +250,15 @@ portfolio:
         - Education: Add details of your academic qualifications.
         - Certifications: Showcase professional certifications.
         - Hobbies: Add a personal touch with your interests.
-      Tech Stack
+      - Challenges:
+        - Dynamic Content Integration: Smoothly integrating and updating project descriptions, skills, and work experience.
+        - Interactive Elements: Implementing smooth scrolling and engaging interactive elements.
+        - Cross-browser Compatibility: Ensuring consistent performance across different browsers.
+        - Responsive Design: Adapting the website to various screen sizes.
+        - Performance Optimization: Minimizing loading times and ensuring a smooth user experience.
+        - Accessibility: Designing the website for users with disabilities.
+        - Deployment and Maintenance: Deploying and maintaining the app effectively.
+      - Tech Stack
         - Streamlit: For building the UI.
         - Python: For logic and backend handling.
         - JavaScript: For enabling smooth scrolling.
@@ -284,13 +275,24 @@ portfolio:
       statistical models to generate robust trading signals and execute trades automatically.
     technology: Python,  Pandas, Dash, Plotly
     additional information: |
-      Main Highlights
+      - Main Highlights
         - Develop and implement a robust backtesting framework to rigorously evaluate trading strategies on historical market data.
         - Incorporate risk management rules, such as position sizing, stop-loss orders, and portfolio diversification, to minimize potential losses.
         - Integrate with a brokerage API to enable automated order execution and trade management.
         - Conduct ongoing research and development to refine trading strategies, incorporate new market data sources, and adapt to evolving market conditions.
         - Develop a comprehensive documentation and user manual to guide users in utilizing the platform effectively.
-      Tech Stack:
+      Challenges:
+        - Market Volatility: Accurately predicting and adapting to rapidly changing market conditions and volatility.
+        - Data Acquisition and Management: Efficiently collecting, cleaning, and managing high-frequency market data (stock prices, option chains, etc.).
+        - Model Development and Validation: Developing, backtesting, and validating robust trading models that can consistently generate profitable signals.
+        - Risk Management: Implementing effective risk management strategies to mitigate potential losses and protect capital.
+        - Real-time Data Processing: Processing and analyzing market data in real-time to generate timely trading signals.
+        - Algorithmic Trading Execution: Implementing a reliable and efficient system for executing trades automatically and minimizing slippage.
+        - Regulatory Compliance: Adhering to relevant regulations and compliance requirements for algorithmic trading.
+        - Scalability and Performance: Ensuring the platform can handle high volumes of data and execute trades efficiently at scale.
+        - Backtesting and Optimization: Continuously backtesting and optimizing trading strategies to improve performance and adapt to changing market conditions.
+        - Ethical Considerations: Addressing ethical considerations related to algorithmic trading, such as market manipulation and its impact on market stability.
+      - Tech Stack:
         - Programming Languages: Python
         - Data Science Libraries: Pandas, NumPy, Scikit-learn, Statsmodels
         - Data Visualization: Plotly, Dash
@@ -530,3 +532,27 @@ projects:
             •	Performed coding and testing for year 2000 changes and enhancements. 
             •	Worked with quality assurance (QA) team for creating quality procedures for ISO 9000 certification. 
                 Won the ‘Project of the Year’ award for the overall performance
+hobbies:
+  summary: |
+    This project explores the integration of a Raspberry Pi directly onto a drone platform. By leveraging the Pi's computational power, the project aims to enhance drone capabilities beyond basic flight control. Key objectives include real-time sensor data processing for improved stability, navigation, and obstacle avoidance; high-resolution image and video capture with on-board image recognition for applications like object detection and environmental monitoring; and the implementation of advanced flight modes such as "follow me," precision landings, and autonomous missions.
+  additional information: |
+    - Brief Description: This project involves integrating a Raspberry Pi directly onto a drone to enhance its capabilities beyond basic flight control.
+    - Main Highlights:
+      - Enhanced Flight Control: Real-time sensor data processing for improved stability, navigation, and obstacle avoidance.
+      - Advanced Data Collection: High-resolution image and video capture, image recognition (object detection), and environmental data analysis.
+      - Autonomous Flight: Implementation of advanced flight modes like "follow me," precision landings, and autonomous missions.
+    - Technical Challenges:
+      - Weight and Size Constraints: Minimizing the weight and size of the Raspberry Pi and its components to avoid impacting the drone's flight performance.
+      - Power Consumption: Ensuring efficient power management to prevent excessive battery drain.
+      - Data Transmission: Establishing a reliable and low-latency communication link for data transmission between the Pi and a ground station.
+      - Environmental Factors: Addressing the challenges of operating the Raspberry Pi in harsh environments (vibration, temperature fluctuations, etc.).
+      - Real-time Processing: Developing efficient algorithms for real-time processing of sensor data and image/video streams.
+      - Safety: Implementing robust safety mechanisms to ensure safe and reliable drone operation.
+      - This project pushes the boundaries of drone technology, enabling more sophisticated and autonomous operations.
+    - Tech Stack 
+       - Raspberry Pi: As the on-board computer.
+       - Python: As the primary programming language.
+       - OpenCV: For image and video processing, including object detection and computer vision tasks.
+       - Sensor Libraries: Libraries for interfacing with on-board sensors (IMU, GPS, barometer, etc.).
+       - Communication Protocols: Libraries for communication (e.g., Wi-Fi, Bluetooth, radio) between the Pi and a ground station or other systems.
+       - ArduPilot (or similar): For low-level flight control and coordination with the Raspberry Pi.
