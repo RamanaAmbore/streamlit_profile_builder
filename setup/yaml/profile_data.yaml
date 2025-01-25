@@ -340,16 +340,20 @@ projects:
           summary: |
             Led the modernization of a high-volume, business-critical legacy application on AWS, leveraging Java, Spark, and a developed core framework. This significantly improved development and deployment speed, achieving a 50% reduction in turnaround times. Key responsibilities included designing high-volume transmission files, implementing data parsing and validation, and ensuring data consistency with mainframe systems.
           additional information: |
-            **Modernized a high-volume, business-critical legacy application on AWS using Java and Spark. This involved:
+            **Project: Modernization of High-Volume Legacy Application**
             
-            Creating a core framework that reduced development and deployment turnaround times by 50 percent.
-            Developing high-volume transmission files generated from the new system using complex SQL queries.
-            Parsing SQL output to match the format of the transmission files.
-            Implementing the entire solution as a core framework.
-            Ensuring data in the transmission files matches with mainframe transmission files.
-            Developing mechanisms within the core framework to recreate transmissions for specific clients within SLAs when failures occur.
-            Utilizing technologies such as Spring Boot, Spark, EMR, and AWS.
-            Analyzing existing mainframe processes utilizing tools like REXX.**
+            **Description:** Modernized a high-volume, business-critical legacy application on AWS using Java and Spark. This involved:
+            
+            * **Core Framework Development:** Created a core framework that reduced development and deployment turnaround times by 50 percent.
+            * **High-Volume Data Processing:** Developed high-volume transmission files generated from the new system using complex SQL queries.
+            * **Data Transformation:** Parsed SQL output to match the exact format of the legacy transmission files.
+            * **Comprehensive Solution Implementation:** Implemented the entire solution as a reusable core framework for future projects.
+            * **Data Integrity:** Ensured data accuracy by rigorously validating transmission files against the format of legacy mainframe transmissions.
+            * **Enhanced Reliability:** Developed mechanisms within the core framework to recreate transmissions for specific clients within defined Service Level Agreements (SLAs) in case of failures.
+            * **Technology Stack:** Leveraged technologies such as Spring Boot, Spark, EMR, and AWS services for efficient data processing and deployment.
+            * **Legacy System Analysis:** Analyzed existing mainframe processes utilizing tools like REXX to understand and replicate critical functionalities.
+            
+            This project successfully modernized a critical business application, improving efficiency, agility, and reliability while leveraging the power of cloud technologies.
         2. Rambo - Rapid Analysis of Mainframe Batch Objects:
           role: Project Manager
           start: Apr 2003
