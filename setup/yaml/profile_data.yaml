@@ -6,8 +6,8 @@ profile: |
   evidenced by FRM certification and CFA Level 3 candidacy. Proven expertise in modernizing 
   legacy systems, optimizing high-volume trading platforms, and developing sophisticated 
   algorithmic trading solutions. Deep understanding of cloud/distributed technologies, 
-  database & legacy systems, and data analytics. Recipient of the organization's most 
-  coveted Innovation Award, a results-driven professional with a proven ability to deliver innovative 
+  database & legacy systems, and data analytics. A results-driven professional, recipient of the organization's most 
+  coveted Innovation Award, with a proven ability to deliver innovative 
   solutions and drive success within the financial markets.
 experience summary:
   - Modernized a high-volume, business-critical legacy application on AWS using Java and Spark. 
@@ -199,9 +199,9 @@ skills:
     long label: Used for professional and personal projects
 contact:
   resume:
-    label: View Resume
+    label: Download Resume
     icon: pdf.png
-    link: resume.pdf
+    link: /resume.pdf
   mail:
     label: Ramana.Ambore@gmail.com
     icon: mail.png
@@ -244,32 +244,41 @@ portfolio:
       and portfolio in a visually appealing and interactive format. It leverages Streamlit's features and custom JavaScript for smooth scrolling navigation.
     technology: Python,  Pandas, Streamlit
     additional information: |
-      - Main Highlights
-        - Smooth Scrolling: Navigate seamlessly to different sections of the profile using JavaScript.
-        - Dynamic Sidebar: A sidebar menu for quick navigation between sections.
-        - Comprehensive Sections:
-        - Profile: Display your name, tagline, and basic info.
-        - Social Links: Provide easy access to your social media profiles.
-        - Experience Summary: Summarize your career achievements.
-        - Skills: Showcase your technical and soft skills.
-        - Projects and Portfolio: Highlight your key projects and accomplishments.
-        - Education: Add details of your academic qualifications.
-        - Certifications: Showcase professional certifications.
-        - Hobbies: Add a personal touch with your interests.
-      - Challenges:
-        - Dynamic Content Integration: Smoothly integrating and updating project descriptions, skills, and work experience.
-        - Interactive Elements: Implementing smooth scrolling and engaging interactive elements.
-        - Cross-browser Compatibility: Ensuring consistent performance across different browsers.
-        - Responsive Design: Adapting the website to various screen sizes.
-        - Performance Optimization: Minimizing loading times and ensuring a smooth user experience.
-        - Accessibility: Designing the website for users with disabilities.
-        - Deployment and Maintenance: Deploying and maintaining the app effectively.
-      - Tech Stack
-        - Streamlit: For building the UI.
-        - Python: For logic and backend handling.
-        - JavaScript: For enabling smooth scrolling.
-        - Pillow: For image processing.
-        - HTML & CSS: For custom styling.
+      **Project: Streamlit Powered Profile Builder**
+      
+      **Description:** A dynamic Streamlit-powered profile builder showcasing skills, experience, and portfolio with interactive features and smooth scrolling navigation.
+      
+      **Main Highlights:**
+      
+      * **Smooth Scrolling:** Navigate seamlessly to different sections of the profile using JavaScript.
+      * **Dynamic Sidebar:** A sidebar menu for quick navigation between sections.
+      * **Comprehensive Sections:**
+          * Profile: Display your name, tagline, and basic info.
+          * Social Links: Provide easy access to your social media profiles.
+          * Experience Summary: Summarize your career achievements.
+          * Skills: Showcase your technical and soft skills.
+          * Projects and Portfolio: Highlight your key projects and accomplishments.
+          * Education: Add details of your academic qualifications.
+          * Certifications: Showcase professional certifications.
+          * Hobbies: Add a personal touch with your interests.
+      
+      **Challenges:**
+      
+      * **Dynamic Content Integration:** Smoothly integrating and updating project descriptions, skills, and work experience.
+      * **Interactive Elements:** Implementing smooth scrolling and engaging interactive elements.
+      * **Cross-browser Compatibility:** Ensuring consistent performance across different browsers.
+      * **Responsive Design:** Adapting the website to various screen sizes.
+      * **Performance Optimization:** Minimizing loading times and ensuring a smooth user experience.
+      * **Accessibility:** Designing the website for users with disabilities.
+      * **Deployment and Maintenance:** Deploying and maintaining the app effectively.
+      
+      **Tech Stack:**
+      
+      * **Streamlit:** For building the UI.
+      * **Python:** For logic and backend handling.
+      * **JavaScript:** For enabling smooth scrolling.
+      * **Pillow:** For image processing.
+      * **HTML & CSS:** For custom styling.
   RRambo Trader - Algo Trading for Derivatives:
     icon: trader.png
     link: https://medium.com/@rrambo
@@ -281,29 +290,38 @@ portfolio:
       statistical models to generate robust trading signals and execute trades automatically.
     technology: Python,  Pandas, Dash, Plotly
     additional information: |
-      - Main Highlights
-        - Develop and implement a robust backtesting framework to rigorously evaluate trading strategies on historical market data.
-        - Incorporate risk management rules, such as position sizing, stop-loss orders, and portfolio diversification, to minimize potential losses.
-        - Integrate with a brokerage API to enable automated order execution and trade management.
-        - Conduct ongoing research and development to refine trading strategies, incorporate new market data sources, and adapt to evolving market conditions.
-        - Develop a comprehensive documentation and user manual to guide users in utilizing the platform effectively.
-      Challenges:
-        - Market Volatility: Accurately predicting and adapting to rapidly changing market conditions and volatility.
-        - Data Acquisition and Management: Efficiently collecting, cleaning, and managing high-frequency market data (stock prices, option chains, etc.).
-        - Model Development and Validation: Developing, backtesting, and validating robust trading models that can consistently generate profitable signals.
-        - Risk Management: Implementing effective risk management strategies to mitigate potential losses and protect capital.
-        - Real-time Data Processing: Processing and analyzing market data in real-time to generate timely trading signals.
-        - Algorithmic Trading Execution: Implementing a reliable and efficient system for executing trades automatically and minimizing slippage.
-        - Regulatory Compliance: Adhering to relevant regulations and compliance requirements for algorithmic trading.
-        - Scalability and Performance: Ensuring the platform can handle high volumes of data and execute trades efficiently at scale.
-        - Backtesting and Optimization: Continuously backtesting and optimizing trading strategies to improve performance and adapt to changing market conditions.
-        - Ethical Considerations: Addressing ethical considerations related to algorithmic trading, such as market manipulation and its impact on market stability.
-      - Tech Stack:
-        - Programming Languages: Python
-        - Data Science Libraries: Pandas, NumPy, Scikit-learn, Statsmodels
-        - Data Visualization: Plotly, Dash
-        - Cloud Computing (Optional): AWS, Google Cloud, Azure (for scalability and resource management)
-        - Brokerage API Integration: Interactive Brokers API, Alpaca API, or other relevant APIs
+      **Project: RRambo Trader - Algo Trading for Derivatives**
+  
+      **Description:** This project aims to develop a sophisticated algorithmic trading platform designed to identify and capitalize on short-term market inefficiencies in option prices.
+  
+      **Main Highlights:**
+      
+      * **Robust Backtesting Framework:** Develop and implement a robust backtesting framework to rigorously evaluate trading strategies on historical market data.
+      * **Risk Management:** Incorporate risk management rules, such as position sizing, stop-loss orders, and portfolio diversification, to minimize potential losses.
+      * **Automated Trading:** Integrate with a brokerage API to enable automated order execution and trade management.
+      * **Continuous Improvement:** Conduct ongoing research and development to refine trading strategies, incorporate new market data sources, and adapt to evolving market conditions.
+      * **User-Friendly Interface:** Develop a comprehensive documentation and user manual to guide users in utilizing the platform effectively.
+  
+      **Challenges:**
+      
+      * **Market Volatility:** Accurately predict and adapt to rapidly changing market conditions and volatility.
+      * **Data Management:** Efficiently collect, clean, and manage high-frequency market data.
+      * **Model Development:** Develop, backtest, and validate robust trading models.
+      * **Risk Mitigation:** Implement effective risk management strategies.
+      * **Real-time Data Processing:** Process and analyze market data in real-time.
+      * **Automated Execution:** Implement a reliable and efficient system for automated trading.
+      * **Regulatory Compliance:** Adhere to relevant regulations for algorithmic trading.
+      * **Scalability and Performance:** Ensure the platform can handle high volumes of data and execute trades efficiently.
+      * **Continuous Optimization:** Continuously backtest and optimize trading strategies.
+      * **Ethical Considerations:** Address ethical considerations related to algorithmic trading.
+  
+      **Tech Stack:**
+      
+      * **Programming Languages:** Python
+      * **Data Science Libraries:** Pandas, NumPy, Scikit-learn, Statsmodels
+      * **Data Visualization:** Plotly, Dash
+      * **Cloud Computing (Optional):** AWS, Google Cloud, Azure
+      * **Brokerage API Integration:** Interactive Brokers API, Alpaca API, or other relevant APIs
 projects:
   NTT DATA:
     short label: NTT
@@ -439,23 +457,17 @@ projects:
             Meta Data Services group of  iNautix provides offshore support to the parent company – Pershing to capture, 
             store and present the Meta Data related to mainframe source code using Platinum Repository and DataShopper
           additional information: |
-            Redesign the weekly batch cycle, implement the enhancements, provide offshore support. 
-            •	Created transition plans and coordinated with the delivery manager to recruit and train resources for the project. 
-            Worked with the contractors to conduct knowledge transfer sessions for the offshore team members. 
-            •	Did estimation, planning and scheduling for various tasks involved to capture, store and present the Meta Data using 
-            Platinum/Repository. Identified the inefficiencies in the weekly batch process and redesigned weekly batch cycle. 
-            Organized and consolidated the source code related to Meta Data on mainframe. Submitted the proposal for creating an 
-            internet based ‘DBA Online Request Processing System’ for submitting, tracking and fulfilling database related requests. 
-            Helped the team members in resolving various technical issues. 
-            •	Redesigned the weekly batch cycle using REXX tools to submit the jobs recursively and ran it successfully through CA-7. 
-            Identified and resolved various quality issues with the Meta Data. Implemented the enhancements requested by business users. 
-            •	Created standard templates to document various activities in the project. Implemented the processes to identity and fix 
-            the problems in Repository maintenance. Helped the team in creating tools using REXX and MS Access to automate and document 
-            repetitive tasks.  Participated in CMM Level 3 process related activities. 
-            •	Conducted training sessions for the team members on the core skills - REXX and Java, DB2 Database Administration - required 
-            for the project. Created training material on Repository/Data Shopper and conducted training sessions for new associates. 
-            Helped the associates to acquire the technology in DB2 Database administration through IBM certification. 
-            Received Star award within three months of joining the company for the contribution to the project
+            **Redesign and Enhancement of Weekly Batch Cycle with Offshore Support:**
+            
+            * **Transition Planning:** Created transition plans and coordinated with the delivery manager to recruit and train resources for the project. Worked with contractors to conduct knowledge transfer sessions for offshore team members.
+            * **Estimation and Planning:** Performed estimation, planning, and scheduling for tasks involved in capturing, storing, and presenting metadata using Platinum/Repository. Identified inefficiencies in the weekly batch process and redesigned the weekly batch cycle.
+            * **Code Organization:** Organized and consolidated the source code related to metadata on the mainframe. Submitted a proposal for an internet-based ‘DBA Online Request Processing System’ to submit, track, and fulfill database-related requests.
+            * **Technical Support:** Assisted team members in resolving various technical issues.
+            * **REXX Tools Implementation:** Redesigned the weekly batch cycle using REXX tools to submit jobs recursively and ran it successfully through CA-7. Identified and resolved various quality issues with the metadata. Implemented enhancements requested by business users.
+            * **Documentation and Automation:** Created standard templates to document various project activities. Implemented processes to identify and fix issues in repository maintenance. Assisted the team in creating tools using REXX and MS Access to automate and document repetitive tasks. Participated in CMM Level 3 process-related activities.
+            * **Training Sessions:** Conducted training sessions for team members on core skills—REXX and Java, DB2 Database Administration—required for the project. Created training material on Repository/Data Shopper and conducted training sessions for new associates. Helped associates acquire DB2 Database administration technology through IBM certification.
+            * **Recognition:** Received the Star award within three months of joining the company for contributions to the project.
+
   Modis Consulting:
     short label: Moids
     long label: Modis Consulting, Software Consultant, Nov 1997 Apr 2002
@@ -473,17 +485,17 @@ projects:
             The project is to install, customize and implement DBS E-series packages for Dade County Public Schools. 
               The project also involved developing Internal Funds systems and integrating it with DBS E-Series packages
           additional information: |
-            Worked as a consultant to assist the project manager in implementing DBS E-series financial system and developing 
-            Internal Funds System. 
-            •	Actively participated in creating the framework for implementing in-house enhancements and service requests. 
-            •	Worked with team members in creating the documentation for screen and report layout changes. 
-            •	Helped the team members in resolving the technical issues, creating the test cases and integrating the other 
-            in-house systems with the new release. 
-            •	Involved in troubleshooting various integration issues. Consulted with the vendor for applying the bug fixes 
-            and resolving integration issues with budgetary and financial controller systems. 
-            •	Rewrote the Internal Funds online system using Dun & Bradstreet Software’s DCI. Worked with the documentation 
-            team in updating the user manual and conducted training sessions for the clients to use the new system. 
-            •	Provided level 2 support for the new release.
+            **Consultant for DBS E-Series Financial System Implementation and Internal Funds System Development:**
+            
+            * **Project Implementation:** Assisted the project manager in implementing the DBS E-series financial system and developing the Internal Funds System.
+            * **Framework Creation:** Actively participated in creating the framework for implementing in-house enhancements and service requests.
+            * **Documentation:** Collaborated with team members to create documentation for screen and report layout changes.
+            * **Technical Support:** Helped team members resolve technical issues, create test cases, and integrate other in-house systems with the new release.
+            * **Integration Troubleshooting:** Involved in troubleshooting various integration issues. Consulted with the vendor to apply bug fixes and resolve integration issues with budgetary and financial controller systems.
+            * **System Rewrite:** Rewrote the Internal Funds online system using Dun & Bradstreet Software’s DCI.
+            * **User Manual & Training:** Worked with the documentation team to update the user manual and conducted training sessions for clients to use the new system.
+            * **Level 2 Support:** Provided level 2 support for the new release.
+
   Mastech Inc:
     label: Mastech
     icon: igate.png
@@ -502,12 +514,13 @@ projects:
             the repair shops. The system generates productivity reports and helps in estimating the manpower requirements 
             at various Ryder repair shops
           additional information: |
-            Worked as a consultant to perform analysis, design and implementation of ROAD. 
-            •	Consulted and reviewed the client requirements for the new system. Developed new programs and JCL’s and 
-              created installation and maintenance procedures for system maintenance. 
-            •	Worked with the maintenance team in installing the system and participated in the initial system maintenance. 
-            •	Worked with the client in resolving the various data integrity issues in the database. 
-            •	Developed VIN subsystem to report any inconsistencies in the database and to correct it using online screens.
+            **Consultant for Analysis, Design, and Implementation of ROAD:**
+            
+            * **Client Requirements:** Consulted and reviewed client requirements for the new system. Developed new programs and JCLs, and created installation and maintenance procedures for system upkeep.
+            * **System Installation & Maintenance:** Collaborated with the maintenance team to install the system and participated in initial system maintenance.
+            * **Data Integrity:** Worked with the client to resolve various data integrity issues in the database.
+            * **VIN Subsystem Development:** Developed a VIN subsystem to report database inconsistencies and correct them using online screens.
+
   Dun & Bradstreet Satyam Software:
     short label: DBSS
     long label: Dun & Bradstreet Satyam Software, Software Associate, Oct 1994 - Oct 1996
@@ -527,38 +540,40 @@ projects:
             is year 2000 compliant. Worked as a team member to build Design Document for Year 2000 changes and product enhancements for the new 
             release of Purchasing System (PS) Module of DBS E-series products.
           additional information: |
-            Worked as a team member to implement Year 200 changes and product enhancements for DB2 version of Purchasing 
-            and Common Components Modules. 
-            Reviewed and tested Year 2000 changes for DB2 version of Purchasing and Common Components Modules. 
-            •	Designed and implemented the scrolling functionality in Inquiry Screens. 
-            •	Resolved the problem in using variable storage used in CICS screens. Performed the bug fixes and enhancements 
-                requested by the client. 
-            •	Developed REXX tools for automating Year 2000 changes.  Participated in peer reviews as part of the quality 
-                assurance 
-            •	Performed coding and testing for year 2000 changes and enhancements. 
-            •	Worked with quality assurance (QA) team for creating quality procedures for ISO 9000 certification. 
-                Won the ‘Project of the Year’ award for the overall performance
+            **Collaborative Implementation of Year 2000 Enhancements for Dun & Bradstreet Software:**
+  
+            * **Year 2000 Compliance:** As a key team member, I contributed to implementing and reviewing Year 2000 (Y2K) changes and product enhancements for the DB2 version of Purchasing and Common Components Modules.
+            * **Scrolling Functionality:** Designed and implemented scrolling functionality in Inquiry Screens.
+            * **Variable Storage Issue:** Resolved issues related to variable storage in CICS screens; performed bug fixes and client-requested enhancements.
+            * **Automation with REXX:** Developed REXX tools to automate Y2K changes, enhancing efficiency.
+            * **Peer Reviews & Quality Assurance:** Participated in peer reviews as part of the quality assurance process. Worked with the QA team to create quality procedures for ISO 9000 certification.
+            * **Recognition:** Awarded 'Project of the Year' for exceptional performance and contributions.
+
 hobbies:
   summary: |
-    The hobby project integrates a Raspberry Pi onto a drone to enhance its capabilities beyond basic flight. Challenges include minimizing weight and power consumption, ensuring reliable communication, and developing real-time processing algorithms while addressing the harsh environment. This project provides a rewarding learning experience in drone technology and embedded systems.
-  additional information:
-        - Brief Description: This hobby project integrates a Raspberry Pi onto a drone to enhance its capabilities, such as real-time image processing and autonomous flight. Key challenges include minimizing weight, optimizing power consumption, and developing robust algorithms for the drone's dynamic environment.
-        - Main Highlights:
-          - Enhanced Flight Control: Real-time sensor data processing for improved stability, navigation, and obstacle avoidance.
-          - Advanced Data Collection: High-resolution image and video capture, image recognition (object detection), and environmental data analysis.
-          - Autonomous Flight: Implementation of advanced flight modes like "follow me," precision landings, and autonomous missions.
-        - Technical Challenges:
-          - Weight and Size Constraints: Minimizing the weight and size of the Raspberry Pi and its components to avoid impacting the drone's flight performance.
-          - Power Consumption: Ensuring efficient power management to prevent excessive battery drain.
-          - Data Transmission: Establishing a reliable and low-latency communication link for data transmission between the Pi and a ground station.
-          - Environmental Factors: Addressing the challenges of operating the Raspberry Pi in harsh environments (vibration, temperature fluctuations, etc.).
-          - Real-time Processing: Developing efficient algorithms for real-time processing of sensor data and image/video streams.
-          - Safety: Implementing robust safety mechanisms to ensure safe and reliable drone operation.
-          - This project pushes the boundaries of drone technology, enabling more sophisticated and autonomous operations.
-        - Tech Stack:
-           - Raspberry Pi: As the on-board computer.
-           - Python: As the primary programming language.
-           - OpenCV: For image and video processing, including object detection and computer vision tasks.
-           - Sensor Libraries: Libraries for interfacing with on-board sensors (IMU, GPS, barometer, etc.).
-           - Communication Protocols: Libraries for communication (e.g., Wi-Fi, Bluetooth, radio) between the Pi and a ground station or other systems.
-           - ArduPilot (or similar): For low-level flight control and coordination with the Raspberry Pi.
+    The hobby project integrated a Raspberry Pi onto a drone to enhance its capabilities beyond basic flight. Challenges include minimizing weight and power consumption, ensuring reliable communication, and developing real-time processing algorithms while addressing the harsh environment. This project provides a rewarding learning experience in drone technology and embedded systems.
+  additional information: |
+    **Project: Raspberry Pi Drone Enhancement**
+    
+    **Description:** This hobby project successfully integrated a Raspberry Pi onto a drone platform, significantly enhancing its capabilities beyond basic flight control. 
+    
+    **Key Achievements:**
+    
+    * **Real-time Image Processing:** Implemented real-time object detection and tracking using OpenCV, enabling the drone to autonomously follow moving targets or identify areas of interest.
+    * **Improved Flight Stability:** Utilized sensor data from the Pi to refine flight control algorithms, resulting in smoother and more stable flight performance.
+    * **Autonomous Mission Execution:** Developed and successfully tested autonomous flight modes, including "follow me," waypoint navigation, and precision landings.
+    
+    **Technical Considerations:**
+    
+    * **Weight Optimization:** Minimized the weight and size of the Raspberry Pi and its components through careful selection and custom enclosures.
+    * **Power Efficiency:** Implemented power-saving techniques, including dynamic clock scaling and sleep modes, to optimize battery life.
+    * **Robust Communication:** Established a reliable Wi-Fi communication link between the Pi and a ground station, ensuring stable data transmission.
+    * **Environmental Hardening:** Implemented vibration isolation and thermal management solutions to protect the Pi from the drone's operating environment.
+    
+    **Key Learnings:**
+    
+    * This project provided valuable hands-on experience in drone technology, embedded systems, and computer vision.
+    * The challenges of weight, power consumption, and environmental factors were successfully addressed through careful design and implementation.
+    * The project demonstrates the potential of integrating small computers like the Raspberry Pi to unlock new levels of functionality in drone applications.
+    
+    This project serves as a foundation for future explorations in advanced drone technologies, such as artificial intelligence, machine learning, and swarm robotics.
