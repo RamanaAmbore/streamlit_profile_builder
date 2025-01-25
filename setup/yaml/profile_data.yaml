@@ -489,8 +489,7 @@ projects:
           role: Project Leader
           start: May 2002
           end: Apr 2003
-          technology: MVS, REXX, JCL, COBOL, DB2, CA-7, Endevor, Platinum/Repository, Platinum/DataShopper, JDK 1.2, Swing,
-            JSP, Servlets, Java Script, DB2 Connect, Lotus Notes, MS Word, MS Access, MS Excel, MS Visio, Windows NT
+          technology: MVS, REXX, JCL, COBOL, DB2, CA-7, Endevor, Platinum/DataShopper, Java, Java Script, DB2 Connect
           summary: |
             Meta Data Services group of  iNautix provides offshore support to the parent company – Pershing to capture, 
             store and present the Meta Data related to mainframe source code using Platinum Repository and DataShopper
