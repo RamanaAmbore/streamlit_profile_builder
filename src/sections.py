@@ -8,7 +8,7 @@ from streamlit_scroll_navigation import scroll_navbar
 from src.components import container, write_section_heading, write_columns, write_container, \
     disp_icon_text
 from src.utils import profile, get_path, get_selected_colors, get_image_bin_file, freq_color, get_config, \
-    get_profile,     colors, get_labels, capitalize, get_darker_colors, get_darker_color, pdf_resume
+    get_profile, colors, get_labels, capitalize, get_darker_colors, get_darker_color, pdf_resume
 
 
 # Function to generate the sidebar section
@@ -50,7 +50,7 @@ def generate_profile_section():
 
     container(st.write, f"#### {profile['designation']}", key='profile_designation')
 
-    col1, _, col2 = st.columns([2, .1, 10],vertical_alignment="center")
+    col1, _, col2 = st.columns([2, .1, 10], vertical_alignment="center")
     with col1:
         # Display profile photo
         container(st.image, get_path('profile_photo.png'), clamp=True,
@@ -66,7 +66,6 @@ def generate_profile_section():
 def generate_contact_social_section():
     section_name = 'contact_social'
     with st.container(key=section_name):
-
         section_name = 'contact'
         width_cols = [1, .05, 1, 0.05, 1, .05, 1]
         col1, _, col2, _, col3, _, col4 = st.columns(width_cols, vertical_alignment='center')
@@ -78,7 +77,6 @@ def generate_contact_social_section():
         width_cols = [1, .05, 1, 0.05, 1, .05, 1]
         col1, _, col2, _, col3, _, col4 = st.columns(width_cols, vertical_alignment='center')
         write_columns([col1, col2, col3, col4], section_name)
-
 
 
 # Function to generate the experience summary section
@@ -183,7 +181,7 @@ def generate_hobbie_section():
 
     # Create columns for displaying images of hobbies
     col1, _, col2 = container(st.columns, width_education,
-                                 vertical_alignment='center', key='hobbie_container')
+                              vertical_alignment='center', key='hobbie_container')
     with col1:
         st.image(get_path('drone.png'))  # Display the first hobby image
 
@@ -366,8 +364,8 @@ def generate_project_section():
         container = st.container(key=f"{section_name}_{key}")  # Create a container for each project
         with container:
             label = capitalize(vals['label'] if 'label' in vals else key)  # Capitalize the project label
-            disp_icon_text(vals['icon'], label, vals['link'])  # Display project icon and link
-
+            disp_icon_text(vals['icon'], label, vals['link'], tag="h5")  # Display project icon and link
+            st.write("---")
 
             # Iterate over clients for the project
             for key1, vals1 in vals['clients'].items():
@@ -378,8 +376,6 @@ def generate_project_section():
 
                     st.write(f"{vals2['summary']}")  # Display project summary
                     st.write(f"Technology: {vals2['technology']}")  # Display technologies used
-
-
 
 
 # Function to generate the milestone section
