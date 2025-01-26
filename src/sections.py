@@ -179,10 +179,10 @@ def generate_hobbie_section():
     st.write(section['summary'])  # Display summary of hobbies
 
     # Define column layout for images
-    width_education = [3, .05, 1, 3]
+    width_education = [3, .05, 3]
 
     # Create columns for displaying images of hobbies
-    col1, _, col2, _ = container(st.columns, width_education,
+    col1, _, col2 = container(st.columns, width_education,
                                  vertical_alignment='center', key='hobbie_container')
     with col1:
         st.image(get_path('drone.png'))  # Display the first hobby image
@@ -339,11 +339,12 @@ def generate_portfolio_section():
     for key, vals in section.items():
         m_col1, _, m_col2 = st.columns([10, 0.01, 5])  # Define column layout for project details
         with m_col1:
-            col1, col2 = st.columns([4, 2])  # Define column layout for portfolio item
+            col1, col2 = st.columns([4, 1])  # Define column layout for portfolio item
             with col1:
                 disp_icon_text(vals['icon'], key, vals['link'], 'h5')  # Display project icon and link
             with col2:
                 disp_icon_text('git_small.png', '', vals['github'])  # Display GitHub icon and link
+            st.write("---")
 
             st.write(vals['summary'])  # Display project summary
             st.write(f"Technology: {vals['technology']}")  # Display technologies used
@@ -366,6 +367,7 @@ def generate_project_section():
         with container:
             label = capitalize(vals['label'] if 'label' in vals else key)  # Capitalize the project label
             disp_icon_text(vals['icon'], label, vals['link'], 'H5')  # Display project icon and link
+            st.write("---")
 
             # Iterate over clients for the project
             for key1, vals1 in vals['clients'].items():

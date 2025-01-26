@@ -10,7 +10,7 @@
 }
 
 .stAppViewContainer {
-    max-width: 1800px;
+    max-width: 1400px;
 }
 
 .stMainBlockContainer {
@@ -81,7 +81,7 @@ ul {
 
 .stExpander details {
     border-style: none !important;
-    background:#f8f8f8 !important;
+    background:#fafafa !important;
 }
 
 .st-key-contact_social {

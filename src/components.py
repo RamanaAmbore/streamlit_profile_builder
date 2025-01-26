@@ -63,28 +63,24 @@ def disp_icon_text(icon=None, text=None, link=None, tag=""):
         tag = f"<{tag}><img src='{icon}' class='href_icon'>{text}</{tag}>"  # Use custom HTML tag for text
 
     if link is None:
-        st.markdown(
-            f"""
+        markdown_text=            f"""
                 <div class='icon_href_text_div'>
                     <span class='href_link'> 
                         {tag}
                     </span>
                 </div>
-                """,
-            unsafe_allow_html=True  # Allow unsafe HTML in the output
-        )
+                """
     else:
-        st.markdown(
-            f"""
+        markdown_text =         f"""
                 <div class='icon_href_text_div'>
                     <span> 
                         <a href="{link} " 
                         class='href_link'><span class='href_text'>{tag}</a>
                     </span>
-                </div>
-                """,
-            unsafe_allow_html=True  # Allow unsafe HTML in the output
-        )
+                </div>"""
+
+    st.markdown(markdown_text, unsafe_allow_html=True)
+        
 
 
 # Function to create a horizontal rule (line)
