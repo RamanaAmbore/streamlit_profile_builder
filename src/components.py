@@ -1,6 +1,6 @@
 import streamlit as st
 
-from src.utils import get_image_bin_file, config, profile
+from src.utils import get_image_bin_file, config, profile, get_path
 
 
 # Function to set a PNG image as the page background
@@ -54,6 +54,33 @@ def write_subheading(heading, text, key=None):
 
 
 # Function to display an icon with text and a link, with optional custom HTML tag
+def disp_icon_text(icon=None, text=None, link=None, tag="",expander=False):
+    icon = get_image_bin_file(icon)  # Get the binary string of the icon image
+    text = "" if text is None else text
+    if tag == "":
+        tag = f"<img src='{icon}' class='href_icon'>{text}"  # Format icon with text
+    else:
+        tag = f"<{tag}><img src='{icon}' class='href_icon'>{text}</{tag}>"  # Use custom HTML tag for text
+
+    if link is None:
+        markdown_text=            f"""
+                <div class='icon_href_text_div'>
+                    <span class='href_link'> 
+                        {tag}
+                    </span>
+                </div>
+                """
+    else:
+        markdown_text =         f"""
+                <div class='icon_href_text_div'>
+                    <span> 
+                        <a href="{link} " 
+                        class='href_link'><span class='href_text'>{tag}</a>
+                    </span>
+                </div>"""
+
+    st.markdown(markdown_text, unsafe_allow_html=True)
+# Function to display an icon with text and a link, with optional custom HTML tag
 def disp_icon_text(icon=None, text=None, link=None, tag=""):
     icon = get_image_bin_file(icon)  # Get the binary string of the icon image
     text = "" if text is None else text
@@ -80,8 +107,6 @@ def disp_icon_text(icon=None, text=None, link=None, tag=""):
                 </div>"""
 
     st.markdown(markdown_text, unsafe_allow_html=True)
-        
-
 
 # Function to create a horizontal rule (line)
 def create_ruler():

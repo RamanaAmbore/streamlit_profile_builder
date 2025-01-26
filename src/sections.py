@@ -366,19 +366,20 @@ def generate_project_section():
         container = st.container(key=f"{section_name}_{key}")  # Create a container for each project
         with container:
             label = capitalize(vals['label'] if 'label' in vals else key)  # Capitalize the project label
-            disp_icon_text(vals['icon'], label, vals['link'], 'H5')  # Display project icon and link
-            st.write("---")
+            disp_icon_text(vals['icon'], label, vals['link'])  # Display project icon and link
+
 
             # Iterate over clients for the project
             for key1, vals1 in vals['clients'].items():
                 for key2, vals2 in vals1.items():
                     # Display client details
-                    st.write(
-                        f"**{key2}, {key1}, {vals2['role']}, {vals2['start']} - {vals2['end']}**")
+                    with st.expander(f"**{key2}, {key1}, {vals2['role']}, {vals2['start']} - {vals2['end']}**"):
+                        st.write(vals2['additional information'])  # Display additional project information
+
                     st.write(f"{vals2['summary']}")  # Display project summary
                     st.write(f"Technology: {vals2['technology']}")  # Display technologies used
-                    with st.expander(f"Additional Information..."):
-                        st.write(vals2['additional information'])  # Display additional project information
+
+
 
 
 # Function to generate the milestone section
