@@ -104,18 +104,18 @@ def generate_skills_section():
     icon_paths = [val['icon'] for val in val_list]
     ratings = [val['level'] for val in val_list]
     hover = [val['long label'] for val in val_list]
-    select_colors = get_selected_colors(colors, len(categories))
+    select_colors = get_selected_colors(colors, len(ratings))
     border_colors = get_darker_colors(select_colors)
 
     img_base64 = [get_image_bin_file(icon) for icon in icon_paths]
 
     # Create bar chart using Plotly
     fig = go.Figure()
-    spaces = ' ' * 10
+
     fig.add_trace(go.Bar(
         x=categories,
         y=ratings,
-        text=[f'{spaces}{i}' for i in categories],
+        text='',
         textposition='inside',
         insidetextanchor='start',
         marker=dict(
@@ -123,12 +123,21 @@ def generate_skills_section():
             line=dict(color=border_colors, width=1)  # Shadow effect with darker border
         ),
         hovertemplate='%{customdata}<extra></extra>',
-        customdata=hover,
-        textangle = -90,  # Vertical text
-        textfont = dict(color=freq_color, size=15),
+        customdata=hover
     ))
 
     for i, category in enumerate(categories):
+        # Add vertical text inside the bars
+        fig.add_annotation(
+            x=category,
+            y=1,  # Adjust position to start from bottom
+            text=category,
+            showarrow=False,
+            textangle=-90,  # Vertical text
+            yanchor='bottom',
+            font=dict(color=freq_color, size=14)
+        )
+
         # Add images inside the bars just below the text
         fig.add_layout_image(
             dict(
@@ -158,7 +167,6 @@ def generate_skills_section():
 
     # Display the chart in Streamlit
     st.plotly_chart(fig)
-
 
 def generate_hobbie_section():
     # Generate the "Hobbies" section of the profile
