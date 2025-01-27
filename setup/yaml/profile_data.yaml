@@ -82,8 +82,8 @@ milestones:
     milestone: Innovation
     height: 2
     icon: ntt.png
-    long label: Received delivery excellence award for innovation. one among the 40 people to receive the award across the
-      organization
+    long label: Received the most coveted Delivery Excellence award for Innovation. One among the 40 people to receive the award across the
+      organization to receive the award.
 education:
   Master's:
     icon: jk.png
@@ -96,7 +96,7 @@ education:
     link: https://www.xlri.ac.in/
     year: 2005
     duration: 1.5
-    long label: PGCBM, Xaviers Labour Relations Institute(XLRI), 2005
+    long label: PGCBM, XLRI - School of Business, 2005
   Bachelor's:
     icon: nagarjuna.png
     link: https://www.nagarjunauniversity.ac.in/
@@ -361,7 +361,7 @@ projects:
           start: Apr 2003
           end: Till Date
           duration: 21 years
-          technology: MVS, COBOL, CICS, JCL, DB2, VSAM, Assembler
+          technology: Java, Springboot, Spark, Oracle, AWS, Python, Pandas
           summary: |
             Led the modernization of a high-volume, business-critical legacy application on AWS, leveraging Java, Spark, and a developed core framework. This significantly improved development and deployment speed, achieving a 50% reduction in turnaround times. Key responsibilities included designing high-volume transmission files, implementing data parsing and validation, and ensuring data consistency with mainframe systems.
           additional information: |
@@ -383,7 +383,7 @@ projects:
           role: Principle Software Engineer
           start: Apr 2003
           end: Till Date
-          technology: MVS, COBOL, CICS, JCL, DB2, VSAM, Assembler
+          technology: Paython, Pandas, Postgres, Networkx, Pyvis, Streamlit
           summary: |
             I led the development of 'Rambo,' an analytics platform that empowered software development teams to reengineer and optimize software artifacts by providing critical insights into dependencies. My responsibilities included identifying metadata sources on software artifacts, organizing and storing the data in a database, creating networkx graph structures with nodes and edges, parsing the data for various use cases with complex SQLs, and presenting data flow diagrams in a visual manner using Python, PyVis, SQL, REXX, and Streamlit.
           additional information: |
@@ -397,7 +397,7 @@ projects:
           role: Principle Software Engineer
           start: Apr 2003
           end: Till Date
-          technology: MVS, COBOL, CICS, JCL, DB2, VSAM, Assembler
+          technology: Python, Pandas, Regex, Neworkx, Postgres, Pyvis, Streamlit
           summary: |
             This project centers around the development of "Cobra," a comprehensive ecosystem specifically designed to address the challenges of modernizing and enhancing legacy COBOL applications. Recognizing the critical role these systems play in many organizations, Cobra aims to equip businesses with the tools and technologies necessary to effectively understand, analyze, and ultimately modernize their existing COBOL codebases. This multifaceted ecosystem will encompass a suite of integrated tools and functionalities, empowering organizations to gain deeper insights into their COBOL applications and explore various modernization pathways.
           additional information: |
