@@ -81,7 +81,7 @@ ul {
 
 .stExpander details {
     border-style: none !important;
-    background: #daeaf6 !important;
+    background: #ebf1f5 !important;
 }
 
 .st-key-contact_social {
@@ -89,6 +89,7 @@ ul {
     gap:.5rem !important;
     border-radius:10px !important;
 }
+.stHorizontalBlock {padding:0px !important;}
 
 
 
