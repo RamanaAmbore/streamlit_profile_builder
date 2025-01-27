@@ -82,7 +82,7 @@ milestones:
     milestone: Innovation
     height: 2
     icon: ntt.png
-    long label: Received the most coveted Delivery Excellence award for Innovation. One among the 40 people to receive the award across the
+    long label: Received the most coveted Delivery Excellence award for Innovation. <br>One among the 40 people to receive the award across the
       organization to receive the award.
 education:
   Master's:
@@ -117,7 +117,7 @@ certifications:
     year: 2020
     duration: 1.5
     group: domain
-    long label: Cleared Certified Financial Analyst (CFA) Level 1 and Level 2 exams, 2020,  ID# 8243442
+    long label: Cleared Certified Financial Analyst (CFA) Level 1 & Level 2 exams, 2020,  ID# 8243442
   DB2 DBA:
     icon: ibm_db2.png
     link: https://www.ibm.com/training/certification/ibm-certified-administrator-db2-12-for-zos-C0005400
@@ -155,12 +155,12 @@ skills:
   streamlit:
     icon: streamlit.png
     level: 4
-    long label: created analytics platform for analyzing organizational artifacts and dependencies
+    long label: Created analytics platform for analyzing organizational artifacts and dependencies
     duration: 3
   dash/plotly:
     icon: dash_plotly.png
     level: 4
-    long label: craated algo trading platform for derivatives
+    long label: Created algo trading platform for derivatives
     duration: 2
   java:
     icon: java_small.png
@@ -170,12 +170,12 @@ skills:
   spark:
     icon: apache_spark.png
     level: 4
-    long label: used to modernize high volume time sensitive lagcy applicaiton
+    long label: Used to modernize high volume time sensitive legacy application
     duration: 3
   SpringBoot:
     icon: spring.png
     level: 3
-    long label: used to create spark batch application
+    long label: Used to create spark batch application
     duration: 5
   COBOL:
     icon: ibm.png
@@ -190,12 +190,12 @@ skills:
   DB2/SQL:
     icon: ibm_db2.png
     level: 5
-    long label: Used extesnively on mainframe for batch and online applciations, Certified DB2 DBA.
+    long label: Used extensively on mainframe for batch and online applications, Certified DB2 DBA.
     duration: 25
   JCL:
     icon: ibm.png
     level: 5
-    long label: devloped high-volume batch applications. Certified Java developer
+    long label: Developed high-volume batch applications. Certified Java developer
     duration: 25
   VSAM:
     icon: ibm.png
