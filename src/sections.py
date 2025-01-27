@@ -437,7 +437,7 @@ def generate_milestone_section():
 
     fig.update_layout(
         barmode='stack',  # Stack the bars
-        bargap=0.4,
+        bargap=0.1,
         xaxis=dict(
             showline=False,
             tickvals=[],  # Remove default x-axis ticks
