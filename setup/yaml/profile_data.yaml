@@ -490,7 +490,7 @@ projects:
           role: Project Leader
           start: May 2002
           end: Apr 2003
-          technology: MVS, REXX, JCL, COBOL, IMS, DB2, CICS, Siebel, MS Word, MS Access, MS Excel, Windows NT
+          technology: MVS, REXX, JCL, COBOL, IMS, DB2, CICS
           additional information: |
             **Redesign and Enhancement of Weekly Batch Cycle with Offshore Support:**
 
