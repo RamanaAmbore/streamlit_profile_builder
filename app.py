@@ -37,7 +37,7 @@ def initial_setup():
     markdown(css_style)
 
     # Set the background image for the page
-    set_png_as_page_bg('background2.png')
+    set_png_as_page_bg('background.png')
 
 
 # Main function to execute the initial setup and generate different sections of the profile page
