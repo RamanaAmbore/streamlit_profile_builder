@@ -1,6 +1,6 @@
 import streamlit as st
 
-from src.utils import get_image_bin_file, config, profile, get_path
+from src.utils import get_image_bin_file, config, profile, get_path, pdf_resume
 
 
 # Function to set a PNG image as the page background
@@ -63,7 +63,7 @@ def disp_icon_text(icon=None, text=None, link=None, tag=""):
         tag = f"<{tag}><img src='{icon}' class='href_icon'>{text}</{tag}>"  # Use custom HTML tag for text
 
     if link is None:
-        markdown_text=            f"""
+        markdown_text=f"""
                 <div class='icon_href_text_div'>
                     <span class='href_link'> 
                         {tag}
@@ -71,13 +71,18 @@ def disp_icon_text(icon=None, text=None, link=None, tag=""):
                 </div>
                 """
     else:
-        markdown_text =         f"""
-                <div class='icon_href_text_div'>
-                    <span> 
-                        <a href="{link} " 
-                        class='href_link'><span class='href_text'>{tag}</a>
-                    </span>
-                </div>"""
+        if '.pdf' in link:
+            file_name = f'{profile['name'].split()[0].lower()}.pdf'
+            link =f"data:application/octet-stream;base64,{pdf_resume} download='{file_name}"
+        else:
+
+            markdown_text = f"""
+                    <div class='icon_href_text_div'>
+                        <span> 
+                            <a href="{link} " 
+                            class='href_link'><span class='href_text'>{tag}</a>
+                        </span>
+                    </div>"""
 
     st.markdown(markdown_text, unsafe_allow_html=True)
 # Function to display an icon with text and a link, with optional custom HTML tag
