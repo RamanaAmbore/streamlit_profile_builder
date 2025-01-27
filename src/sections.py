@@ -8,7 +8,7 @@ from streamlit_scroll_navigation import scroll_navbar
 from src.components import container, write_section_heading, write_columns, write_container, \
     disp_icon_text
 from src.utils import profile, get_path, get_selected_colors, get_image_bin_file, freq_color, get_config, \
-    get_profile, colors, get_labels, capitalize, get_darker_colors, get_darker_color, pdf_resume
+    get_profile, colors, get_labels, capitalize, get_darker_colors, get_darker_color, pdf_resume, word_width
 
 
 # Function to generate the sidebar section
@@ -104,7 +104,7 @@ def generate_skills_section():
     icon_paths = [val['icon'] for val in val_list]
     ratings = [val['level'] for val in val_list]
     hover = [val['long label'] for val in val_list]
-    select_colors = get_selected_colors(colors, len(ratings))
+    select_colors = get_selected_colors(colors, len(categories))
     border_colors = get_darker_colors(select_colors)
 
     img_base64 = [get_image_bin_file(icon) for icon in icon_paths]
@@ -381,62 +381,56 @@ def generate_project_section():
 # Function to generate the milestone section
 def generate_milestone_section():
     section_name = 'milestones'
-    section = profile[section_name]
-    df = pd.DataFrame.from_dict(section, orient='index')
-    df.index.name = 'x'
-    df = df.reset_index()
-    df['color'] = get_selected_colors(colors, len(df))
+    key_list, val_list = get_profile(section_name)
+
+    categories = get_labels(section_name)
+    milestones = [f' {x['milestone']}' for x in val_list]
+    categories = [f' {x} ' for x in categories]
+    y1 = [1] * len(categories)
+    y2 = [word_width(milestone) for milestone in milestones]
+
+    select_colors = get_selected_colors(colors, len(categories))
+    border1_colors = get_darker_colors(select_colors,0.5)
+    border2_colors = get_darker_colors(select_colors)
+
+    hover = [val['long label'] for val in val_list]
 
     fig = go.Figure()
 
-    # Iterate over each milestone in the DataFrame
-    for i in range(len(df)):
-        row = df.iloc[i]
-        color = row['color']
-        border_color = get_darker_color(color, .25)
-        # Add combined annotation above the zero line with vertical orientation and hover effect
-        fig.add_annotation(
-            x=i * .5,
-            y=0.5,  # Position above the zero line, adjust this for vertical padding
-            text=f"<span style='line-height:11px;background-color:{color};font-weight:bold;'> {str(row['x'])}  </span>"  f"<span style='line-height:11px;'>{row['milestone']}</span>",
-            # Combine name and year
-            showarrow=False,
-            font=dict(size=13, color="black"),
-            align="center",
-            xanchor="center",
-            yanchor="bottom",
-            textangle=-90,  # Vertical text orientation
-            bgcolor=row['color'],  # Background color for the milestone name
-            bordercolor=border_color,  # Border color for the annotation
-            borderwidth=1,  # Width of the border
-            borderpad=5,  # Padding for rounded corners
-            opacity=1,
-            hovertext=row['long label'],  # Hover text for annotation
-        )
-        border_color = get_darker_color(color, .75)
-        # Add combined annotation above the zero line with vertical orientation and hover effect
-        fig.add_annotation(
-            x=i * .5,
-            y=1.5,  # Position above the zero line, adjust this for vertical padding
+    fig.add_trace(go.Bar(
+        x=milestones,
+        y=y1,
+        text=[f"<b>{val}</b>" for val in categories],
+        textposition='inside',
+        insidetextanchor='start',
+        textangle=-90,  # Vertical text
+        marker=dict(
+            color=select_colors,  # Base color
+            line=dict(color=border1_colors, width=1)  # Shadow effect with darker border
+        ),
+        hovertemplate='%{customdata}<extra></extra>',
+        customdata=hover,
+        width=0.4
+    ))
+    fig.add_trace(go.Bar(
+        x=milestones,
+        y=y2,
+        text=[f"{val}" for val in milestones],
+        textposition='inside',
+        insidetextanchor='start',
+        textangle=-90,  # Vertical text
+        marker=dict(
+            color='#fafafa',  # Base color
+            line=dict(color=border2_colors, width=1)  # Shadow effect with darker border
+        ),
+        hovertemplate='%{customdata}<extra></extra>',
+        customdata=hover,
+        width=0.4
+    ))
 
-            text=f"</span><span style='line-height:11px;'>{row['milestone']}</span>",
-            # Combine name and year
-            showarrow=False,
-            font=dict(size=13, color="black"),
-            align="center",
-            xanchor="center",
-            yanchor="bottom",
-            textangle=-90,  # Vertical text orientation
-            bgcolor='white',  # Background color for the milestone name
-            bordercolor=border_color,  # Border color for the annotation
-            borderwidth=1,  # Width of the border
-            borderpad=5,  # Padding for rounded corners
-            opacity=1,
-            hovertext=row['long label'],  # Hover text for annotation
-        )
 
-    # Update layout for overall appearance with increased right margin
     fig.update_layout(
+        barmode='stack',  # Stack the bars
         xaxis=dict(
             showline=False,
             tickvals=[],  # Remove default x-axis ticks
@@ -452,11 +446,11 @@ def generate_milestone_section():
             tickvals=[],
             ticktext=[]
         ),
-        bargap=0.0,
+        bargap=0.2,
         plot_bgcolor='rgba(255, 255, 255, 0)',  # White background
         paper_bgcolor='rgba(255, 255, 255, 0)',  # White background
         showlegend=False,
-        margin=dict(l=0, r=0, t=0, b=0),  # Increased right margin
+        margin=dict(l=20, r=20, t=20, b=0),  # Increased right margin
         height=200,
     )
 

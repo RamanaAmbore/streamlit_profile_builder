@@ -88,7 +88,6 @@ def debug_wrapper(function):
     return wrapper
 
 
-
 def get_selected_colors(lst, size):
     """
     Select a random subset of colors from a list.
@@ -120,7 +119,7 @@ def capitalize(text):
     """
     Capitalize text if it doesn't already contain uppercase characters.
     """
-    return text if any([x.isupper() for x in text]) else text.title()
+    return text if isinstance(text, (int, float)) or any([x.isupper() for x in text]) else text.title()
 
 
 @streamlit.cache_resource
@@ -133,12 +132,12 @@ def get_labels(name, label='label'):
 
 
 @streamlit.cache_resource
-def get_darker_color(hex_color, factor=0.5):
+def get_darker_color(hex_color, factor=0.75):
     """
     Darken a given hex color by a specified factor.
     Factor should be between 0 (black) and 1 (original color).
     """
-    if not (0 <= factor <= 1):
+    if not (0 <= factor):
         raise ValueError("Factor must be between 0 and 1")
 
     # Convert hex color to RGB
@@ -147,8 +146,11 @@ def get_darker_color(hex_color, factor=0.5):
 
     # Apply the factor to each channel
     r = int(r * factor)
+    if r > 255: r = 255
     g = int(g * factor)
+    if g > 255: g = 255
     b = int(b * factor)
+    if b > 255: b = 255
 
     # Clamp values between 0 and 255 and return the new hex color
     return f"#{r:02x}{g:02x}{b:02x}"
@@ -160,3 +162,14 @@ def get_darker_colors(hex_color_list, factor=0.75):
     Darken a list of hex colors by a specified factor.
     """
     return [get_darker_color(color, factor) for color in hex_color_list]
+
+@streamlit.cache_resource
+def word_width(text, cap_factor = 0.28, small_factor = 0.17):
+    caps = 0
+    smalls = 0
+    for letter in text:
+        if letter.isupper():
+            caps += 1
+        else:
+            smalls += 1
+    return caps*cap_factor + smalls * small_factor
