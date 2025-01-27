@@ -111,7 +111,7 @@ def generate_skills_section():
 
     # Create bar chart using Plotly
     fig = go.Figure()
-    spaces = ' ' * 13
+    spaces = ' ' * 10
     fig.add_trace(go.Bar(
         x=categories,
         y=ratings,
@@ -125,7 +125,7 @@ def generate_skills_section():
         hovertemplate='%{customdata}<extra></extra>',
         customdata=hover,
         textangle = -90,  # Vertical text
-        textfont = dict(color=freq_color, size=14),
+        textfont = dict(color=freq_color, size=15),
     ))
 
     for i, category in enumerate(categories):

@@ -172,7 +172,7 @@ skills:
     level: 4
     long label: used to modernize high volume time sensitive lagcy applicaiton
     duration: 3
-  springBoot:
+  SpringBoot:
     icon: spring.png
     level: 3
     long label: used to create spark batch application
