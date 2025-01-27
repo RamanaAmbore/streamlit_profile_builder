@@ -337,7 +337,7 @@ def generate_portfolio_section():
     for key, vals in section.items():
         m_col1, _, m_col2 = st.columns([10, 0.01, 5])  # Define column layout for project details
         with m_col1:
-            col1, col2 = st.columns([4, 1])  # Define column layout for portfolio item
+            col1, col2 = st.columns([10, 3])  # Define column layout for portfolio item
             with col1:
                 disp_icon_text(vals['icon'], key, vals['link'], 'h5')  # Display project icon and link
             with col2:
