@@ -6,9 +6,9 @@ profile: |
   evidenced by FRM certification and CFA Level 3 candidacy. Proven expertise in modernizing 
   legacy systems, optimizing high-volume trading platforms, and developing sophisticated 
   algorithmic trading solutions. Deep understanding of cloud/distributed technologies, 
-  database & legacy systems, and data analytics. A results-driven professional, recipient of the organization's most 
-  coveted Innovation Award, with a proven ability to deliver innovative 
-  solutions and drive success within the financial markets.
+  database & legacy systems, and data analytics. A results-driven professional, recipient 
+  of the organization's most coveted Innovation Award, with a proven ability to deliver 
+  innovative solutions and drive success within the financial markets..
 experience summary:
   - Modernized a high-volume, business-critical legacy application on AWS using Java and Spark. 
     The resulting core framework reduced development and deployment turnaround times by 50 percent.
@@ -307,7 +307,7 @@ portfolio:
   RRambo Trader - Algo Trading for Derivatives:
     icon: trader.png
     link: https://medium.com/@rrambo
-    github: https://medium.com/@rrambo
+    github: https://github.com/RamanaAmbore
     image: portfolio2.png
     summary: |
       This project aims to develop a sophisticated algorithmic trading platform designed to identify and capitalize on short-term market inefficiencies 
