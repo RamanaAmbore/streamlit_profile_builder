@@ -45,7 +45,7 @@ milestones:
     link: https://www.bny.com/pershing/us/en.html
     long label: iNautix Technologies India Pvt, Project Leader, May 2002 - Apr 2003
   2003:
-    milestone: TJMaxx
+    milestone: General Motors
     icon: ntt.png
     duration: 21
     link: https://www.nttdata.com/global/en/
@@ -347,7 +347,7 @@ projects:
     clients:
       Fidelity:
         1. Cloud based Transmission architecture, Design, Development:
-          role: Project Manager
+          role: Principle Software Engineer
           start: Apr 2003
           end: Till Date
           duration: 21 years
@@ -370,7 +370,7 @@ projects:
             
             This project successfully modernized a critical business application, improving efficiency, agility, and reliability while leveraging the power of cloud technologies.
         2. Rambo - Rapid Analysis of Mainframe Batch Objects:
-          role: Project Manager
+          role: Principle Software Engineer
           start: Apr 2003
           end: Till Date
           technology: MVS, COBOL, CICS, JCL, DB2, VSAM, Assembler
@@ -384,7 +384,7 @@ projects:
             * **Graph Structure:** Created networkx graph structures with nodes and edges, parsing the data for various use cases with complex SQLs.
             * **Data Visualization:** Presented data flow diagrams visually using Python, PyVis, SQL, REXX, and Streamlit.
         3. Cobra - COBOL Research & Analysis:
-          role: Project Manager
+          role: Principle Software Engineer
           start: Apr 2003
           end: Till Date
           technology: MVS, COBOL, CICS, JCL, DB2, VSAM, Assembler
@@ -434,7 +434,7 @@ projects:
             
             This project represents a significant undertaking in modernizing legacy COBOL systems. By addressing the challenges and leveraging the power of modern technologies, Cobra - COBOL Research & Analysis can empower organizations to unlock the value of their existing COBOL investments while preparing them for the future.
         4. Legacy Automation:
-          role: Project Manager
+          role: Principle Software Engineer
           start: Apr 2003
           end: Till Date
           technology: MVS, COBOL, CICS, JCL, DB2, VSAM, Assembler
@@ -557,7 +557,7 @@ projects:
     clients:
       Ryder Inc:
         Ryder On-line Analytical Decision (ROAD) System:
-          role: Project Manager
+          role: Senior Software Consultant
           start: Nov 1996
           end: Oct 1997
           technology: MVS, COBOL, JCL, REXX, CICS, DB2, VSAM, DCI, IE, Script, Xpediter, SPUFI, FileAid, QMF

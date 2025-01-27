@@ -10,8 +10,8 @@ def set_png_as_page_bg(png_file, icon=False):
     <style>
         .appview-container {{
             background-image: url("{bin_str}");
-            background-repeat: repeat-y;  # Repeat image vertically
-            background-size: cover;  # Make image cover the entire page
+   
+            background-size: 100% 100%;  # Make image cover the entire page
             background-position: top;  # Align image to the top
         }}
     </style>
@@ -54,7 +54,7 @@ def write_subheading(heading, text, key=None):
 
 
 # Function to display an icon with text and a link, with optional custom HTML tag
-def disp_icon_text(icon=None, text=None, link=None, tag="",expander=False):
+def disp_icon_text(icon=None, text=None, link=None, tag=""):
     icon = get_image_bin_file(icon)  # Get the binary string of the icon image
     text = "" if text is None else text
     if tag == "":
