@@ -414,6 +414,7 @@ def generate_milestone_section():
             size=14,  # Set font size
 
         ),
+        width=0.6,
 
     ))
     fig.add_trace(go.Bar(
@@ -432,6 +433,7 @@ def generate_milestone_section():
         textfont=dict(
             size=14,  # Set font size
         ),
+        width=0.6,
     ))
 
 
