@@ -385,9 +385,9 @@ def generate_milestone_section():
 
     categories = get_labels(section_name)
     milestones = [f' {x['milestone']}' for x in val_list]
-    categories = [f' {x} ' for x in categories]
-    y1 = [1] * len(categories)
-    y2 = [word_width(milestone) for milestone in milestones]
+    categories = [f'  {x} ' for x in categories]
+    y1 = [1.3] * len(categories)
+    y2 = [word_width(milestone,.3, .20) for milestone in milestones]
 
     select_colors = get_selected_colors(colors, len(categories))
     border1_colors = get_darker_colors(select_colors,0.5)
@@ -410,7 +410,11 @@ def generate_milestone_section():
         ),
         hovertemplate='%{customdata}<extra></extra>',
         customdata=hover,
-        width=0.4
+        textfont=dict(
+            size=14,  # Set font size
+
+        ),
+
     ))
     fig.add_trace(go.Bar(
         x=milestones,
@@ -420,17 +424,20 @@ def generate_milestone_section():
         insidetextanchor='start',
         textangle=-90,  # Vertical text
         marker=dict(
-            color='#fafafa',  # Base color
+            color='#f8f8f8',  # Base color
             line=dict(color=border2_colors, width=1)  # Shadow effect with darker border
         ),
         hovertemplate='%{customdata}<extra></extra>',
         customdata=hover,
-        width=0.4
+        textfont=dict(
+            size=14,  # Set font size
+        ),
     ))
 
 
     fig.update_layout(
         barmode='stack',  # Stack the bars
+        bargap=0.4,
         xaxis=dict(
             showline=False,
             tickvals=[],  # Remove default x-axis ticks
@@ -446,7 +453,6 @@ def generate_milestone_section():
             tickvals=[],
             ticktext=[]
         ),
-        bargap=0.2,
         plot_bgcolor='rgba(255, 255, 255, 0)',  # White background
         paper_bgcolor='rgba(255, 255, 255, 0)',  # White background
         showlegend=False,
