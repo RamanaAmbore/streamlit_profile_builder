@@ -134,7 +134,7 @@ def generate_skills_section():
             showarrow=False,
             textangle=-90,  # Vertical text
             yanchor='bottom',
-            font=dict(color=default_color, size=14)
+            font=dict(color=default_color, size=12)
         )
 
         # Add images inside the bars just below the text
