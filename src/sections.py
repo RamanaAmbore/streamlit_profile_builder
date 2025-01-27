@@ -111,11 +111,11 @@ def generate_skills_section():
 
     # Create bar chart using Plotly
     fig = go.Figure()
-
+    spaces = ' ' * 13
     fig.add_trace(go.Bar(
         x=categories,
         y=ratings,
-        text='',
+        text=[f'{spaces}{i}' for i in categories],
         textposition='inside',
         insidetextanchor='start',
         marker=dict(
@@ -123,21 +123,12 @@ def generate_skills_section():
             line=dict(color=border_colors, width=1)  # Shadow effect with darker border
         ),
         hovertemplate='%{customdata}<extra></extra>',
-        customdata=hover
+        customdata=hover,
+        textangle = -90,  # Vertical text
+        textfont = dict(color=freq_color, size=14),
     ))
 
     for i, category in enumerate(categories):
-        # Add vertical text inside the bars
-        fig.add_annotation(
-            x=category,
-            y=1,  # Adjust position to start from bottom
-            text=category,
-            showarrow=False,
-            textangle=-90,  # Vertical text
-            yanchor='bottom',
-            font=dict(color=freq_color, size=14)
-        )
-
         # Add images inside the bars just below the text
         fig.add_layout_image(
             dict(
@@ -390,8 +381,8 @@ def generate_milestone_section():
     y2 = [word_width(milestone,.3, .20) for milestone in milestones]
 
     select_colors = get_selected_colors(colors, len(categories))
-    border1_colors = get_darker_colors(select_colors,0.5)
-    border2_colors = get_darker_colors(select_colors)
+    border1_colors = get_darker_colors(select_colors)
+    border2_colors = get_darker_colors(select_colors, .90)
 
     hover = [val['long label'] for val in val_list]
 
