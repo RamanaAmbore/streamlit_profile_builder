@@ -55,7 +55,7 @@ with open('setup/yaml/config.yaml', 'r') as file:
     dark_colors = config['dark_colors']
     sidebar_icons = config['sidebar_icons']
     section_icons = config['section_icons']
-    freq_color = config['freq_color']
+    default_color = config['default_color']
 
 
 @streamlit.cache_resource
@@ -163,8 +163,9 @@ def get_darker_colors(hex_color_list, factor=0.75):
     """
     return [get_darker_color(color, factor) for color in hex_color_list]
 
+
 @streamlit.cache_resource
-def word_width(text, cap_factor = 0.28, small_factor = 0.17):
+def word_width(text, cap_factor=0.28, small_factor=0.17):
     caps = 0
     smalls = 0
     for letter in text:
@@ -172,4 +173,4 @@ def word_width(text, cap_factor = 0.28, small_factor = 0.17):
             caps += 1
         else:
             smalls += 1
-    return caps*cap_factor + smalls * small_factor
+    return caps * cap_factor + smalls * small_factor

@@ -1,5 +1,6 @@
 # Import necessary modules and components
 import logging  # Module for logging events and messages
+
 import streamlit as st  # Streamlit module for building the web app
 from PIL import Image  # PIL module for image handling
 

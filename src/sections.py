@@ -1,5 +1,4 @@
 # Import necessary modules and components
-import pandas as pd
 import streamlit as st
 from plotly import graph_objects as go
 from streamlit_scroll_navigation import scroll_navbar
@@ -7,8 +6,8 @@ from streamlit_scroll_navigation import scroll_navbar
 # Import custom components and functions from src directory
 from src.components import container, write_section_heading, write_columns, write_container, \
     disp_icon_text
-from src.utils import profile, get_path, get_selected_colors, get_image_bin_file, freq_color, get_config, \
-    get_profile, colors, get_labels, capitalize, get_darker_colors, get_darker_color, pdf_resume, word_width
+from src.utils import profile, get_path, get_selected_colors, get_image_bin_file, default_color, get_config, \
+    get_profile, colors, get_labels, capitalize, get_darker_colors, word_width
 
 
 # Function to generate the sidebar section
@@ -135,7 +134,7 @@ def generate_skills_section():
             showarrow=False,
             textangle=-90,  # Vertical text
             yanchor='bottom',
-            font=dict(color=freq_color, size=14)
+            font=dict(color=default_color, size=14)
         )
 
         # Add images inside the bars just below the text
@@ -154,8 +153,8 @@ def generate_skills_section():
 
     # Update layout for transparent background and vertical x-axis labels
     fig.update_layout(
-        xaxis_title=dict(text="Skills", font=dict(color=freq_color, size=14)),
-        yaxis_title=dict(text="Proficiency", font=dict(color=freq_color, size=14)),
+        xaxis_title=dict(text="Skills", font=dict(color=default_color, size=14)),
+        yaxis_title=dict(text="Proficiency", font=dict(color=default_color, size=14)),
         xaxis=dict(tickangle=0, showticklabels=False, ),
         yaxis=dict(range=[0, 5]),
         plot_bgcolor='rgba(0, 0, 0, 0)',  # Transparent plot background
@@ -167,6 +166,7 @@ def generate_skills_section():
 
     # Display the chart in Streamlit
     st.plotly_chart(fig)
+
 
 def generate_hobbie_section():
     # Generate the "Hobbies" section of the profile
@@ -386,7 +386,7 @@ def generate_milestone_section():
     milestones = [f' {x['milestone']}' for x in val_list]
     categories = [f'  {x} ' for x in categories]
     y1 = [1.3] * len(categories)
-    y2 = [word_width(milestone,.3, .20) for milestone in milestones]
+    y2 = [word_width(milestone, .3, .20) for milestone in milestones]
 
     select_colors = get_selected_colors(colors, len(categories))
     border1_colors = get_darker_colors(select_colors)
@@ -435,7 +435,6 @@ def generate_milestone_section():
         width=0.6,
     ))
 
-
     fig.update_layout(
         barmode='stack',  # Stack the bars
         bargap=0.1,
@@ -460,6 +459,5 @@ def generate_milestone_section():
         margin=dict(l=20, r=20, t=20, b=0),  # Increased right margin
         height=200,
     )
-
 
     st.plotly_chart(fig)  # Display milestone chart

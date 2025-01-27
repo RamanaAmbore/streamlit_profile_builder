@@ -1,6 +1,6 @@
 import streamlit as st
 
-from src.utils import get_image_bin_file, config, profile, get_path, pdf_resume
+from src.utils import get_image_bin_file, config, profile
 
 
 # Function to set a PNG image as the page background
@@ -42,10 +42,8 @@ def container(*args, **kwargs):
 
 # Function to display a section heading with an optional icon and styling
 def write_section_heading(text):
-
     icon = config["section_icons"]  # Get icon from config based on section name
-    st.subheader(f':{icon[text]}: {text.title()}', anchor=text.title(),divider='rainbow')  # Display section heading
-
+    st.subheader(f':{icon[text]}: {text.title()}', anchor=text.title(), divider='rainbow')  # Display section heading
 
 
 # Function to display a subheading with text
@@ -63,7 +61,7 @@ def disp_icon_text(icon=None, text=None, link=None, tag=""):
         tag = f"<{tag}><img src='{icon}' class='href_icon'>{text}</{tag}>"  # Use custom HTML tag for text
 
     if link is None:
-        markdown_text=f"""
+        markdown_text = f"""
                 <div class='icon_href_text_div'>
                     <span class='href_link'> 
                         {tag}
@@ -71,47 +69,17 @@ def disp_icon_text(icon=None, text=None, link=None, tag=""):
                 </div>
                 """
     else:
-        if '.pdf' in link:
-            file_name = f'{profile['name'].split()[0].lower()}.pdf'
-            link =f"data:application/octet-stream;base64,{pdf_resume} download='{file_name}"
-        else:
 
-            markdown_text = f"""
+        markdown_text = f"""
                     <div class='icon_href_text_div'>
                         <span> 
-                            <a href="{link} " 
+                            <a href="{link}" 
                             class='href_link'><span class='href_text'>{tag}</a>
                         </span>
                     </div>"""
 
     st.markdown(markdown_text, unsafe_allow_html=True)
-# Function to display an icon with text and a link, with optional custom HTML tag
-def disp_icon_text(icon=None, text=None, link=None, tag=""):
-    icon = get_image_bin_file(icon)  # Get the binary string of the icon image
-    text = "" if text is None else text
-    if tag == "":
-        tag = f"<img src='{icon}' class='href_icon'>{text}"  # Format icon with text
-    else:
-        tag = f"<{tag}><img src='{icon}' class='href_icon'>{text}</{tag}>"  # Use custom HTML tag for text
 
-    if link is None:
-        markdown_text=            f"""
-                <div class='icon_href_text_div'>
-                    <span class='href_link'> 
-                        {tag}
-                    </span>
-                </div>
-                """
-    else:
-        markdown_text =         f"""
-                <div class='icon_href_text_div'>
-                    <span> 
-                        <a href="{link} " 
-                        class='href_link'><span class='href_text'>{tag}</a>
-                    </span>
-                </div>"""
-
-    st.markdown(markdown_text, unsafe_allow_html=True)
 
 # Function to create a horizontal rule (line)
 def create_ruler():

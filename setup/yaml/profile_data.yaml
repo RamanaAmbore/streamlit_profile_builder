@@ -226,7 +226,7 @@ contact:
   resume:
     label: Download Resume
     icon: pdf.png
-    link: /resume.pdf
+    link: resume.pdf
   mail:
     label: Ramana.Ambore@gmail.com
     icon: mail.png
