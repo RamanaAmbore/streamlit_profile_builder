@@ -452,6 +452,7 @@ def generate_milestone_section():
             tickvals=[],
             ticktext=[]
         ),
+        bargap=0.0,
         plot_bgcolor='rgba(255, 255, 255, 0)',  # White background
         paper_bgcolor='rgba(255, 255, 255, 0)',  # White background
         showlegend=False,
@@ -459,7 +460,5 @@ def generate_milestone_section():
         height=200,
     )
 
-    # Display the chart in Streamlit
-    milestone_container = st.container(key=section_name)
-    with milestone_container:
-        st.plotly_chart(fig)  # Display milestone chart
+
+    st.plotly_chart(fig)  # Display milestone chart
