@@ -341,7 +341,8 @@ def generate_portfolio_section():
                 disp_icon_text(vals['icon'], key, vals['link'], 'h5')  # Display project icon and link
             with col2:
                 disp_icon_text('git_small.png', '', vals['github'])  # Display GitHub icon and link
-            st.write("---")
+            st.write('---')
+
 
             st.write(vals['summary'])  # Display project summary
             st.write(f"Technology: {vals['technology']}")  # Display technologies used
