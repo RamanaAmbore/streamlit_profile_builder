@@ -350,7 +350,7 @@ projects:
   NTT DATA:
     short label: NTT
     long label: NTT DATA Global Delivery Services Ltd., Application Development Director, Apr 2003 - Till Date
-    hover: NTT DATA Global Delivery Services::Application Development Director::Apr 2003 - Till Date
+    hover: NTT DATA Global Delivery Services,::Application Development Director,::21 years, Apr 2003 - Till Date
     icon: ntt.png
     duration: 21
     link: https://www.nttdata.com/global/en/
@@ -508,7 +508,7 @@ projects:
     duration: 1
     link: https://www.bny.com/pershing/us/en.html
     long label: iNautix Technologies India Pvt, Project Leader, May 2002 - Apr 2003
-    hover: iNautix Technologies India Pvt::Project Leader, May 2002 - Apr 2003
+    hover: iNautix Technologies, Project Leader,::1 year, May 2002 - Apr 2003
     clients:
       Pershing:
         Meta Data Services Group:
@@ -534,7 +534,7 @@ projects:
   Modis Consulting:
     short label: Moids
     long label: Modis Consulting, Software Consultant, Nov 1997 Apr 2002
-    hover: Modis Consulting, Software Consultant::Nov 1997 Apr 2002
+    hover: Modis Consulting, Software Consultant,::5 years, Nov 1997 Apr 2002
     icon: modis.png
     link: https://www.akkodis.com/
     duration: 5
@@ -566,7 +566,7 @@ projects:
     duration: 1
     link: https://www.capgemini.com/
     long label: Matech Systems, Software Consultant, Nov 1996 - Nov 1997
-    hover: Matech Systems, Software Consultant::Nov 1996 - Nov 1997
+    hover: Matech Systems, Software Consultant,::1 year, Nov 1996 - Nov 1997
     clients:
       Ryder Inc:
         Ryder On-line Analytical Decision (ROAD) System:
@@ -589,7 +589,7 @@ projects:
   Dun & Bradstreet Satyam Software:
     short label: DBSS
     long label: Dun & Bradstreet Satyam Software, Software Associate, Oct 1994 - Oct 1996
-    hover: Dun & Bradstreet Satyam Software::Software Associate::Oct 1994 - Oct 1996
+    hover: Dun & Bradstreet Satyam Software,::Software Associate,::2 years,Oct 1994 - Oct 1996
     icon: cts.png
     duration: 2
     link: https://www.cognizant.com/in/en
