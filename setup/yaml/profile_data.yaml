@@ -85,7 +85,7 @@ milestones:
     height: 1
     long label: Cleared two levels  of of Certified Financial Analyst 
                 <br>which helped understanding trading and investment, 
-                <br> and gave strong foundation in quantitative analysis**
+                <br> and gave strong foundation in quantitative analysis
   2023:
     milestone: Innovation
     height: 2
@@ -268,7 +268,7 @@ social:
     icon: medium.png
     link: https://medium.com/@rrambo
 portfolio:
-  Profile builder:
+  profile builder:
     icon: rambo.png
     link: https://medium.com/@rrambo
     github: https://github.com/RamanaAmbore/stremlite_profile

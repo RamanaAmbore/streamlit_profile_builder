@@ -10,7 +10,7 @@
 }
 
 .stAppViewContainer {
-    max-width: 1400px;
+    max-width: 1500px;
 }
 
 .stMainBlockContainer {
@@ -94,5 +94,6 @@ ul {
 hr {
 border-color: #e76801 !important; }
 
-
+h5 {
+padding: 0px !important;}
 

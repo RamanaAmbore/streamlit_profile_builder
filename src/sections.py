@@ -338,7 +338,7 @@ def generate_portfolio_section():
         with m_col1:
             col1, col2 = st.columns([10, 3])  # Define column layout for portfolio item
             with col1:
-                disp_icon_text(vals['icon'], key, vals['link'], 'h5')  # Display project icon and link
+                disp_icon_text(vals['icon'], capitalize(key), vals['link'], 'h5')  # Display project icon and link
             with col2:
                 disp_icon_text('git_small.png', '', vals['github'])  # Display GitHub icon and link
             st.write('---')
