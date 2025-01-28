@@ -59,15 +59,15 @@ milestones:
   2020:
     milestone: FRM
     height: 0
-    hover: Awarded FRM after clearing two parts of Financial Risk Manager 
-                ::exam involving 1000 hours of learning and::preparation which
-                gave a strong foundation on::risk management in financial industry
+    hover: Awarded FRM after clearing two parts of::Financial Risk Manager 
+                exam conducted by GARP involving 1000 hours of learning and::preparation which
+                gave a good understanding of::risk management in financial industry
   2021:
     milestone: CFA
     height: 0
-    hover: Cleared two levels  of of Certified Financial Analyst 
-                ::which helped understanding trading and investment, 
-                ::and gave strong foundation in quantitative analysis
+    hover: Cleared two levels  of of Certified Financial::Analyst exam
+                :: conducted by CFA Institute::which helped understanding trading and investment, 
+                ::which gave a strong foundation in quantitative analysis
   2023:
     milestone: Innovation
     height: 0
