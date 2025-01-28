@@ -6,7 +6,7 @@ sidebar_icons:
   portfolio: rocket
   education: trophy
   certifications: clipboard-check
-  hobbies: joystick
+  interests: joystick
 section_icons:
   experience summary: memo
   skills: male-technologist
@@ -15,7 +15,7 @@ section_icons:
   portfolio: rocket
   education: school
   certifications: trophy
-  hobbies: video_game
+  interests: video_game
 colors:
   - '#ffc09f'
   - '#a0ced9'

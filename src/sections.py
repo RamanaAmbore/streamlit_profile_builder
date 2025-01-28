@@ -170,7 +170,7 @@ def generate_skills_section():
 
 def generate_hobbie_section():
     # Generate the "Hobbies" section of the profile
-    section_name = 'hobbies'  # Section identifier
+    section_name = 'interests'  # Section identifier
     section = profile[section_name]  # Load hobbies data from the profile
     write_section_heading(section_name)  # Add a section heading
     st.write(section['summary'])  # Display summary of hobbies
