@@ -33,14 +33,14 @@ milestones:
     icon: igate.png
     duration: .5
     link: https://www.capgemini.com/
-    long label: Worked for Ryder ROAD and SHOP projects as Software Consultant
+    long label: Worked for Ryder ROAD project as Software Consultant
   1997:
     milestone: Dade County
     icon: modis.png
     link: https://www.akkodis.com/
     duration: 5
     long label: Implemented DBS Software Year 2000 version changes at 
-                <br> Office of Information at Dade County Public Schools
+                <br>Office of Information Tech., Dade County Public Schools
     height: 3
   2002:
     milestone: Pershing
@@ -56,7 +56,7 @@ milestones:
     duration: 21
     height: 3.5
     link: https://www.nttdata.com/global/en/
-    long label: Led the team to extract business logic and documenting GM dealer systems
+    long label: Led the team to extract business logic and document GM dealer systems
   2005:
     milestone: PGCBM
     icon: xlri.png
@@ -76,16 +76,16 @@ milestones:
     milestone: FRM
     icon: frm.png
     height: 1
-    long label: Awarded FRM after clearing two parts of Financial Risk Manager 
+    long label: Awarded FRM Certication after clearing two parts of Financial Risk Manager 
                 <br>exam involving 1000 hours of learning and preparation which
-                <br>gave a strong foundation on risk management for algo trading
+                <br>gave a strong foundation on risk management in financial industry.
   2021:
     milestone: CFA
     icon: cfa.png
     height: 1
     long label: Cleared two levels  of of Certified Financial Analyst 
                 <br>which helped understanding trading and investment, 
-                <br> and gave strong foundation in quantitative analysis
+                <br>and gave strong foundation in quantitative analysis
   2023:
     milestone: Innovation
     height: 2
