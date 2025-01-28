@@ -149,12 +149,12 @@ skills:
   python:
     icon: python.png
     level: 5
-    hover: Used extensively for analytics, automation, visualization
+    hover: Used extensively for analytics, automation,::visualization
     duration: 8
   streamlit:
     icon: streamlit.png
     level: 4
-    hover: Created analytics platform for visualizing organizational artifacts and dependencies
+    hover: Created analytics platform for visualizing::organizational artifacts and dependencies
     duration: 3
   dash/plotly:
     icon: dash_plotly.png
@@ -164,12 +164,12 @@ skills:
   java:
     icon: java_small.png
     level: 4
-    hover: Used to modernize legacy system with demanding performance objectives
+    hover: Used to modernize legacy system with::critical performance objectives
     duration: 6
   spark:
     icon: apache_spark.png
     level: 4
-    hover: Core of high volume modernized platform for a high volume transmission data
+    hover: Core of high volume modernized platform::for a high volume transmission data
     duration: 3
   SpringBoot:
     icon: spring.png
@@ -179,7 +179,7 @@ skills:
   COBOL:
     icon: ibm.png
     level: 5
-    hover: Extensive experience writing batch, db2 and CICS applications
+    hover: Extensive experience writing batch, db2::and CICS applications
     duration: 25
   CICS:
     icon: ibm.png
@@ -189,7 +189,7 @@ skills:
   DB2/SQL:
     icon: ibm_db2.png
     level: 5
-    hover: Certified DB2 DBA with extensive experience writing online and batch applications
+    hover: Certified DB2 DBA with extensive experience::writing online and batch applications
     duration: 25
   JCL:
     icon: ibm.png
@@ -204,7 +204,7 @@ skills:
   AWS:
     icon: aws.png
     level: 3
-    hover: legacy modernization platform for EMR, S3, Lambda, EC2, etc
+    hover: Legacy modernization platform for::EMR, S3, Lambda, EC2, etc
     duration: 5
   terracore:
     icon: terraform.png
@@ -215,7 +215,7 @@ skills:
     icon: jenkins.png
     level: 3
     duration: 5
-    hover: Implemented CI/CD pipelines to build artifacts and deploy in the code
+    hover: Implemented CI/CD pipelines to::build artifacts and deploy in the code
   git:
     icon: git.png
     level: 4
