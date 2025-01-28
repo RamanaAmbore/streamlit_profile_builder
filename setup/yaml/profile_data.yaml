@@ -17,7 +17,7 @@ experience summary:
     'Rambo' facilitated the identification and decommissioning of around 3000 batch jobs, significantly improving efficiency.
   - Received the Delivery Excellence Award for designing and developing a Python-based product suite to reengineer 
     legacy COBOL-VSAM applications into COBOL-DB2 applications.
-  - As Principal Software Engineer, I'm leading the development of the parsing engine for Cobra, a COBOL Research and Analysis tool. 
+  - As a Principal Software Engineer, I'm leading the development of the parsing engine for Cobra, a COBOL Research and Analysis tool. 
     This engine will track data flow, identify the origin and transformation of critical fields, and ultimately enable accurate data lineage analysis.
   - Developing an algorithmic trading platform that leverages the power of option Greeks and underlying stock prices to identify 
     and exploit fleeting market inefficiencies, enabling automated, data-driven trading decisions.
@@ -29,22 +29,22 @@ milestones:
   1996:
     milestone: Ryder
     height: 0
-    hover: Worked for Ryder ROAD and SHOP projects as Software Consultant
+    hover: Worked for Ryder to optimze ROAD analytics datbase as Software Consultant
   1997:
     milestone: Dade County
     height: 0
-    hover: Implemented DBS Software Year 2000 version changes at 
-                ::Office of Information at Dade County Public Schools
+    hover: Implemented DBS Software Year 2000 changes at 
+                ::Office of Information Tech.,::Dade County Public Schools
 
   2002:
     milestone: Pershing
     height: 0
-    hover: Responsible for automating the batch system and reducing the source count.
-                ::Recipient of the Project of the Year Award and commendation from CEO
+    hover: Responsible for automating the batch system,::optimized application support.
+                ::Recipient of the Project of the Year Award and::commendation from CEO
   2003:
     milestone: General Motors
     height: 3.5
-    hover: Led the team to extract business logic and documenting GM dealer systems
+    hover: Led the team to extract business logic and::documenting GM Dealer Informatio Delivery system
   2005:
     milestone: PGCBM
     height: 0
@@ -55,7 +55,7 @@ milestones:
     height: 0
     hover: Started working for Fidelity. Implemented major 
                 ::automation, reengineering and modernization initiatives
-                ::Rambo, Cobra, VSAM-to-DB2, Transmission Automation
+                ::Rambo, Cobra, VSAM-to-DB2,::legacy Transmission Automation
   2020:
     milestone: FRM
     height: 0
