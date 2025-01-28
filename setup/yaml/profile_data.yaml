@@ -76,9 +76,9 @@ milestones:
     milestone: FRM
     icon: frm.png
     height: 1
-    long label: Awarded FRM after clearing two parts of Financial Risk Manager exam 
-                <br>which involved 1000 hours of learning and preparation and helped
-                <br>strong foundation on risk management for algo trading
+    long label: Awarded FRM after clearing two parts of Financial Risk Manager 
+                <br/>exam involving 1000 hours of learning and preparation which
+                <br>gave a strong foundation on risk management for algo trading
   2021:
     milestone: CFA
     icon: cfa.png
