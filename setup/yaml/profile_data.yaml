@@ -39,7 +39,7 @@ milestones:
   2002:
     milestone: Pershing
     height: 0
-    hover: Automated the batch system,::optimized application support cost.
+    hover: Automated the batch system,::optimized application support costs.
                 ::Recipient of the Project of the Year Award and::commendation from CEO
   2003:
     milestone: General Motors
@@ -48,20 +48,20 @@ milestones:
   2005:
     milestone: PGCBM
     height: 0
-    hover: Completed one year executive management program, 
-                ::PGCBM from one of the most reputed business schools XLRI
+    hover: Completed one year executive business management program, 
+                ::PGCBM from one of the most reputed business schools-XLRI
   2008:
     milestone: Fidelity
     height: 0
     hover: Started working for Fidelity. Implemented major 
                 ::automation, reengineering and modernization initiatives
-                ::Rambo, Cobra, VSAM-to-DB2,::legacy Transmission Automation
+                ::Rambo, Cobra, VSAM-to-DB2,::legacy transmission Automation
   2020:
     milestone: FRM
     height: 0
     hover: Awarded FRM after clearing two parts of Financial Risk Manager 
-                ::exam involving 1000 hours of learning and preparation which
-                ::gave a strong foundation on risk management for algo trading
+                ::exam involving 1000 hours of learning and::preparation which
+                gave a strong foundation on::risk management in financial industry
   2021:
     milestone: CFA
     height: 0
@@ -80,8 +80,8 @@ education:
     link: https://www.jkinstitute.ac.in/
     year: 1993
     duration: 2
-    long label: Masters in Computer Science, J.K.Institute of Applied Physics & Tech., 1993
-    hover: Masters in Computer Science::sponsored by DRDO,::2 years, 1993
+    long label: Master's in Computer Science, J.K.Institute of Applied Physics & Tech., 1993
+    hover: Master's in Computer Science::sponsored by DRDO,::2 years, 1993
   PGCBM:
     icon: xlri.png
     link: https://www.xlri.ac.in/
@@ -94,8 +94,8 @@ education:
     link: https://www.nagarjunauniversity.ac.in/
     year: 1991
     duration: 3
-    long label: Bachelors in Computer Science, Nagarjuna University, 1991
-    hover: Bachelors in Computer Science, Nagarjuna University,::3 years, 1991
+    long label: Bachelor's in Computer Science, Nagarjuna University, 1991
+    hover: Bachelor's in Computer Science, Nagarjuna University,::3 years, 1991
 certifications:
   FRM:
     icon: frm.png
@@ -104,7 +104,7 @@ certifications:
     duration: 1000
     group: domain
     long label: GARP certified Financial Risk Manager (FRM), 2022, ID# 502640
-    hover: Certified Financial Risk Manager (FRM), 2022,::1000 hours of learning and preparation
+    hover: Certified Financial Risk Manager (FRM),::1000 hours of learning and preparation,::2022
   CFA:
     icon: cfa.png
     link: https://www.cfainstitute.org/
@@ -120,7 +120,7 @@ certifications:
     duration: 500
     group: technical
     long label: IBM Certified DB2 DBA, 2003
-    hover: IBM Certified DB2 DBA::500 hours of learning and preparation::for passing two exams, 2003
+    hover: IBM Certified DB2 DBA::500 hours of learning and preparation,::2003
   six sigma:
     icon: six_sigma.png
     link: https://qaiglobalinstitute.com/six-sigma-certification-courses/
@@ -136,7 +136,7 @@ certifications:
     duration: 200
     group: management
     long label: Project Management Professional (PMP), PMI, 2004
-    hover: Project Management Professional (PMP)::200 hours of learning and preparation::for passing the exam, 2005
+    hover: Project Management Professional (PMP)::200 hours of learning and preparation,:2005
   Java:
     icon: java_small.png
     link: https://www.oracle.com/in/education/training/java/
@@ -144,7 +144,7 @@ certifications:
     duration: 200
     group: technical
     long label: Sun Certified Java Programmer, 1999
-    hover: Sun Certified Java Programmer::200 hours of learning and preparation,::for passing the exam, 1999
+    hover: Sun Certified Java Programmer::200 hours of learning and preparation,::1999
 skills:
   python:
     icon: python.png
@@ -169,7 +169,7 @@ skills:
   spark:
     icon: apache_spark.png
     level: 4
-    hover: Core of high volume modernized platform::for a high volume transmission data
+    hover: Core technology of high volume::modernized platform for a high::volume transmission data
     duration: 3
   SpringBoot:
     icon: spring.png
@@ -186,7 +186,7 @@ skills:
     level: 5
     hover: Developed new online screens and modify existing screens
     duration: 20
-  DB2/SQL:
+  DB2/SQL: 
     icon: ibm_db2.png
     level: 5
     hover: Certified DB2 DBA with extensive experience::writing online and batch applications
