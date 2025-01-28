@@ -81,21 +81,21 @@ education:
     year: 1993
     duration: 2
     long label: Masters in Computer Science, J.K.Institute of Applied Physics & Tech., 1993
-    hover: Masters in Computer Science::sponsored by DRDO::2 years, 1993
+    hover: Masters in Computer Science::sponsored by DRDO,::2 years, 1993
   PGCBM:
     icon: xlri.png
     link: https://www.xlri.ac.in/
     year: 2005
     duration: 1
     long label: PGCBM, XLRI - School of Business, 2005
-    hover: Executive business management program, XLRI::, one of the most reputed schools in India::1 year, 2005
+    hover: Executive business management program, XLRI::, one of the most reputed schools in India,::1 year, 2005
   Bachelor's:
     icon: nagarjuna.png
     link: https://www.nagarjunauniversity.ac.in/
     year: 1991
     duration: 3
     long label: Bachelors in Computer Science, Nagarjuna University, 1991
-    hover: Bachelors in Computer Science, Nagarjuna University::3 years, 1991
+    hover: Bachelors in Computer Science, Nagarjuna University,::3 years, 1991
 certifications:
   FRM:
     icon: frm.png
