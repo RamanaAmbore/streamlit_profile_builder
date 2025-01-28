@@ -25,11 +25,11 @@ milestones:
   1993:
     milestone: Master's
     height: 0
-    hover: Completed Master degree in Computer Science, sponsored ::by Defence Research Development Organization::(DRDO)
+    hover: Completed Master's degree in Computer Science, sponsored ::by Defence Research Development Organization::(DRDO)
   1996:
     milestone: Ryder
     height: 0
-    hover: Worked for Ryder to optimze ROAD analytics datbase as Software Consultant
+    hover: Worked for Ryder to optimze ROAD analytics datbase as a Software Consultant
   1997:
     milestone: Dade County
     height: 0
@@ -39,12 +39,12 @@ milestones:
   2002:
     milestone: Pershing
     height: 0
-    hover: Responsible for automating the batch system,::optimized application support.
+    hover: Automated the batch system,::optimized application support cost.
                 ::Recipient of the Project of the Year Award and::commendation from CEO
   2003:
     milestone: General Motors
     height: 3.5
-    hover: Led the team to extract business logic and::documenting GM Dealer Information Delivery system
+    hover: Led the team to extract business logic and::to document GM Dealer Information Delivery system::for leagacy modernization.
   2005:
     milestone: PGCBM
     height: 0
