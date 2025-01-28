@@ -44,7 +44,7 @@ milestones:
   2003:
     milestone: General Motors
     height: 3.5
-    hover: Led the team to extract business logic and::documenting GM Dealer Informatio Delivery system
+    hover: Led the team to extract business logic and::documenting GM Dealer Information Delivery system
   2005:
     milestone: PGCBM
     height: 0
@@ -86,9 +86,9 @@ education:
     icon: xlri.png
     link: https://www.xlri.ac.in/
     year: 2005
-    duration: 1.5
+    duration: 1
     long label: PGCBM, XLRI - School of Business, 2005
-    hover: Executive business management program, XLRI::, one of the most reputed schools in India::1.5 years, 2005
+    hover: Executive business management program, XLRI::, one of the most reputed schools in India::1 year, 2005
   Bachelor's:
     icon: nagarjuna.png
     link: https://www.nagarjunauniversity.ac.in/
@@ -104,7 +104,7 @@ certifications:
     duration: 1000
     group: domain
     long label: GARP certified Financial Risk Manager (FRM), 2022, ID# 502640
-    hover: Certified Financial Risk Manager (FRM), 2022::1000 hours of learning and preparation
+    hover: Certified Financial Risk Manager (FRM), 2022,::1000 hours of learning and preparation
   CFA:
     icon: cfa.png
     link: https://www.cfainstitute.org/
@@ -112,7 +112,7 @@ certifications:
     duration: 1000
     group: domain
     long label: Cleared Certified Financial Analyst (CFA) Level 1 & Level 2 exams, 2020, ID# 8243442
-    hover: Cleared Certified Financial Analyst::(CFA) Level 1 & Level 2 exams::1000 hours of learning and preparation
+    hover: Cleared Certified Financial Analyst::(CFA) Level 1 & Level 2 exams,::1000 hours of learning and preparation
   DB2 DBA:
     icon: ibm_db2.png
     link: https://www.ibm.com/training/certification/ibm-certified-administrator-db2-12-for-zos-C0005400
@@ -120,7 +120,7 @@ certifications:
     duration: 500
     group: technical
     long label: IBM Certified DB2 DBA, 2003
-    hover: IBM Certified DB2 DBA::500 years of learning and preparation passing two exams::2003
+    hover: IBM Certified DB2 DBA::500 years of learning and preparation passing two exams,::2003
   six sigma:
     icon: six_sigma.png
     link: https://qaiglobalinstitute.com/six-sigma-certification-courses/
@@ -128,7 +128,7 @@ certifications:
     duration: 200
     group: process
     long label: Six Sigma Green Belt certification, QAI, 2005
-    hover: Six Sigma Green Belt certification::200 years of learning and preparation ::2005
+    hover: Six Sigma Green Belt certification::200 years of learning and preparation,::2005
   PMP:
     icon: pmp.png
     link: https://www.pmi.org/certifications/project-management-pmp
@@ -136,7 +136,7 @@ certifications:
     duration: 200
     group: management
     long label: Project Management Professional (PMP), PMI, 2004
-    hover: Project Management Professional (PMP)::200 years of learning and preparation passing the exam::2005
+    hover: Project Management Professional (PMP)::200 years of learning and preparation passing the exam,::2005
   Java:
     icon: java_small.png
     link: https://www.oracle.com/in/education/training/java/
@@ -144,7 +144,7 @@ certifications:
     duration: 200
     group: technical
     long label: Sun Certified Java Programmer, 1999
-    hover: Sun Certified Java Programmer::200 years of learning and preparation passing the exam::1999
+    hover: Sun Certified Java Programmer::200 years of learning and preparation passing the exam,::1999
 skills:
   python:
     icon: python.png
@@ -194,7 +194,7 @@ skills:
   JCL:
     icon: ibm.png
     level: 5
-    hover: Extensive experience in wrting batch applications
+    hover: Extensive experience in writing batch applications
     duration: 25
   VSAM:
     icon: ibm.png
@@ -361,7 +361,7 @@ projects:
           start: Apr 2003
           end: Till Date
           duration: 21 years
-          technology: Java, Springboot, Spark, Oracle, AWS, Python, Pandas, Terraform, Jenkins, GIT
+          technology: Java, Springboot, Spark, Oracle, AWS, Python, Pandas, GIT, Terraform, Jenkins,
           summary: |
             Led the modernization of a high-volume, business-critical legacy application on AWS, leveraging Java, Spark, and a developed core framework. This significantly improved development and deployment speed, achieving a 50% reduction in turnaround times. Key responsibilities included designing high-volume transmission files, implementing data parsing and validation, and ensuring data consistency with mainframe systems.
           additional information: |
