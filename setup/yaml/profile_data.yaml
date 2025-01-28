@@ -90,9 +90,9 @@ milestones:
     milestone: Innovation
     height: 2
     icon: ntt.png
-    long label: Received the most coveted Delivery Excellence award for Innovation at NTT. 
-                <br>One among the 40 people to receive the award across the 
-                <br>organization globally to receive the award.
+    long label: Received the most coveted Delivery Excellence award for
+                <br>Innovation at NTT. One among the 40 people to receive the award 
+                <br>across the organization globally to receive the award.
 education:
   Master's:
     icon: jk.png
