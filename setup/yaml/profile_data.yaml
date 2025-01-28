@@ -260,7 +260,7 @@ social:
 portfolio:
   profile builder:
     icon: rambo.png
-    link: https://medium.com/@rrambo
+    link: https://medium.com/@rrambo/streamlit-profile-builder-a-simple-way-to-create-interactive-online-profiles-3cb0b0f6c8bb
     github: https://github.com/RamanaAmbore/stremlite_profile
     image: portfolio1.png
     summary: |
