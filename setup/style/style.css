@@ -89,11 +89,15 @@ ul {
     gap:.5rem !important;
     border-radius:10px !important;
 }
-.stHorizontalBlock {padding:0px !important;}
+.stHorizontalBlock {
+    padding:0px !important;
+}
 
 hr {
-border-color: #e76801 !important; }
+    border-color: #e76801 !important;
+}
 
 h5 {
-padding: 5px !important;}
+    padding-bottom: 5px !important;
+}
 
