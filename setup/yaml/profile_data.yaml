@@ -24,56 +24,75 @@ experience summary:
 milestones:
   1993:
     milestone: Master's
-    height: 0
-    hover: Completed Master degree in Computer Science, sponsored ::by Defence Research Development Organization::(DRDO)
+    icon: jk.png
+    long label: Completed Master degree in Computer Science sponsored by <br> Defence Research Development Organization
+    height: 1.5
   1996:
     milestone: Ryder
-    height: 0
-    hover: Worked for Ryder ROAD and SHOP projects as Software Consultant
+    height: 2
+    icon: igate.png
+    duration: .5
+    link: https://www.capgemini.com/
+    long label: Worked for Ryder ROAD and SHOP projects as Software Consultant
   1997:
     milestone: Dade County
-    height: 0
-    hover: Implemented DBS Software Year 2000 version changes at 
-                ::Office of Information at Dade County Public Schools
-
+    icon: modis.png
+    link: https://www.akkodis.com/
+    duration: 5
+    long label: Implemented DBS Software Year 2000 version changes at 
+                <br> Office of Information at Dade County Public Schools
+    height: 3
   2002:
     milestone: Pershing
-    height: 0
-    hover: Responsible for automating the batch system and reducing the source count.
-                ::Recipient of the Project of the Year Award and commendation from CEO
+    icon: inautix.png
+    duration: 1
+    height: 2.8
+    link: https://www.bny.com/pershing/us/en.html
+    long label: Responsible for automating the batch system and reducing the source count.
+                <br>Recipient of the Project of the Year Award and commendation from CEO
   2003:
     milestone: General Motors
+    icon: ntt.png
+    duration: 21
     height: 3.5
-    hover: Led the team to extract business logic and documenting GM dealer systems
+    link: https://www.nttdata.com/global/en/
+    long label: Led the team to extract business logic and documenting GM dealer systems
   2005:
     milestone: PGCBM
-    height: 0
-    hover: Completed one year executive management program, 
-                ::PGCBM from one of the most reputed business schools XLRI
+    icon: xlri.png
+    height: 2
+    long label: Completed one year executive management program, 
+                <br> PGCBM from one of the most reputed business schools XLRI
   2008:
     milestone: Fidelity
-    height: 0
-    hover: Started working for Fidelity. Implemented major 
-                ::automation, reengineering and modernization initiatives
-                ::Rambo, Cobra, VSAM-to-DB2, Transmission Automation
+    icon: ntt.png
+    duration: 21
+    height: 2
+    link: https://www.nttdata.com/global/en/
+    long label: Started working for Fidelity. Implemented major 
+                <br>automation, reengineering and modernization initiatives
+                <br>Rambo, Cobra, VSAM-to-DB2, Transmission Automation
   2020:
     milestone: FRM
-    height: 0
-    hover: Awarded FRM after clearing two parts of Financial Risk Manager 
-                ::exam involving 1000 hours of learning and preparation which
-                ::gave a strong foundation on risk management for algo trading
+    icon: frm.png
+    height: 1
+    long label: Awarded FRM after clearing two parts of Financial Risk Manager 
+                <br>exam involving 1000 hours of learning and preparation which
+                <br>gave a strong foundation on risk management for algo trading
   2021:
     milestone: CFA
-    height: 0
-    hover: Cleared two levels  of of Certified Financial Analyst 
-                ::which helped understanding trading and investment, 
-                ::and gave strong foundation in quantitative analysis
+    icon: cfa.png
+    height: 1
+    long label: Cleared two levels  of of Certified Financial Analyst 
+                <br>which helped understanding trading and investment, 
+                <br> and gave strong foundation in quantitative analysis
   2023:
     milestone: Innovation
-    height: 0
-    hover: Received the most coveted Delivery Excellence award for
-                ::Innovation at NTT. One among the 40 people to receive the award 
-                ::globally across the organization to receive the award.
+    height: 2
+    icon: ntt.png
+    long label: Received the most coveted Delivery Excellence award for
+                <br>Innovation at NTT. One among the 40 people to receive the award 
+                <br>globally across the organization to receive the award.
 education:
   Master's:
     icon: jk.png
@@ -81,145 +100,136 @@ education:
     year: 1993
     duration: 2
     long label: Masters in Computer Science, J.K.Institute of Applied Physics & Tech., 1993
-    hover: Masters in Computer Science::sponsored by DRDO::2 years, 1993
   PGCBM:
     icon: xlri.png
     link: https://www.xlri.ac.in/
     year: 2005
     duration: 1.5
     long label: PGCBM, XLRI - School of Business, 2005
-    hover: Executive business management program, XLRI::, one of the most reputed schools in India::1.5 years, 2005
   Bachelor's:
     icon: nagarjuna.png
     link: https://www.nagarjunauniversity.ac.in/
     year: 1991
     duration: 3
     long label: Bachelors in Computer Science, Nagarjuna University, 1991
-    hover: Bachelors in Computer Science, Nagarjuna University::3 years, 1991
 certifications:
   FRM:
     icon: frm.png
     link: https://www.garp.org/frm
     year: 2022
-    duration: 1000
+    duration: 1.5
     group: domain
-    long label: GARP certified Financial Risk Manager (FRM), 2022, ID# 502640
-    hover: GARP certified Financial Risk Manager (FRM), 2022::1000 hours of learning and preparation
+    long label: GARP certified Financial Risk Manager (FRM), 2022, GARP ID# 502640
   CFA:
     icon: cfa.png
     link: https://www.cfainstitute.org/
     year: 2020
-    duration: 1000
+    duration: 1.5
     group: domain
     long label: Cleared Certified Financial Analyst (CFA) Level 1 & Level 2 exams, 2020, ID# 8243442
-    hover: Cleared Certified Financial Analyst (CFA) Level 1 & Level 2 exams::1000 hours of learning and preparation
   DB2 DBA:
     icon: ibm_db2.png
     link: https://www.ibm.com/training/certification/ibm-certified-administrator-db2-12-for-zos-C0005400
     year: 2003
-    duration: 500
+    duration: 1
     group: technical
     long label: IBM Certified DB2 DBA, 2003
-    hover: IBM Certified DB2 DBA::500 years of learning and preparation passing two exams::2003
   six sigma:
     icon: six_sigma.png
     link: https://qaiglobalinstitute.com/six-sigma-certification-courses/
     year: 2005
-    duration: 200
+    duration: .5
     group: process
     long label: Six Sigma Green Belt certification, QAI, 2005
-    hover: Six Sigma Green Belt certification::200 years of learning and preparation ::2005
   PMP:
     icon: pmp.png
     link: https://www.pmi.org/certifications/project-management-pmp
     year: 2004
-    duration: 200
+    duration: .5
     group: management
     long label: Project Management Professional (PMP), PMI, 2004
-    hover: Project Management Professional (PMP)::200 years of learning and preparation passing the exam::2005
   Java:
     icon: java_small.png
     link: https://www.oracle.com/in/education/training/java/
     year: 1999
-    duration: 200
+    duration: .5
     group: technical
     long label: Sun Certified Java Programmer, 1999
-    hover: Sun Certified Java Programmer::200 years of learning and preparation passing the exam::1999
 skills:
   python:
     icon: python.png
     level: 5
-    hover: Used extensively for analytics, automation, visualization
+    long label: Used extensively for legacy automation, visualization and analytics
     duration: 8
   streamlit:
     icon: streamlit.png
     level: 4
-    hover: Created analytics platform for visualizing organizational artifacts and dependencies
+    long label: Created analytics platform for analyzing organizational artifacts and dependencies
     duration: 3
   dash/plotly:
     icon: dash_plotly.png
     level: 4
-    hover: Created algo trading platform for derivatives
+    long label: Created algo trading platform for derivatives
     duration: 2
   java:
     icon: java_small.png
     level: 4
-    hover: Used to modernize legacy system with demanding performance objectives
+    long label: Used to modernize a high volume legacy application in cloud
     duration: 6
   spark:
     icon: apache_spark.png
     level: 4
-    hover: Core of high volume modernized platform for a high volume transmission data
+    long label: Used to modernize high volume time sensitive legacy application
     duration: 3
   SpringBoot:
     icon: spring.png
     level: 3
-    hover: Used to create spark batch application
+    long label: Used to create spark batch application
     duration: 5
   COBOL:
     icon: ibm.png
     level: 5
-    hover: Extensive experience writing batch, db2 and CICS applications
+    long label: Used to develop batch, db2 and CICS applications
     duration: 25
   CICS:
     icon: ibm.png
     level: 5
-    hover: Developed new online screens and modify existing screens
+    long label: Developed new online screens and modify existing screens
     duration: 20
   DB2/SQL:
     icon: ibm_db2.png
     level: 5
-    hover: Certified DB2 DBA with extensive experience writing online and batch applications
+    long label: Used extensively on mainframe for batch and online applications, Certified DB2 DBA.
     duration: 25
   JCL:
     icon: ibm.png
     level: 5
-    hover: Extensive experience in wrting batch applications
+    long label: Developed high-volume batch applications. Certified Java developer
     duration: 25
   VSAM:
     icon: ibm.png
     level: 3
-    hover: Used for batch and online applications
+    long label: used for batch and online applications
     duration: 15
   AWS:
     icon: aws.png
     level: 3
-    hover: legacy modernization platform for EMR, S3, Lambda, EC2, etc
+    long label: legacy modernization is done using AWS
     duration: 5
-  terracore:
+  terraform:
     icon: terraform.png
     level: 3
-    hover: Used cloud automation
+    long label: Used cloud automation
     duration: 5
   jenkins:
     icon: jenkins.png
     level: 3
     duration: 5
-    hover: Implemented CI/CD pipelines to build artifacts and deploy in the code
+    long label: usec to created CI/CD pipelines
   git:
     icon: git.png
     level: 4
-    hover: Used extensively for professional and personal projects
+    long label: Used for professional and personal projects
     duration: 8
 contact:
   resume:
@@ -350,7 +360,6 @@ projects:
   NTT DATA:
     short label: NTT
     long label: NTT DATA Global Delivery Services Ltd., Application Development Director, Apr 2003 - Till Date
-    hover: NTT DATA Global Delivery Services::Application Development Director::Apr 2003 - Till Date
     icon: ntt.png
     duration: 21
     link: https://www.nttdata.com/global/en/
@@ -361,7 +370,7 @@ projects:
           start: Apr 2003
           end: Till Date
           duration: 21 years
-          technology: Java, Springboot, Spark, Oracle, AWS, Python, Pandas, Terraform, Jenkins, GIT
+          technology: Java, Springboot, Spark, Oracle, AWS, Python, Pandas
           summary: |
             Led the modernization of a high-volume, business-critical legacy application on AWS, leveraging Java, Spark, and a developed core framework. This significantly improved development and deployment speed, achieving a 50% reduction in turnaround times. Key responsibilities included designing high-volume transmission files, implementing data parsing and validation, and ensuring data consistency with mainframe systems.
           additional information: |
@@ -383,7 +392,7 @@ projects:
           role: Principle Software Engineer
           start: Apr 2003
           end: Till Date
-          technology: Paython, Pandas, Postgres, Networkx, Pyvis, Streamlit, GIT, Jenkins
+          technology: Paython, Pandas, Postgres, Networkx, Pyvis, Streamlit
           summary: |
             I led the development of 'Rambo,' an analytics platform that empowered software development teams to reengineer and optimize software artifacts by providing critical insights into dependencies. My responsibilities included identifying metadata sources on software artifacts, organizing and storing the data in a database, creating networkx graph structures with nodes and edges, parsing the data for various use cases with complex SQLs, and presenting data flow diagrams in a visual manner using Python, PyVis, SQL, REXX, and Streamlit.
           additional information: |
@@ -397,7 +406,7 @@ projects:
           role: Principle Software Engineer
           start: Apr 2003
           end: Till Date
-          technology: Python, Pandas, Regex, Neworkx, Postgres, Pyvis, Streamlit, GIT, Jenkins
+          technology: Python, Pandas, Regex, Neworkx, Postgres, Pyvis, Streamlit
           summary: |
             This project centers around the development of "Cobra," a comprehensive ecosystem specifically designed to address the challenges of modernizing and enhancing legacy COBOL applications. Recognizing the critical role these systems play in many organizations, Cobra aims to equip businesses with the tools and technologies necessary to effectively understand, analyze, and ultimately modernize their existing COBOL codebases. This multifaceted ecosystem will encompass a suite of integrated tools and functionalities, empowering organizations to gain deeper insights into their COBOL applications and explore various modernization pathways.
           additional information: |
@@ -508,7 +517,6 @@ projects:
     duration: 1
     link: https://www.bny.com/pershing/us/en.html
     long label: iNautix Technologies India Pvt, Project Leader, May 2002 - Apr 2003
-    hover: iNautix Technologies India Pvt::Project Leader, May 2002 - Apr 2003
     clients:
       Pershing:
         Meta Data Services Group:
@@ -534,7 +542,6 @@ projects:
   Modis Consulting:
     short label: Moids
     long label: Modis Consulting, Software Consultant, Nov 1997 Apr 2002
-    hover: Modis Consulting, Software Consultant::Nov 1997 Apr 2002
     icon: modis.png
     link: https://www.akkodis.com/
     duration: 5
@@ -566,7 +573,6 @@ projects:
     duration: 1
     link: https://www.capgemini.com/
     long label: Matech Systems, Software Consultant, Nov 1996 - Nov 1997
-    hover: Matech Systems, Software Consultant::Nov 1996 - Nov 1997
     clients:
       Ryder Inc:
         Ryder On-line Analytical Decision (ROAD) System:
@@ -589,7 +595,6 @@ projects:
   Dun & Bradstreet Satyam Software:
     short label: DBSS
     long label: Dun & Bradstreet Satyam Software, Software Associate, Oct 1994 - Oct 1996
-    hover: Dun & Bradstreet Satyam Software::Software Associate::Oct 1994 - Oct 1996
     icon: cts.png
     duration: 2
     link: https://www.cognizant.com/in/en
