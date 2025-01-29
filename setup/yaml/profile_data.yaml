@@ -45,7 +45,7 @@ milestones:
   2005:
     milestone: PGCBM
     height: 0
-    hover: Successfully completed the one-year executive management program (PGCBM) at XLRI, a top-tier Indian business school.
+    hover: Successfully completed the executive management program (PGCBM) at XLRI, a top-tier Indian business school.
   2008:
     milestone: Fidelity
     height: 0
@@ -137,77 +137,77 @@ skills:
   python:
     icon: python.png
     level: 5
-    hover: Used extensively for analytics, automation, visualization
+    hover: Leveraged Python extensively for data analytics, reengineering, automation, and visualization
     duration: 8
   streamlit:
     icon: streamlit.png
     level: 4
-    hover: Created analytics platform for visualizing organizational artifacts and dependencies
+    hover: Developed an analytics platform using Streamlit to visualize complex organizational artifacts and their dependencies.
     duration: 3
   dash/plotly:
     icon: dash_plotly.png
     level: 4
-    hover: Created algo trading platform for derivatives
+    hover: Developed an algorithmic trading platform for derivatives using Dash and Plotly for interactive data visualization and dashboarding.
     duration: 2
   java:
     icon: java_small.png
     level: 4
-    hover: Used to modernize legacy system with critical performance objectives
+    hover: Modernized legacy systems with critical performance objectives using Java.
     duration: 6
   spark:
     icon: apache_spark.png
     level: 4
-    hover: Core technology for processing high-volume data streams in a modernized platform.
+    hover: Processed high-volume data streams using Spark in a modernized platform.
     duration: 3
   SpringBoot:
     icon: spring.png
     level: 3
-    hover: Used to create spark batch application
+    hover: Developed Spark batch applications using Spring Boot.
     duration: 5
   COBOL:
     icon: ibm.png
     level: 5
-    hover: Extensive experience writing batch, db2 and CICS applications
+    hover: Extensive experience developing batch, DB2, and CICS applications in COBOL.
     duration: 25
   CICS:
     icon: ibm.png
     level: 5
-    hover: Developed new online screens and modify existing screens
+    hover: Developed and modified online screens within the CICS environment.
     duration: 20
   DB2/SQL:
     icon: ibm_db2.png
     level: 5
-    hover: Certified DB2 DBA with extensive experience writing online and batch applications
+    hover: Certified DB2 DBA with extensive experience in developing online and batch applications using DB2 and SQL.
     duration: 25
   JCL:
     icon: ibm.png
     level: 5
-    hover: Extensive experience in writing batch applications
+    hover: Extensive experience in writing and managing batch jobs using JCL.
     duration: 25
   VSAM:
     icon: ibm.png
     level: 3
-    hover: Used for batch and online applications
+    hover: Experienced in working with VSAM for batch and online applications.
     duration: 15
   AWS:
     icon: aws.png
     level: 3
-    hover: Legacy modernization platform for EMR, S3, Lambda, EC2, etc
+    hover: Leveraged AWS services (EMR, S3, Lambda, EC2, etc.) for legacy modernization projects.
     duration: 5
   terracore:
     icon: terraform.png
     level: 3
-    hover: Used cloud automation
+    hover: Utilized Terraform for automating TLM activities.
     duration: 5
   jenkins:
     icon: jenkins.png
     level: 3
-    hover: Implemented CI/CD pipelines to build artifacts and deploy in the code
+    hover: Implemented CI/CD pipelines using Jenkins to build and deploy code.
     duration: 5
   git:
     icon: git.png
     level: 4
-    hover: Used extensively for professional and personal projects
+    hover: Utilized Git extensively for both professional and personal projects.
     duration: 8
 contact:
   resume:
@@ -240,7 +240,6 @@ social:
     label: github.com/RamanaAmbore
     icon: github.png
     link: https://github.com/RamanaAmbore
-
   medium:
     label: medium.com/@rrambo
     icon: medium.png
@@ -283,9 +282,7 @@ portfolio:
     technology: Python,  Pandas, Dash, Plotly
     additional information: |
       **Project: RRambo Trader - Algo Trading for Derivatives**
-  
       **Description:** This project aims to develop a sophisticated algorithmic trading platform designed to identify and capitalize on short-term market inefficiencies in option prices.
-  
     summary: |
       Developed a Python-based algorithmic trading platform (RRambo Trader) to capitalize on short-term market inefficiencies in option prices. This platform leverages option Greeks, underlying stock prices, and advanced statistical models to generate trading signals and execute trades (when integrated with a brokerage API).
     technology: Python, Pandas, Dash, Plotly
@@ -326,7 +323,7 @@ projects:
           additional information: |
             **Project: Modernization of High-Volume Legacy Application**
             
-            **Description:** Modernized a high-volume, business-critical legacy application on AWS using Java and Spark. This involved:
+            **Key Achievements:** Modernized a high-volume, business-critical legacy application on AWS using Java and Spark. This involved:
             
             * **Core Framework Development:** Created a core framework that reduced development and deployment turnaround times by 50 percent.
             * **High-Volume Data Processing:** Developed high-volume transmission files generated from the new system using complex SQL queries.
@@ -344,9 +341,9 @@ projects:
           end: Till Date
           technology: Paython, Pandas, Postgres, Networkx, Pyvis, Streamlit, GIT, Jenkins
           summary: |
-            Develped 'Rambo,' an analytics platform that empowered software development teams to reengineer and optimize software artifacts by providing critical insights into dependencies. Responsibilities included identifying metadata sources on software artifacts, organizing and storing the data in a database, creating networkx graph structures with nodes and edges, parsing the data for various use cases with complex SQLs, and presenting data flow diagrams in a visual manner using Python, PyVis, SQL, REXX, and Streamlit.
+            Developed 'Rambo,' an analytics platform that empowered software development teams to reengineer and optimize software artifacts by providing critical insights into dependencies. Responsibilities included identifying metadata sources on software artifacts, organizing and storing the data in a database, creating networkx graph structures with nodes and edges, parsing the data for various use cases with complex SQLs, and presenting data flow diagrams in a visual manner using Python, PyVis, SQL, REXX, and Streamlit.
           additional information: |
-            **Responsibilities:**
+            **Key Achievements:**
             
             * **Platform Development:** Developed 'Rambo,' an analytics platform empowering software development teams to reengineer and optimize software artifacts by providing critical insights into dependencies.
             * **Metadata Management:** Identified metadata sources on software artifacts, organized, and saved the data in the database.
