@@ -133,7 +133,7 @@ certifications:
     group: technical
     long label: Sun Certified Java Programmer, 1999
     hover: Sun Certified Java Programmer. 200+ hours of study. Demonstrated Java programming proficiency, 1999
-skills:
+technical skills:
   python:
     icon: python.png
     level: 5
