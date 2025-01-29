@@ -93,7 +93,7 @@ def generate_experience_summary_section():
 
 # Function to generate the skills section
 def generate_skills_section():
-    section_name = 'skills'
+    section_name = 'technical skills'
     key_list, val_list = get_profile(section_name)
 
     write_section_heading(section_name)  # Add section heading
@@ -155,7 +155,7 @@ def generate_skills_section():
 
     # Update layout for transparent background and vertical x-axis labels
     fig.update_layout(
-        xaxis_title=dict(text="Skills", font=dict(color=default_color, size=14)),
+        # xaxis_title=dict(text="Skills", font=dict(color=default_color, size=14)),
         yaxis_title=dict(text="Proficiency", font=dict(color=default_color, size=14)),
         xaxis=dict(tickangle=0, showticklabels=False, ),
         yaxis=dict(range=[0, 5]),

@@ -1,6 +1,6 @@
 sidebar_icons:
   summary: list-check
-  skills: gear
+  technical skills: gear
   employment: person-workspace
   projects: folder
   portfolio: rocket
@@ -9,7 +9,7 @@ sidebar_icons:
   interests: joystick
 section_icons:
   experience summary: memo
-  skills: male-technologist
+  technical skills: male-technologist
   employment: office
   projects: open_file_folder
   portfolio: rocket
