@@ -194,7 +194,7 @@ skills:
     level: 3
     hover: Leveraged AWS services (EMR, S3, Lambda, EC2, etc.) for legacy modernization projects.
     duration: 5
-  terracore:
+  terraform:
     icon: terraform.png
     level: 3
     hover: Utilized Terraform for automating cloud deployment and TLM activities.
