@@ -197,7 +197,7 @@ skills:
   terracore:
     icon: terraform.png
     level: 3
-    hover: Utilized Terraform for automating TLM activities.
+    hover: Utilized Terraform for automating cloud deployment and TLM activities.
     duration: 5
   jenkins:
     icon: jenkins.png
