@@ -25,52 +25,43 @@ milestones:
   1993:
     milestone: Master's
     height: 0
-    hover: Completed a Master's degree in Computer Science, sponsored by the Defence Research and Development Organization (DRDO)
+    hover: Completed Master's in Computer Science with sponsorship from the Defence Research and Development Organisation (DRDO)
   1996:
     milestone: Ryder
     height: 0
-    hover: Worked for Ryder to optimize the ROAD analytics database  as a Software Consultant
+    hover: Contributed to the optimization of the ROAD analytics database as a Software Consultant for Ryder.
   1997:
     milestone: Dade County
     height: 0
-    hover: Implemented DBS Software Year 2000 changes at 
-                 Office of Information Technology, Dade County Public Schools
+    hover:  Implemented critical Year 2000 changes to DBS Software at the Office of Information Technology, Dade County Public Schools.
   2002:
     milestone: Pershing
     height: 0
-    hover: Automated the batch system, optimized application support costs.
-                 Recipient of the Project of the Year Award and commendation from the CEO
+    hover: Successfully automated batch system, significantly reducing support costs. Recognized with Project of the Year Award and commendation from the CEO.
   2003:
     milestone: General Motors
     height: 3.5
-    hover: Led the team to extract business logic and document the GM Dealer Information Delivery System for legacy modernization.
+    hover: Led the re-engineering of the GM Dealer Information Delivery System for legacy modernization.
   2005:
     milestone: PGCBM
     height: 0
-    hover: Completed a one-year executive management program, 
-                 PGCBM from XLRI, one of the most reputed business schools
+    hover: Successfully completed the one-year executive management program (PGCBM) at XLRI, a top-tier Indian business school.
   2008:
     milestone: Fidelity
     height: 0
-    hover: Started working for Fidelity. Implemented major 
-                 automation, reengineering, and modernization initiatives
-                 Rambo, Cobra, VSAM-to-DB2, legacy Transmission Automation
+    hover: played a key role in implementing major automation, reengineering, and modernization initiatives, such as Rambo, Cobra, and VSAM-to-DB2.
   2020:
     milestone: FRM
     height: 0
-    hover: Earned FRM certification after clearing both parts of the Financial 
-                 Risk Manager exam, involving 1,000 hours of learning and preparation.
-                 This provided a strong foundation in risk management for algorithmic trading.
+    hover: FRM Certified. Successfully passed both Part 1 & 2 exams after 1,000+ hours of rigorous study. Demonstrates a strong foundation in financial ri
+    milestone: CFAsk management.
   2021:
-    milestone: CFA
     height: 0
-    hover: Cleared two levels of the Certified Financial Analyst (CFA) exam, 
-                 gaining expertise in trading, investment, and quantitative analysis
+    hover: Cleared CFA Levels 1 & 2 (1,000+ hours). Progressing towards CFA charter. Has strong foundation in trading, investment, and quantitative analysis.
   2023:
     milestone: Innovation
     height: 0
-    hover: Received the most prestigious Delivery Excellence
-                 Award for Innovation at NTT. One of only 40 recipients globally across the organization
+    hover: Recipient of the prestigious NTT Delivery Excellence Award for Innovation. Recognized among the top 40 innovators globally within the organization.
 education:
   Master's:
     icon: jk.png
@@ -78,14 +69,14 @@ education:
     year: 1993
     duration: 2
     long label: Master's in Computer Science, J.K. Institute of Applied Physics & Technology, 1993
-    hover: Master's in Computer Science sponsored by DRDO, 2 years, 1993
+    hover: Completed Master's in Computer Science with sponsorship from the Defence Research and Development Organisation (DRDO), 2 years, 1993
   PGCBM:
     icon: xlri.png
     link: https://www.xlri.ac.in/
     year: 2005
     duration: 1
     long label: PGCBM, XLRI - School of Business, 2005
-    hover: Executive business management program, XLRI, one of the most reputed business schools in India, 1 year, 2005
+    hover: Successfully completed the one-year executive management program (PGCBM) at XLRI, a top-tier Indian business school, 1 year, 2005
   Bachelor's:
     icon: nagarjuna.png
     link: https://www.nagarjunauniversity.ac.in/
@@ -101,7 +92,8 @@ certifications:
     duration: 1000
     group: domain
     long label: GARP Certified Financial Risk Manager (FRM), 2022, ID# 502640
-    hover: Certified Financial Risk Manager (FRM), 2022 1,000 hours of learning and preparation
+    hover:  FRM Certified. Successfully passed both Part 1 & 2 exams after 1,000+ hours of rigorous study. Demonstrates a strong foundation in financial ri
+, 2022
   CFA:
     icon: cfa.png
     link: https://www.cfainstitute.org/
@@ -109,7 +101,7 @@ certifications:
     duration: 1000
     group: domain
     long label: Cleared Certified Financial Analyst (CFA) Level 1 & Level 2 exams, 2020, ID# 8243442
-    hover: Cleared Certified Financial Analyst (CFA) Level 1 & Level 2 exams, 1,000 hours of learning and preparation, 2020
+    hover: Cleared CFA Levels 1 & 2 (1,000+ hours). Progressing towards CFA charter. Has strong foundation in trading, investment, and quantitative analysis, 2020
   DB2 DBA:
     icon: ibm_db2.png
     link: https://www.ibm.com/training/certification/ibm-certified-administrator-db2-12-for-zos-C0005400
@@ -117,7 +109,7 @@ certifications:
     duration: 500
     group: technical
     long label: IBM Certified DB2 DBA, 2003
-    hover: IBM Certified DB2 DBA 500 hours of learning and preparation for passing two exams, 2003
+    hover: IBM Certified DB2 DBA. 500+ hours of study culminated in passing two rigorous exams, demonstrating in-depth expertise in DB2 administration, 2003
   Six Sigma:
     icon: six_sigma.png
     link: https://qaiglobalinstitute.com/six-sigma-certification-courses/
@@ -125,7 +117,7 @@ certifications:
     duration: 200
     group: process
     long label: Six Sigma Green Belt certification, QAI, 2005
-    hover: Six Sigma Green Belt certification 200 hours of learning and preparation, 2005
+    hover: Six Sigma Green Belt Certified. 200+ hours of study demonstrating a commitment to process improvement, 2005
   PMP:
     icon: pmp.png
     link: https://www.pmi.org/certifications/project-management-pmp
@@ -133,7 +125,7 @@ certifications:
     duration: 200
     group: management
     long label: Project Management Professional (PMP), PMI, 2004
-    hover: Project Management Professional (PMP) 200 hours of learning and preparation for passing the exam, 2005
+    hover: PMP Certified. Successfully navigated the rigorous PMP exam after 200+ hours of dedicated study, 2005
   Java:
     icon: java_small.png
     link: https://www.oracle.com/in/education/training/java/
@@ -141,7 +133,7 @@ certifications:
     duration: 200
     group: technical
     long label: Sun Certified Java Programmer, 1999
-    hover: Sun Certified Java Programmer 200 hours of learning and preparation, for passing the exam, 1999
+    hover: Sun Certified Java Programmer. 200+ hours of study. Demonstrated Java programming proficiency, 1999
 skills:
   python:
     icon: python.png
