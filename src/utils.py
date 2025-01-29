@@ -174,3 +174,23 @@ def word_width(text, cap_factor=0.28, small_factor=0.17):
         else:
             smalls += 1
     return caps * cap_factor + smalls * small_factor
+
+@streamlit.cache_resource
+def hover_split(text, size=40):
+    lines = []
+    line = ''
+    for word in text.split():
+        if word.strip() !='':
+            if len(test_line:=f'{line} {word}') < size:
+                line =test_line
+            else:
+                lines.append(line)
+                line = word
+    lines.append(line)
+
+    lines = '<br>'.join(lines)
+    return lines
+
+
+
+

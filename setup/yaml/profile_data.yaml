@@ -25,52 +25,52 @@ milestones:
   1993:
     milestone: Master's
     height: 0
-    hover: Completed a Master's degree in Computer Science, sponsored by the::Defence Research and Development Organization (DRDO)
+    hover: Completed a Master's degree in Computer Science, sponsored by the Defence Research and Development Organization (DRDO)
   1996:
     milestone: Ryder
     height: 0
-    hover: Worked for Ryder to optimize the ROAD analytics database ::as a Software Consultant
+    hover: Worked for Ryder to optimize the ROAD analytics database  as a Software Consultant
   1997:
     milestone: Dade County
     height: 0
     hover: Implemented DBS Software Year 2000 changes at 
-                ::Office of Information Technology,::Dade County Public Schools
+                 Office of Information Technology, Dade County Public Schools
   2002:
     milestone: Pershing
     height: 0
-    hover: Automated the batch system,::optimized application support costs.
-                ::Recipient of the Project of the Year Award and::commendation from the CEO
+    hover: Automated the batch system, optimized application support costs.
+                 Recipient of the Project of the Year Award and commendation from the CEO
   2003:
     milestone: General Motors
     height: 3.5
-    hover: Led the team to extract business logic and::document the GM Dealer Information Delivery System::for legacy modernization.
+    hover: Led the team to extract business logic and document the GM Dealer Information Delivery System for legacy modernization.
   2005:
     milestone: PGCBM
     height: 0
     hover: Completed a one-year executive management program, 
-                ::PGCBM from XLRI, one of the most reputed business schools
+                 PGCBM from XLRI, one of the most reputed business schools
   2008:
     milestone: Fidelity
     height: 0
     hover: Started working for Fidelity. Implemented major 
-                ::automation, reengineering, and modernization initiatives
-                ::Rambo, Cobra, VSAM-to-DB2,::legacy Transmission Automation
+                 automation, reengineering, and modernization initiatives
+                 Rambo, Cobra, VSAM-to-DB2, legacy Transmission Automation
   2020:
     milestone: FRM
     height: 0
     hover: Earned FRM certification after clearing both parts of the Financial 
-                ::Risk Manager exam, involving 1,000 hours of learning and preparation.
-                ::This provided a strong foundation in risk management for algorithmic trading.
+                 Risk Manager exam, involving 1,000 hours of learning and preparation.
+                 This provided a strong foundation in risk management for algorithmic trading.
   2021:
     milestone: CFA
     height: 0
     hover: Cleared two levels of the Certified Financial Analyst (CFA) exam, 
-                ::gaining expertise in trading, investment, and quantitative analysis
+                 gaining expertise in trading, investment, and quantitative analysis
   2023:
     milestone: Innovation
     height: 0
     hover: Received the most prestigious Delivery Excellence
-                ::Award for Innovation at NTT. One of only 40 recipients::globally across the organization
+                 Award for Innovation at NTT. One of only 40 recipients globally across the organization
 education:
   Master's:
     icon: jk.png
@@ -78,21 +78,21 @@ education:
     year: 1993
     duration: 2
     long label: Master's in Computer Science, J.K. Institute of Applied Physics & Technology, 1993
-    hover: Master's in Computer Science::sponsored by DRDO,::2 years, 1993
+    hover: Master's in Computer Science sponsored by DRDO, 2 years, 1993
   PGCBM:
     icon: xlri.png
     link: https://www.xlri.ac.in/
     year: 2005
     duration: 1
     long label: PGCBM, XLRI - School of Business, 2005
-    hover: Executive business management program, XLRI::, one of the most reputed business schools in India,::1 year, 2005
+    hover: Executive business management program, XLRI, one of the most reputed business schools in India, 1 year, 2005
   Bachelor's:
     icon: nagarjuna.png
     link: https://www.nagarjunauniversity.ac.in/
     year: 1991
     duration: 3
     long label: Bachelor's in Computer Science, Nagarjuna University, 1991
-    hover: Bachelor's in Computer Science, Nagarjuna University,::3 years, 1991
+    hover: Bachelor's in Computer Science, Nagarjuna University, 3 years, 1991
 certifications:
   FRM:
     icon: frm.png
@@ -101,7 +101,7 @@ certifications:
     duration: 1000
     group: domain
     long label: GARP Certified Financial Risk Manager (FRM), 2022, ID# 502640
-    hover: Certified Financial Risk Manager (FRM), 2022::1,000 hours of learning and preparation
+    hover: Certified Financial Risk Manager (FRM), 2022 1,000 hours of learning and preparation
   CFA:
     icon: cfa.png
     link: https://www.cfainstitute.org/
@@ -109,7 +109,7 @@ certifications:
     duration: 1000
     group: domain
     long label: Cleared Certified Financial Analyst (CFA) Level 1 & Level 2 exams, 2020, ID# 8243442
-    hover: Cleared Certified Financial Analyst::(CFA) Level 1 & Level 2 exams,::1,000 hours of learning and preparation, 2020
+    hover: Cleared Certified Financial Analyst (CFA) Level 1 & Level 2 exams, 1,000 hours of learning and preparation, 2020
   DB2 DBA:
     icon: ibm_db2.png
     link: https://www.ibm.com/training/certification/ibm-certified-administrator-db2-12-for-zos-C0005400
@@ -117,7 +117,7 @@ certifications:
     duration: 500
     group: technical
     long label: IBM Certified DB2 DBA, 2003
-    hover: IBM Certified DB2 DBA::500 hours of learning and preparation::for passing two exams, 2003
+    hover: IBM Certified DB2 DBA 500 hours of learning and preparation for passing two exams, 2003
   Six Sigma:
     icon: six_sigma.png
     link: https://qaiglobalinstitute.com/six-sigma-certification-courses/
@@ -125,7 +125,7 @@ certifications:
     duration: 200
     group: process
     long label: Six Sigma Green Belt certification, QAI, 2005
-    hover: Six Sigma Green Belt certification::200 hours of learning and preparation, 2005
+    hover: Six Sigma Green Belt certification 200 hours of learning and preparation, 2005
   PMP:
     icon: pmp.png
     link: https://www.pmi.org/certifications/project-management-pmp
@@ -133,7 +133,7 @@ certifications:
     duration: 200
     group: management
     long label: Project Management Professional (PMP), PMI, 2004
-    hover: Project Management Professional (PMP)::200 hours of learning and preparation::for passing the exam, 2005
+    hover: Project Management Professional (PMP) 200 hours of learning and preparation for passing the exam, 2005
   Java:
     icon: java_small.png
     link: https://www.oracle.com/in/education/training/java/
@@ -141,17 +141,17 @@ certifications:
     duration: 200
     group: technical
     long label: Sun Certified Java Programmer, 1999
-    hover: Sun Certified Java Programmer::200 hours of learning and preparation,::for passing the exam, 1999
+    hover: Sun Certified Java Programmer 200 hours of learning and preparation, for passing the exam, 1999
 skills:
   python:
     icon: python.png
     level: 5
-    hover: Used extensively for analytics, automation,::visualization
+    hover: Used extensively for analytics, automation, visualization
     duration: 8
   streamlit:
     icon: streamlit.png
     level: 4
-    hover: Created analytics platform for visualizing::organizational artifacts and dependencies
+    hover: Created analytics platform for visualizing organizational artifacts and dependencies
     duration: 3
   dash/plotly:
     icon: dash_plotly.png
@@ -161,12 +161,12 @@ skills:
   java:
     icon: java_small.png
     level: 4
-    hover: Used to modernize legacy system with::critical performance objectives
+    hover: Used to modernize legacy system with critical performance objectives
     duration: 6
   spark:
     icon: apache_spark.png
     level: 4
-    hover: Core technology for processing high-volume::data streams in a modernized platform.
+    hover: Core technology for processing high-volume data streams in a modernized platform.
     duration: 3
   SpringBoot:
     icon: spring.png
@@ -176,7 +176,7 @@ skills:
   COBOL:
     icon: ibm.png
     level: 5
-    hover: Extensive experience writing batch, db2::and CICS applications
+    hover: Extensive experience writing batch, db2 and CICS applications
     duration: 25
   CICS:
     icon: ibm.png
@@ -186,7 +186,7 @@ skills:
   DB2/SQL:
     icon: ibm_db2.png
     level: 5
-    hover: Certified DB2 DBA with extensive experience::writing online and batch applications
+    hover: Certified DB2 DBA with extensive experience writing online and batch applications
     duration: 25
   JCL:
     icon: ibm.png
@@ -201,7 +201,7 @@ skills:
   AWS:
     icon: aws.png
     level: 3
-    hover: Legacy modernization platform for::EMR, S3, Lambda, EC2, etc
+    hover: Legacy modernization platform for EMR, S3, Lambda, EC2, etc
     duration: 5
   terracore:
     icon: terraform.png
@@ -211,7 +211,7 @@ skills:
   jenkins:
     icon: jenkins.png
     level: 3
-    hover: Implemented CI/CD pipelines to::build artifacts and deploy in the code
+    hover: Implemented CI/CD pipelines to build artifacts and deploy in the code
     duration: 5
   git:
     icon: git.png
@@ -318,7 +318,7 @@ projects:
   NTT DATA:
     short label: NTT
     long label: NTT DATA Global Delivery Services Ltd., Application Development Director, Apr 2003 - Till Date
-    hover: NTT DATA Global Delivery Services,::Application Development Director,::21 years, Apr 2003 - Till Date
+    hover: NTT DATA Global Delivery Services, Application Development Director, 21 years, Apr 2003 - Till Date
     icon: ntt.png
     duration: 21
     link: https://www.nttdata.com/global/en/
@@ -476,7 +476,7 @@ projects:
     duration: 1
     link: https://www.bny.com/pershing/us/en.html
     long label: iNautix Technologies India Pvt, Project Leader, May 2002 - Apr 2003
-    hover: iNautix Technologies, Project Leader,::1 year, May 2002 - Apr 2003
+    hover: iNautix Technologies, Project Leader, 1 year, May 2002 - Apr 2003
     clients:
       Pershing:
         Meta Data Services Group:
@@ -501,7 +501,7 @@ projects:
   Modis Consulting:
     short label: Moids
     long label: Modis Consulting, Software Consultant, Nov 1997 Apr 2002
-    hover: Modis Consulting, Software Consultant,::5 years, Nov 1997 Apr 2002
+    hover: Modis Consulting, Software Consultant, 5 years, Nov 1997 Apr 2002
     icon: modis.png
     link: https://www.akkodis.com/
     duration: 5
@@ -534,7 +534,7 @@ projects:
     duration: 1
     link: https://www.capgemini.com/
     long label: Matech Systems, Software Consultant, Nov 1996 - Nov 1997
-    hover: Matech Systems, Software Consultant,::1 year, Nov 1996 - Nov 1997
+    hover: Matech Systems, Software Consultant, 1 year, Nov 1996 - Nov 1997
     clients:
       Ryder Inc:
         Ryder On-line Analytical Decision (ROAD) System:
@@ -558,7 +558,7 @@ projects:
   Dun & Bradstreet Satyam Software:
     short label: DBSS
     long label: Dun & Bradstreet Satyam Software, Software Associate, Oct 1994 - Oct 1996
-    hover: Dun & Bradstreet Satyam Software,::Software Associate,::2 years,Oct 1994 - Oct 1996
+    hover: Dun & Bradstreet Satyam Software, Software Associate, 2 years,Oct 1994 - Oct 1996
     icon: cts.png
     duration: 2
     link: https://www.cognizant.com/in/en

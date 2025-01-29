@@ -7,7 +7,7 @@ from streamlit_scroll_navigation import scroll_navbar
 from src.components import container, write_section_heading, write_columns, write_container, \
     disp_icon_text
 from src.utils import profile, get_path, get_selected_colors, get_image_bin_file, default_color, get_config, \
-    get_profile, colors, get_labels, capitalize, get_darker_colors, word_width
+    get_profile, colors, get_labels, capitalize, get_darker_colors, word_width, hover_split
 
 
 # Function to generate the sidebar section
@@ -102,7 +102,7 @@ def generate_skills_section():
     categories = get_labels(section_name)
     icon_paths = [val['icon'] for val in val_list]
     ratings = [val['level'] for val in val_list]
-    hover = [val['hover'].replace('::','<br>') for val in val_list]
+    hover = [hover_split(val['hover']) for val in val_list]
     select_colors = get_selected_colors(colors, len(ratings))
     border_colors = get_darker_colors(select_colors)
 
@@ -209,7 +209,7 @@ def generate_education_section():
     with education_pie_chart_col:
         labels = get_labels(section_name, 'short label')  # Get labels for education pie chart
         values = [val['duration'] for val in val_list]  # Extract duration values
-        hover = [val['hover'].replace('::','<br>') for val in val_list]
+        hover = [hover_split(val['hover']) for val in val_list]
         select_colors = get_selected_colors(colors, len(labels))  # Select colors for the chart
         border_colors = get_darker_colors(select_colors)  # Darken colors for border
 
@@ -254,7 +254,7 @@ def generate_certification_section():
     with pie_chart_col:
         labels = get_labels(section_name, 'short label')  # Get labels for the pie chart
         values = [val['duration'] for val in val_list]  # Extract duration values
-        hover = [val['hover'].replace('::', '<br>') for val in val_list]
+        hover = [hover_split(val['hover']) for val in val_list]
         select_colors = get_selected_colors(colors, len(labels))  # Select colors for the chart
         border_colors = get_darker_colors(select_colors)  # Darken colors for border
 
@@ -298,7 +298,7 @@ def generate_employment_section():
     with pie_chart_col:
         labels = get_labels('projects')  # Retrieve labels for pie chart
         values = [val['duration'] for val in val_list]  # Get project durations for pie chart values
-        hover = [val['hover'].replace('::', '<br>') for val in val_list]
+        hover = [hover_split(val['hover']) for val in val_list]
         select_colors = get_selected_colors(colors, len(labels))  # Get selected colors for pie chart
         border_colors = get_darker_colors(select_colors)  # Get darker colors for pie chart borders
 
@@ -392,7 +392,7 @@ def generate_milestone_section():
     border1_colors = get_darker_colors(select_colors)
     border2_colors = get_darker_colors(select_colors, .90)
 
-    hover = [val['hover'].replace('::', '<br>') for val in val_list]
+    hover = [hover_split(val['hover']) for val in val_list]
 
     fig = go.Figure()
 
