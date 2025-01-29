@@ -101,7 +101,7 @@ def generate_skills_section():
     # Prepare data for skills bar chart
     categories = get_labels(section_name)
     icon_paths = [val['icon'] for val in val_list]
-    ratings = [val['level'] for val in val_list]
+    ratings = [val['level']  for val in val_list]
     hover = [hover_split(val['hover']) for val in val_list]
     select_colors = get_selected_colors(colors, len(ratings))
     border_colors = get_darker_colors(select_colors)
@@ -110,6 +110,8 @@ def generate_skills_section():
 
     # Create bar chart using Plotly
     fig = go.Figure()
+
+
 
     fig.add_trace(go.Bar(
         x=categories,
