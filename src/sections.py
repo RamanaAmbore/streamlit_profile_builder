@@ -388,7 +388,7 @@ def generate_milestone_section():
     milestones = [f' {x['milestone']}' for x in val_list]
     categories = [f'  {x} ' for x in categories]
     y1 = [1.3] * len(categories)
-    y2 = [word_width(milestone, .3, .20) for milestone in milestones]
+    y2 = [word_width(milestone, .3, .19) for milestone in milestones]
 
     select_colors = get_selected_colors(colors, len(categories))
     border1_colors = get_darker_colors(select_colors)
