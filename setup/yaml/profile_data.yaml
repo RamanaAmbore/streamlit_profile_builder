@@ -49,13 +49,13 @@ milestones:
   2008:
     milestone: Fidelity
     height: 0
-    hover: played a key role in implementing major automation, reengineering, and modernization initiatives, such as Rambo, Cobra, and VSAM-to-DB2.
+    hover: Played a key role in implementing major automation, reengineering, and modernization initiatives, such as Rambo, Cobra, and VSAM-to-DB2.
   2020:
     milestone: FRM
     height: 0
-    hover: FRM Certified. Successfully passed both Part 1 & 2 exams after 1,000+ hours of rigorous study. Demonstrates a strong foundation in financial ri
-    milestone: CFAsk management.
+    hover: FRM Certified. Successfully passed both Part 1 & 2 exams after 1,000+ hours of rigorous study. Demonstrates a strong foundation in financial risk management.
   2021:
+    milestone: CFA
     height: 0
     hover: Cleared CFA Levels 1 & 2 (1,000+ hours). Progressing towards CFA charter. Has strong foundation in trading, investment, and quantitative analysis.
   2023:
@@ -92,8 +92,7 @@ certifications:
     duration: 1000
     group: domain
     long label: GARP Certified Financial Risk Manager (FRM), 2022, ID# 502640
-    hover:  FRM Certified. Successfully passed both Part 1 & 2 exams after 1,000+ hours of rigorous study. Demonstrates a strong foundation in financial ri
-, 2022
+    hover:  FRM Certified. Successfully passed both Part 1 & 2 exams after 1,000+ hours of rigorous study. Demonstrates a strong foundation in financial risk management, 2022
   CFA:
     icon: cfa.png
     link: https://www.cfainstitute.org/
