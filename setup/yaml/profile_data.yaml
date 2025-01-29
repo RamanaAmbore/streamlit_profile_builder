@@ -3,84 +3,81 @@ designation: APPLICATION DEVELOPMENT DIRECTOR
 name suffix: 'FRM'
 profile: |
   Highly accomplished FinTech professional with a strong foundation in quantitative finance, 
-  evidenced by FRM certification and CFA Level 3 candidacy. Proven expertise in modernizing 
+  evidenced by an FRM certification and CFA Level 3 candidacy. Proven expertise in modernizing 
   legacy systems, optimizing high-volume trading platforms, and developing sophisticated 
   algorithmic trading solutions. Deep understanding of cloud/distributed technologies, 
-  database & legacy systems, and data analytics. A results-driven professional, recipient 
-  of the organization's most coveted Innovation Award, with a proven ability to deliver 
-  innovative solutions and drive success within the financial markets.
+  databases, legacy systems, and data analytics. A results-driven professional and recipient 
+  of the organization's most coveted Innovation Award, with a demonstrated ability to deliver 
+  cutting-edge solutions and drive success within the financial markets.
 experience summary:
   - Modernized a high-volume, business-critical legacy application on AWS using Java and Spark. 
-    The resulting core framework reduced development and deployment turnaround times by 50 percent.
+    The resulting core framework reduced development and deployment turnaround times by 50%.
   - Developed 'Rambo,' an analytics platform that empowered software development teams to reengineer and 
-    optimize software artifacts. By providing critical insights into dependencies,
-    'Rambo' facilitated the identification and decommissioning of around 3000 batch jobs, significantly improving efficiency.
+    optimize software artifacts. By providing critical insights into dependencies, 
+    'Rambo' facilitated the identification and decommissioning of approximately 3,000 batch jobs, significantly improving efficiency.
   - Received the Delivery Excellence Award for designing and developing a Python-based product suite to reengineer 
     legacy COBOL-VSAM applications into COBOL-DB2 applications.
-  - As a Principal Software Engineer, I'm leading the development of the parsing engine for Cobra, a COBOL Research and Analysis tool. 
-    This engine will track data flow, identify the origin and transformation of critical fields, and ultimately enable accurate data lineage analysis.
-  - Developing an algorithmic trading platform that leverages the power of option Greeks and underlying stock prices to identify 
+  - As a Principal Software Engineer, leading the development of the parsing engine for Cobra, a COBOL Research and Analysis tool. 
+    This engine tracks data flow, identifies the origin and transformation of critical fields, and enables accurate data lineage analysis.
+  - Developed an algorithmic trading platform leveraging the power of option Greeks and underlying stock prices to identify 
     and exploit fleeting market inefficiencies, enabling automated, data-driven trading decisions.
 milestones:
   1993:
     milestone: Master's
     height: 0
-    hover: Completed Master's degree in Computer Science, sponsored ::by Defence Research Development Organization::(DRDO)
+    hover: Completed a Master's degree in Computer Science, sponsored by the::Defence Research and Development Organization (DRDO)
   1996:
     milestone: Ryder
     height: 0
-    hover: Worked for Ryder to optimize ROAD analytics database::as a Software Consultant
+    hover: Worked for Ryder to optimize the ROAD analytics database ::as a Software Consultant
   1997:
     milestone: Dade County
     height: 0
     hover: Implemented DBS Software Year 2000 changes at 
-                ::Office of Information Tech.,::Dade County Public Schools
-
+                ::Office of Information Technology,::Dade County Public Schools
   2002:
     milestone: Pershing
     height: 0
     hover: Automated the batch system,::optimized application support costs.
-                ::Recipient of the Project of the Year Award and::commendation from CEO
+                ::Recipient of the Project of the Year Award and::commendation from the CEO
   2003:
     milestone: General Motors
     height: 3.5
-    hover: Led the team to extract business logic and::to document GM Dealer Information Delivery system::for leagacy modernization.
+    hover: Led the team to extract business logic and::document the GM Dealer Information Delivery System::for legacy modernization.
   2005:
     milestone: PGCBM
     height: 0
-    hover: Completed one year executive business management program, 
-                ::PGCBM from one of the most reputed business schools-XLRI
+    hover: Completed a one-year executive management program, 
+                ::PGCBM from XLRI, one of the most reputed business schools
   2008:
     milestone: Fidelity
     height: 0
     hover: Started working for Fidelity. Implemented major 
-                ::automation, reengineering and modernization initiatives
-                ::Rambo, Cobra, VSAM-to-DB2,::legacy transmission Automation
+                ::automation, reengineering, and modernization initiatives
+                ::Rambo, Cobra, VSAM-to-DB2,::legacy Transmission Automation
   2020:
     milestone: FRM
     height: 0
-    hover: Awarded FRM designation after clearing two parts::of Financial Risk Manager 
-                exam::conducted by GARP involving 1000 hours::of learning and preparation which
-                gave a strong foundation in::risk management in financial industry
+    hover: Earned FRM certification after clearing both parts of the Financial 
+                ::Risk Manager exam, involving 1,000 hours of learning and preparation.
+                ::This provided a strong foundation in risk management for algorithmic trading.
   2021:
     milestone: CFA
     height: 0
-    hover: Cleared two levels  of of Certified Financial::Analyst exam
-                conducted by CFA Institute::which helped thorough understanding, 
-                quantitative analysis
+    hover: Cleared two levels of the Certified Financial Analyst (CFA) exam, 
+                ::gaining expertise in trading, investment, and quantitative analysis
   2023:
     milestone: Innovation
     height: 0
-    hover: Received the most coveted Delivery Excellence::award for
-                Innovation at NTT.::One among the 40 people to receive the award 
-                ::globally across the organization to receive the award.
+    hover: Received the most prestigious Delivery Excellence
+                ::Award for Innovation at NTT. One of only 40 recipients::globally across the organization
 education:
   Master's:
     icon: jk.png
     link: https://www.jkinstitute.ac.in/
     year: 1993
     duration: 2
-    long label: Master's in Computer Science, J.K.Institute of Applied Physics & Tech., 1993
+    long label: Master's in Computer Science, J.K. Institute of Applied Physics & Technology, 1993
     hover: Master's in Computer Science::sponsored by DRDO,::2 years, 1993
   PGCBM:
     icon: xlri.png
@@ -88,7 +85,7 @@ education:
     year: 2005
     duration: 1
     long label: PGCBM, XLRI - School of Business, 2005
-    hover: Executive business management program, XLRI::, one of the most reputed schools in India,::1 year, 2005
+    hover: Executive business management program, XLRI::, one of the most reputed business schools in India,::1 year, 2005
   Bachelor's:
     icon: nagarjuna.png
     link: https://www.nagarjunauniversity.ac.in/
@@ -103,8 +100,8 @@ certifications:
     year: 2022
     duration: 1000
     group: domain
-    long label: GARP certified Financial Risk Manager (FRM), 2022, ID# 502640
-    hover: Certified Financial Risk Manager (FRM),::1000 hours of learning and preparation,::2022
+    long label: GARP Certified Financial Risk Manager (FRM), 2022, ID# 502640
+    hover: Certified Financial Risk Manager (FRM), 2022::1,000 hours of learning and preparation
   CFA:
     icon: cfa.png
     link: https://www.cfainstitute.org/
@@ -112,7 +109,7 @@ certifications:
     duration: 1000
     group: domain
     long label: Cleared Certified Financial Analyst (CFA) Level 1 & Level 2 exams, 2020, ID# 8243442
-    hover: Cleared Certified Financial Analyst::(CFA) Level 1 & Level 2 exams,::1000 hours of learning and preparation, 2020
+    hover: Cleared Certified Financial Analyst::(CFA) Level 1 & Level 2 exams,::1,000 hours of learning and preparation, 2020
   DB2 DBA:
     icon: ibm_db2.png
     link: https://www.ibm.com/training/certification/ibm-certified-administrator-db2-12-for-zos-C0005400
@@ -120,8 +117,8 @@ certifications:
     duration: 500
     group: technical
     long label: IBM Certified DB2 DBA, 2003
-    hover: IBM Certified DB2 DBA::500 hours of learning and preparation,::2003
-  six sigma:
+    hover: IBM Certified DB2 DBA::500 hours of learning and preparation::for passing two exams, 2003
+  Six Sigma:
     icon: six_sigma.png
     link: https://qaiglobalinstitute.com/six-sigma-certification-courses/
     year: 2005
@@ -136,7 +133,7 @@ certifications:
     duration: 200
     group: management
     long label: Project Management Professional (PMP), PMI, 2004
-    hover: Project Management Professional (PMP)::200 hours of learning and preparation,:2005
+    hover: Project Management Professional (PMP)::200 hours of learning and preparation::for passing the exam, 2005
   Java:
     icon: java_small.png
     link: https://www.oracle.com/in/education/training/java/
@@ -144,7 +141,7 @@ certifications:
     duration: 200
     group: technical
     long label: Sun Certified Java Programmer, 1999
-    hover: Sun Certified Java Programmer::200 hours of learning and preparation,::1999
+    hover: Sun Certified Java Programmer::200 hours of learning and preparation,::for passing the exam, 1999
 skills:
   python:
     icon: python.png
@@ -169,7 +166,7 @@ skills:
   spark:
     icon: apache_spark.png
     level: 4
-    hover: Core technology of high volume::modernized platform for a high::volume transmission data
+    hover: Core technology for processing high-volume::data streams in a modernized platform.
     duration: 3
   SpringBoot:
     icon: spring.png
@@ -186,7 +183,7 @@ skills:
     level: 5
     hover: Developed new online screens and modify existing screens
     duration: 20
-  DB2/SQL: 
+  DB2/SQL:
     icon: ibm_db2.png
     level: 5
     hover: Certified DB2 DBA with extensive experience::writing online and batch applications
@@ -214,8 +211,8 @@ skills:
   jenkins:
     icon: jenkins.png
     level: 3
-    duration: 5
     hover: Implemented CI/CD pipelines to::build artifacts and deploy in the code
+    duration: 5
   git:
     icon: git.png
     level: 4
@@ -264,45 +261,25 @@ portfolio:
     github: https://github.com/RamanaAmbore/stremlite_profile
     image: portfolio1.png
     summary: |
-      A dynamic, professional profile website built with Streamlit. This app is designed to showcase your profile, skills, experience, 
-      and portfolio in a visually appealing and interactive format. It leverages Streamlit's features and custom JavaScript for smooth scrolling navigation.
+      Built a dynamic, professional profile website using Streamlit. This interactive app allows users to easily showcase their skills, experience, and portfolio in a visually appealing format. Streamlit's features and custom JavaScript enable smooth scrolling navigation for an exceptional user experience. It leverages Streamlit's features and custom JavaScript for smooth scrolling navigation.
     technology: Python,  Pandas, Streamlit
     additional information: |
-      **Project: Streamlit Powered Profile Builder**
+      **Project: Streamlit Profile Builder**
       
-      **Description:** A dynamic Streamlit-powered profile builder showcasing skills, experience, and portfolio with interactive features and smooth scrolling navigation.
+      **Description:** Developed an interactive profile builder using Streamlit. This user-friendly app streamlines the creation of professional online profiles, allowing users to highlight their skills, experience, and portfolio.
+
       
-      **Main Highlights:**
+      **Key Achievements:**
       
-      * **Smooth Scrolling:** Navigate seamlessly to different sections of the profile using JavaScript.
-      * **Dynamic Sidebar:** A sidebar menu for quick navigation between sections.
-      * **Comprehensive Sections:**
-          * Profile: Display your name, tagline, and basic info.
-          * Social Links: Provide easy access to your social media profiles.
-          * Experience Summary: Summarize your career achievements.
-          * Skills: Showcase your technical and soft skills.
-          * Projects and Portfolio: Highlight your key projects and accomplishments.
-          * Education: Add details of your academic qualifications.
-          * Certifications: Showcase professional certifications.
-          * Hobbies: Add a personal touch with your interests.
+      * **Enhanced User Experience:** Implemented smooth scrolling navigation using JavaScript for a seamless browsing experience.
+      * **Comprehensive Profile Sections:** Designed dedicated sections for profile information, social links, experience summaries, skills, projects, education, certifications, hobbies, and more.
+      * **Streamlined Profile Creation:** Enabled users to easily create and update their profiles with minimal technical expertise.
       
-      **Challenges:**
+      **Technical Skills Demonstrated:**
       
-      * **Dynamic Content Integration:** Smoothly integrating and updating project descriptions, skills, and work experience.
-      * **Interactive Elements:** Implementing smooth scrolling and engaging interactive elements.
-      * **Cross-browser Compatibility:** Ensuring consistent performance across different browsers.
-      * **Responsive Design:** Adapting the website to various screen sizes.
-      * **Performance Optimization:** Minimizing loading times and ensuring a smooth user experience.
-      * **Accessibility:** Designing the website for users with disabilities.
-      * **Deployment and Maintenance:** Deploying and maintaining the app effectively.
-      
-      **Tech Stack:**
-      
-      * **Streamlit:** For building the UI.
-      * **Python:** For logic and backend handling.
-      * **JavaScript:** For enabling smooth scrolling.
-      * **Pillow:** For image processing.
-      * **HTML & CSS:** For custom styling.
+      * Streamlit development
+      * Front-end development (HTML, CSS, JavaScript)
+      * Project design and planning
   RRambo Trader - Algo Trading for Derivatives:
     icon: trader.png
     link: https://medium.com/@rrambo
@@ -318,34 +295,25 @@ portfolio:
   
       **Description:** This project aims to develop a sophisticated algorithmic trading platform designed to identify and capitalize on short-term market inefficiencies in option prices.
   
-      **Main Highlights:**
+    summary: |
+      Developed a Python-based algorithmic trading platform (RRambo Trader) to capitalize on short-term market inefficiencies in option prices. This platform leverages option Greeks, underlying stock prices, and advanced statistical models to generate trading signals and execute trades (when integrated with a brokerage API).
+    technology: Python, Pandas, Dash, Plotly
+    additional information: |
+      **RRambo Trader - Algorithmic Trading Platform**
       
-      * **Robust Backtesting Framework:** Develop and implement a robust backtesting framework to rigorously evaluate trading strategies on historical market data.
-      * **Risk Management:** Incorporate risk management rules, such as position sizing, stop-loss orders, and portfolio diversification, to minimize potential losses.
-      * **Automated Trading:** Integrate with a brokerage API to enable automated order execution and trade management.
-      * **Continuous Improvement:** Conduct ongoing research and development to refine trading strategies, incorporate new market data sources, and adapt to evolving market conditions.
-      * **User-Friendly Interface:** Develop a comprehensive documentation and user manual to guide users in utilizing the platform effectively.
-  
-      **Challenges:**
+      **Description:** Designed and built RRambo Trader, an algorithmic trading platform for the derivatives market. This platform utilizes Python, Dash, and Plotly to identify and exploit short-term market opportunities in option prices.
       
-      * **Market Volatility:** Accurately predict and adapt to rapidly changing market conditions and volatility.
-      * **Data Management:** Efficiently collect, clean, and manage high-frequency market data.
-      * **Model Development:** Develop, backtest, and validate robust trading models.
-      * **Risk Mitigation:** Implement effective risk management strategies.
-      * **Real-time Data Processing:** Process and analyze market data in real-time.
-      * **Automated Execution:** Implement a reliable and efficient system for automated trading.
-      * **Regulatory Compliance:** Adhere to relevant regulations for algorithmic trading.
-      * **Scalability and Performance:** Ensure the platform can handle high volumes of data and execute trades efficiently.
-      * **Continuous Optimization:** Continuously backtest and optimize trading strategies.
-      * **Ethical Considerations:** Address ethical considerations related to algorithmic trading.
-  
-      **Tech Stack:**
+      **Key Achievements:**
       
-      * **Programming Languages:** Python
-      * **Data Science Libraries:** Pandas, NumPy, Scikit-learn, Statsmodels
-      * **Data Visualization:** Plotly, Dash
-      * **Cloud Computing (Optional):** AWS, Google Cloud, Azure
-      * **Brokerage API Integration:** Interactive Brokers API, Alpaca API, or other relevant APIs
+      * **Automated Trading Signal Generation:** Implemented functionalities to generate robust trading signals based on option Greeks, underlying stock prices, and statistical models. (Mention specific models if possible)
+      * **Integration Potential:** Designed the platform for potential integration with a brokerage API to enable automated trade execution.
+
+      **Technical Skills Demonstrated:**
+      
+      * Python development
+      * Algorithmic trading concepts
+      * Data analysis and visualization (Dash, Plotly)
+      * Financial modeling (option Greeks)
 projects:
   NTT DATA:
     short label: NTT
@@ -356,7 +324,7 @@ projects:
     link: https://www.nttdata.com/global/en/
     clients:
       Fidelity:
-        1. Cloud based Transmission architecture, Design, Development:
+        1. Cloud based Transmission application:
           role: Principle Software Engineer
           start: Apr 2003
           end: Till Date
@@ -385,7 +353,7 @@ projects:
           end: Till Date
           technology: Paython, Pandas, Postgres, Networkx, Pyvis, Streamlit, GIT, Jenkins
           summary: |
-            I led the development of 'Rambo,' an analytics platform that empowered software development teams to reengineer and optimize software artifacts by providing critical insights into dependencies. My responsibilities included identifying metadata sources on software artifacts, organizing and storing the data in a database, creating networkx graph structures with nodes and edges, parsing the data for various use cases with complex SQLs, and presenting data flow diagrams in a visual manner using Python, PyVis, SQL, REXX, and Streamlit.
+            Develped 'Rambo,' an analytics platform that empowered software development teams to reengineer and optimize software artifacts by providing critical insights into dependencies. Responsibilities included identifying metadata sources on software artifacts, organizing and storing the data in a database, creating networkx graph structures with nodes and edges, parsing the data for various use cases with complex SQLs, and presenting data flow diagrams in a visual manner using Python, PyVis, SQL, REXX, and Streamlit.
           additional information: |
             **Responsibilities:**
             
@@ -399,7 +367,7 @@ projects:
           end: Till Date
           technology: Python, Pandas, Regex, Neworkx, Postgres, Pyvis, Streamlit, GIT, Jenkins
           summary: |
-            This project centers around the development of "Cobra," a comprehensive ecosystem specifically designed to address the challenges of modernizing and enhancing legacy COBOL applications. Recognizing the critical role these systems play in many organizations, Cobra aims to equip businesses with the tools and technologies necessary to effectively understand, analyze, and ultimately modernize their existing COBOL codebases. This multifaceted ecosystem will encompass a suite of integrated tools and functionalities, empowering organizations to gain deeper insights into their COBOL applications and explore various modernization pathways.
+            Leading the team to develop "Cobra," a comprehensive ecosystem specifically designed to address the challenges of modernizing and enhancing legacy COBOL applications. Recognizing the critical role these systems play in many organizations, Cobra aims to equip businesses with the tools and technologies necessary to effectively understand, analyze, and ultimately modernize their existing COBOL codebases. This multifaceted ecosystem will encompass a suite of integrated tools and functionalities, empowering organizations to gain deeper insights into their COBOL applications and explore various modernization pathways.
           additional information: |
             **Project: Cobra - COBOL Research & Analysis**
             
@@ -449,7 +417,7 @@ projects:
           end: Till Date
           technology: MVS, COBOL, CICS, JCL, DB2, VSAM, Assembler
           summary: |
-            The project focused on modernizing legacy transmission job automation processes within our organization. The primary objective was to replace static job schedules with dynamic job submissions triggered by events or data changes within the CICS environment.
+            Modernized legacy transmission job automation processes within our organization. The primary objective was to replace static job schedules with dynamic job submissions triggered by events or data changes within the CICS environment.
           additional information: |
        
             **Project: Legacy Transmission Job Automation**
@@ -484,7 +452,7 @@ projects:
       General Motors:
         General Motors Dealer Information Database (GMDID) Re-engineering Project:
           summary: |
-            As a lead, I prepared program logic documents and functional specifications, and created project proposals for GMDID/DNPS systems. I developed REXX tools to extract information for creating Functional Specifications. I conducted impact analysis and documented data access issues. I assisted in data retrieval, batch processes, and database issues for Siebel integration. I also created Functional Specifications and project proposals, and managed project planning, scheduling, and monitoring.
+            Led the re-engineering of the GMDID/DNPS systems, including redesigning the weekly batch cycle and supporting Siebel integration. Developed REXX tools to extract information for creating Functional Specifications. I conducted impact analysis and documented data access issues. I assisted in data retrieval, batch processes, and database issues for Siebel integration. I also created Functional Specifications and project proposals, and managed project planning, scheduling, and monitoring.
 
 
           role: Project Leader
@@ -517,8 +485,7 @@ projects:
           end: Apr 2003
           technology: MVS, REXX, JCL, COBOL, DB2, CA-7, Endevor, Platinum/DataShopper, Java, Java Script, DB2 Connect
           summary: |
-            Meta Data Services group of  iNautix provides offshore support to the parent company – Pershing to capture, 
-            store and present the Meta Data related to mainframe source code using Platinum Repository and DataShopper
+            Led the Meta Data Services Group at iNautix, providing offshore support to Pershing for capturing, storing, and presenting mainframe metadata.
           additional information: |
             **Redesign and Enhancement of Weekly Batch Cycle with Offshore Support:**
             
@@ -546,7 +513,8 @@ projects:
           end: Nov 1997
           technology: MVS, COBOL, EasyTrieve, JCL, REXX, CICS, VSAM, FileAid, Xpediter, DCI
           summary: |
-            The project is to install, customize and implement DBS E-series packages for Dade County Public Schools. 
+              Implemented the DBS E-series financial system and developed the Internal Funds system for Dade County Public Schools.
+              The project is to install, customize and implement DBS E-series packages for Dade County Public Schools. 
               The project also involved developing Internal Funds systems and integrating it with DBS E-Series packages
           additional information: |
             **Consultant for DBS E-Series Financial System Implementation and Internal Funds System Development:**
@@ -575,6 +543,7 @@ projects:
           end: Oct 1997
           technology: MVS, COBOL, JCL, REXX, CICS, DB2, VSAM, DCI, IE, Script, Xpediter, SPUFI, FileAid, QMF
           summary: |
+            Developed and implemented the Ryder On-line Analytical Decision (ROAD) System to support repair shop operations.
             Ryder On-line Analytical Decision (ROAD) Support System helps in calculating the average number repair hours at 
             the repair shops. The system generates productivity reports and helps in estimating the manpower requirements 
             at various Ryder repair shops
