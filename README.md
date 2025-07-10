@@ -25,7 +25,7 @@ A dynamic, professional profile website built with **Streamlit**. This app is de
 - **Streamlit**: For building the UI.
 - **Python**: For logic and backend handling.
 - **JavaScript**: For enabling smooth scrolling.
-- **Pillow**: For image processing.
+- **Pillow**: For image processing. 
 - **HTML & CSS**: For custom styling.
 
 ## Installation
