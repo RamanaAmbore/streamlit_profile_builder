@@ -17,10 +17,11 @@ experience summary:
     'Rambo' facilitated the identification and decommissioning of approximately 3,000 batch jobs, significantly improving efficiency.
   - Received the Delivery Excellence Award for designing and developing a Python-based product suite to reengineer 
     legacy COBOL-VSAM applications into COBOL-DB2 applications.
-  - As a Principal Software Engineer, leading the development of the parsing engine for Cobra, a COBOL Research and Analysis tool. 
+  - As a Principal Software Engineer, leading the development of the parsing engine for DataSnake & Cobra, a COBOL Research and Analysis tool. 
     This engine tracks data flow, identifies the origin and transformation of critical fields, and enables accurate data lineage analysis.
-  - Developed an algorithmic trading platform leveraging the power of option Greeks and underlying stock prices to identify 
+  - Working an algorithmic trading platform leveraging the power of option Greeks and underlying stock prices to identify 
     and exploit fleeting market inefficiencies, enabling automated, data-driven trading decisions.
+  - Senior Analyst & Full Stack Developer with expertise in end-to-end solution design, data analysis, and application development
 milestones:
   1993:
     milestone: Master's
