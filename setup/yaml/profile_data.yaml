@@ -5,7 +5,7 @@ profile: |
   Highly accomplished FinTech professional with a strong foundation in quantitative finance, 
   evidenced by an FRM certification and CFA Level 3 candidacy. Proven expertise in modernizing 
   legacy systems, optimizing high-volume trading platforms, and developing sophisticated 
-  algorithmic trading solutions. Deep understanding of cloud/distributed technologies, 
+  algorithmic trading solutions. Deep understanding of cloud/distributed technologies, full stack web development, 
   databases, legacy systems, and data analytics. A results-driven professional and recipient 
   of the organization's most coveted Innovation Award, with a demonstrated ability to deliver 
   cutting-edge solutions and drive success within the financial markets.  
@@ -272,7 +272,7 @@ portfolio:
       * Streamlit development
       * Front-end development (HTML, CSS, JavaScript)
       * Project design and planning
-  RRambo Trader - Algo Trading for Derivatives:
+  Rambo Quant Strategies - Algo Trading for Derivatives:
     icon: trader.png
     link: https://medium.com/@rrambo
     github: https://github.com/RamanaAmbore
@@ -281,24 +281,15 @@ portfolio:
       This project aims to develop a sophisticated algorithmic trading platform designed to identify and capitalize on short-term market inefficiencies 
       in option prices. Leveraging the power of Python, Dash, and Plotly, the platform will utilize option Greeks, underlying stock prices, and advanced 
       statistical models to generate robust trading signals and execute trades automatically.
-    technology: Python,  Pandas, Dash, Plotly
+    technology: Python,  Streamlit, Pandas, Dash, Plotly, Postgres
     additional information: |
-      **Project: RRambo Trader - Algo Trading for Derivatives**
+      **Project: Rambo Quant Strategies - Algo Trading for Derivatives**
       **Description:** This project aims to develop a sophisticated algorithmic trading platform designed to identify and capitalize on short-term market inefficiencies in option prices.
-    summary: |
-      Developing a Python-based algorithmic trading platform (RRambo Trader) to capitalize on short-term market inefficiencies in option prices. This platform leverages option Greeks, underlying stock prices, and advanced statistical models to generate trading signals and execute trades (when integrated with a brokerage API).
-    technology: Python, Pandas, Streamlit, Dash, Plotly
-    additional information: |
-      **RRambo Trader - Algorithmic Trading Platform**
-      
-      **Description:** Designed and built RRambo Trader, an algorithmic trading platform for the derivatives market. This platform utilizes Python, Dash, and Plotly to identify and exploit short-term market opportunities in option prices.
-      
-      **Key Achievements:**
       
       **Key Achievements:**  
       - **Brokerage Integration:** Fully integrated with Zerodha’s **KiteConnect API** to enable automated trade execution and real-time market data handling.  
       - **Volatility-Based Trading:** Utilized **implied volatility** and **standard deviation bands** to identify entry points, manage risk, and adjust positions automatically.  
-      - **Options Strategies:** Implemented automated management of **covered calls** and adjustment logic for existing positions based on market movement.  
+      - **Options Strategies:** Currently implementing automated management of **covered calls** and adjustment logic for existing positions based on market movement.  
 
 
       **Technical Skills Demonstrated:**
