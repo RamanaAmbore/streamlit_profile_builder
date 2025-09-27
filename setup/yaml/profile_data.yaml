@@ -9,7 +9,7 @@ profile: |
   databases, legacy systems, and data analytics. A results-driven professional and recipient 
   of the organization's most coveted Innovation Award, with a demonstrated ability to deliver 
   cutting-edge solutions and drive success within the financial markets.  
-  `Green Card Holder - No Visa Sponsorship Required, Authorized to work in the U.S. for any employer`
+  `No Visa Sponsorship Required, Authorized to work in the U.S. for any employer`
 experience summary:
   - Modernized a high-volume, business-critical legacy application on AWS using Java and Spark. 
     The resulting core framework reduced development and deployment turnaround times by 50%.
@@ -221,7 +221,7 @@ contact:
     icon: mail.png
     link: mailto:ramana.ambore@gmail.com
   phone:
-    label: (515) 735-1486
+    label: (515) XXX-XXXX
     icon: phone.png
     link: tel:+15157351486
   loc:
@@ -286,8 +286,8 @@ portfolio:
       **Project: RRambo Trader - Algo Trading for Derivatives**
       **Description:** This project aims to develop a sophisticated algorithmic trading platform designed to identify and capitalize on short-term market inefficiencies in option prices.
     summary: |
-      Developed a Python-based algorithmic trading platform (RRambo Trader) to capitalize on short-term market inefficiencies in option prices. This platform leverages option Greeks, underlying stock prices, and advanced statistical models to generate trading signals and execute trades (when integrated with a brokerage API).
-    technology: Python, Pandas, Dash, Plotly
+      Developing a Python-based algorithmic trading platform (RRambo Trader) to capitalize on short-term market inefficiencies in option prices. This platform leverages option Greeks, underlying stock prices, and advanced statistical models to generate trading signals and execute trades (when integrated with a brokerage API).
+    technology: Python, Pandas, Streamlit, Dash, Plotly
     additional information: |
       **RRambo Trader - Algorithmic Trading Platform**
       
@@ -295,8 +295,11 @@ portfolio:
       
       **Key Achievements:**
       
-      * **Automated Trading Signal Generation:** Implemented functionalities to generate robust trading signals based on option Greeks, underlying stock prices, and statistical models. (Mention specific models if possible)
-      * **Integration Potential:** Designed the platform for potential integration with a brokerage API to enable automated trade execution.
+      **Key Achievements:**  
+      - **Brokerage Integration:** Fully integrated with Zerodha’s **KiteConnect API** to enable automated trade execution and real-time market data handling.  
+      - **Volatility-Based Trading:** Utilized **implied volatility** and **standard deviation bands** to identify entry points, manage risk, and adjust positions automatically.  
+      - **Options Strategies:** Implemented automated management of **covered calls** and adjustment logic for existing positions based on market movement.  
+
 
       **Technical Skills Demonstrated:**
       
