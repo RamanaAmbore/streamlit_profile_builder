@@ -247,31 +247,6 @@ social:
     icon: medium.png
     link: https://medium.com/@rrambo
 portfolio:
-  profile builder:
-    icon: rambo.png
-    link: https://medium.com/@rrambo/streamlit-profile-builder-a-simple-way-to-create-interactive-online-profiles-3cb0b0f6c8bb
-    github: https://github.com/RamanaAmbore/stremlite_profile
-    image: portfolio1.png
-    summary: |
-      Built a dynamic, professional profile website using Streamlit. This interactive app allows users to easily showcase their skills, experience, and portfolio in a visually appealing format. Streamlit's features and custom JavaScript enable smooth scrolling navigation for an exceptional user experience. It leverages Streamlit's features and custom JavaScript for smooth scrolling navigation.
-    technology: Python,  Pandas, Streamlit
-    additional information: |
-      **Project: Streamlit Profile Builder**
-      
-      **Description:** Developed an interactive profile builder using Streamlit. This user-friendly app streamlines the creation of professional online profiles, allowing users to highlight their skills, experience, and portfolio.
-
-      
-      **Key Achievements:**
-      
-      * **Enhanced User Experience:** Implemented smooth scrolling navigation using JavaScript for a seamless browsing experience.
-      * **Comprehensive Profile Sections:** Designed dedicated sections for profile information, social links, experience summaries, skills, projects, education, certifications, hobbies, and more.
-      * **Streamlined Profile Creation:** Enabled users to easily create and update their profiles with minimal technical expertise.
-      
-      **Technical Skills Demonstrated:**
-      
-      * Streamlit development
-      * Front-end development (HTML, CSS, JavaScript)
-      * Project design and planning
   Rambo Quant Strategies - Algo Trading for Derivatives:
     icon: trader.png
     link: https://medium.com/@rrambo
@@ -298,6 +273,31 @@ portfolio:
       * Algorithmic trading concepts
       * Data analysis and visualization (Dash, Plotly)
       * Financial modeling (option Greeks)
+  profile builder:
+    icon: rambo.png
+    link: https://medium.com/@rrambo/streamlit-profile-builder-a-simple-way-to-create-interactive-online-profiles-3cb0b0f6c8bb
+    github: https://github.com/RamanaAmbore/stremlite_profile
+    image: portfolio1.png
+    summary: |
+      Built a dynamic, professional profile website using Streamlit. This interactive app allows users to easily showcase their skills, experience, and portfolio in a visually appealing format. Streamlit's features and custom JavaScript enable smooth scrolling navigation for an exceptional user experience. It leverages Streamlit's features and custom JavaScript for smooth scrolling navigation.
+    technology: Python,  Pandas, Streamlit
+    additional information: |
+      **Project: Streamlit Profile Builder**
+
+      **Description:** Developed an interactive profile builder using Streamlit. This user-friendly app streamlines the creation of professional online profiles, allowing users to highlight their skills, experience, and portfolio.
+
+
+      **Key Achievements:**
+
+      * **Enhanced User Experience:** Implemented smooth scrolling navigation using JavaScript for a seamless browsing experience.
+      * **Comprehensive Profile Sections:** Designed dedicated sections for profile information, social links, experience summaries, skills, projects, education, certifications, hobbies, and more.
+      * **Streamlined Profile Creation:** Enabled users to easily create and update their profiles with minimal technical expertise.
+
+      **Technical Skills Demonstrated:**
+
+      * Streamlit development
+      * Front-end development (HTML, CSS, JavaScript)
+      * Project design and planning
 projects:
   NTT DATA:
     short label: NTT
