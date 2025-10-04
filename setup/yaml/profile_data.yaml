@@ -105,7 +105,7 @@ certifications:
     hover: Cleared CFA Levels 1 & 2 (1,000+ hours). Progressing towards CFA charter. Has strong foundation in trading, investment, and quantitative analysis, 2020
   DB2 DBA:
     icon: ibm_db2.png
-    link: https://www.ibm.com/training/certification/ibm-certified-administrator-db2-12-for-zos-C0005400
+    link: https://www.dropbox.com/scl/fi/l6v6x3d6061qgorkfc5b4/db2.png?rlkey=jm8ofyvtrv49lqs2u2mk6wdc2&st=yb6pe4nj&dl=0
     year: 2003
     duration: 500
     group: technical
@@ -113,7 +113,7 @@ certifications:
     hover: IBM Certified DB2 DBA. 500+ hours of study culminated in passing two rigorous exams, demonstrating in-depth expertise in DB2 administration, 2003
   Six Sigma:
     icon: six_sigma.png
-    link: https://qaiglobalinstitute.com/six-sigma-certification-courses/
+    link: https://www.dropbox.com/scl/fi/kxn4how1xlb91pa2d6qdl/six_sigma.png?rlkey=pu037ttz9lh3d8xsmh76gz1fd&st=o89ydxd3&dl=0
     year: 2005
     duration: 200
     group: process
@@ -121,15 +121,15 @@ certifications:
     hover: Six Sigma Green Belt Certified. 200+ hours of study demonstrating a commitment to process improvement, 2005
   PMP:
     icon: pmp.png
-    link: https://www.pmi.org/certifications/project-management-pmp
+    link: https://www.dropbox.com/scl/fi/hf5cx92sfnfi3ioozd2rt/pmp.png?rlkey=yy45v00iwnlj3qjal2g0eak37&st=2fkbgm91&dl=0
     year: 2004
     duration: 200
     group: management
-    long label: Project Management Professional (PMP), PMI, 2004
+    long label: Project Management Professional (PMP), PMI, 2005
     hover: PMP Certified. Successfully navigated the rigorous PMP exam after 200+ hours of dedicated study, 2005
   Java:
     icon: java_small.png
-    link: https://www.oracle.com/in/education/training/java/
+    link: https://www.dropbox.com/scl/fi/1rimmvw2d3wnzjeripyw6/Java-certification.png?rlkey=1fhvu6bd9hkk03766hgaqhjng&st=q391i2tc&dl=0
     year: 1999
     duration: 200
     group: technical
