@@ -89,7 +89,7 @@ education:
 certifications:
   FRM:
     icon: frm.png
-    link: https://www.garp.org/frm
+    link: https://my.garp.org/DigitalBadgeFRM?id=0034000001pZImUAAW
     year: 2022
     duration: 1000
     group: domain
@@ -97,7 +97,7 @@ certifications:
     hover:  FRM Certified. Successfully passed both Part 1 & 2 exams after 1,000+ hours of rigorous study. Demonstrates a strong foundation in financial risk management, 2022
   CFA:
     icon: cfa.png
-    link: https://www.cfainstitute.org/
+    link: https://credentials.cfainstitute.org/profile/ramanaraoambore67098/wallet
     year: 2020
     duration: 1000
     group: domain
@@ -221,7 +221,7 @@ contact:
     icon: mail.png
     link: mailto:ramana.ambore@gmail.com
   phone:
-    label: (515) XXX-XXXX
+    label: (515) 745-1486
     icon: phone.png
     link: tel:+15157351486
   loc:
