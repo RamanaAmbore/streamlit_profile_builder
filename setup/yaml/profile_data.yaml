@@ -213,7 +213,7 @@ technical skills:
     duration: 8
 contact:
   resume:
-    label: Download Resume
+    label: Resume (PDF)
     icon: pdf.png
     link: resume.pdf
   mail:
