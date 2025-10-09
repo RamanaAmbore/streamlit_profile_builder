@@ -9,7 +9,7 @@ from src.components import container, write_section_heading, write_columns, writ
 from src.utils import profile, get_path, get_selected_colors, get_image_bin_file, default_color, get_config, \
     get_profile, colors, get_labels, capitalize, get_darker_colors, word_width, hover_split
 
-
+add_info=True
 # Function to generate the sidebar section
 def generate_sidebar_section():
     # Fetch configuration for sidebar icons
@@ -188,9 +188,9 @@ def generate_hobbie_section():
 
     with col2:
         st.image(get_path('raspberry.png'))  # Display the second hobby image
-
-    with st.expander("Additional Information..."):
-        st.write(section['additional information'])  # Display additional hobby details
+    if add_info:
+        with st.expander("Additional Information..."):
+            st.write(section['additional information'])  # Display additional hobby details
 
 
 def generate_education_section():
@@ -349,9 +349,9 @@ def generate_portfolio_section():
             st.write(f"Technology: {vals['technology']}")  # Display technologies used
         with m_col2:
             st.image(get_path(vals['image']))  # Display project image
-
-        with st.expander(f"Additional Information..."):
-            st.write(vals['additional information'])  # Display additional information about the project
+        if add_info:
+            with st.expander(f"Additional Information..."):
+                st.write(vals['additional information'])  # Display additional information about the project
 
 
 # Function to generate the project section
@@ -374,6 +374,7 @@ def generate_project_section():
                     # Display client details
                     with st.expander(f"**{key2}, {key1}, {vals2['role']}, {vals2['start']} - {vals2['end']}**"):
                         st.write(vals2['additional information'])  # Display additional project information
+
 
                     st.write(f"{vals2['summary']}")  # Display project summary
                     st.write(f"Technology: {vals2['technology']}")  # Display technologies used
