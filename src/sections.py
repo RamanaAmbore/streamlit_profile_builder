@@ -9,7 +9,7 @@ from src.components import container, write_section_heading, write_columns, writ
 from src.utils import profile, get_path, get_selected_colors, get_image_bin_file, default_color, get_config, \
     get_profile, colors, get_labels, capitalize, get_darker_colors, word_width, hover_split
 
-add_info=True
+add_info = True
 # Function to generate the sidebar section
 def generate_sidebar_section():
     # Fetch configuration for sidebar icons
