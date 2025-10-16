@@ -40,13 +40,13 @@ def initial_setup():
     # Set the background image for the page
     set_png_as_page_bg('background.png')
 
-
+add_info = True
 # Main function to execute the initial setup and generate different sections of the profile page
 if __name__ == '__main__':
     initial_setup()  # Call the setup function to configure the app
 
     # Generate the sidebar section
-    generate_sidebar_section()
+    generate_sidebar_section(add_info)
 
     # Generate the profile section
     generate_profile_section()

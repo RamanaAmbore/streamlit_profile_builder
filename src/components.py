@@ -41,9 +41,15 @@ def container(*args, **kwargs):
 
 
 # Function to display a section heading with an optional icon and styling
-def write_section_heading(text):
+def write_section_heading(text, portfolio=False):
     icon = config["section_icons"]  # Get icon from config based on section name
-    st.subheader(f':{icon[text]}: {text.title()}', anchor=text.title(), divider='rainbow')  # Display section heading
+    if not portfolio:
+        st.subheader(f':{icon[text]}: {text.title()}', anchor=text.title(), divider='rainbow')  # Display section heading
+    else:
+        text1 = f'Personal Portfolio Projects'
+        st.subheader(f':{icon[text]}: {text1.title()}', anchor=text.title(),
+                     divider='rainbow')  # Display section heading
+
 
 
 # Function to display a subheading with text

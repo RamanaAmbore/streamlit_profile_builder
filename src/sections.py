@@ -11,7 +11,9 @@ from src.utils import profile, get_path, get_selected_colors, get_image_bin_file
 
 add_info=True
 # Function to generate the sidebar section
-def generate_sidebar_section():
+def generate_sidebar_section(parm_add_info=True):
+    global add_info
+    add_info = parm_add_info
     # Fetch configuration for sidebar icons
     key_list, val_list = get_config('sidebar_icons')
     key_list = [key.title() for key in key_list]
@@ -330,7 +332,7 @@ def generate_employment_section():
 # Function to generate the portfolio section
 def generate_portfolio_section():
     section_name = 'portfolio'
-    write_section_heading(section_name)  # Add section heading for portfolio
+    write_section_heading(section_name, portfolio=True)  # Add section heading for portfolio
     section = profile[section_name]  # Retrieve portfolio section data
 
     # Iterate over each portfolio item
@@ -349,9 +351,12 @@ def generate_portfolio_section():
             st.write(f"Technology: {vals['technology']}")  # Display technologies used
         with m_col2:
             st.image(get_path(vals['image']))  # Display project image
+
         if add_info:
-            with st.expander(f"Additional Information..."):
-                st.write(vals['additional information'])  # Display additional information about the project
+            txt = f"Additional Information"
+            with st.expander(f"{txt}..."):
+                st.write(vals[txt.lower()])  # Display additional information about the project
+
 
 
 # Function to generate the project section

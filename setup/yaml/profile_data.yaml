@@ -221,9 +221,9 @@ contact:
     icon: mail.png
     link: mailto:ramana.ambore@gmail.com
   phone:
-    label: (515) 745-1486
+    label: (515) 525-4636
     icon: phone.png
-    link: tel:+15157351486
+    link: tel:+15155254636
   loc:
     label: West Des Moines, Iowa
     icon: loc.png
@@ -299,7 +299,7 @@ portfolio:
       * Front-end development (HTML, CSS, JavaScript)
       * Project design and planning
 projects:
-  NTT DATA:
+  NTT DATA (delivering solutions for Fidelity for seventeen years):
     short label: NTT
     long label: NTT DATA Global Delivery Services Ltd., Application Development Director, Apr 2003 - Till Date
     hover: NTT DATA Global Delivery Services, Application Development Director, 21 years, Apr 2003 - Till Date
@@ -316,6 +316,8 @@ projects:
           technology: Java, Springboot, Spark, Oracle, AWS, Python, Pandas, GIT, Terraform, Jenkins,
           summary: |
             Led the modernization of a high-volume, business-critical legacy application on AWS, leveraging Java, Spark, and a developed core framework. This significantly improved development and deployment speed, achieving a 50% reduction in turnaround times. Key responsibilities included designing high-volume transmission files, implementing data parsing and validation, and ensuring data consistency with mainframe systems.
+            
+
           additional information: |
             **Project: Modernization of High-Volume Legacy Application**
             
