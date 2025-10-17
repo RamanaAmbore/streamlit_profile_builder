@@ -356,6 +356,8 @@ def generate_portfolio_section():
             txt = f"Additional Information"
             with st.expander(f"{txt}..."):
                 st.write(vals[txt.lower()])  # Display additional information about the project
+        else:
+            st.write('.')
 
 
 
